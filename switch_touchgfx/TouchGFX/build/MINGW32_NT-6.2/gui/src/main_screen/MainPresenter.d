@@ -46,7 +46,9 @@ build/MINGW32_NT-6.2/gui/src/main_screen/MainPresenter.o: \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Image.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Widget.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Button.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/AbstractButton.hpp
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/AbstractButton.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/EasingEquations.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/mixins/MoveAnimator.hpp
 
 gui/include/gui/main_screen/MainView.hpp:
 
@@ -141,3 +143,7 @@ gui/include/gui/model/ModelListener.hpp:
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Button.hpp:
 
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/AbstractButton.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/EasingEquations.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/mixins/MoveAnimator.hpp:

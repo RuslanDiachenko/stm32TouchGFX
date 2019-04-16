@@ -4,9 +4,9 @@
       {
         "Components": [
           {
-            "RelativeFilename": "battleRoyal.png",
+            "RelativeFilename": "main_screen.png",
             "Alpha": 255,
-            "Name": "battleRoyal1",
+            "Name": "image",
             "X": 0,
             "Y": 0,
             "Width": 480,
@@ -19,12 +19,27 @@
             "Moveable": false
           },
           {
-            "Pressed": "__designer\\blue_buttons_round_edge_icon_button_pressed.png",
-            "Released": "__designer\\blue_buttons_round_edge_icon_button.png",
+            "RelativeFilename": "window_settings.png",
             "Alpha": 255,
-            "Name": "button1",
-            "X": 16,
-            "Y": 76,
+            "Name": "window_settings1",
+            "X": 500,
+            "Y": 6,
+            "Width": 400,
+            "Height": 261,
+            "Type": "Image",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "__designer\\blue_buttons_round_icon_button_pressed.png",
+            "Released": "__designer\\blue_buttons_round_icon_button.png",
+            "Alpha": 0,
+            "Name": "button2",
+            "X": 8,
+            "Y": 6,
             "Width": 60,
             "Height": 60,
             "Type": "Button",
@@ -35,14 +50,14 @@
             "Moveable": false
           },
           {
-            "Pressed": "__designer\\blue_buttons_round_icon_button_pressed.png",
-            "Released": "__designer\\blue_buttons_round_icon_button.png",
-            "Alpha": 255,
-            "Name": "button2",
-            "X": 16,
-            "Y": 159,
-            "Width": 60,
-            "Height": 60,
+            "Pressed": "transparencysmall.png",
+            "Released": "transparencysmall.png",
+            "Alpha": 0,
+            "Name": "button3",
+            "X": 68,
+            "Y": 17,
+            "Width": 355,
+            "Height": 239,
             "Type": "Button",
             "Visible": true,
             "Draggable": false,
@@ -51,7 +66,42 @@
             "Moveable": false
           }
         ],
-        "Interactions": [],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "button3",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "X": 20,
+              "Y": 6,
+              "Easing": "Linear",
+              "EasingOption": "Out",
+              "Duration": 500,
+              "ActionComponent": "window_settings1",
+              "Type": "ActionMove"
+            }
+          },
+          {
+            "InteractionName": "Interaction2",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "button2",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "X": 500,
+              "Y": 6,
+              "Easing": "Linear",
+              "EasingOption": "Out",
+              "Duration": 500,
+              "ActionComponent": "window_settings1",
+              "Type": "ActionMove"
+            }
+          }
+        ],
         "Name": "Main",
         "OverrideDefaultBufferSize": false,
         "CanvasBufferSize": 0

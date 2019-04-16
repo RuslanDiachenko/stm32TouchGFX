@@ -1349,12 +1349,6 @@
       <group>
         <name>__designer</name>
         <file>
-          <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\__designer\blue_buttons_round_edge_icon_button.cpp</name>
-        </file>
-        <file>
-          <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\__designer\blue_buttons_round_edge_icon_button_pressed.cpp</name>
-        </file>
-        <file>
           <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\__designer\blue_buttons_round_icon_button.cpp</name>
         </file>
         <file>
@@ -1362,13 +1356,16 @@
         </file>
       </group>
       <file>
-        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\battleRoyal.cpp</name>
-      </file>
-      <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\BitmapDatabase.cpp</name>
       </file>
       <file>
-        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\red.cpp</name>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\main_screen.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\TransparencySmall.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\window_settings.cpp</name>
       </file>
     </group>
     <group>

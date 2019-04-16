@@ -46,6 +46,8 @@ build/MINGW32_NT-6.2/generated/gui_generated/src/main_screen/MainViewBase.o: \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Widget.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Button.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/AbstractButton.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/EasingEquations.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/mixins/MoveAnimator.hpp \
  generated/images/include/BitmapDatabase.hpp
 
 generated/gui_generated/include/gui_generated/main_screen/MainViewBase.hpp:
@@ -139,5 +141,9 @@ gui/include/gui/model/ModelListener.hpp:
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Button.hpp:
 
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/AbstractButton.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/EasingEquations.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/mixins/MoveAnimator.hpp:
 
 generated/images/include/BitmapDatabase.hpp:

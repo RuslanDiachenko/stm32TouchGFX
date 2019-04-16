@@ -71,6 +71,8 @@ build/MINGW32_NT-6.2/simulator/main.o: simulator/main.cpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Widget.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Button.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/AbstractButton.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/EasingEquations.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/mixins/MoveAnimator.hpp \
  generated/images/include/BitmapDatabase.hpp \
  generated/gui_generated/include/gui_generated/common/SimConstants.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/platform/driver/touch/SDL2TouchController.hpp \
@@ -222,6 +224,10 @@ gui/include/gui/model/ModelListener.hpp:
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Button.hpp:
 
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/AbstractButton.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/EasingEquations.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/mixins/MoveAnimator.hpp:
 
 generated/images/include/BitmapDatabase.hpp:
 

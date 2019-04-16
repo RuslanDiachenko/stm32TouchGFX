@@ -4,23 +4,52 @@
 #include <gui_generated/main_screen/MainViewBase.hpp>
 #include "BitmapDatabase.hpp"
 
-MainViewBase::MainViewBase()
+MainViewBase::MainViewBase() :
+    buttonCallback(this, &MainViewBase::buttonCallbackHandler)
 {
-    battleRoyal1.setXY(0, 0);
-    battleRoyal1.setBitmap(Bitmap(BITMAP_BATTLEROYAL_ID));
+    image.setXY(0, 0);
+    image.setBitmap(Bitmap(BITMAP_MAIN_SCREEN_ID));
 
-    button1.setXY(16, 76);
-    button1.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID));
+    window_settings1.setXY(500, 6);
+    window_settings1.setBitmap(Bitmap(BITMAP_WINDOW_SETTINGS_ID));
 
-    button2.setXY(16, 159);
+    button2.setXY(8, 6);
     button2.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_ICON_BUTTON_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_ICON_BUTTON_PRESSED_ID));
+    button2.setAction(buttonCallback);
+    button2.setAlpha(0);
 
-    add(battleRoyal1);
-    add(button1);
+    button3.setXY(68, 17);
+    button3.setBitmaps(Bitmap(BITMAP_TRANSPARENCYSMALL_ID), Bitmap(BITMAP_TRANSPARENCYSMALL_ID));
+    button3.setAction(buttonCallback);
+    button3.setAlpha(0);
+
+    add(image);
+    add(window_settings1);
     add(button2);
+    add(button3);
 }
 
 void MainViewBase::setupScreen()
 {
 
+}
+
+void MainViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
+{
+    if (&src == &button2)
+    {
+        //Interaction2
+        //When button2 clicked move window_settings1
+        //Move window_settings1 to x:500, y:6 with LinearOut easing in 500 ms (30 Ticks)
+        window_settings1.clearMoveAnimationEndedAction();
+        window_settings1.startMoveAnimation(500, 6, 30, EasingEquations::linearEaseOut, EasingEquations::linearEaseOut);
+    }
+    else if (&src == &button3)
+    {
+        //Interaction1
+        //When button3 clicked move window_settings1
+        //Move window_settings1 to x:20, y:6 with LinearOut easing in 500 ms (30 Ticks)
+        window_settings1.clearMoveAnimationEndedAction();
+        window_settings1.startMoveAnimation(20, 6, 30, EasingEquations::linearEaseOut, EasingEquations::linearEaseOut);
+    }
 }

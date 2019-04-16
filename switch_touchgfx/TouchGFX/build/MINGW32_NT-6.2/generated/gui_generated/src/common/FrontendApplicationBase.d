@@ -49,6 +49,8 @@ build/MINGW32_NT-6.2/generated/gui_generated/src/common/FrontendApplicationBase.
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Widget.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Button.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/AbstractButton.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/EasingEquations.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/mixins/MoveAnimator.hpp \
  generated/texts/include/texts/TextKeysAndLanguages.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/Texts.hpp
 
@@ -151,6 +153,10 @@ gui/include/gui/model/ModelListener.hpp:
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Button.hpp:
 
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/AbstractButton.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/EasingEquations.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/mixins/MoveAnimator.hpp:
 
 generated/texts/include/texts/TextKeysAndLanguages.hpp:
 

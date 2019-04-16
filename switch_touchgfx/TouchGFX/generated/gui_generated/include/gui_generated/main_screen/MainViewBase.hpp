@@ -9,6 +9,8 @@
 #include <gui/main_screen/MainPresenter.hpp>
 #include <touchgfx/widgets/Image.hpp>
 #include <touchgfx/widgets/Button.hpp>
+#include <touchgfx/EasingEquations.hpp>
+#include <touchgfx/mixins/MoveAnimator.hpp>
 
 class MainViewBase : public touchgfx::View<MainPresenter>
 {
@@ -26,11 +28,22 @@ protected:
     /*
      * Member Declarations
      */
-    touchgfx::Image battleRoyal1;
-    touchgfx::Button button1;
+    touchgfx::Image image;
+    touchgfx::MoveAnimator< touchgfx::Image > window_settings1;
     touchgfx::Button button2;
+    touchgfx::Button button3;
 
 private:
+
+    /*
+     * Callback Handler Declarations
+     */
+    void buttonCallbackHandler(const touchgfx::AbstractButton& src);
+
+    /*
+     * Callback Declarations
+     */
+    touchgfx::Callback<MainViewBase, const touchgfx::AbstractButton&> buttonCallback;
 
 };
 

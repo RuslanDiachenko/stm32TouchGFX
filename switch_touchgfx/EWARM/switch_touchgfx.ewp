@@ -1290,6 +1290,15 @@
         <name>$PROJ_DIR$\..\TouchGFX\gui\src\model\Model.cpp</name>
       </file>
     </group>
+    <group>
+      <name>timer_screen</name>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\gui\src\timer_screen\TimerPresenter.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\gui\src\timer_screen\TimerView.cpp</name>
+      </file>
+    </group>
   </group>
   <group>
     <name>Application/User/TouchGFX/generated</name>
@@ -1299,19 +1308,16 @@
         <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\ApplicationFontProvider.cpp</name>
       </file>
       <file>
-        <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Font_verdana_10_4bpp.cpp</name>
-      </file>
-      <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Font_verdana_20_4bpp.cpp</name>
       </file>
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Font_verdana_40_4bpp.cpp</name>
       </file>
       <file>
-        <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\FontGetters.cpp</name>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Font_verdana_80_4bpp.cpp</name>
       </file>
       <file>
-        <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Kerning_verdana_10_4bpp.cpp</name>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\FontGetters.cpp</name>
       </file>
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Kerning_verdana_20_4bpp.cpp</name>
@@ -1320,13 +1326,16 @@
         <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Kerning_verdana_40_4bpp.cpp</name>
       </file>
       <file>
-        <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Table_verdana_10_4bpp.cpp</name>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Kerning_verdana_80_4bpp.cpp</name>
       </file>
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Table_verdana_20_4bpp.cpp</name>
       </file>
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Table_verdana_40_4bpp.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Table_verdana_80_4bpp.cpp</name>
       </file>
     </group>
     <group>
@@ -1343,36 +1352,51 @@
           <name>$PROJ_DIR$\..\TouchGFX\generated\gui_generated\src\main_screen\MainViewBase.cpp</name>
         </file>
       </group>
+      <group>
+        <name>timer_screen</name>
+        <file>
+          <name>$PROJ_DIR$\..\TouchGFX\generated\gui_generated\src\timer_screen\TimerViewBase.cpp</name>
+        </file>
+      </group>
     </group>
     <group>
       <name>images</name>
-      <group>
-        <name>__designer</name>
-        <file>
-          <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\__designer\blue_buttons_round_edge_icon_button.cpp</name>
-        </file>
-        <file>
-          <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\__designer\blue_buttons_round_edge_icon_button_pressed.cpp</name>
-        </file>
-        <file>
-          <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\__designer\blue_buttons_round_icon_button.cpp</name>
-        </file>
-        <file>
-          <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\__designer\blue_buttons_round_icon_button_pressed.cpp</name>
-        </file>
-      </group>
       <file>
-        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\battleRoyal.cpp</name>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\background_Screen1.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\background_Screen2.cpp</name>
       </file>
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\BitmapDatabase.cpp</name>
       </file>
       <file>
-        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\red.cpp</name>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\btn_round.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\btn_round_pressed.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\configuration.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\Down_arrow.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\Down_arrow_pressed.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\Up_arrow.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\Up_arrow_pressed.cpp</name>
       </file>
     </group>
     <group>
       <name>texts</name>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\texts\src\LanguageGb.cpp</name>
+      </file>
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\texts\src\Texts.cpp</name>
       </file>

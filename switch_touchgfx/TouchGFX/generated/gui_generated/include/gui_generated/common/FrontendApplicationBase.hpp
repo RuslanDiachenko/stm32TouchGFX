@@ -18,6 +18,12 @@ public:
     // Main
     void gotoMainScreenNoTransition();
 
+    void gotoMainScreenSlideTransitionSouth();
+
+
+    // Timer
+    void gotoTimerScreenCoverTransitionNorth();
+
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
     FrontendHeap& frontendHeap;
@@ -25,6 +31,12 @@ protected:
 
     // Main
     void gotoMainScreenNoTransitionImpl();
+
+    void gotoMainScreenSlideTransitionSouthImpl();
+
+
+    // Timer
+    void gotoTimerScreenCoverTransitionNorthImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

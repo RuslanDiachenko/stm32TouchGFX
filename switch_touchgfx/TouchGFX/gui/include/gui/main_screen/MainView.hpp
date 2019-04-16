@@ -11,7 +11,23 @@ public:
     virtual ~MainView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+    virtual void buttonHourUpClicked();
+    virtual void buttonHourDownClicked();
+    virtual void buttonMinuteUpClicked();
+    virtual void buttonMinuteDownClicked();
+    
+    virtual void buttonSaveHourClicked()
+    {
+        presenter->saveHour(hour);
+    }
+
+    virtual void buttonSaveMinuteClicked()
+    {
+        presenter->saveMinute(minute);
+    }
 protected:
+    int16_t hour;
+    int16_t minute;
 };
 
 #endif // MAIN_VIEW_HPP

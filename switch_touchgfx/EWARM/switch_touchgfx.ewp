@@ -1370,6 +1370,24 @@
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\icon00.cpp</name>
       </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\icon01.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\icon02.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\icon03.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\icon04.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\icon05.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\icon06.cpp</name>
+      </file>
     </group>
     <group>
       <name>texts</name>

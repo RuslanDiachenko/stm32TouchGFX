@@ -101,8 +101,13 @@ void touchgfx_init()
   uint16_t dispWidth = 480;
   uint16_t dispHeight = 272;  
   
-  HAL& hal = touchgfx_generic_init<STM32F4HAL>(dma, display, tc, dispWidth, dispHeight,(uint16_t*) 0, 
-                                               0, 0); 
+  uint16_t *cacheStartAddr = (uint16_t *) 0xC1000000;
+  uint32_t cacheSize = 0x300000;
+  
+//  HAL& hal = touchgfx_generic_init<STM32F4HAL>(dma, display, tc, dispWidth, dispHeight,(uint16_t*) 0, 
+//                                               0, 0); 
+    HAL& hal = touchgfx_generic_init<STM32F4HAL>(dma, display, tc, dispWidth, dispHeight, cacheStartAddr, 
+                                                 cacheSize, 0); 
 
     hal.setFrameBufferStartAddress((uint16_t*)frameBuf0, bitdepth ,true , true);
 

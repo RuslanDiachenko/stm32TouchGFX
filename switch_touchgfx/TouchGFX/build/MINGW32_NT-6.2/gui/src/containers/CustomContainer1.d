@@ -47,7 +47,8 @@ build/MINGW32_NT-6.2/gui/src/containers/CustomContainer1.o: \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Widget.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/TypedText.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/Texts.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Image.hpp
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Image.hpp \
+ generated/images/include/BitmapDatabase.hpp
 
 gui/include/gui/containers/CustomContainer1.hpp:
 
@@ -144,3 +145,5 @@ gui/include/gui/model/Model.hpp:
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/Texts.hpp:
 
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Image.hpp:
+
+generated/images/include/BitmapDatabase.hpp:

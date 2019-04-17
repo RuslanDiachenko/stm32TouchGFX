@@ -11,6 +11,10 @@ public:
     virtual ~MainView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+    virtual void scrollWheel1UpdateItem(CustomContainer1& item, int16_t itemIndex)
+    {
+      item.setNumber(itemIndex);
+    }
 protected:
 };
 

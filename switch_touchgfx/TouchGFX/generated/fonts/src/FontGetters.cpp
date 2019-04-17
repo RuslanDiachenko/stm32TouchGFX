@@ -14,7 +14,7 @@ touchgfx::InternalFlashFont& getFont_verdana_15_4bpp();
 
 touchgfx::InternalFlashFont& getFont_verdana_15_4bpp()
 {
-    static touchgfx::InternalFlashFont verdana_15_4bpp(glyphs_verdana_15_4bpp, 10, 15, 0, 4, 0, 0, unicodes_verdana_15_4bpp, kerning_verdana_15_4bpp, 0, 0);
+    static touchgfx::InternalFlashFont verdana_15_4bpp(glyphs_verdana_15_4bpp, 12, 15, 0, 4, 0, 0, unicodes_verdana_15_4bpp, kerning_verdana_15_4bpp, 0, 0);
     return verdana_15_4bpp;
 }
 

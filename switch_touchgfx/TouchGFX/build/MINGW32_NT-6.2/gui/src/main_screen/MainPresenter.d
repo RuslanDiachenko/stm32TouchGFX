@@ -57,7 +57,8 @@ build/MINGW32_NT-6.2/gui/src/main_screen/MainPresenter.o: \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/TextArea.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/FontManager.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/TypedText.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/Texts.hpp
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/Texts.hpp \
+ generated/images/include/BitmapDatabase.hpp
 
 gui/include/gui/main_screen/MainView.hpp:
 
@@ -174,3 +175,5 @@ generated/gui_generated/include/gui_generated/containers/CustomContainer1Base.hp
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/TypedText.hpp:
 
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/Texts.hpp:
+
+generated/images/include/BitmapDatabase.hpp:

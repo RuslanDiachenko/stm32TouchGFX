@@ -8,7 +8,9 @@
 #include <mvp/View.hpp>
 #include <gui/main_screen/MainPresenter.hpp>
 #include <touchgfx/widgets/Image.hpp>
-#include <touchgfx/widgets/Button.hpp>
+#include <touchgfx/widgets/ScalableImage.hpp>
+#include <touchgfx/containers/scrollers/ScrollWheel.hpp>
+#include <gui/containers/CustomContainer1.hpp>
 
 class MainViewBase : public touchgfx::View<MainPresenter>
 {
@@ -18,6 +20,11 @@ public:
 
     virtual void setupScreen();
 
+    virtual void scrollWheel1UpdateItem(CustomContainer1& item, int16_t itemIndex)
+    {
+        // Override and implement this function in Main
+    }
+
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(Application::getInstance());
@@ -26,11 +33,16 @@ protected:
     /*
      * Member Declarations
      */
-    touchgfx::Image battleRoyal1;
-    touchgfx::Button button1;
-    touchgfx::Button button2;
+    touchgfx::Image black1;
+    touchgfx::Image image;
+    touchgfx::ScalableImage scalableImage1;
+    touchgfx::ScrollWheel scrollWheel1;
+    touchgfx::DrawableListItems<CustomContainer1, 7> scrollWheel1ListItems;
+
 
 private:
+    void updateItemCallbackHandler(DrawableListItemsInterface* items, int16_t containerIndex, int16_t itemIndex);
+    touchgfx::Callback<MainViewBase, DrawableListItemsInterface*, int16_t, int16_t> updateItemCallback;
 
 };
 

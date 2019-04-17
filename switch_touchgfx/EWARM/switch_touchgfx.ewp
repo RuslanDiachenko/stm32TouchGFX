@@ -1276,6 +1276,12 @@
       </file>
     </group>
     <group>
+      <name>containers</name>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\gui\src\containers\CustomContainer1.cpp</name>
+      </file>
+    </group>
+    <group>
       <name>main_screen</name>
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\gui\src\main_screen\MainPresenter.cpp</name>
@@ -1299,7 +1305,7 @@
         <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\ApplicationFontProvider.cpp</name>
       </file>
       <file>
-        <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Font_verdana_10_4bpp.cpp</name>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Font_verdana_15_4bpp.cpp</name>
       </file>
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Font_verdana_20_4bpp.cpp</name>
@@ -1311,7 +1317,7 @@
         <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\FontGetters.cpp</name>
       </file>
       <file>
-        <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Kerning_verdana_10_4bpp.cpp</name>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Kerning_verdana_15_4bpp.cpp</name>
       </file>
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Kerning_verdana_20_4bpp.cpp</name>
@@ -1320,7 +1326,7 @@
         <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Kerning_verdana_40_4bpp.cpp</name>
       </file>
       <file>
-        <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Table_verdana_10_4bpp.cpp</name>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Table_verdana_15_4bpp.cpp</name>
       </file>
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Table_verdana_20_4bpp.cpp</name>
@@ -1338,6 +1344,12 @@
         </file>
       </group>
       <group>
+        <name>containers</name>
+        <file>
+          <name>$PROJ_DIR$\..\TouchGFX\generated\gui_generated\src\containers\CustomContainer1Base.cpp</name>
+        </file>
+      </group>
+      <group>
         <name>main_screen</name>
         <file>
           <name>$PROJ_DIR$\..\TouchGFX\generated\gui_generated\src\main_screen\MainViewBase.cpp</name>
@@ -1346,33 +1358,24 @@
     </group>
     <group>
       <name>images</name>
-      <group>
-        <name>__designer</name>
-        <file>
-          <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\__designer\blue_buttons_round_edge_icon_button.cpp</name>
-        </file>
-        <file>
-          <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\__designer\blue_buttons_round_edge_icon_button_pressed.cpp</name>
-        </file>
-        <file>
-          <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\__designer\blue_buttons_round_icon_button.cpp</name>
-        </file>
-        <file>
-          <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\__designer\blue_buttons_round_icon_button_pressed.cpp</name>
-        </file>
-      </group>
       <file>
-        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\battleRoyal.cpp</name>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\background.cpp</name>
       </file>
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\BitmapDatabase.cpp</name>
       </file>
       <file>
-        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\red.cpp</name>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\black.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\icon00.cpp</name>
       </file>
     </group>
     <group>
       <name>texts</name>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\texts\src\LanguageGb.cpp</name>
+      </file>
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\texts\src\Texts.cpp</name>
       </file>

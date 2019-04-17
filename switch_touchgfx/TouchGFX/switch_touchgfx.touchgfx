@@ -4,9 +4,9 @@
       {
         "Components": [
           {
-            "RelativeFilename": "battleRoyal.png",
+            "RelativeFilename": "black.png",
             "Alpha": 255,
-            "Name": "battleRoyal1",
+            "Name": "black1",
             "X": 0,
             "Y": 0,
             "Width": 480,
@@ -19,15 +19,14 @@
             "Moveable": false
           },
           {
-            "Pressed": "__designer\\blue_buttons_round_edge_icon_button_pressed.png",
-            "Released": "__designer\\blue_buttons_round_edge_icon_button.png",
+            "RelativeFilename": "black.png",
             "Alpha": 255,
-            "Name": "button1",
-            "X": 16,
-            "Y": 76,
-            "Width": 60,
-            "Height": 60,
-            "Type": "Button",
+            "Name": "image",
+            "X": 0,
+            "Y": 0,
+            "Width": 480,
+            "Height": 272,
+            "Type": "Image",
             "Visible": true,
             "Draggable": false,
             "Clickable": false,
@@ -35,15 +34,44 @@
             "Moveable": false
           },
           {
-            "Pressed": "__designer\\blue_buttons_round_icon_button_pressed.png",
-            "Released": "__designer\\blue_buttons_round_icon_button.png",
+            "Filename": "background.png",
             "Alpha": 255,
-            "Name": "button2",
-            "X": 16,
-            "Y": 159,
-            "Width": 60,
-            "Height": 60,
-            "Type": "Button",
+            "ScalingAlgorithm": "Nearest-neighbor",
+            "Name": "scalableImage1",
+            "X": 106,
+            "Y": 0,
+            "Width": 268,
+            "Height": 272,
+            "Type": "ScalableImage",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "SelectedItemOffset": 100,
+            "UseSelectedStyle": false,
+            "ExtraSizeBefore": 0,
+            "ExtraSizeAfter": 0,
+            "MarginBefore": 0,
+            "MarginAfter": 0,
+            "IsHorizontal": false,
+            "IsCircular": false,
+            "ItemTemplateName": "CustomContainer1",
+            "NumberofItems": 10,
+            "InitialElement": 0,
+            "ItemMargin": 5,
+            "Easing": "Back",
+            "EasingOption": "Out",
+            "SwipeAcceleration": 1.0,
+            "DragAcceleration": 1.0,
+            "Name": "scrollWheel1",
+            "X": 125,
+            "Y": 0,
+            "Width": 249,
+            "Height": 272,
+            "Type": "ScrollWheel",
             "Visible": true,
             "Draggable": false,
             "Clickable": false,
@@ -57,7 +85,77 @@
         "CanvasBufferSize": 0
       }
     ],
-    "CustomContainerDefinitions": [],
+    "CustomContainerDefinitions": [
+      {
+        "Components": [
+          {
+            "TextId": "SingleUseId1",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId2",
+              "UseBuffer": true,
+              "BufferSize": 3
+            },
+            "Name": "textArea1",
+            "X": 63,
+            "Y": 12,
+            "Width": 132,
+            "Height": 19,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "RelativeFilename": "icon00.png",
+            "Alpha": 255,
+            "Name": "icon001",
+            "X": 11,
+            "Y": 3,
+            "Width": 36,
+            "Height": 36,
+            "Type": "Image",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [],
+        "Name": "CustomContainer1",
+        "X": 0,
+        "Y": 0,
+        "Width": 249,
+        "Height": 43,
+        "Type": "CustomContainerDefinition",
+        "Visible": true,
+        "Draggable": false,
+        "Clickable": false,
+        "Fadeable": false,
+        "Moveable": false
+      }
+    ],
+    "TextEntries": [
+      {
+        "TextEntryId": "SingleUseId1",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId2",
+        "IsResource": false
+      }
+    ],
     "Name": "MyApplication",
     "Resolution": {
       "Width": 480,

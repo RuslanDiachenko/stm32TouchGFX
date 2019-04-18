@@ -24,7 +24,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include <yfuns.h>
+#include <stdio.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -108,7 +109,8 @@ int main(void)
   MX_I2C1_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-
+  //HAL_UART_Transmit(&huart2, (uint8_t *)"Hello world!\r\n", sizeof("Hello world!\r\n"), 100);
+  printf("Hello world!\r\n");
   /* USER CODE END 2 */
 
 /* Initialise the graphical hardware */
@@ -253,7 +255,7 @@ static void MX_GFXSIMULATOR_Init(void)
 {
 
   /* USER CODE BEGIN GFXSIMULATOR_Init 0 */
-
+ 
   /* USER CODE END GFXSIMULATOR_Init 0 */
 
   /* USER CODE BEGIN GFXSIMULATOR_Init 1 */

@@ -6,8 +6,8 @@
 
 MainViewBase::MainViewBase()
 {
-    battleRoyal1.setXY(0, 0);
-    battleRoyal1.setBitmap(Bitmap(BITMAP_BATTLEROYAL_ID));
+    image.setXY(0, 0);
+    image.setBitmap(Bitmap(BITMAP_MAIN_SCREEN_ID));
 
     button1.setXY(16, 76);
     button1.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID));
@@ -15,7 +15,7 @@ MainViewBase::MainViewBase()
     button2.setXY(16, 159);
     button2.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_ICON_BUTTON_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_ICON_BUTTON_PRESSED_ID));
 
-    add(battleRoyal1);
+    add(image);
     add(button1);
     add(button2);
 }

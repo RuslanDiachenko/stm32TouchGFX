@@ -131,5 +131,6 @@ void GRAPHICS_Init()
 
 void GRAPHICS_MainTask(void)
 {
+    touchgfx::HAL::getInstance()->setDisplayOrientation(ORIENTATION_PORTRAIT);
     touchgfx::HAL::getInstance()->taskEntry();
 }

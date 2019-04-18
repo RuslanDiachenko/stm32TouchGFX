@@ -4,13 +4,13 @@
       {
         "Components": [
           {
-            "RelativeFilename": "battleRoyal.png",
+            "RelativeFilename": "main_screen.png",
             "Alpha": 255,
-            "Name": "battleRoyal1",
+            "Name": "image",
             "X": 0,
             "Y": 0,
-            "Width": 480,
-            "Height": 272,
+            "Width": 272,
+            "Height": 480,
             "Type": "Image",
             "Visible": true,
             "Draggable": false,
@@ -60,8 +60,8 @@
     "CustomContainerDefinitions": [],
     "Name": "MyApplication",
     "Resolution": {
-      "Width": 480,
-      "Height": 272
+      "Width": 272,
+      "Height": 480
     },
     "SelectedColorDepth": 24,
     "StartupScreenName": "Main",

@@ -1362,13 +1362,10 @@
         </file>
       </group>
       <file>
-        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\battleRoyal.cpp</name>
-      </file>
-      <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\BitmapDatabase.cpp</name>
       </file>
       <file>
-        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\red.cpp</name>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\main_screen.cpp</name>
       </file>
     </group>
     <group>

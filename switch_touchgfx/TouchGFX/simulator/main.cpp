@@ -53,7 +53,10 @@ int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
     SDL2TouchController tc;
 
     // Create hardware layer. Display size is defined in SimConstants.hpp
-    HAL& hal = touchgfx_generic_init<HALSDL2>(dma, lcd, tc, SIM_WIDTH, SIM_HEIGHT, 0, 0);
+    HAL& hal = touchgfx_generic_init<HALSDL2>(dma, lcd, tc, SIM_HEIGHT, SIM_WIDTH, 0, 0);
+	
+
+HAL::getInstance()->setDisplayOrientation(ORIENTATION_PORTRAIT);
 
     // Simulate hardware running at 60Hz generating a vsync every 16.6667 ms
     static_cast<HALSDL2&>(hal).setVsyncInterval(16.6667f);

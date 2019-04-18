@@ -26,7 +26,7 @@ protected:
     /*
      * Member Declarations
      */
-    touchgfx::Image battleRoyal1;
+    touchgfx::Image image;
     touchgfx::Button button1;
     touchgfx::Button button2;
 

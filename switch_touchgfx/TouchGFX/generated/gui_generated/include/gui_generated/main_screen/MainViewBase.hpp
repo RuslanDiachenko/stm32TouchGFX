@@ -8,7 +8,7 @@
 #include <mvp/View.hpp>
 #include <gui/main_screen/MainPresenter.hpp>
 #include <touchgfx/widgets/Image.hpp>
-#include <touchgfx/widgets/Button.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 
 class MainViewBase : public touchgfx::View<MainPresenter>
 {
@@ -26,9 +26,19 @@ protected:
     /*
      * Member Declarations
      */
-    touchgfx::Image image;
-    touchgfx::Button button1;
-    touchgfx::Button button2;
+    touchgfx::Image black_background1;
+    touchgfx::TextAreaWithTwoWildcards clockNum;
+    touchgfx::TextAreaWithOneWildcard clockText;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t CLOCKNUMBUFFER1_SIZE = 3;
+    touchgfx::Unicode::UnicodeChar clockNumBuffer1[CLOCKNUMBUFFER1_SIZE];
+    static const uint16_t CLOCKNUMBUFFER2_SIZE = 3;
+    touchgfx::Unicode::UnicodeChar clockNumBuffer2[CLOCKNUMBUFFER2_SIZE];
+    static const uint16_t CLOCKTEXT_SIZE = 3;
+    touchgfx::Unicode::UnicodeChar clockTextBuffer[CLOCKTEXT_SIZE];
 
 private:
 

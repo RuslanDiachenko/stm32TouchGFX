@@ -4,9 +4,9 @@
       {
         "Components": [
           {
-            "RelativeFilename": "main_screen.png",
+            "RelativeFilename": "black_background.png",
             "Alpha": 255,
-            "Name": "image",
+            "Name": "black_background1",
             "X": 0,
             "Y": 0,
             "Width": 272,
@@ -19,15 +19,32 @@
             "Moveable": false
           },
           {
-            "Pressed": "__designer\\blue_buttons_round_edge_icon_button_pressed.png",
-            "Released": "__designer\\blue_buttons_round_edge_icon_button.png",
+            "TextId": "SingleUseId1",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
             "Alpha": 255,
-            "Name": "button1",
-            "X": 16,
-            "Y": 76,
-            "Width": 60,
-            "Height": 60,
-            "Type": "Button",
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId2",
+              "UseBuffer": true,
+              "BufferSize": 3
+            },
+            "Wildcard2": {
+              "TextId": "SingleUseId3",
+              "UseBuffer": true,
+              "BufferSize": 3
+            },
+            "Name": "clockNum",
+            "X": 60,
+            "Y": 101,
+            "Width": 94,
+            "Height": 49,
+            "Type": "TextArea",
             "Visible": true,
             "Draggable": false,
             "Clickable": false,
@@ -35,15 +52,27 @@
             "Moveable": false
           },
           {
-            "Pressed": "__designer\\blue_buttons_round_icon_button_pressed.png",
-            "Released": "__designer\\blue_buttons_round_icon_button.png",
+            "TextId": "SingleUseId4",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
             "Alpha": 255,
-            "Name": "button2",
-            "X": 16,
-            "Y": 159,
-            "Width": 60,
-            "Height": 60,
-            "Type": "Button",
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId5",
+              "UseBuffer": true,
+              "BufferSize": 3
+            },
+            "Name": "clockText",
+            "X": 154,
+            "Y": 101,
+            "Width": 64,
+            "Height": 49,
+            "Type": "TextArea",
             "Visible": true,
             "Draggable": false,
             "Clickable": false,
@@ -58,6 +87,28 @@
       }
     ],
     "CustomContainerDefinitions": [],
+    "TextEntries": [
+      {
+        "TextEntryId": "SingleUseId1",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId2",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId3",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId4",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId5",
+        "IsResource": false
+      }
+    ],
     "Name": "MyApplication",
     "Resolution": {
       "Width": 272,

@@ -24,8 +24,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include <yfuns.h>
-#include <stdio.h>
+#include <gui/common/FrontendApplication.hpp>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -35,7 +34,8 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+osMailQDef(timeMsgBox_g, 5, time_t);
+osMailQId  timeMsgBox_g;
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -52,7 +52,7 @@ UART_HandleTypeDef huart2;
 
 osThreadId defaultTaskHandle;
 /* USER CODE BEGIN PV */
-
+osThreadId userTaskHandle;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -68,11 +68,23 @@ extern void GRAPHICS_MainTask(void);
 void StartDefaultTask(void const * argument);
 
 /* USER CODE BEGIN PFP */
-
+void StartUserTask(void const *argument);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+void sendTimeMsg(time_t t)
+{
+  time_t *mail = 0;
+  
+  mail = (time_t *) osMailAlloc(timeMsgBox_g, 100);
+  
+  mail->hour = t.hour;
+  mail->min = t.min;
+  mail->h12 = t.h12;
+  
+  osMailPut(timeMsgBox_g, mail);
+}
 
 /* USER CODE END 0 */
 
@@ -109,8 +121,7 @@ int main(void)
   MX_I2C1_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-  //HAL_UART_Transmit(&huart2, (uint8_t *)"Hello world!\r\n", sizeof("Hello world!\r\n"), 100);
-  printf("Hello world!\r\n");
+  
   /* USER CODE END 2 */
 
 /* Initialise the graphical hardware */
@@ -130,7 +141,7 @@ int main(void)
   /* USER CODE END RTOS_SEMAPHORES */
 
   /* USER CODE BEGIN RTOS_TIMERS */
-  /* start timers, add new ones, ... */
+
   /* USER CODE END RTOS_TIMERS */
 
   /* USER CODE BEGIN RTOS_QUEUES */
@@ -143,7 +154,8 @@ int main(void)
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
-  /* add threads, ... */
+  osThreadDef(userTask, StartUserTask, osPriorityNormal, 0, 128);
+  userTaskHandle = osThreadCreate(osThread(userTask), NULL);
   /* USER CODE END RTOS_THREADS */
 
   /* Start scheduler */
@@ -160,6 +172,54 @@ int main(void)
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
+}
+
+static time_t t;
+
+void StartUserTask(void const *argument)
+{
+  timeMsgBox_g = osMailCreate(osMailQ(timeMsgBox_g), NULL);
+  
+  while (1)
+  {
+    t.min++;
+    if (t.min >= 60)
+    {
+      t.hour++;
+      t.min = 0;
+    }
+    if (t.hour >= 12)
+    {
+      t.h12 = !t.h12;
+      t.hour = 0;
+    }
+    
+    sendTimeMsg(t);
+    
+    osDelay(100);
+  }
+}
+
+/* USER CODE BEGIN Header_StartDefaultTask */
+/**
+  * @brief  Function implementing the defaultTask thread.
+  * @param  argument: Not used 
+  * @retval None
+  */
+/* USER CODE END Header_StartDefaultTask */
+void StartDefaultTask(void const * argument)
+{
+
+/* Graphic application */ 
+  GRAPHICS_MainTask();
+
+  /* USER CODE BEGIN 5 */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END 5 */ 
 }
 
 /**
@@ -379,28 +439,6 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 
 /* USER CODE END 4 */
-
-/* USER CODE BEGIN Header_StartDefaultTask */
-/**
-  * @brief  Function implementing the defaultTask thread.
-  * @param  argument: Not used 
-  * @retval None
-  */
-/* USER CODE END Header_StartDefaultTask */
-void StartDefaultTask(void const * argument)
-{
-
-/* Graphic application */  
-  GRAPHICS_MainTask();
-
-  /* USER CODE BEGIN 5 */
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
-  }
-  /* USER CODE END 5 */ 
-}
 
 /**
   * @brief  This function is executed in case of error occurrence.

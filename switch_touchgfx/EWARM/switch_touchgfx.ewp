@@ -1346,30 +1346,18 @@
     </group>
     <group>
       <name>images</name>
-      <group>
-        <name>__designer</name>
-        <file>
-          <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\__designer\blue_buttons_round_edge_icon_button.cpp</name>
-        </file>
-        <file>
-          <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\__designer\blue_buttons_round_edge_icon_button_pressed.cpp</name>
-        </file>
-        <file>
-          <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\__designer\blue_buttons_round_icon_button.cpp</name>
-        </file>
-        <file>
-          <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\__designer\blue_buttons_round_icon_button_pressed.cpp</name>
-        </file>
-      </group>
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\BitmapDatabase.cpp</name>
       </file>
       <file>
-        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\main_screen.cpp</name>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\black_background.cpp</name>
       </file>
     </group>
     <group>
       <name>texts</name>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\texts\src\LanguageGb.cpp</name>
+      </file>
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\texts\src\Texts.cpp</name>
       </file>

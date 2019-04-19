@@ -22,6 +22,15 @@
 /* Define to prevent recursive inclusion -------------------------------------*/
 #ifndef __MAIN_H
 #define __MAIN_H
+    
+#include <stdint.h>
+    
+typedef struct 
+{
+  uint8_t hour;
+  uint8_t min;
+  uint8_t h12;
+} time_t;
 
 #ifdef __cplusplus
 extern "C" {

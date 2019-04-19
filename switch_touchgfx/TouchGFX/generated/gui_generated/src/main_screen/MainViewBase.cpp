@@ -3,21 +3,35 @@
 /*********************************************************************************/
 #include <gui_generated/main_screen/MainViewBase.hpp>
 #include "BitmapDatabase.hpp"
+#include <texts/TextKeysAndLanguages.hpp>
+#include <touchgfx/Color.hpp>
 
 MainViewBase::MainViewBase()
 {
-    image.setXY(0, 0);
-    image.setBitmap(Bitmap(BITMAP_MAIN_SCREEN_ID));
+    black_background1.setXY(0, 0);
+    black_background1.setBitmap(Bitmap(BITMAP_BLACK_BACKGROUND_ID));
 
-    button1.setXY(16, 76);
-    button1.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID));
+    clockNum.setXY(60, 101);
+    clockNum.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    clockNum.setLinespacing(0);
+    Unicode::snprintf(clockNumBuffer1, CLOCKNUMBUFFER1_SIZE, "%s", TypedText(T_SINGLEUSEID2).getText());
+    clockNum.setWildcard1(clockNumBuffer1);
+    Unicode::snprintf(clockNumBuffer2, CLOCKNUMBUFFER2_SIZE, "%s", TypedText(T_SINGLEUSEID3).getText());
+    clockNum.setWildcard2(clockNumBuffer2);
+    clockNum.resizeToCurrentText();
+    clockNum.setTypedText(TypedText(T_SINGLEUSEID1));
 
-    button2.setXY(16, 159);
-    button2.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_ICON_BUTTON_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_ICON_BUTTON_PRESSED_ID));
+    clockText.setXY(154, 101);
+    clockText.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    clockText.setLinespacing(0);
+    Unicode::snprintf(clockTextBuffer, CLOCKTEXT_SIZE, "%s", TypedText(T_SINGLEUSEID5).getText());
+    clockText.setWildcard(clockTextBuffer);
+    clockText.resizeToCurrentText();
+    clockText.setTypedText(TypedText(T_SINGLEUSEID4));
 
-    add(image);
-    add(button1);
-    add(button2);
+    add(black_background1);
+    add(clockNum);
+    add(clockText);
 }
 
 void MainViewBase::setupScreen()

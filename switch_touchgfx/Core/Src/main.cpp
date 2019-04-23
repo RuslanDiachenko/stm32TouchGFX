@@ -196,7 +196,7 @@ void StartUserTask(void const *argument)
     
     sendTimeMsg(t);
     
-    osDelay(100);
+    osDelay(1000);
   }
 }
 

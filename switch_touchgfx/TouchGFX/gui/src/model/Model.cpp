@@ -1,9 +1,12 @@
 #include <gui/model/Model.hpp>
 #include <gui/model/ModelListener.hpp>
-#include <cmsis_os.h>
+
+#ifndef SIMULATOR
+#include "cmsis_os.h"
 #include "main.h"
 
 extern osMailQId  timeMsgBox_g;
+#endif
 
 Model::Model() : modelListener(0)
 {
@@ -11,6 +14,7 @@ Model::Model() : modelListener(0)
 
 void Model::tick()
 {
+#ifndef SIMULATOR
   osEvent evt;
   time_t *mail;
   
@@ -24,4 +28,5 @@ void Model::tick()
       
     }
   }
+#endif
 }

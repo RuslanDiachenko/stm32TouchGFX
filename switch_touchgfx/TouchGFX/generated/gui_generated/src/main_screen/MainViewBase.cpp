@@ -6,7 +6,8 @@
 #include <texts/TextKeysAndLanguages.hpp>
 #include <touchgfx/Color.hpp>
 
-MainViewBase::MainViewBase()
+MainViewBase::MainViewBase() :
+    buttonCallback(this, &MainViewBase::buttonCallbackHandler)
 {
     black_background1.setXY(0, 0);
     black_background1.setBitmap(Bitmap(BITMAP_BLACK_BACKGROUND_ID));
@@ -29,12 +30,32 @@ MainViewBase::MainViewBase()
     clockText.resizeToCurrentText();
     clockText.setTypedText(TypedText(T_SINGLEUSEID4));
 
+    buttonZones.setXY(51, 36);
+    buttonZones.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
+    buttonZones.setAction(buttonCallback);
+
+    zonesView1.setXY(9, 496);
+
     add(black_background1);
     add(clockNum);
     add(clockText);
+    add(buttonZones);
+    add(zonesView1);
 }
 
 void MainViewBase::setupScreen()
 {
+    zonesView1.initialize();
+}
 
+void MainViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
+{
+    if (&src == &buttonZones)
+    {
+        //Interaction1
+        //When buttonZones clicked move zonesView1
+        //Move zonesView1 to x:9, y:20 with LinearIn easing in 300 ms (18 Ticks)
+        zonesView1.clearMoveAnimationEndedAction();
+        zonesView1.startMoveAnimation(9, 20, 18, EasingEquations::linearEaseIn, EasingEquations::linearEaseIn);
+    }
 }

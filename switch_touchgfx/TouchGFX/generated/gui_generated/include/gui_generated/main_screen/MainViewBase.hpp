@@ -9,6 +9,10 @@
 #include <gui/main_screen/MainPresenter.hpp>
 #include <touchgfx/widgets/Image.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
+#include <touchgfx/widgets/Button.hpp>
+#include <gui/containers/ZonesView.hpp>
+#include <touchgfx/EasingEquations.hpp>
+#include <touchgfx/mixins/MoveAnimator.hpp>
 
 class MainViewBase : public touchgfx::View<MainPresenter>
 {
@@ -29,6 +33,8 @@ protected:
     touchgfx::Image black_background1;
     touchgfx::TextAreaWithTwoWildcards clockNum;
     touchgfx::TextAreaWithOneWildcard clockText;
+    touchgfx::Button buttonZones;
+    touchgfx::MoveAnimator< ZonesView > zonesView1;
 
     /*
      * Wildcard Buffers
@@ -41,6 +47,16 @@ protected:
     touchgfx::Unicode::UnicodeChar clockTextBuffer[CLOCKTEXT_SIZE];
 
 private:
+
+    /*
+     * Callback Handler Declarations
+     */
+    void buttonCallbackHandler(const touchgfx::AbstractButton& src);
+
+    /*
+     * Callback Declarations
+     */
+    touchgfx::Callback<MainViewBase, const touchgfx::AbstractButton&> buttonCallback;
 
 };
 

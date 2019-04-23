@@ -7,6 +7,10 @@
 #include <touchgfx/Bitmap.hpp>
 
 const uint16_t BITMAP_BLACK_BACKGROUND_ID = 0; // Size: 272x480 pixels
+const uint16_t BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID = 1; // Size: 170x60 pixels
+const uint16_t BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID = 2; // Size: 170x60 pixels
+const uint16_t BITMAP_ICON04_ID = 3; // Size: 36x36 pixels
+const uint16_t BITMAP_WINDOW_GREY_ID = 4; // Size: 255x358 pixels
 
 namespace BitmapDatabase
 {

@@ -1276,6 +1276,15 @@
       </file>
     </group>
     <group>
+      <name>containers</name>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\gui\src\containers\CustomContainer2.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\gui\src\containers\ZonesView.cpp</name>
+      </file>
+    </group>
+    <group>
       <name>main_screen</name>
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\gui\src\main_screen\MainPresenter.cpp</name>
@@ -1338,6 +1347,15 @@
         </file>
       </group>
       <group>
+        <name>containers</name>
+        <file>
+          <name>$PROJ_DIR$\..\TouchGFX\generated\gui_generated\src\containers\CustomContainer2Base.cpp</name>
+        </file>
+        <file>
+          <name>$PROJ_DIR$\..\TouchGFX\generated\gui_generated\src\containers\ZonesViewBase.cpp</name>
+        </file>
+      </group>
+      <group>
         <name>main_screen</name>
         <file>
           <name>$PROJ_DIR$\..\TouchGFX\generated\gui_generated\src\main_screen\MainViewBase.cpp</name>
@@ -1346,11 +1364,26 @@
     </group>
     <group>
       <name>images</name>
+      <group>
+        <name>__designer</name>
+        <file>
+          <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\__designer\blue_buttons_round_edge_small.cpp</name>
+        </file>
+        <file>
+          <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\__designer\blue_buttons_round_edge_small_pressed.cpp</name>
+        </file>
+      </group>
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\BitmapDatabase.cpp</name>
       </file>
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\black_background.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\icon04.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\window_grey.cpp</name>
       </file>
     </group>
     <group>

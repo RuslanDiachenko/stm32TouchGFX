@@ -2,9 +2,13 @@
 C:\projects\switchTouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\ApplicationFontProvider.pbi
 C:\projects\switchTouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\BitmapDatabase.pbi
 C:\projects\switchTouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\black_background.pbi
+C:\projects\switchTouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\blue_buttons_round_edge_small.pbi
+C:\projects\switchTouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\blue_buttons_round_edge_small_pressed.pbi
 C:\projects\switchTouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\BoardConfiguration.pbi
 C:\projects\switchTouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\cmsis_os.pbi
 C:\projects\switchTouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\croutine.pbi
+C:\projects\switchTouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\CustomContainer2.pbi
+C:\projects\switchTouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\CustomContainer2Base.pbi
 C:\projects\switchTouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\event_groups.pbi
 C:\projects\switchTouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\exc7200.pbi
 C:\projects\switchTouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\Font_verdana_10_4bpp.pbi
@@ -18,6 +22,7 @@ C:\projects\switchTouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\ft5436.pbi
 C:\projects\switchTouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\GPIO.pbi
 C:\projects\switchTouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\heap_4.pbi
 C:\projects\switchTouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\HW_Init.pbi
+C:\projects\switchTouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\icon04.pbi
 C:\projects\switchTouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\Kerning_verdana_10_4bpp.pbi
 C:\projects\switchTouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\Kerning_verdana_20_4bpp.pbi
 C:\projects\switchTouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\Kerning_verdana_40_4bpp.pbi
@@ -74,3 +79,6 @@ C:\projects\switchTouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\Texts.pbi
 C:\projects\switchTouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\timers.pbi
 C:\projects\switchTouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\ts3510.pbi
 C:\projects\switchTouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\TypedTextDatabase.pbi
+C:\projects\switchTouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\window_grey.pbi
+C:\projects\switchTouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\ZonesView.pbi
+C:\projects\switchTouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\ZonesViewBase.pbi

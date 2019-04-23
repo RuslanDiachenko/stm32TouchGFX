@@ -1,2 +1,8 @@
 Converting images
+Compiling gui/src/containers/CustomContainer.cpp
+Compiling gui/src/main_screen/MainPresenter.cpp
+Compiling gui/src/main_screen/MainView.cpp
+Compiling generated/gui_generated/src/common/FrontendApplicationBase.cpp
+Compiling generated/gui_generated/src/main_screen/MainViewBase.cpp
+Compiling simulator/main.cpp
 Linking build/bin/simulator.exe

@@ -19,13 +19,14 @@
             "Moveable": false
           },
           {
-            "Pressed": "__designer\\blue_buttons_round_edge_icon_button_pressed.png",
-            "Released": "__designer\\blue_buttons_round_edge_icon_button.png",
+            "Pressed": "__designer\\blue_buttons_round_edge_small_pressed.png",
+            "Released": "__designer\\blue_buttons_round_edge_small.png",
             "Alpha": 255,
+            "Style": "Style4",
             "Name": "button1",
-            "X": 16,
-            "Y": 76,
-            "Width": 60,
+            "X": 51,
+            "Y": 27,
+            "Width": 170,
             "Height": 60,
             "Type": "Button",
             "Visible": true,
@@ -35,15 +36,93 @@
             "Moveable": false
           },
           {
-            "Pressed": "__designer\\blue_buttons_round_icon_button_pressed.png",
-            "Released": "__designer\\blue_buttons_round_icon_button.png",
+            "CustomContainerDefinitionName": "ZoneContainer",
+            "Name": "zoneContainer1",
+            "X": 9,
+            "Y": 502,
+            "Width": 255,
+            "Height": 358,
+            "Type": "CustomContainerInstance",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "button1",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "X": 9,
+              "Y": 30,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 200,
+              "ActionComponent": "zoneContainer1",
+              "Type": "ActionMove"
+            }
+          },
+          {
+            "InteractionName": "Interaction2",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "button1",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "Type": "ActionNone"
+            }
+          }
+        ],
+        "Name": "Main",
+        "OverrideDefaultBufferSize": false,
+        "CanvasBufferSize": 0
+      }
+    ],
+    "CustomContainerDefinitions": [
+      {
+        "Components": [
+          {
+            "RelativeFilename": "window_grey.png",
             "Alpha": 255,
-            "Name": "button2",
-            "X": 16,
-            "Y": 159,
-            "Width": 60,
-            "Height": 60,
-            "Type": "Button",
+            "Name": "window_grey1",
+            "X": 0,
+            "Y": 0,
+            "Width": 255,
+            "Height": 358,
+            "Type": "Image",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "PaddingBefore": 0,
+            "PaddingAfter": 0,
+            "Snapping": false,
+            "IsHorizontal": false,
+            "IsCircular": false,
+            "ItemTemplateName": "ZoneNameContainer",
+            "NumberofItems": 10,
+            "InitialElement": 0,
+            "ItemMargin": 0,
+            "Easing": "Back",
+            "EasingOption": "Out",
+            "SwipeAcceleration": 1.0,
+            "DragAcceleration": 1.0,
+            "Name": "scrollList1",
+            "X": 13,
+            "Y": 33,
+            "Width": 228,
+            "Height": 292,
+            "Type": "ScrollList",
             "Visible": true,
             "Draggable": false,
             "Clickable": false,
@@ -52,12 +131,104 @@
           }
         ],
         "Interactions": [],
-        "Name": "Main",
-        "OverrideDefaultBufferSize": false,
-        "CanvasBufferSize": 0
+        "Name": "ZoneContainer",
+        "X": 9,
+        "Y": 0,
+        "Width": 255,
+        "Height": 358,
+        "Type": "CustomContainerDefinition",
+        "Visible": true,
+        "Draggable": false,
+        "Clickable": false,
+        "Fadeable": false,
+        "Moveable": false
+      },
+      {
+        "Components": [
+          {
+            "InitialStatePressed": false,
+            "Pressed": "__designer\\blue_togglebars_toggle_small_button_on.png",
+            "Released": "__designer\\blue_togglebars_toggle_small_button_off.png",
+            "Alpha": 255,
+            "Style": "Style6",
+            "Name": "zoneToggleButton",
+            "X": 127,
+            "Y": 6,
+            "Width": 96,
+            "Height": 38,
+            "Type": "ToggleButton",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId1",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId2",
+              "UseBuffer": true,
+              "BufferSize": 3
+            },
+            "Name": "zoneNameArea",
+            "X": 22,
+            "Y": 13,
+            "Width": 80,
+            "Height": 25,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "zoneToggleButton",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "zoneButtonIsClocked",
+              "Type": "ActionCustom"
+            }
+          }
+        ],
+        "Name": "ZoneNameContainer",
+        "X": 22,
+        "Y": 13,
+        "Width": 228,
+        "Height": 50,
+        "Type": "CustomContainerDefinition",
+        "Visible": true,
+        "Draggable": false,
+        "Clickable": false,
+        "Fadeable": false,
+        "Moveable": false
       }
     ],
-    "CustomContainerDefinitions": [],
+    "TextEntries": [
+      {
+        "TextEntryId": "SingleUseId1",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId2",
+        "IsResource": false
+      }
+    ],
     "Name": "MyApplication",
     "Resolution": {
       "Width": 272,

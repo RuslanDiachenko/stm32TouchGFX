@@ -19,13 +19,14 @@
             "Moveable": false
           },
           {
-            "Pressed": "__designer\\blue_buttons_round_edge_icon_button_pressed.png",
-            "Released": "__designer\\blue_buttons_round_edge_icon_button.png",
+            "Pressed": "__designer\\blue_buttons_round_edge_small_pressed.png",
+            "Released": "__designer\\blue_buttons_round_edge_small.png",
             "Alpha": 255,
+            "Style": "Style4",
             "Name": "button1",
-            "X": 16,
-            "Y": 76,
-            "Width": 60,
+            "X": 58,
+            "Y": 136,
+            "Width": 170,
             "Height": 60,
             "Type": "Button",
             "Visible": true,
@@ -35,12 +36,69 @@
             "Moveable": false
           },
           {
-            "Pressed": "__designer\\blue_buttons_round_icon_button_pressed.png",
-            "Released": "__designer\\blue_buttons_round_icon_button.png",
+            "CustomContainerDefinitionName": "CustomContainer",
+            "Name": "customContainer",
+            "X": 9,
+            "Y": 487,
+            "Width": 255,
+            "Height": 358,
+            "Type": "CustomContainerInstance",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "button1",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "X": 9,
+              "Y": 20,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 200,
+              "ActionComponent": "customContainer",
+              "Type": "ActionMove"
+            }
+          }
+        ],
+        "Name": "Main",
+        "OverrideDefaultBufferSize": false,
+        "CanvasBufferSize": 0
+      }
+    ],
+    "CustomContainerDefinitions": [
+      {
+        "Components": [
+          {
+            "RelativeFilename": "window_grey.png",
             "Alpha": 255,
-            "Name": "button2",
-            "X": 16,
-            "Y": 159,
+            "Name": "window_grey1",
+            "X": 0,
+            "Y": 0,
+            "Width": 255,
+            "Height": 358,
+            "Type": "Image",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "__designer\\blue_buttons_round_edge_icon_button_pressed.png",
+            "Released": "__designer\\blue_buttons_round_edge_icon_button.png",
+            "Alpha": 255,
+            "Name": "closeButton",
+            "X": 178,
+            "Y": 11,
             "Width": 60,
             "Height": 60,
             "Type": "Button",
@@ -51,13 +109,33 @@
             "Moveable": false
           }
         ],
-        "Interactions": [],
-        "Name": "Main",
-        "OverrideDefaultBufferSize": false,
-        "CanvasBufferSize": 0
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "closeButton",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "closeButtonCallback",
+              "Type": "ActionCustom"
+            }
+          }
+        ],
+        "Name": "CustomContainer",
+        "X": 0,
+        "Y": 0,
+        "Width": 255,
+        "Height": 358,
+        "Type": "CustomContainerDefinition",
+        "Visible": true,
+        "Draggable": false,
+        "Clickable": false,
+        "Fadeable": false,
+        "Moveable": false
       }
     ],
-    "CustomContainerDefinitions": [],
     "Name": "MyApplication",
     "Resolution": {
       "Width": 272,

@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V8.32.3.193/W32 for ARM                  23/Apr/2019  16:28:38
+# IAR ELF Linker V8.32.3.193/W32 for ARM                  23/Apr/2019  16:45:08
 # Copyright 2007-2019 IAR Systems AB.
 #
 #    Output file  =  
@@ -8,7 +8,7 @@
 #    Map file     =  
 #        C:\projects\switchTouchGFX\switch_touchgfx\EWARM\switch_touchgfx\List\switch_touchgfx.map
 #    Command line =  
-#        -f C:\Users\user\AppData\Local\Temp\EWC0E6.tmp
+#        -f C:\Users\user\AppData\Local\Temp\EWDC95.tmp
 #        (C:\projects\switchTouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\ApplicationFontProvider.o
 #        C:\projects\switchTouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\BitmapDatabase.o
 #        C:\projects\switchTouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\blue_buttons_round_edge_icon_button.o

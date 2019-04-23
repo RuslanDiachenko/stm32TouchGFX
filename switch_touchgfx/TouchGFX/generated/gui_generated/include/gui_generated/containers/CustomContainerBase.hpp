@@ -8,6 +8,8 @@
 #include <touchgfx/containers/Container.hpp>
 #include <touchgfx/widgets/Image.hpp>
 #include <touchgfx/widgets/Button.hpp>
+#include <touchgfx/containers/scrollers/ScrollList.hpp>
+#include <gui/containers/scrollItem.hpp>
 
 class CustomContainerBase : public touchgfx::Container
 {
@@ -16,6 +18,11 @@ public:
     virtual ~CustomContainerBase() {}
 
     virtual void initialize();
+
+    virtual void scrollList1UpdateItem(scrollItem& item, int16_t itemIndex)
+    {
+        // Override and implement this function in CustomContainer
+    }
 
     /*
      * Custom Action Handlers
@@ -35,6 +42,9 @@ protected:
      */
     touchgfx::Image window_grey1;
     touchgfx::Button closeButton;
+    touchgfx::ScrollList scrollList1;
+    touchgfx::DrawableListItems<scrollItem, 6> scrollList1ListItems;
+
 
 private:
 
@@ -42,11 +52,13 @@ private:
      * Callback Handler Declarations
      */
     void buttonCallbackHandler(const touchgfx::AbstractButton& src);
+    void updateItemCallbackHandler(DrawableListItemsInterface* items, int16_t containerIndex, int16_t itemIndex);
 
     /*
      * Callback Declarations
      */
     touchgfx::Callback<CustomContainerBase, const touchgfx::AbstractButton&> buttonCallback;
+    touchgfx::Callback<CustomContainerBase, DrawableListItemsInterface*, int16_t, int16_t> updateItemCallback;
 
 };
 

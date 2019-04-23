@@ -1280,6 +1280,9 @@
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\gui\src\containers\CustomContainer.cpp</name>
       </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\gui\src\containers\scrollItem.cpp</name>
+      </file>
     </group>
     <group>
       <name>main_screen</name>
@@ -1348,6 +1351,9 @@
         <file>
           <name>$PROJ_DIR$\..\TouchGFX\generated\gui_generated\src\containers\CustomContainerBase.cpp</name>
         </file>
+        <file>
+          <name>$PROJ_DIR$\..\TouchGFX\generated\gui_generated\src\containers\scrollItemBase.cpp</name>
+        </file>
       </group>
       <group>
         <name>main_screen</name>
@@ -1385,6 +1391,9 @@
     </group>
     <group>
       <name>texts</name>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\texts\src\LanguageGb.cpp</name>
+      </file>
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\texts\src\Texts.cpp</name>
       </file>

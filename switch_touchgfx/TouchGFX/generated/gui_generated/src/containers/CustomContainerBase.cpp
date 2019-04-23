@@ -5,7 +5,8 @@
 #include "BitmapDatabase.hpp"
 
 CustomContainerBase::CustomContainerBase() :
-    buttonCallback(this, &CustomContainerBase::buttonCallbackHandler)
+    buttonCallback(this, &CustomContainerBase::buttonCallbackHandler),
+    updateItemCallback(this, &CustomContainerBase::updateItemCallbackHandler)
 {
     setWidth(255);
     setHeight(358);
@@ -17,13 +18,30 @@ CustomContainerBase::CustomContainerBase() :
     closeButton.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID));
     closeButton.setAction(buttonCallback);
 
+    scrollList1.setPosition(2, 101, 250, 239);
+    scrollList1.setHorizontal(false);
+    scrollList1.setCircular(false);
+    scrollList1.setEasingEquation(EasingEquations::backEaseOut);
+    scrollList1.setSwipeAcceleration(10);
+    scrollList1.setDragAcceleration(10);
+    scrollList1.setNumberOfItems(1);
+    scrollList1.setPadding(0, 0);
+    scrollList1.setSnapping(false);
+    scrollList1.setDrawableSize(51, 0);
+    scrollList1.setDrawables(scrollList1ListItems, updateItemCallback);
+
     add(window_grey1);
     add(closeButton);
+    add(scrollList1);
 }
 
 void CustomContainerBase::initialize()
 {
-	
+    scrollList1.initialize();
+    for (int i = 0; i < scrollList1ListItems.getNumberOfDrawables(); i++)
+    {
+        scrollList1ListItems[i].initialize();
+    }	
 }
 
 void CustomContainerBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
@@ -34,5 +52,15 @@ void CustomContainerBase::buttonCallbackHandler(const touchgfx::AbstractButton& 
         //When closeButton clicked call virtual function
         //Call closeButtonCallback
         closeButtonCallback();
+    }
+}
+
+void CustomContainerBase::updateItemCallbackHandler(DrawableListItemsInterface* items, int16_t containerIndex, int16_t itemIndex)
+{
+    if (items == &scrollList1ListItems)
+    {
+        Drawable* d = items->getDrawable(containerIndex);
+        scrollItem* cc = (scrollItem*)d;
+        scrollList1UpdateItem(*cc, itemIndex);
     }
 }

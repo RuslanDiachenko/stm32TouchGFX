@@ -1278,10 +1278,10 @@
     <group>
       <name>containers</name>
       <file>
-        <name>$PROJ_DIR$\..\TouchGFX\gui\src\containers\CustomContainer.cpp</name>
+        <name>$PROJ_DIR$\..\TouchGFX\gui\src\containers\AllZonesContainer.cpp</name>
       </file>
       <file>
-        <name>$PROJ_DIR$\..\TouchGFX\gui\src\containers\scrollItem.cpp</name>
+        <name>$PROJ_DIR$\..\TouchGFX\gui\src\containers\SingleZoneContainer.cpp</name>
       </file>
     </group>
     <group>
@@ -1349,10 +1349,10 @@
       <group>
         <name>containers</name>
         <file>
-          <name>$PROJ_DIR$\..\TouchGFX\generated\gui_generated\src\containers\CustomContainerBase.cpp</name>
+          <name>$PROJ_DIR$\..\TouchGFX\generated\gui_generated\src\containers\AllZonesContainerBase.cpp</name>
         </file>
         <file>
-          <name>$PROJ_DIR$\..\TouchGFX\generated\gui_generated\src\containers\scrollItemBase.cpp</name>
+          <name>$PROJ_DIR$\..\TouchGFX\generated\gui_generated\src\containers\SingleZoneContainerBase.cpp</name>
         </file>
       </group>
       <group>

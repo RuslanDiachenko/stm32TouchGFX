@@ -1,0 +1,7 @@
+{
+    "version": 1,
+    "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.2\\",
+    "project": "C:\\Data\\Work\\Git\\sage\\stm32TouchGFX\\switch_touchgfx\\EWARM\\switch_touchgfx.ewp",
+    "config": "switch_touchgfx",
+    "parallel" : true
+}

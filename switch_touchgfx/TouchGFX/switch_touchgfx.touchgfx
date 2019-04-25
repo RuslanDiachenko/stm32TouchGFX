@@ -6,7 +6,7 @@
           {
             "RelativeFilename": "main_screen.png",
             "Alpha": 255,
-            "Name": "image",
+            "Name": "background",
             "X": 0,
             "Y": 0,
             "Width": 272,
@@ -23,7 +23,7 @@
             "Released": "__designer\\blue_buttons_round_edge_small.png",
             "Alpha": 255,
             "Style": "Style4",
-            "Name": "button1",
+            "Name": "openAllZonesContainerButton",
             "X": 58,
             "Y": 136,
             "Width": 170,
@@ -36,8 +36,8 @@
             "Moveable": false
           },
           {
-            "CustomContainerDefinitionName": "CustomContainer",
-            "Name": "customContainer",
+            "CustomContainerDefinitionName": "AllZonesContainer",
+            "Name": "allZonesContainer",
             "X": 9,
             "Y": 487,
             "Width": 255,
@@ -52,10 +52,10 @@
         ],
         "Interactions": [
           {
-            "InteractionName": "Interaction1",
+            "InteractionName": "OpenAllZonesContainerClicked",
             "HasCompletedTrigger": false,
             "Trigger": {
-              "TriggerComponent": "button1",
+              "TriggerComponent": "openAllZonesContainerButton",
               "Type": "TriggerClicked"
             },
             "Action": {
@@ -64,7 +64,7 @@
               "Easing": "Linear",
               "EasingOption": "In",
               "Duration": 200,
-              "ActionComponent": "customContainer",
+              "ActionComponent": "allZonesContainer",
               "Type": "ActionMove"
             }
           }
@@ -80,7 +80,7 @@
           {
             "RelativeFilename": "window_grey.png",
             "Alpha": 255,
-            "Name": "window_grey1",
+            "Name": "background",
             "X": 0,
             "Y": 0,
             "Width": 255,
@@ -109,25 +109,39 @@
             "Moveable": false
           },
           {
-            "PaddingBefore": 0,
-            "PaddingAfter": 0,
-            "Snapping": false,
-            "IsHorizontal": false,
-            "IsCircular": false,
-            "ItemTemplateName": "scrollItem",
-            "NumberofItems": 1,
-            "InitialElement": 0,
-            "ItemMargin": 0,
-            "Easing": "Back",
-            "EasingOption": "Out",
-            "SwipeAcceleration": 1.0,
-            "DragAcceleration": 1.0,
-            "Name": "scrollList1",
-            "X": 2,
-            "Y": 101,
-            "Width": 250,
-            "Height": 239,
-            "Type": "ScrollList",
+            "Components": [],
+            "HorizontalScrollEnabled": false,
+            "VerticalScrollEnabled": true,
+            "ScrollbarsVisible": false,
+            "ScrollbarsVisibleOnPressed": false,
+            "ScrollbarsColor": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "ScrollbarsAlpha": 255,
+            "Name": "scrollableAllZonesContainer",
+            "X": 6,
+            "Y": 71,
+            "Width": 244,
+            "Height": 271,
+            "Type": "ScrollableContainer",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "__designer\\blue_buttons_round_edge_icon_button_pressed.png",
+            "Released": "__designer\\blue_buttons_round_edge_icon_button.png",
+            "Alpha": 255,
+            "Name": "resetButton",
+            "X": 91,
+            "Y": 11,
+            "Width": 60,
+            "Height": 60,
+            "Type": "Button",
             "Visible": true,
             "Draggable": false,
             "Clickable": false,
@@ -137,21 +151,33 @@
         ],
         "Interactions": [
           {
-            "InteractionName": "Interaction1",
+            "InteractionName": "CloseButtonClicked",
             "HasCompletedTrigger": false,
             "Trigger": {
               "TriggerComponent": "closeButton",
               "Type": "TriggerClicked"
             },
             "Action": {
-              "FunctionName": "closeButtonCallback",
+              "FunctionName": "CloseButtonClicked",
+              "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "ResetButtonClicked",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "resetButton",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "ResetButtonClicked",
               "Type": "ActionCustom"
             }
           }
         ],
-        "Name": "CustomContainer",
-        "X": 0,
-        "Y": 0,
+        "Name": "AllZonesContainer",
+        "X": 8,
+        "Y": 20,
         "Width": 255,
         "Height": 358,
         "Type": "CustomContainerDefinition",
@@ -174,10 +200,15 @@
             "Alpha": 255,
             "AutoSize": true,
             "LineSpacing": 0,
-            "Name": "scrollItemText",
-            "X": 47,
+            "Wildcard1": {
+              "TextId": "SingleUseId2",
+              "UseBuffer": true,
+              "BufferSize": 20
+            },
+            "Name": "zoneNameText",
+            "X": 69,
             "Y": 13,
-            "Width": 141,
+            "Width": 113,
             "Height": 25,
             "Type": "TextArea",
             "Visible": true,
@@ -185,14 +216,247 @@
             "Clickable": false,
             "Fadeable": false,
             "Moveable": false
+          },
+          {
+            "InitialStatePressed": false,
+            "Pressed": "__designer\\blue_buttons_round_edge_icon_button_pressed.png",
+            "Released": "__designer\\blue_buttons_round_edge_icon_button.png",
+            "Alpha": 255,
+            "Name": "zoneModeButton0",
+            "X": 5,
+            "Y": 47,
+            "Width": 60,
+            "Height": 60,
+            "Type": "ToggleButton",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "InitialStatePressed": false,
+            "Pressed": "__designer\\blue_buttons_round_edge_icon_button_pressed.png",
+            "Released": "__designer\\blue_buttons_round_edge_icon_button.png",
+            "Alpha": 255,
+            "Name": "zoneModeButton1",
+            "X": 65,
+            "Y": 47,
+            "Width": 60,
+            "Height": 60,
+            "Type": "ToggleButton",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "InitialStatePressed": false,
+            "Pressed": "__designer\\blue_buttons_round_edge_icon_button_pressed.png",
+            "Released": "__designer\\blue_buttons_round_edge_icon_button.png",
+            "Alpha": 255,
+            "Name": "zoneModeButton2",
+            "X": 125,
+            "Y": 47,
+            "Width": 60,
+            "Height": 60,
+            "Type": "ToggleButton",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "InitialStatePressed": false,
+            "Pressed": "__designer\\blue_buttons_round_edge_icon_button_pressed.png",
+            "Released": "__designer\\blue_buttons_round_edge_icon_button.png",
+            "Alpha": 255,
+            "Name": "zoneModeButton3",
+            "X": 185,
+            "Y": 47,
+            "Width": 60,
+            "Height": 60,
+            "Type": "ToggleButton",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "InitialStatePressed": false,
+            "Pressed": "__designer\\blue_buttons_round_edge_icon_button_pressed.png",
+            "Released": "__designer\\blue_buttons_round_edge_icon_button.png",
+            "Alpha": 255,
+            "Name": "zoneModeButton4",
+            "X": 5,
+            "Y": 108,
+            "Width": 60,
+            "Height": 60,
+            "Type": "ToggleButton",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "InitialStatePressed": false,
+            "Pressed": "__designer\\blue_buttons_round_edge_icon_button_pressed.png",
+            "Released": "__designer\\blue_buttons_round_edge_icon_button.png",
+            "Alpha": 255,
+            "Name": "zoneModeButton5",
+            "X": 65,
+            "Y": 108,
+            "Width": 60,
+            "Height": 60,
+            "Type": "ToggleButton",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "InitialStatePressed": false,
+            "Pressed": "__designer\\blue_buttons_round_edge_icon_button_pressed.png",
+            "Released": "__designer\\blue_buttons_round_edge_icon_button.png",
+            "Alpha": 255,
+            "Name": "zoneModeButton6",
+            "X": 125,
+            "Y": 108,
+            "Width": 60,
+            "Height": 60,
+            "Type": "ToggleButton",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "InitialStatePressed": false,
+            "Pressed": "__designer\\blue_buttons_round_edge_icon_button_pressed.png",
+            "Released": "__designer\\blue_buttons_round_edge_icon_button.png",
+            "Alpha": 255,
+            "Name": "zoneModeButton7",
+            "X": 185,
+            "Y": 108,
+            "Width": 60,
+            "Height": 60,
+            "Type": "ToggleButton",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
           }
         ],
-        "Interactions": [],
-        "Name": "scrollItem",
-        "X": 11,
-        "Y": 23,
+        "Interactions": [
+          {
+            "InteractionName": "ZoneModeButton1Clicked",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "zoneModeButton1",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "ZoneModeButton1Clicked",
+              "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "ZoneModeButton2Clicked",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "zoneModeButton2",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "ZoneModeButton2Clicked",
+              "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "ZoneModeButton3Clicked",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "zoneModeButton3",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "ZoneModeButton3Clicked",
+              "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "ZoneModeButton4Clicked",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "zoneModeButton4",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "ZoneModeButton4Clicked",
+              "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "ZoneModeButton0Clicked",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "zoneModeButton0",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "ZoneModeButton0Clicked",
+              "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "ZoneModeButton5Clicked",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "zoneModeButton5",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "ZoneModeButton5Clicked",
+              "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "ZoneModeButton6Clicked",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "zoneModeButton6",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "ZoneModeButton6Clicked",
+              "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "ZoneModeButton7Clicked",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "zoneModeButton7",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "ZoneModeButton7Clicked",
+              "Type": "ActionCustom"
+            }
+          }
+        ],
+        "Name": "SingleZoneContainer",
+        "X": 10,
+        "Y": 20,
         "Width": 250,
-        "Height": 51,
+        "Height": 180,
         "Type": "CustomContainerDefinition",
         "Visible": true,
         "Draggable": false,
@@ -204,6 +468,10 @@
     "TextEntries": [
       {
         "TextEntryId": "SingleUseId1",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId2",
         "IsResource": false
       }
     ],

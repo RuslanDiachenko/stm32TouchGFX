@@ -7,15 +7,16 @@
 class MainView : public MainViewBase
 {
 public:
+
     MainView();
     virtual ~MainView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+
 protected:
-  
-  touchgfx::Callback<MainView, void> closeContainer;
-  
-  void closeContainerOnView(void);
+    void CloseAllZonesContainerHandler(void);
+
+    touchgfx::Callback<MainView, void> closeAllZonesContainer;
 };
 
 #endif // MAIN_VIEW_HPP

@@ -7,33 +7,33 @@
 MainViewBase::MainViewBase() :
     buttonCallback(this, &MainViewBase::buttonCallbackHandler)
 {
-    image.setXY(0, 0);
-    image.setBitmap(Bitmap(BITMAP_MAIN_SCREEN_ID));
+    background.setXY(0, 0);
+    background.setBitmap(Bitmap(BITMAP_MAIN_SCREEN_ID));
 
-    button1.setXY(58, 136);
-    button1.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
-    button1.setAction(buttonCallback);
+    openAllZonesContainerButton.setXY(58, 136);
+    openAllZonesContainerButton.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
+    openAllZonesContainerButton.setAction(buttonCallback);
 
-    customContainer.setXY(9, 487);
+    allZonesContainer.setXY(9, 487);
 
-    add(image);
-    add(button1);
-    add(customContainer);
+    add(background);
+    add(openAllZonesContainerButton);
+    add(allZonesContainer);
 }
 
 void MainViewBase::setupScreen()
 {
-    customContainer.initialize();
+    allZonesContainer.initialize();
 }
 
 void MainViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
 {
-    if (&src == &button1)
+    if (&src == &openAllZonesContainerButton)
     {
-        //Interaction1
-        //When button1 clicked move customContainer
-        //Move customContainer to x:9, y:20 with LinearIn easing in 200 ms (12 Ticks)
-        customContainer.clearMoveAnimationEndedAction();
-        customContainer.startMoveAnimation(9, 20, 12, EasingEquations::linearEaseIn, EasingEquations::linearEaseIn);
+        //OpenAllZonesContainerClicked
+        //When openAllZonesContainerButton clicked move allZonesContainer
+        //Move allZonesContainer to x:9, y:20 with LinearIn easing in 200 ms (12 Ticks)
+        allZonesContainer.clearMoveAnimationEndedAction();
+        allZonesContainer.startMoveAnimation(9, 20, 12, EasingEquations::linearEaseIn, EasingEquations::linearEaseIn);
     }
 }

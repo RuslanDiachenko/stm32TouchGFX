@@ -9,7 +9,7 @@
 #include <gui/main_screen/MainPresenter.hpp>
 #include <touchgfx/widgets/Image.hpp>
 #include <touchgfx/widgets/Button.hpp>
-#include <gui/containers/CustomContainer.hpp>
+#include <gui/containers/AllZonesContainer.hpp>
 #include <touchgfx/EasingEquations.hpp>
 #include <touchgfx/mixins/MoveAnimator.hpp>
 
@@ -29,9 +29,9 @@ protected:
     /*
      * Member Declarations
      */
-    touchgfx::Image image;
-    touchgfx::Button button1;
-    touchgfx::MoveAnimator< CustomContainer > customContainer;
+    touchgfx::Image background;
+    touchgfx::Button openAllZonesContainerButton;
+    touchgfx::MoveAnimator< AllZonesContainer > allZonesContainer;
 
 private:
 

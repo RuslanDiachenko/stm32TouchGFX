@@ -109,8 +109,7 @@ int main(void)
   MX_I2C1_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-  //HAL_UART_Transmit(&huart2, (uint8_t *)"Hello world!\r\n", sizeof("Hello world!\r\n"), 100);
-  printf("Hello world!\r\n");
+
   /* USER CODE END 2 */
 
 /* Initialise the graphical hardware */

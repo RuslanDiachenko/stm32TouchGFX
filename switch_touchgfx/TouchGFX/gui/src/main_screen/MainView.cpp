@@ -1,10 +1,9 @@
 #include <gui/main_screen/MainView.hpp>
 
 MainView::MainView() :
-  closeContainer(this, &MainView::closeContainerOnView)
+    closeAllZonesContainer(this, &MainView::CloseAllZonesContainerHandler)
 {
-    customContainer.setCloseContainerOnViewCallback(closeContainer);
-  
+    allZonesContainer.SetCloseContainerCallback(closeAllZonesContainer);
 }
 
 void MainView::setupScreen()
@@ -17,8 +16,8 @@ void MainView::tearDownScreen()
     MainViewBase::tearDownScreen();
 }
 
-void MainView::closeContainerOnView(void)
+void MainView::CloseAllZonesContainerHandler(void)
 {
-  customContainer.clearMoveAnimationEndedAction();
-  customContainer.startMoveAnimation(9, 487, 12, EasingEquations::linearEaseIn, EasingEquations::linearEaseIn);
+    allZonesContainer.clearMoveAnimationEndedAction();
+    allZonesContainer.startMoveAnimation(9, 487, 12, EasingEquations::linearEaseIn, EasingEquations::linearEaseIn);
 }

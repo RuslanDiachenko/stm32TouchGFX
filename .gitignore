@@ -2,4 +2,4 @@ switch_touchgfx/EWARM/switch_touchgfx/Obj/*
 
 switch_touchgfx/TouchGFX/build/*
 
-.vscode/*
+switch_touchgfx/.vscode/*

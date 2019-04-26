@@ -91,6 +91,21 @@ int putSunMsg(main_screen_state_t state)
   
   return (int) status;
 }
+
+__ATTRIBUTES size_t __write(int in, const unsigned char *str, size_t size)
+{
+  HAL_StatusTypeDef status = HAL_OK;
+
+  status = HAL_UART_Transmit(&huart2, (uint8_t *) str, size, 100);
+  if (status == HAL_OK)
+  {
+    return size;
+  }
+  else
+  {
+    return 0;
+  }
+}
 /* USER CODE END 0 */
 
 /**
@@ -126,7 +141,7 @@ int main(void)
   MX_I2C1_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-
+  printf("Hello world!\r\n");
   /* USER CODE END 2 */
 
 /* Initialise the graphical hardware */

@@ -4,7 +4,37 @@
 Model::Model() : modelListener(0)
 {
 }
+#ifndef SIMULATOR
+#include "cmsis_os.h"
+#include "main.h"
+
+extern osMailQId sunMsgBox_g;
+
+static osEvent evt;
+main_screen_state_t *mail;
 
 void Model::tick()
 {
+  static unsigned int counter = 0;
+  if (counter >= 20)
+  {
+    counter = 0;
+    evt = osMailGet(sunMsgBox_g, 0);
+    if (evt.status == osEventMail)
+    {
+      mail = (main_screen_state_t *) evt.value.p;
+      if (mail)
+      {
+        modelListener->notifySunStateChanged(mail->sunState, mail->hour, mail->minute, mail->hF, mail->dayOfWeek);
+        osMailFree(sunMsgBox_g, mail);
+      }
+    }
+  }
+  counter++;
 }
+#else
+void Model::tick()
+{
+    
+}
+#endif

@@ -13,6 +13,7 @@ public:
     virtual void setupScreen();
     virtual void tearDownScreen();
 
+    void setSunState(int newSunState, int hour, int minute, int hF, int dow);
 protected:
     void CloseAllZonesContainerHandler(void);
 

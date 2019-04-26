@@ -52,7 +52,7 @@ UART_HandleTypeDef huart2;
 
 osThreadId defaultTaskHandle;
 /* USER CODE BEGIN PV */
-
+osThreadId uiTaskHandle;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -68,12 +68,29 @@ extern void GRAPHICS_MainTask(void);
 void StartDefaultTask(void const * argument);
 
 /* USER CODE BEGIN PFP */
-
+void StartUITask(void const *argument);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
+osMailQDef(sunMsgBox_g, 5, main_screen_state_t);
+osMailQId sunMsgBox_g;
+
+
+int putSunMsg(main_screen_state_t state)
+{
+  osStatus status = osOK;
+  main_screen_state_t *mail = 0;
+  
+  mail = (main_screen_state_t *) osMailAlloc(sunMsgBox_g, 100);
+  
+  *mail = state;
+  
+  status = osMailPut(sunMsgBox_g, mail);
+  
+  return (int) status;
+}
 /* USER CODE END 0 */
 
 /**
@@ -118,8 +135,6 @@ int main(void)
   /* Initialise the graphical stack engine */
   GRAPHICS_Init();
       
-  
-
   /* USER CODE BEGIN RTOS_MUTEX */
   /* add mutexes, ... */
   /* USER CODE END RTOS_MUTEX */
@@ -143,6 +158,8 @@ int main(void)
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
+  osThreadDef(uiTask, StartUITask, osPriorityNormal, 0, 128);
+  uiTaskHandle = osThreadCreate(osThread(uiTask), NULL);
   /* USER CODE END RTOS_THREADS */
 
   /* Start scheduler */
@@ -159,6 +176,55 @@ int main(void)
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
+}
+
+/* USER CODE BEGIN Header_StartDefaultTask */
+/**
+  * @brief  Function implementing the defaultTask thread.
+  * @param  argument: Not used 
+  * @retval None
+  */
+/* USER CODE END Header_StartDefaultTask */
+void StartDefaultTask(void const * argument)
+{
+
+/* Graphic application */  
+  GRAPHICS_MainTask();
+
+  /* USER CODE BEGIN 5 */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END 5 */ 
+}
+
+void StartUITask(void const *argument)
+{
+  sunMsgBox_g = osMailCreate(osMailQ(sunMsgBox_g), NULL);
+  main_screen_state_t state = {0};
+  for (;;)
+  {
+    state.sunState++;
+    state.hF++;
+    state.dayOfWeek++;
+    state.hour++;
+    state.minute++;
+    
+    if (state.sunState >= 9)
+      state.sunState = 0;
+    if (state.hF)
+      state.hF = 0;
+    if (state.dayOfWeek >= 7)
+      state.dayOfWeek = 0;
+    if (state.hour >= 12)
+      state.hour = 0;
+    if (state.minute >= 60)
+      state.minute = 0;
+    osDelay(1000);
+    putSunMsg(state);
+  }
 }
 
 /**
@@ -378,28 +444,6 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 
 /* USER CODE END 4 */
-
-/* USER CODE BEGIN Header_StartDefaultTask */
-/**
-  * @brief  Function implementing the defaultTask thread.
-  * @param  argument: Not used 
-  * @retval None
-  */
-/* USER CODE END Header_StartDefaultTask */
-void StartDefaultTask(void const * argument)
-{
-
-/* Graphic application */  
-  GRAPHICS_MainTask();
-
-  /* USER CODE BEGIN 5 */
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
-  }
-  /* USER CODE END 5 */ 
-}
 
 /**
   * @brief  This function is executed in case of error occurrence.

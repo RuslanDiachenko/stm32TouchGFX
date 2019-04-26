@@ -2,7 +2,7 @@
 
 "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.2\arm\bin\armstlink2.dll" 
 
-"C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Exe\switch_touchgfx.out" 
+"C:\projects\switchTouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Exe\switch_touchgfx.out" 
 
 --plugin="C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.2\arm\bin\armbat.dll" 
 

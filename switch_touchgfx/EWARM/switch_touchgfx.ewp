@@ -1380,10 +1380,16 @@
         </file>
       </group>
       <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\background_image.cpp</name>
+      </file>
+      <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\BitmapDatabase.cpp</name>
       </file>
       <file>
-        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\main_screen.cpp</name>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\combinedGraphicNew.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\sun-icon.cpp</name>
       </file>
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\window_grey.cpp</name>

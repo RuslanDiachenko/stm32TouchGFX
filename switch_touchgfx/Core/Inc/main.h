@@ -37,7 +37,16 @@ extern "C" {
 
 /* Exported types ------------------------------------------------------------*/
 /* USER CODE BEGIN ET */
-
+typedef struct
+{ 
+  uint8_t hour;
+  uint8_t minute;
+  uint8_t hF;
+  uint8_t dayOfWeek;
+  uint8_t day;
+  uint8_t month;
+  uint8_t sunState;
+} main_screen_state_t;
 /* USER CODE END ET */
 
 /* Exported constants --------------------------------------------------------*/

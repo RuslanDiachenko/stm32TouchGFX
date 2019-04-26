@@ -3,21 +3,59 @@
 /*********************************************************************************/
 #include <gui_generated/main_screen/MainViewBase.hpp>
 #include "BitmapDatabase.hpp"
+#include <texts/TextKeysAndLanguages.hpp>
+#include <touchgfx/Color.hpp>
 
 MainViewBase::MainViewBase() :
     buttonCallback(this, &MainViewBase::buttonCallbackHandler)
 {
     background.setXY(0, 0);
-    background.setBitmap(Bitmap(BITMAP_MAIN_SCREEN_ID));
+    background.setBitmap(Bitmap(BITMAP_BACKGROUND_IMAGE_ID));
+
+    sunHorizontImg.setXY(1, 333);
+    sunHorizontImg.setBitmap(Bitmap(BITMAP_COMBINEDGRAPHICNEW_ID));
+
+    sunIcon.setXY(23, 374);
+    sunIcon.setBitmap(Bitmap(BITMAP_SUN_ICON_ID));
 
     openAllZonesContainerButton.setXY(58, 136);
     openAllZonesContainerButton.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
     openAllZonesContainerButton.setAction(buttonCallback);
 
+    clockNum.setPosition(31, 51, 121, 49);
+    clockNum.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    clockNum.setLinespacing(0);
+    Unicode::snprintf(clockNumBuffer1, CLOCKNUMBUFFER1_SIZE, "%s", TypedText(T_SINGLEUSEID4).getText());
+    clockNum.setWildcard1(clockNumBuffer1);
+    Unicode::snprintf(clockNumBuffer2, CLOCKNUMBUFFER2_SIZE, "%s", TypedText(T_SINGLEUSEID5).getText());
+    clockNum.setWildcard2(clockNumBuffer2);
+    clockNum.setTypedText(TypedText(T_SINGLEUSEID3));
+
+    clockText.setXY(152, 51);
+    clockText.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    clockText.setLinespacing(0);
+    Unicode::snprintf(clockTextBuffer, CLOCKTEXT_SIZE, "%s", TypedText(T_SINGLEUSEID7).getText());
+    clockText.setWildcard(clockTextBuffer);
+    clockText.resizeToCurrentText();
+    clockText.setTypedText(TypedText(T_SINGLEUSEID6));
+
+    dayOfWeek.setXY(97, 100);
+    dayOfWeek.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    dayOfWeek.setLinespacing(0);
+    Unicode::snprintf(dayOfWeekBuffer, DAYOFWEEK_SIZE, "%s", TypedText(T_SINGLEUSEID9).getText());
+    dayOfWeek.setWildcard(dayOfWeekBuffer);
+    dayOfWeek.resizeToCurrentText();
+    dayOfWeek.setTypedText(TypedText(T_SINGLEUSEID8));
+
     allZonesContainer.setXY(9, 487);
 
     add(background);
+    add(sunHorizontImg);
+    add(sunIcon);
     add(openAllZonesContainerButton);
+    add(clockNum);
+    add(clockText);
+    add(dayOfWeek);
     add(allZonesContainer);
 }
 

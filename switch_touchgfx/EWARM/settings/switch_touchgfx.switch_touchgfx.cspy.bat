@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.2\common\bin\cspybat" -f "C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\settings\switch_touchgfx.switch_touchgfx.general.xcl" --backend -f "C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\settings\switch_touchgfx.switch_touchgfx.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.2\common\bin\cspybat" -f "C:\projects\switchTouchGFX\switch_touchgfx\EWARM\settings\switch_touchgfx.switch_touchgfx.general.xcl" --backend -f "C:\projects\switchTouchGFX\switch_touchgfx\EWARM\settings\switch_touchgfx.switch_touchgfx.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.2\common\bin\cspybat" -f "C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\settings\switch_touchgfx.switch_touchgfx.general.xcl" "--debug_file=%~1" --backend -f "C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\settings\switch_touchgfx.switch_touchgfx.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.2\common\bin\cspybat" -f "C:\projects\switchTouchGFX\switch_touchgfx\EWARM\settings\switch_touchgfx.switch_touchgfx.general.xcl" "--debug_file=%~1" --backend -f "C:\projects\switchTouchGFX\switch_touchgfx\EWARM\settings\switch_touchgfx.switch_touchgfx.driver.xcl" 
 
 @echo off 
 :end

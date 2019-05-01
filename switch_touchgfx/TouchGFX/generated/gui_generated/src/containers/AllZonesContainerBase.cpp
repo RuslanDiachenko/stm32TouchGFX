@@ -4,6 +4,7 @@
 #include <gui_generated/containers/AllZonesContainerBase.hpp>
 #include "BitmapDatabase.hpp"
 #include <touchgfx/Color.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
 
 AllZonesContainerBase::AllZonesContainerBase() :
     buttonCallback(this, &AllZonesContainerBase::buttonCallbackHandler)
@@ -14,7 +15,7 @@ AllZonesContainerBase::AllZonesContainerBase() :
     background.setXY(0, 0);
     background.setBitmap(Bitmap(BITMAP_WINDOW_GREY_ID));
 
-    closeButton.setXY(178, 11);
+    closeButton.setXY(184, 11);
     closeButton.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID));
     closeButton.setAction(buttonCallback);
 
@@ -25,14 +26,20 @@ AllZonesContainerBase::AllZonesContainerBase() :
 
     scrollableAllZonesContainer.setScrollbarsVisible(false);
 
-    resetButton.setXY(91, 11);
-    resetButton.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID));
-    resetButton.setAction(buttonCallback);
+    backButton.setXY(12, 11);
+    backButton.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID));
+    backButton.setAction(buttonCallback);
+
+    containerNameText.setXY(97, 29);
+    containerNameText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    containerNameText.setLinespacing(0);
+    containerNameText.setTypedText(TypedText(T_SINGLEUSEID11));
 
     add(background);
     add(closeButton);
     add(scrollableAllZonesContainer);
-    add(resetButton);
+    add(backButton);
+    add(containerNameText);
 }
 
 void AllZonesContainerBase::initialize()
@@ -49,11 +56,11 @@ void AllZonesContainerBase::buttonCallbackHandler(const touchgfx::AbstractButton
         //Call CloseButtonClicked
         CloseButtonClicked();
     }
-    else if (&src == &resetButton)
+    else if (&src == &backButton)
     {
-        //ResetButtonClicked
-        //When resetButton clicked call virtual function
-        //Call ResetButtonClicked
-        ResetButtonClicked();
+        //BackButtonClicked
+        //When backButton clicked call virtual function
+        //Call BackButtonClicked
+        BackButtonClicked();
     }
 }

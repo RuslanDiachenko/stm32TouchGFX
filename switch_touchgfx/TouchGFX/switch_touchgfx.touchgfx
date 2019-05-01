@@ -49,23 +49,6 @@
             "Moveable": true
           },
           {
-            "Pressed": "__designer\\blue_buttons_round_edge_small_pressed.png",
-            "Released": "__designer\\blue_buttons_round_edge_small.png",
-            "Alpha": 255,
-            "Style": "Style4",
-            "Name": "openAllZonesContainerButton",
-            "X": 58,
-            "Y": 136,
-            "Width": 170,
-            "Height": 60,
-            "Type": "Button",
-            "Visible": true,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
             "TextId": "SingleUseId3",
             "TextRotation": "0",
             "Color": {
@@ -87,8 +70,8 @@
               "BufferSize": 3
             },
             "Name": "clockNum",
-            "X": 31,
-            "Y": 51,
+            "X": 42,
+            "Y": 50,
             "Width": 121,
             "Height": 49,
             "Type": "TextArea",
@@ -115,8 +98,8 @@
               "BufferSize": 3
             },
             "Name": "clockText",
-            "X": 152,
-            "Y": 51,
+            "X": 165,
+            "Y": 50,
             "Width": 64,
             "Height": 49,
             "Type": "TextArea",
@@ -143,9 +126,9 @@
               "BufferSize": 10
             },
             "Name": "dayOfWeek",
-            "X": 97,
+            "X": 86,
             "Y": 100,
-            "Width": 78,
+            "Width": 114,
             "Height": 25,
             "Type": "TextArea",
             "Visible": true,
@@ -155,10 +138,57 @@
             "Moveable": false
           },
           {
+            "Pressed": "__designer\\blue_buttons_round_edge_small.png",
+            "Released": "__designer\\blue_buttons_round_edge_small.png",
+            "Alpha": 255,
+            "Name": "windowSettingsButton",
+            "X": 58,
+            "Y": 217,
+            "Width": 170,
+            "Height": 60,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "RelativeFilename": "background_image.png",
+            "Alpha": 0,
+            "Name": "backgroundBlur",
+            "X": 0,
+            "Y": 0,
+            "Width": 272,
+            "Height": 480,
+            "Type": "Image",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": true,
+            "Moveable": false
+          },
+          {
+            "Pressed": "__designer\\blue_buttons_round_edge_icon_button.png",
+            "Released": "__designer\\blue_buttons_round_edge_icon_button.png",
+            "Alpha": 255,
+            "Name": "panelSettingsButton",
+            "X": 207,
+            "Y": 413,
+            "Width": 60,
+            "Height": 60,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
             "CustomContainerDefinitionName": "AllZonesContainer",
             "Name": "allZonesContainer",
-            "X": 9,
-            "Y": 487,
+            "X": -260,
+            "Y": 10,
             "Width": 255,
             "Height": 358,
             "Type": "CustomContainerInstance",
@@ -166,25 +196,91 @@
             "Draggable": false,
             "Clickable": false,
             "Fadeable": false,
+            "Moveable": true
+          },
+          {
+            "CustomContainerDefinitionName": "WindowSettingsContainer",
+            "Name": "windowSettingsContainer",
+            "X": -260,
+            "Y": 10,
+            "Width": 250,
+            "Height": 400,
+            "Type": "CustomContainerInstance",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
             "Moveable": false
+          },
+          {
+            "CustomContainerDefinitionName": "AllScenesContainer",
+            "Name": "allScenesContainer",
+            "X": -260,
+            "Y": 10,
+            "Width": 250,
+            "Height": 400,
+            "Type": "CustomContainerInstance",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": true
+          },
+          {
+            "CustomContainerDefinitionName": "PanelSettingsContainer",
+            "Name": "panelSettingsContainer",
+            "X": 10,
+            "Y": -410,
+            "Width": 250,
+            "Height": 400,
+            "Type": "CustomContainerInstance",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": true
           }
         ],
         "Interactions": [
           {
-            "InteractionName": "OpenAllZonesContainerClicked",
-            "HasCompletedTrigger": false,
+            "InteractionName": "WindowSettingsButtonClicked",
+            "HasCompletedTrigger": true,
             "Trigger": {
-              "TriggerComponent": "openAllZonesContainerButton",
+              "TriggerComponent": "windowSettingsButton",
               "Type": "TriggerClicked"
             },
             "Action": {
-              "X": 9,
-              "Y": 20,
+              "FunctionName": "WindowSettingsButtonClicked",
+              "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "WindowSettingsAnimation",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "InteractionToTriggerOn": "WindowSettingsButtonClicked",
+              "Type": "TriggerInteractionCompleted"
+            },
+            "Action": {
+              "X": 10,
+              "Y": 10,
               "Easing": "Linear",
               "EasingOption": "In",
               "Duration": 200,
-              "ActionComponent": "allZonesContainer",
+              "ActionComponent": "windowSettingsContainer",
               "Type": "ActionMove"
+            }
+          },
+          {
+            "InteractionName": "PanelSettingsButtonClicked",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "panelSettingsButton",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "PanelSettingsButtonClicked",
+              "Type": "ActionCustom"
             }
           }
         ],
@@ -216,7 +312,7 @@
             "Released": "__designer\\blue_buttons_round_edge_icon_button.png",
             "Alpha": 255,
             "Name": "closeButton",
-            "X": 178,
+            "X": 184,
             "Y": 11,
             "Width": 60,
             "Height": 60,
@@ -255,12 +351,35 @@
             "Pressed": "__designer\\blue_buttons_round_edge_icon_button_pressed.png",
             "Released": "__designer\\blue_buttons_round_edge_icon_button.png",
             "Alpha": 255,
-            "Name": "resetButton",
-            "X": 91,
+            "Name": "backButton",
+            "X": 12,
             "Y": 11,
             "Width": 60,
             "Height": 60,
             "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId11",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "containerNameText",
+            "X": 97,
+            "Y": 29,
+            "Width": 60,
+            "Height": 25,
+            "Type": "TextArea",
             "Visible": true,
             "Draggable": false,
             "Clickable": false,
@@ -282,14 +401,14 @@
             }
           },
           {
-            "InteractionName": "ResetButtonClicked",
+            "InteractionName": "BackButtonClicked",
             "HasCompletedTrigger": false,
             "Trigger": {
-              "TriggerComponent": "resetButton",
+              "TriggerComponent": "backButton",
               "Type": "TriggerClicked"
             },
             "Action": {
-              "FunctionName": "ResetButtonClicked",
+              "FunctionName": "BackButtonClicked",
               "Type": "ActionCustom"
             }
           }
@@ -582,6 +701,654 @@
         "Clickable": false,
         "Fadeable": false,
         "Moveable": false
+      },
+      {
+        "Components": [
+          {
+            "Pressed": "__designer\\blue_buttons_round_edge_icon_button_pressed.png",
+            "Released": "__designer\\blue_buttons_round_edge_icon_button.png",
+            "Alpha": 255,
+            "Name": "closeButton",
+            "X": 190,
+            "Y": 0,
+            "Width": 60,
+            "Height": 60,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId10",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "containerNameText",
+            "X": 41,
+            "Y": 68,
+            "Width": 168,
+            "Height": 25,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "InitialStatePressed": true,
+            "Pressed": "__designer\\blue_buttons_round_edge_small_pressed.png",
+            "Released": "__designer\\blue_buttons_round_edge_small.png",
+            "Alpha": 255,
+            "Name": "autoTintButton",
+            "X": 40,
+            "Y": 157,
+            "Width": 170,
+            "Height": 60,
+            "Type": "ToggleButton",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "InitialStatePressed": false,
+            "Pressed": "__designer\\blue_buttons_round_edge_small_pressed.png",
+            "Released": "__designer\\blue_buttons_round_edge_small.png",
+            "Alpha": 255,
+            "Name": "manualTintButton",
+            "X": 40,
+            "Y": 217,
+            "Width": 170,
+            "Height": 60,
+            "Type": "ToggleButton",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "InitialStatePressed": false,
+            "Pressed": "__designer\\blue_buttons_round_edge_small_pressed.png",
+            "Released": "__designer\\blue_buttons_round_edge_small.png",
+            "Alpha": 255,
+            "Name": "presetScenesButton",
+            "X": 40,
+            "Y": 277,
+            "Width": 170,
+            "Height": 60,
+            "Type": "ToggleButton",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId27",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "autoTintText",
+            "X": 79,
+            "Y": 175,
+            "Width": 92,
+            "Height": 25,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId28",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 140,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "manualTintText",
+            "X": 67,
+            "Y": 235,
+            "Width": 117,
+            "Height": 25,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId29",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 140,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "presetScenesText",
+            "X": 55,
+            "Y": 295,
+            "Width": 141,
+            "Height": 25,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "CloseButtonClicked",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "closeButton",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "CloseButtonClicked",
+              "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "AutoTintButtonClicked",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "autoTintButton",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "AutoTintButtonClicked",
+              "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "ManualTintButtonClicked",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "TriggerComponent": "manualTintButton",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "ManualTintButtonClicked",
+              "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "PresetScenesButtonClicked",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "presetScenesButton",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "PresetScenesButtonClicked",
+              "Type": "ActionCustom"
+            }
+          }
+        ],
+        "Name": "WindowSettingsContainer",
+        "X": 10,
+        "Y": 10,
+        "Width": 250,
+        "Height": 400,
+        "Type": "CustomContainerDefinition",
+        "Visible": true,
+        "Draggable": false,
+        "Clickable": false,
+        "Fadeable": false,
+        "Moveable": false
+      },
+      {
+        "Components": [
+          {
+            "Pressed": "__designer\\blue_buttons_round_edge_icon_button_pressed.png",
+            "Released": "__designer\\blue_buttons_round_edge_icon_button.png",
+            "Alpha": 255,
+            "Name": "backButton",
+            "X": 9,
+            "Y": 9,
+            "Width": 60,
+            "Height": 60,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "__designer\\blue_buttons_round_edge_icon_button_pressed.png",
+            "Released": "__designer\\blue_buttons_round_edge_icon_button.png",
+            "Alpha": 255,
+            "Name": "closeButton",
+            "X": 180,
+            "Y": 9,
+            "Width": 60,
+            "Height": 60,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId12",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "containerNameText",
+            "X": 90,
+            "Y": 27,
+            "Width": 71,
+            "Height": 25,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "InitialStatePressed": true,
+            "Pressed": "__designer\\blue_buttons_round_medium_pressed.png",
+            "Released": "__designer\\blue_buttons_round_medium.png",
+            "Alpha": 255,
+            "Name": "sceneButton0",
+            "X": 10,
+            "Y": 85,
+            "Width": 230,
+            "Height": 60,
+            "Type": "ToggleButton",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "InitialStatePressed": false,
+            "Pressed": "__designer\\blue_buttons_round_medium_pressed.png",
+            "Released": "__designer\\blue_buttons_round_medium.png",
+            "Alpha": 255,
+            "Name": "sceneButton1",
+            "X": 10,
+            "Y": 145,
+            "Width": 230,
+            "Height": 60,
+            "Type": "ToggleButton",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "InitialStatePressed": false,
+            "Pressed": "__designer\\blue_buttons_round_medium_pressed.png",
+            "Released": "__designer\\blue_buttons_round_medium.png",
+            "Alpha": 255,
+            "Name": "sceneButton2",
+            "X": 10,
+            "Y": 205,
+            "Width": 230,
+            "Height": 60,
+            "Type": "ToggleButton",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "InitialStatePressed": false,
+            "Pressed": "__designer\\blue_buttons_round_medium_pressed.png",
+            "Released": "__designer\\blue_buttons_round_medium.png",
+            "Alpha": 255,
+            "Name": "sceneButton3",
+            "X": 10,
+            "Y": 265,
+            "Width": 230,
+            "Height": 60,
+            "Type": "ToggleButton",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "InitialStatePressed": false,
+            "Pressed": "__designer\\blue_buttons_round_medium_pressed.png",
+            "Released": "__designer\\blue_buttons_round_medium.png",
+            "Alpha": 255,
+            "Name": "sceneButton4",
+            "X": 11,
+            "Y": 325,
+            "Width": 230,
+            "Height": 60,
+            "Type": "ToggleButton",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId25",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 140,
+            "AutoSize": false,
+            "LineSpacing": 0,
+            "Name": "sceneNameText4",
+            "X": 45,
+            "Y": 342,
+            "Width": 193,
+            "Height": 27,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId23",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 140,
+            "AutoSize": false,
+            "LineSpacing": 0,
+            "Name": "sceneNameText3",
+            "X": 45,
+            "Y": 282,
+            "Width": 193,
+            "Height": 27,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId21",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 140,
+            "AutoSize": false,
+            "LineSpacing": 0,
+            "Name": "sceneNameText2",
+            "X": 45,
+            "Y": 222,
+            "Width": 193,
+            "Height": 27,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId19",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 140,
+            "AutoSize": false,
+            "LineSpacing": 0,
+            "Name": "sceneNameText1",
+            "X": 45,
+            "Y": 162,
+            "Width": 193,
+            "Height": 27,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId26",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "sceneNameText0",
+            "X": 45,
+            "Y": 103,
+            "Width": 139,
+            "Height": 25,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "CloseButtonClicked",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "closeButton",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "CloseButtonClicked",
+              "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "BackButtonClicked",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "backButton",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "BackButtonClicked",
+              "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "SceneButton0Clicked",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "sceneButton0",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "SceneButton0Clicked",
+              "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "SceneButton1Clicked",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "sceneButton1",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "SceneButton1Clicked",
+              "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "SceneButton2Clicked",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "sceneButton2",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "SceneButton2Clicked",
+              "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "SceneButton3Clicked",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "sceneButton3",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "SceneButton3Clicked",
+              "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "SceneButton4Clicked",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "sceneButton4",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "SceneButton4Clicked",
+              "Type": "ActionCustom"
+            }
+          }
+        ],
+        "Name": "AllScenesContainer",
+        "X": 10,
+        "Y": 10,
+        "Width": 250,
+        "Height": 400,
+        "Type": "CustomContainerDefinition",
+        "Visible": true,
+        "Draggable": false,
+        "Clickable": false,
+        "Fadeable": false,
+        "Moveable": false
+      },
+      {
+        "Components": [
+          {
+            "Pressed": "__designer\\blue_buttons_round_edge_icon_button_pressed.png",
+            "Released": "__designer\\blue_buttons_round_edge_icon_button.png",
+            "Alpha": 255,
+            "Name": "closeButton",
+            "X": 184,
+            "Y": 6,
+            "Width": 60,
+            "Height": 60,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId30",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "containerNameText",
+            "X": 16,
+            "Y": 24,
+            "Width": 143,
+            "Height": 25,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "CloseButtonClicked",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "closeButton",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "CloseButtonClicked",
+              "Type": "ActionCustom"
+            }
+          }
+        ],
+        "Name": "PanelSettingsContainer",
+        "X": 10,
+        "Y": 10,
+        "Width": 250,
+        "Height": 400,
+        "Type": "CustomContainerDefinition",
+        "Visible": true,
+        "Draggable": false,
+        "Clickable": false,
+        "Fadeable": false,
+        "Moveable": false
       }
     ],
     "TextEntries": [
@@ -619,6 +1386,54 @@
       },
       {
         "TextEntryId": "SingleUseId9",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId10",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId11",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId12",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId26",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId21",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId23",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId25",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId19",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId27",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId28",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId29",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId30",
         "IsResource": false
       }
     ],

@@ -8,10 +8,14 @@
 #include <mvp/View.hpp>
 #include <gui/main_screen/MainPresenter.hpp>
 #include <touchgfx/widgets/Image.hpp>
-#include <touchgfx/widgets/Button.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
+#include <touchgfx/widgets/Button.hpp>
 #include <gui/containers/AllZonesContainer.hpp>
+#include <gui/containers/WindowSettingsContainer.hpp>
+#include <gui/containers/AllScenesContainer.hpp>
+#include <gui/containers/PanelSettingsContainer.hpp>
 #include <touchgfx/EasingEquations.hpp>
+#include <touchgfx/mixins/FadeAnimator.hpp>
 #include <touchgfx/mixins/MoveAnimator.hpp>
 
 class MainViewBase : public touchgfx::View<MainPresenter>
@@ -21,6 +25,19 @@ public:
     virtual ~MainViewBase() {}
 
     virtual void setupScreen();
+
+    /*
+     * Custom Action Handlers
+     */
+    virtual void WindowSettingsButtonClicked()
+    {
+        // Override and implement this function in MainView
+    }
+
+    virtual void PanelSettingsButtonClicked()
+    {
+        // Override and implement this function in MainView
+    }
 
 protected:
     FrontendApplication& application() {
@@ -33,11 +50,16 @@ protected:
     touchgfx::Image background;
     touchgfx::Image sunHorizontImg;
     touchgfx::MoveAnimator< touchgfx::Image > sunIcon;
-    touchgfx::Button openAllZonesContainerButton;
     touchgfx::TextAreaWithTwoWildcards clockNum;
     touchgfx::TextAreaWithOneWildcard clockText;
     touchgfx::TextAreaWithOneWildcard dayOfWeek;
+    touchgfx::Button windowSettingsButton;
+    touchgfx::FadeAnimator< touchgfx::Image > backgroundBlur;
+    touchgfx::Button panelSettingsButton;
     touchgfx::MoveAnimator< AllZonesContainer > allZonesContainer;
+    touchgfx::MoveAnimator< WindowSettingsContainer > windowSettingsContainer;
+    touchgfx::MoveAnimator< AllScenesContainer > allScenesContainer;
+    touchgfx::MoveAnimator< PanelSettingsContainer > panelSettingsContainer;
 
     /*
      * Wildcard Buffers

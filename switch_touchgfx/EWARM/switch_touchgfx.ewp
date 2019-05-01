@@ -1278,10 +1278,19 @@
     <group>
       <name>containers</name>
       <file>
+        <name>$PROJ_DIR$\..\TouchGFX\gui\src\containers\AllScenesContainer.cpp</name>
+      </file>
+      <file>
         <name>$PROJ_DIR$\..\TouchGFX\gui\src\containers\AllZonesContainer.cpp</name>
       </file>
       <file>
+        <name>$PROJ_DIR$\..\TouchGFX\gui\src\containers\PanelSettingsContainer.cpp</name>
+      </file>
+      <file>
         <name>$PROJ_DIR$\..\TouchGFX\gui\src\containers\SingleZoneContainer.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\gui\src\containers\WindowSettingsContainer.cpp</name>
       </file>
     </group>
     <group>
@@ -1349,10 +1358,19 @@
       <group>
         <name>containers</name>
         <file>
+          <name>$PROJ_DIR$\..\TouchGFX\generated\gui_generated\src\containers\AllScenesContainerBase.cpp</name>
+        </file>
+        <file>
           <name>$PROJ_DIR$\..\TouchGFX\generated\gui_generated\src\containers\AllZonesContainerBase.cpp</name>
         </file>
         <file>
+          <name>$PROJ_DIR$\..\TouchGFX\generated\gui_generated\src\containers\PanelSettingsContainerBase.cpp</name>
+        </file>
+        <file>
           <name>$PROJ_DIR$\..\TouchGFX\generated\gui_generated\src\containers\SingleZoneContainerBase.cpp</name>
+        </file>
+        <file>
+          <name>$PROJ_DIR$\..\TouchGFX\generated\gui_generated\src\containers\WindowSettingsContainerBase.cpp</name>
         </file>
       </group>
       <group>
@@ -1377,6 +1395,12 @@
         </file>
         <file>
           <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\__designer\blue_buttons_round_edge_small_pressed.cpp</name>
+        </file>
+        <file>
+          <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\__designer\blue_buttons_round_medium.cpp</name>
+        </file>
+        <file>
+          <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\__designer\blue_buttons_round_medium_pressed.cpp</name>
         </file>
       </group>
       <file>

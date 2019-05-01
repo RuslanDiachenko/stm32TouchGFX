@@ -15,9 +15,28 @@ public:
 
     void setSunState(int newSunState, int hour, int minute, int hF, int dow);
 protected:
-    void CloseAllZonesContainerHandler(void);
+    virtual void WindowSettingsButtonClicked();
+    virtual void PanelSettingsButtonClicked();
 
+    void OpenAllZonesContainerHandler(void);
+    void CloseAllZonesContainerHandler(void);
+    void BackAllZonesContainerHandler(void);
+    void OpenAllScenesContainerHandler(void);
+    void CloseAllScenesContainerHandler(void);
+    void BackAllScenesContainerHandler(void);
+    void CloseWindowSettingsContainerHandler(void);
+    void ClosePanelSettingsContainerHandler(void);
+
+    touchgfx::Callback<MainView, void> openAllZonesContainer;
     touchgfx::Callback<MainView, void> closeAllZonesContainer;
+    touchgfx::Callback<MainView, void> backAllZonesContainer;
+    touchgfx::Callback<MainView, void> openAllScenesContainer;
+    touchgfx::Callback<MainView, void> closeAllScenesContainer;
+    touchgfx::Callback<MainView, void> backAllScenesContainer;
+    touchgfx::Callback<MainView, void> closeWindowSettingsContainer;
+    touchgfx::Callback<MainView, void> closePanelSettingsContainer;
+
+    uint8_t m_lastBackgroundBlurAlfa;
 };
 
 #endif // MAIN_VIEW_HPP

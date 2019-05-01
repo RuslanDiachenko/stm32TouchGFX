@@ -14,16 +14,16 @@ AllZonesContainer::AllZonesContainer()
     Unicode::UnicodeChar zoneName[20];
 
     Unicode::strncpy(zoneName, "Zone 1", 20);
-    AddNewZone(1, zoneName);
+    AddNewZone(ZoneType::Type8, zoneName);
 
     Unicode::strncpy(zoneName, "Zone 2", 20);
-    AddNewZone(0, zoneName);
+    AddNewZone(ZoneType::Type4, zoneName);
 
     Unicode::strncpy(zoneName, "Zone 3", 20);
-    AddNewZone(1, zoneName);
+    AddNewZone(ZoneType::Type8, zoneName);
 
     Unicode::strncpy(zoneName, "Zone 4", 20);
-    AddNewZone(1, zoneName);
+    AddNewZone(ZoneType::Type8, zoneName);
     /////////////////////////////////////
 }
 
@@ -35,7 +35,13 @@ void AllZonesContainer::initialize()
 void AllZonesContainer::CloseButtonClicked()
 {
     scrollableAllZonesContainer.reset();
-    closeContainerCallback->execute();
+    m_pCloseContainerCallback->execute();
+}
+
+void AllZonesContainer::BackButtonClicked()
+{
+    scrollableAllZonesContainer.reset();
+    m_pBackContainerCallback->execute();
 }
 
 void AllZonesContainer::ResetButtonClicked()
@@ -45,19 +51,19 @@ void AllZonesContainer::ResetButtonClicked()
     Unicode::UnicodeChar zoneName[20];
 
     Unicode::strncpy(zoneName, "Zone 5", 20);
-    AddNewZone(1, zoneName);
+    AddNewZone(ZoneType::Type8, zoneName);
 
     Unicode::strncpy(zoneName, "Zone 6", 20);
-    AddNewZone(0, zoneName);
+    AddNewZone(ZoneType::Type4, zoneName);
 
     Unicode::strncpy(zoneName, "Zone 7", 20);
-    AddNewZone(0, zoneName);
+    AddNewZone(ZoneType::Type4, zoneName);
 
     Unicode::strncpy(zoneName, "Zone 8", 20);
-    AddNewZone(1, zoneName);
+    AddNewZone(ZoneType::Type8, zoneName);
 }
 
-bool AllZonesContainer::AddNewZone(uint8_t type, Unicode::UnicodeChar *pZoneName)
+bool AllZonesContainer::AddNewZone(ZoneType type, Unicode::UnicodeChar *pZoneName)
 {
     uint16_t freeContainerInfoIndex = GetFirstFreeContainerInfoIndex();
     if (freeContainerInfoIndex == ZONE_CONTAINER_COUNT_MAX)
@@ -65,10 +71,10 @@ bool AllZonesContainer::AddNewZone(uint8_t type, Unicode::UnicodeChar *pZoneName
         return false;
     }
 
-    uint16_t zoneHeight = (type == ZONE_TYPE_4) ? ZONE_CONTAINER_4_HEIGHT : ZONE_CONTAINER_8_HEIGHT;
+    uint16_t zoneHeight = (type == ZoneType::Type4) ? ZONE_CONTAINER_4_HEIGHT : ZONE_CONTAINER_8_HEIGHT;
 
     m_zonesInfos[freeContainerInfoIndex].isUsed = true;
-    m_zonesInfos[freeContainerInfoIndex].type = type;
+    m_zonesInfos[freeContainerInfoIndex].type = (uint8_t)type;
 
     m_zonesInfos[freeContainerInfoIndex].zoneContainer.SetZoneNameText(pZoneName);
     m_zonesInfos[freeContainerInfoIndex].zoneContainer.setHeight(zoneHeight);

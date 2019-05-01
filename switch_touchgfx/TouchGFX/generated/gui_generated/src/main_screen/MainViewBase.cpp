@@ -18,11 +18,7 @@ MainViewBase::MainViewBase() :
     sunIcon.setXY(23, 374);
     sunIcon.setBitmap(Bitmap(BITMAP_SUN_ICON_ID));
 
-    openAllZonesContainerButton.setXY(58, 136);
-    openAllZonesContainerButton.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
-    openAllZonesContainerButton.setAction(buttonCallback);
-
-    clockNum.setPosition(31, 51, 121, 49);
+    clockNum.setPosition(42, 50, 121, 49);
     clockNum.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     clockNum.setLinespacing(0);
     Unicode::snprintf(clockNumBuffer1, CLOCKNUMBUFFER1_SIZE, "%s", TypedText(T_SINGLEUSEID4).getText());
@@ -31,7 +27,7 @@ MainViewBase::MainViewBase() :
     clockNum.setWildcard2(clockNumBuffer2);
     clockNum.setTypedText(TypedText(T_SINGLEUSEID3));
 
-    clockText.setXY(152, 51);
+    clockText.setXY(165, 50);
     clockText.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     clockText.setLinespacing(0);
     Unicode::snprintf(clockTextBuffer, CLOCKTEXT_SIZE, "%s", TypedText(T_SINGLEUSEID7).getText());
@@ -39,7 +35,7 @@ MainViewBase::MainViewBase() :
     clockText.resizeToCurrentText();
     clockText.setTypedText(TypedText(T_SINGLEUSEID6));
 
-    dayOfWeek.setXY(97, 100);
+    dayOfWeek.setXY(86, 100);
     dayOfWeek.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     dayOfWeek.setLinespacing(0);
     Unicode::snprintf(dayOfWeekBuffer, DAYOFWEEK_SIZE, "%s", TypedText(T_SINGLEUSEID9).getText());
@@ -47,31 +43,69 @@ MainViewBase::MainViewBase() :
     dayOfWeek.resizeToCurrentText();
     dayOfWeek.setTypedText(TypedText(T_SINGLEUSEID8));
 
-    allZonesContainer.setXY(9, 487);
+    windowSettingsButton.setXY(58, 217);
+    windowSettingsButton.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID));
+    windowSettingsButton.setAction(buttonCallback);
+
+    backgroundBlur.setXY(0, 0);
+    backgroundBlur.setBitmap(Bitmap(BITMAP_BACKGROUND_IMAGE_ID));
+    backgroundBlur.setAlpha(0);
+
+    panelSettingsButton.setXY(207, 413);
+    panelSettingsButton.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID));
+    panelSettingsButton.setAction(buttonCallback);
+
+    allZonesContainer.setXY(-260, 10);
+
+    windowSettingsContainer.setXY(-260, 10);
+
+    allScenesContainer.setXY(-260, 10);
+
+    panelSettingsContainer.setXY(10, -410);
 
     add(background);
     add(sunHorizontImg);
     add(sunIcon);
-    add(openAllZonesContainerButton);
     add(clockNum);
     add(clockText);
     add(dayOfWeek);
+    add(windowSettingsButton);
+    add(backgroundBlur);
+    add(panelSettingsButton);
     add(allZonesContainer);
+    add(windowSettingsContainer);
+    add(allScenesContainer);
+    add(panelSettingsContainer);
 }
 
 void MainViewBase::setupScreen()
 {
     allZonesContainer.initialize();
+    windowSettingsContainer.initialize();
+    allScenesContainer.initialize();
+    panelSettingsContainer.initialize();
 }
 
 void MainViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
 {
-    if (&src == &openAllZonesContainerButton)
+    if (&src == &windowSettingsButton)
     {
-        //OpenAllZonesContainerClicked
-        //When openAllZonesContainerButton clicked move allZonesContainer
-        //Move allZonesContainer to x:9, y:20 with LinearIn easing in 200 ms (12 Ticks)
-        allZonesContainer.clearMoveAnimationEndedAction();
-        allZonesContainer.startMoveAnimation(9, 20, 12, EasingEquations::linearEaseIn, EasingEquations::linearEaseIn);
+        //WindowSettingsButtonClicked
+        //When windowSettingsButton clicked call virtual function
+        //Call WindowSettingsButtonClicked
+        WindowSettingsButtonClicked();
+
+        //WindowSettingsAnimation
+        //When WindowSettingsButtonClicked completed move windowSettingsContainer
+        //Move windowSettingsContainer to x:10, y:10 with LinearIn easing in 200 ms (12 Ticks)
+        windowSettingsContainer.clearMoveAnimationEndedAction();
+        windowSettingsContainer.startMoveAnimation(10, 10, 12, EasingEquations::linearEaseIn, EasingEquations::linearEaseIn);
+    }
+    else if (&src == &panelSettingsButton)
+    {
+        //PanelSettingsButtonClicked
+        //When panelSettingsButton clicked call virtual function
+        //Call PanelSettingsButtonClicked
+        PanelSettingsButtonClicked();
     }
 }

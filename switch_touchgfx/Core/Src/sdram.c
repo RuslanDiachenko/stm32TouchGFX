@@ -12,19 +12,22 @@ void SDRAM_Init(SDRAM_HandleTypeDef *hsdram)
 	command.AutoRefreshNumber = 1;
 	command.ModeRegisterDefinition = 0;
 	HAL_SDRAM_SendCommand(hsdram, &command, SDRAM_TIMEOUT);
-	HAL_Delay(10);
+        for (int i = 0; i < 10000; i++);
+	//HAL_Delay(10);
 	command.CommandMode = FMC_SDRAM_CMD_PALL;
 	command.CommandTarget = FMC_SDRAM_CMD_TARGET_BANK1;
 	command.AutoRefreshNumber = 1;
 	command.ModeRegisterDefinition = 0;
 	HAL_SDRAM_SendCommand(hsdram, &command, SDRAM_TIMEOUT);
-	HAL_Delay(10);
+	for (int i = 0; i < 10000; i++);
+        //HAL_Delay(10);
 	command.CommandMode = FMC_SDRAM_CMD_AUTOREFRESH_MODE;
 	command.CommandTarget = FMC_SDRAM_CMD_TARGET_BANK1;
 	command.AutoRefreshNumber = 4;
 	command.ModeRegisterDefinition = 0;
 	HAL_SDRAM_SendCommand(hsdram, &command, SDRAM_TIMEOUT);
-	HAL_Delay(10);
+	for (int i = 0; i < 10000; i++);
+        //HAL_Delay(10);
 
 	tmpr = (uint32_t) 0x01 | 0x00 | 0x20 | 0x00 | 0x200;
 	command.CommandMode = FMC_SDRAM_CMD_LOAD_MODE;
@@ -32,7 +35,8 @@ void SDRAM_Init(SDRAM_HandleTypeDef *hsdram)
 	command.AutoRefreshNumber = 1;
 	command.ModeRegisterDefinition = tmpr;
 	HAL_SDRAM_SendCommand(hsdram, &command, SDRAM_TIMEOUT);
-	HAL_Delay(10);
+	for (int i = 0; i < 10000; i++);
+        //HAL_Delay(10);
 
 	if (HAL_SDRAM_ProgramRefreshRate(hsdram, 1386))
 	{

@@ -26,6 +26,11 @@
 /* USER CODE BEGIN Includes */
 #include <yfuns.h>
 #include <stdio.h>
+
+extern "C"
+{
+#include "persist_storage.h"
+}
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -48,27 +53,34 @@ CRC_HandleTypeDef hcrc;
 
 I2C_HandleTypeDef hi2c1;
 
+SPI_HandleTypeDef hspi1;
+
 UART_HandleTypeDef huart2;
 
 osThreadId defaultTaskHandle;
 /* USER CODE BEGIN PV */
 osThreadId uiTaskHandle;
+osThreadId psTaskHandle;
+osMutexId debugMutexHandle;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 extern "C" void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_CRC_Init(void);
-static void MX_GFXSIMULATOR_Init(void);
 static void MX_I2C1_Init(void);
 static void MX_USART2_UART_Init(void);
 extern void GRAPHICS_HW_Init(void);
 extern void GRAPHICS_Init(void);
 extern void GRAPHICS_MainTask(void);
+static void MX_SPI1_Init(void);
+static void MX_GFXSIMULATOR_Init(void);
 void StartDefaultTask(void const * argument);
 
 /* USER CODE BEGIN PFP */
 void StartUITask(void const *argument);
+
+extern "C" void PersistStorageTask(void const *argument);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -137,11 +149,15 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_CRC_Init();
-  MX_GFXSIMULATOR_Init();
   MX_I2C1_Init();
   MX_USART2_UART_Init();
+  MX_SPI1_Init();
+  MX_GFXSIMULATOR_Init();
   /* USER CODE BEGIN 2 */
-  printf("Hello world!\r\n");
+  osMutexDef(debugMutex);
+  debugMutexHandle = osMutexCreate(osMutex(debugMutex));
+  
+  DBG_LOG("MAIN", "SageGlass switch v%d.%d.%d", FW_VERSION_MAJOR, FW_VERSION_MINOR, FW_VERSION_BUILD);
   /* USER CODE END 2 */
 
 /* Initialise the graphical hardware */
@@ -150,6 +166,8 @@ int main(void)
   /* Initialise the graphical stack engine */
   GRAPHICS_Init();
       
+  
+
   /* USER CODE BEGIN RTOS_MUTEX */
   /* add mutexes, ... */
   /* USER CODE END RTOS_MUTEX */
@@ -173,8 +191,11 @@ int main(void)
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
-  osThreadDef(uiTask, StartUITask, osPriorityNormal, 0, 128);
+  osThreadDef(uiTask, StartUITask, osPriorityNormal, 0, 256);
   uiTaskHandle = osThreadCreate(osThread(uiTask), NULL);
+  
+  osThreadDef(psTask, PersistStorageTask, osPriorityNormal, 0, 256);
+  psTaskHandle = osThreadCreate(osThread(psTask), NULL);
   /* USER CODE END RTOS_THREADS */
 
   /* Start scheduler */
@@ -191,55 +212,6 @@ int main(void)
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
-}
-
-/* USER CODE BEGIN Header_StartDefaultTask */
-/**
-  * @brief  Function implementing the defaultTask thread.
-  * @param  argument: Not used 
-  * @retval None
-  */
-/* USER CODE END Header_StartDefaultTask */
-void StartDefaultTask(void const * argument)
-{
-
-/* Graphic application */  
-  GRAPHICS_MainTask();
-
-  /* USER CODE BEGIN 5 */
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
-  }
-  /* USER CODE END 5 */ 
-}
-
-void StartUITask(void const *argument)
-{
-  sunMsgBox_g = osMailCreate(osMailQ(sunMsgBox_g), NULL);
-  main_screen_state_t state = {0};
-  for (;;)
-  {
-    state.sunState++;
-    state.hF++;
-    state.dayOfWeek++;
-    state.hour++;
-    state.minute++;
-    
-    if (state.sunState >= 9)
-      state.sunState = 0;
-    if (state.hF)
-      state.hF = 0;
-    if (state.dayOfWeek >= 7)
-      state.dayOfWeek = 0;
-    if (state.hour >= 12)
-      state.hour = 0;
-    if (state.minute >= 60)
-      state.minute = 0;
-    osDelay(1000);
-    putSunMsg(state);
-  }
 }
 
 /**
@@ -394,6 +366,44 @@ static void MX_I2C1_Init(void)
 }
 
 /**
+  * @brief SPI1 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_SPI1_Init(void)
+{
+
+  /* USER CODE BEGIN SPI1_Init 0 */
+
+  /* USER CODE END SPI1_Init 0 */
+
+  /* USER CODE BEGIN SPI1_Init 1 */
+
+  /* USER CODE END SPI1_Init 1 */
+  /* SPI1 parameter configuration*/
+  hspi1.Instance = SPI1;
+  hspi1.Init.Mode = SPI_MODE_MASTER;
+  hspi1.Init.Direction = SPI_DIRECTION_2LINES;
+  hspi1.Init.DataSize = SPI_DATASIZE_8BIT;
+  hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
+  hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
+  hspi1.Init.NSS = SPI_NSS_SOFT;
+  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_8;
+  hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
+  hspi1.Init.TIMode = SPI_TIMODE_DISABLE;
+  hspi1.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
+  hspi1.Init.CRCPolynomial = 10;
+  if (HAL_SPI_Init(&hspi1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN SPI1_Init 2 */
+
+  /* USER CODE END SPI1_Init 2 */
+
+}
+
+/**
   * @brief USART2 Initialization Function
   * @param None
   * @retval None
@@ -447,6 +457,9 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(LCD_DISP_GPIO_Port, LCD_DISP_Pin, GPIO_PIN_SET);
 
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(FLASH_IC_CS_GPIO_Port, FLASH_IC_CS_Pin, GPIO_PIN_SET);
+
   /*Configure GPIO pin : LCD_DISP_Pin */
   GPIO_InitStruct.Pin = LCD_DISP_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
@@ -454,11 +467,68 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(LCD_DISP_GPIO_Port, &GPIO_InitStruct);
 
+  /*Configure GPIO pin : FLASH_IC_CS_Pin */
+  GPIO_InitStruct.Pin = FLASH_IC_CS_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_MEDIUM;
+  HAL_GPIO_Init(FLASH_IC_CS_GPIO_Port, &GPIO_InitStruct);
+
 }
 
 /* USER CODE BEGIN 4 */
 
 /* USER CODE END 4 */
+
+/* USER CODE BEGIN Header_StartDefaultTask */
+/**
+  * @brief  Function implementing the defaultTask thread.
+  * @param  argument: Not used
+  * @retval None
+  */
+/* USER CODE END Header_StartDefaultTask */
+void StartDefaultTask(void const * argument)
+{
+  PS_Init();
+/* Graphic application */
+  GRAPHICS_MainTask();
+
+  /* USER CODE BEGIN 5 */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END 5 */
+}
+
+void StartUITask(void const *argument)
+{
+  sunMsgBox_g = osMailCreate(osMailQ(sunMsgBox_g), NULL);
+  main_screen_state_t state = {0};
+  for (;;)
+  {
+    state.sunState++;
+    state.hF++;
+    state.dayOfWeek++;
+    state.hour++;
+    state.minute++;
+
+    if (state.sunState >= 9)
+      state.sunState = 0;
+    if (state.hF)
+      state.hF = 0;
+    if (state.dayOfWeek >= 7)
+      state.dayOfWeek = 0;
+    if (state.hour >= 12)
+      state.hour = 0;
+    if (state.minute >= 60)
+      state.minute = 0;
+    osDelay(1000);
+    putSunMsg(state);    
+  }
+}
+
 
 /**
   * @brief  This function is executed in case of error occurrence.

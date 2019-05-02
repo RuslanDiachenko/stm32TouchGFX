@@ -13,14 +13,6 @@
 #include "stm32f4xx_hal.h"
 #include "math.h"
 
-typedef enum
-{
-  RV_SUCCESS,
-  RV_FAILURE,
-  RV_NULLPTR,
-  RV_NOT_READY
-} RV_t;
-
 typedef struct
 {
 	uint8_t pressed;

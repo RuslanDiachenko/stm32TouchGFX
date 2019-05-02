@@ -69,8 +69,54 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define LCD_DISP_Pin GPIO_PIN_9
 #define LCD_DISP_GPIO_Port GPIOF
+#define FLASH_IC_CS_Pin GPIO_PIN_15
+#define FLASH_IC_CS_GPIO_Port GPIOA
 /* USER CODE BEGIN Private defines */
+#define FW_VERSION_MAJOR  0
+#define FW_VERSION_MINOR  5
+#define FW_VERSION_BUILD  1
 
+typedef enum
+{
+  RV_SUCCESS,
+  RV_FAILURE,
+  RV_NULLPTR,
+  RV_NOT_READY
+} RV_t;
+
+#include "cmsis_os.h"
+#define DEBUG
+#if defined(DEBUG)
+
+extern osMutexId debugMutexHandle;
+
+#define DISPLAY_LOG(severity, cmp, msg, ...)                                              \
+                      {                                                                   \
+                        osMutexWait(debugMutexHandle, osWaitForever);                     \
+                        printf("<" severity ">" "<" cmp ">" "<%-30s(%04i)> " msg "\r\n",  \
+                               __FUNCTION__, __LINE__, ##__VA_ARGS__);                    \
+                        osMutexRelease(debugMutexHandle);                                 \
+                      }
+#define DBG_LOG(cmp, msg, ...)   DISPLAY_LOG("DEBUG", cmp, msg, ##__VA_ARGS__)
+#define DBG_WARN(cmp, msg, ...)  DISPLAY_LOG("WARNING", cmp, msg, ##__VA_ARGS__)
+#define DBG_ERR(cmp, msg, ...)   DISPLAY_LOG("ERROR", cmp, msg, ##__VA_ARGS__)
+#define DBG_CRIT(cmp, msg, ...)  DISPLAY_LOG("CRITICAL", cmp, msg, ##__VA_ARGS__)
+
+#else
+
+#define DBG_LOG(cmp, ...)
+#define DBG_WARN(cmp, ...)
+#define DBG_ERR(cmp, ...)
+#define DBG_CRIT(cmp, ...)
+
+#endif
+
+/* components list used for debugging */
+#define ETH_MGR       "ETH "
+#define HTTPD_MGR     "HTTP"
+#define SWITCH_MGR    "SWCH"
+
+#define SAGE_PASSWORD "111111"
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

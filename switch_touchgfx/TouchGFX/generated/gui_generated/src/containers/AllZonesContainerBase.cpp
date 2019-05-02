@@ -10,13 +10,13 @@ AllZonesContainerBase::AllZonesContainerBase() :
     buttonCallback(this, &AllZonesContainerBase::buttonCallbackHandler)
 {
     setWidth(255);
-    setHeight(358);
+    setHeight(411);
 
     background.setXY(0, 0);
-    background.setBitmap(Bitmap(BITMAP_WINDOW_GREY_ID));
+    background.setBitmap(Bitmap(BITMAP_PANELBASE_ID));
 
-    closeButton.setXY(184, 11);
-    closeButton.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID));
+    closeButton.setXY(225, 15);
+    closeButton.setBitmaps(Bitmap(BITMAP_CLOSEBUTTON_ID), Bitmap(BITMAP_CLOSEBUTTON_ID));
     closeButton.setAction(buttonCallback);
 
     scrollableAllZonesContainer.setPosition(6, 71, 244, 271);
@@ -26,12 +26,12 @@ AllZonesContainerBase::AllZonesContainerBase() :
 
     scrollableAllZonesContainer.setScrollbarsVisible(false);
 
-    backButton.setXY(12, 11);
-    backButton.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID));
+    backButton.setXY(15, 15);
+    backButton.setBitmaps(Bitmap(BITMAP_BACKBUTTON_ID), Bitmap(BITMAP_BACKBUTTON_ID));
     backButton.setAction(buttonCallback);
 
-    containerNameText.setXY(97, 29);
-    containerNameText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    containerNameText.setXY(97, 11);
+    containerNameText.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     containerNameText.setLinespacing(0);
     containerNameText.setTypedText(TypedText(T_SINGLEUSEID11));
 

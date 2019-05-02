@@ -6,16 +6,38 @@
 #include <touchgfx/hal/Types.hpp>
 #include <touchgfx/Bitmap.hpp>
 
-const uint16_t BITMAP_BACKGROUND_IMAGE_ID = 0; // Size: 272x480 pixels
-const uint16_t BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID = 1; // Size: 60x60 pixels
-const uint16_t BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID = 2; // Size: 60x60 pixels
-const uint16_t BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID = 3; // Size: 170x60 pixels
-const uint16_t BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID = 4; // Size: 170x60 pixels
-const uint16_t BITMAP_BLUE_BUTTONS_ROUND_MEDIUM_ID = 5; // Size: 230x60 pixels
-const uint16_t BITMAP_BLUE_BUTTONS_ROUND_MEDIUM_PRESSED_ID = 6; // Size: 230x60 pixels
-const uint16_t BITMAP_COMBINEDGRAPHICNEW_ID = 7; // Size: 271x80 pixels
-const uint16_t BITMAP_SUN_ICON_ID = 8; // Size: 26x26 pixels
-const uint16_t BITMAP_WINDOW_GREY_ID = 9; // Size: 255x358 pixels
+const uint16_t BITMAP_AUTOTINTBUTTONNOTPRESSEDNEW_ID = 0; // Size: 238x50 pixels
+const uint16_t BITMAP_AUTOTINTBUTTONPRESSEDNEW_ID = 1; // Size: 238x50 pixels
+const uint16_t BITMAP_BACKBUTTON_ID = 2; // Size: 20x20 pixels
+const uint16_t BITMAP_BACKGROUND_IMAGE_ID = 3; // Size: 272x480 pixels
+const uint16_t BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID = 4; // Size: 170x60 pixels
+const uint16_t BITMAP_CLOSEBUTTON_ID = 5; // Size: 20x20 pixels
+const uint16_t BITMAP_COMBINEDGRAPHICNEW_ID = 6; // Size: 271x80 pixels
+const uint16_t BITMAP_MANUALTINTBUTTONNOTPRESSEDNEW_ID = 7; // Size: 238x50 pixels
+const uint16_t BITMAP_MANUALTINTBUTTONPRESSEDNEW_ID = 8; // Size: 238x50 pixels
+const uint16_t BITMAP_PANELBASE_ID = 9; // Size: 255x411 pixels
+const uint16_t BITMAP_PANELSETTINGSBUTTONICON_ID = 10; // Size: 17x17 pixels
+const uint16_t BITMAP_PRESENTSCENESBUTTONNOTPRESSEDNEW_ID = 11; // Size: 238x50 pixels
+const uint16_t BITMAP_PRESENTSCENESBUTTONPRESSEDNEW_ID = 12; // Size: 238x50 pixels
+const uint16_t BITMAP_SUN_ICON_ID = 13; // Size: 26x26 pixels
+const uint16_t BITMAP_TOGGLENOTPRESSED_ID = 14; // Size: 23x23 pixels
+const uint16_t BITMAP_TOGGLEPRESSED_ID = 15; // Size: 23x23 pixels
+const uint16_t BITMAP_ZONEGRAD1NOTPRESSED_ID = 16; // Size: 50x43 pixels
+const uint16_t BITMAP_ZONEGRAD1PRESSED_ID = 17; // Size: 50x43 pixels
+const uint16_t BITMAP_ZONEGRAD2NOTPRESSED_ID = 18; // Size: 50x43 pixels
+const uint16_t BITMAP_ZONEGRAD2PRESSED_ID = 19; // Size: 50x43 pixels
+const uint16_t BITMAP_ZONEGRAD3NOTPRESSED_ID = 20; // Size: 50x43 pixels
+const uint16_t BITMAP_ZONEGRAD3PRESSED_ID = 21; // Size: 50x43 pixels
+const uint16_t BITMAP_ZONEGRAD4NOTPRESSED_ID = 22; // Size: 50x43 pixels
+const uint16_t BITMAP_ZONEGRAD4PRESSED_ID = 23; // Size: 50x43 pixels
+const uint16_t BITMAP_ZONEGREY1NOTPRESSED_ID = 24; // Size: 50x43 pixels
+const uint16_t BITMAP_ZONEGREY1PRESSED_ID = 25; // Size: 50x43 pixels
+const uint16_t BITMAP_ZONEGREY2NOTPRESSED_ID = 26; // Size: 50x43 pixels
+const uint16_t BITMAP_ZONEGREY2PRESSED_ID = 27; // Size: 50x43 pixels
+const uint16_t BITMAP_ZONEGREY3NOTPRESSED_ID = 28; // Size: 50x43 pixels
+const uint16_t BITMAP_ZONEGREY3PRESSED_ID = 29; // Size: 50x43 pixels
+const uint16_t BITMAP_ZONEWHITENOTPRESSED_ID = 30; // Size: 50x43 pixels
+const uint16_t BITMAP_ZONEWHITEPRESSED_ID = 31; // Size: 50x43 pixels
 
 namespace BitmapDatabase
 {

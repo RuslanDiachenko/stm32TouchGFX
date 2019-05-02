@@ -107,7 +107,7 @@ void touchgfx_init()
     hal.setFrameBufferStartAddress((uint16_t*)frameBuf0, bitdepth ,true , true);
 
     hal.setTouchSampleRate(2);
-    hal.setFingerSize(1);
+    hal.setFingerSize(2);
 
     // By default frame rate compensation is off.
     // Enable frame rate compensation to smooth out animations in case there is periodic slow frame rates.

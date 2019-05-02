@@ -12,12 +12,12 @@ PanelSettingsContainerBase::PanelSettingsContainerBase() :
     setWidth(250);
     setHeight(400);
 
-    closeButton.setXY(184, 6);
-    closeButton.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID));
+    closeButton.setXY(214, 14);
+    closeButton.setBitmaps(Bitmap(BITMAP_CLOSEBUTTON_ID), Bitmap(BITMAP_CLOSEBUTTON_ID));
     closeButton.setAction(buttonCallback);
 
-    containerNameText.setXY(16, 24);
-    containerNameText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    containerNameText.setXY(16, 12);
+    containerNameText.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     containerNameText.setLinespacing(0);
     containerNameText.setTypedText(TypedText(T_SINGLEUSEID30));
 

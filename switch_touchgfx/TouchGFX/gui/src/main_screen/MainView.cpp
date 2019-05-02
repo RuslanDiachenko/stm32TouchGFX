@@ -49,6 +49,8 @@ void MainView::CloseAllScenesContainerHandler(void)
     backgroundBlur.clearFadeAnimationEndedAction();
     backgroundBlur.setFadeAnimationDelay(8);
     backgroundBlur.startFadeAnimation(0, 4, EasingEquations::linearEaseIn);
+    
+    windowSettingsButton.setTouchable(true);
 }
 
 void MainView::OpenAllScenesContainerHandler(void)
@@ -79,6 +81,8 @@ void MainView::CloseAllZonesContainerHandler(void)
     backgroundBlur.clearFadeAnimationEndedAction();
     backgroundBlur.setFadeAnimationDelay(8);
     backgroundBlur.startFadeAnimation(0, 4, EasingEquations::linearEaseIn);
+    
+    windowSettingsButton.setTouchable(true);
 }
 
 void MainView::OpenAllZonesContainerHandler(void)
@@ -99,6 +103,8 @@ void MainView::WindowSettingsButtonClicked()
     backgroundBlur.clearFadeAnimationEndedAction();
     backgroundBlur.setFadeAnimationDelay(0);
     backgroundBlur.startFadeAnimation(255, 4, EasingEquations::linearEaseIn);
+    
+    windowSettingsButton.setTouchable(false);
 }
 
 void MainView::CloseWindowSettingsContainerHandler(void)
@@ -109,11 +115,14 @@ void MainView::CloseWindowSettingsContainerHandler(void)
     backgroundBlur.clearFadeAnimationEndedAction();
     backgroundBlur.setFadeAnimationDelay(8);
     backgroundBlur.startFadeAnimation(0, 4, EasingEquations::linearEaseIn);
+    
+    windowSettingsButton.setTouchable(true);
 }
 
 void MainView::PanelSettingsButtonClicked()
 {
     m_lastBackgroundBlurAlfa = backgroundBlur.getAlpha();
+    m_lastWindowSettingsButtonTouchable = windowSettingsButton.isTouchable();
 
     windowSettingsContainer.clearMoveAnimationEndedAction();
     windowSettingsContainer.startMoveAnimation(
@@ -138,6 +147,7 @@ void MainView::PanelSettingsButtonClicked()
     panelSettingsContainer.startMoveAnimation(10, 10, 12, EasingEquations::linearEaseIn, EasingEquations::linearEaseIn);
 
     panelSettingsButton.setVisible(false);
+    windowSettingsButton.setTouchable(false);
 }
 
 void MainView::ClosePanelSettingsContainerHandler(void)
@@ -165,6 +175,7 @@ void MainView::ClosePanelSettingsContainerHandler(void)
     panelSettingsContainer.startMoveAnimation(10, -410, 12, EasingEquations::linearEaseIn, EasingEquations::linearEaseIn);
 
     panelSettingsButton.setVisible(true);
+    windowSettingsButton.setTouchable(m_lastWindowSettingsButtonTouchable);
 }
 
 

@@ -6,6 +6,7 @@
 
 #include <gui/common/FrontendApplication.hpp>
 #include <touchgfx/containers/Container.hpp>
+#include <touchgfx/widgets/Image.hpp>
 #include <touchgfx/widgets/Button.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/ToggleButton.hpp>
@@ -64,6 +65,7 @@ protected:
     /*
      * Member Declarations
      */
+    touchgfx::Image panelBase;
     touchgfx::Button backButton;
     touchgfx::Button closeButton;
     touchgfx::TextArea containerNameText;

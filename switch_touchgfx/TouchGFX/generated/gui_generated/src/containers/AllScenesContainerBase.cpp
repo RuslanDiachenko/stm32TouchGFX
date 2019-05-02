@@ -9,72 +9,76 @@
 AllScenesContainerBase::AllScenesContainerBase() :
     buttonCallback(this, &AllScenesContainerBase::buttonCallbackHandler)
 {
-    setWidth(250);
-    setHeight(400);
+    setWidth(254);
+    setHeight(411);
 
-    backButton.setXY(9, 9);
-    backButton.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID));
+    panelBase.setXY(0, 0);
+    panelBase.setBitmap(Bitmap(BITMAP_PANELBASE_ID));
+
+    backButton.setXY(15, 15);
+    backButton.setBitmaps(Bitmap(BITMAP_BACKBUTTON_ID), Bitmap(BITMAP_BACKBUTTON_ID));
     backButton.setAction(buttonCallback);
 
-    closeButton.setXY(180, 9);
-    closeButton.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID));
+    closeButton.setXY(225, 15);
+    closeButton.setBitmaps(Bitmap(BITMAP_CLOSEBUTTON_ID), Bitmap(BITMAP_CLOSEBUTTON_ID));
     closeButton.setAction(buttonCallback);
 
-    containerNameText.setXY(90, 27);
-    containerNameText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    containerNameText.setXY(92, 13);
+    containerNameText.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     containerNameText.setLinespacing(0);
     containerNameText.setTypedText(TypedText(T_SINGLEUSEID12));
 
-    sceneButton0.setXY(10, 85);
-    sceneButton0.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_MEDIUM_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_MEDIUM_PRESSED_ID));
+    sceneButton0.setXY(15, 97);
+    sceneButton0.setBitmaps(Bitmap(BITMAP_TOGGLENOTPRESSED_ID), Bitmap(BITMAP_TOGGLEPRESSED_ID));
     sceneButton0.forceState(true);
     sceneButton0.setAction(buttonCallback);
 
-    sceneButton1.setXY(10, 145);
-    sceneButton1.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_MEDIUM_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_MEDIUM_PRESSED_ID));
+    sceneButton1.setXY(15, 145);
+    sceneButton1.setBitmaps(Bitmap(BITMAP_TOGGLENOTPRESSED_ID), Bitmap(BITMAP_TOGGLEPRESSED_ID));
     sceneButton1.setAction(buttonCallback);
 
-    sceneButton2.setXY(10, 205);
-    sceneButton2.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_MEDIUM_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_MEDIUM_PRESSED_ID));
+    sceneButton2.setXY(15, 194);
+    sceneButton2.setBitmaps(Bitmap(BITMAP_TOGGLENOTPRESSED_ID), Bitmap(BITMAP_TOGGLEPRESSED_ID));
     sceneButton2.setAction(buttonCallback);
 
-    sceneButton3.setXY(10, 265);
-    sceneButton3.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_MEDIUM_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_MEDIUM_PRESSED_ID));
+    sceneButton3.setXY(15, 245);
+    sceneButton3.setBitmaps(Bitmap(BITMAP_TOGGLENOTPRESSED_ID), Bitmap(BITMAP_TOGGLEPRESSED_ID));
     sceneButton3.setAction(buttonCallback);
 
-    sceneButton4.setXY(11, 325);
-    sceneButton4.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_MEDIUM_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_MEDIUM_PRESSED_ID));
+    sceneButton4.setXY(15, 297);
+    sceneButton4.setBitmaps(Bitmap(BITMAP_TOGGLENOTPRESSED_ID), Bitmap(BITMAP_TOGGLEPRESSED_ID));
     sceneButton4.setAction(buttonCallback);
 
-    sceneNameText4.setPosition(45, 342, 193, 27);
-    sceneNameText4.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    sceneNameText4.setPosition(45, 295, 193, 27);
+    sceneNameText4.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     sceneNameText4.setLinespacing(0);
     sceneNameText4.setAlpha(140);
     sceneNameText4.setTypedText(TypedText(T_SINGLEUSEID25));
 
-    sceneNameText3.setPosition(45, 282, 193, 27);
-    sceneNameText3.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    sceneNameText3.setPosition(45, 243, 193, 27);
+    sceneNameText3.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     sceneNameText3.setLinespacing(0);
     sceneNameText3.setAlpha(140);
     sceneNameText3.setTypedText(TypedText(T_SINGLEUSEID23));
 
-    sceneNameText2.setPosition(45, 222, 193, 27);
-    sceneNameText2.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    sceneNameText2.setPosition(45, 192, 193, 27);
+    sceneNameText2.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     sceneNameText2.setLinespacing(0);
     sceneNameText2.setAlpha(140);
     sceneNameText2.setTypedText(TypedText(T_SINGLEUSEID21));
 
-    sceneNameText1.setPosition(45, 162, 193, 27);
-    sceneNameText1.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    sceneNameText1.setPosition(45, 143, 193, 27);
+    sceneNameText1.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     sceneNameText1.setLinespacing(0);
     sceneNameText1.setAlpha(140);
     sceneNameText1.setTypedText(TypedText(T_SINGLEUSEID19));
 
-    sceneNameText0.setXY(45, 103);
-    sceneNameText0.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    sceneNameText0.setXY(45, 96);
+    sceneNameText0.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     sceneNameText0.setLinespacing(0);
     sceneNameText0.setTypedText(TypedText(T_SINGLEUSEID26));
 
+    add(panelBase);
     add(backButton);
     add(closeButton);
     add(containerNameText);

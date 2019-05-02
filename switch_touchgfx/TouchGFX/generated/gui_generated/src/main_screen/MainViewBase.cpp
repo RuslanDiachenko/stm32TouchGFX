@@ -51,8 +51,8 @@ MainViewBase::MainViewBase() :
     backgroundBlur.setBitmap(Bitmap(BITMAP_BACKGROUND_IMAGE_ID));
     backgroundBlur.setAlpha(0);
 
-    panelSettingsButton.setXY(207, 413);
-    panelSettingsButton.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID));
+    panelSettingsButton.setXY(237, 446);
+    panelSettingsButton.setBitmaps(Bitmap(BITMAP_PANELSETTINGSBUTTONICON_ID), Bitmap(BITMAP_PANELSETTINGSBUTTONICON_ID));
     panelSettingsButton.setAction(buttonCallback);
 
     allZonesContainer.setXY(-260, 10);

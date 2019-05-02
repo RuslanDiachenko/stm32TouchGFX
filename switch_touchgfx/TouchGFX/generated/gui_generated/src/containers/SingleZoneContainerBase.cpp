@@ -13,43 +13,43 @@ SingleZoneContainerBase::SingleZoneContainerBase() :
     setHeight(180);
 
     zoneNameText.setXY(69, 13);
-    zoneNameText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    zoneNameText.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     zoneNameText.setLinespacing(0);
     Unicode::snprintf(zoneNameTextBuffer, ZONENAMETEXT_SIZE, "%s", TypedText(T_SINGLEUSEID2).getText());
     zoneNameText.setWildcard(zoneNameTextBuffer);
     zoneNameText.resizeToCurrentText();
     zoneNameText.setTypedText(TypedText(T_SINGLEUSEID1));
 
-    zoneModeButton0.setXY(5, 47);
-    zoneModeButton0.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID));
+    zoneModeButton0.setXY(10, 56);
+    zoneModeButton0.setBitmaps(Bitmap(BITMAP_ZONEGREY3NOTPRESSED_ID), Bitmap(BITMAP_ZONEGREY3PRESSED_ID));
     zoneModeButton0.setAction(buttonCallback);
 
-    zoneModeButton1.setXY(65, 47);
-    zoneModeButton1.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID));
+    zoneModeButton1.setXY(70, 56);
+    zoneModeButton1.setBitmaps(Bitmap(BITMAP_ZONEGREY2NOTPRESSED_ID), Bitmap(BITMAP_ZONEGREY2PRESSED_ID));
     zoneModeButton1.setAction(buttonCallback);
 
-    zoneModeButton2.setXY(125, 47);
-    zoneModeButton2.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID));
+    zoneModeButton2.setXY(130, 56);
+    zoneModeButton2.setBitmaps(Bitmap(BITMAP_ZONEGREY1NOTPRESSED_ID), Bitmap(BITMAP_ZONEGREY1PRESSED_ID));
     zoneModeButton2.setAction(buttonCallback);
 
-    zoneModeButton3.setXY(185, 47);
-    zoneModeButton3.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID));
+    zoneModeButton3.setXY(190, 56);
+    zoneModeButton3.setBitmaps(Bitmap(BITMAP_ZONEWHITENOTPRESSED_ID), Bitmap(BITMAP_ZONEWHITEPRESSED_ID));
     zoneModeButton3.setAction(buttonCallback);
 
-    zoneModeButton4.setXY(5, 108);
-    zoneModeButton4.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID));
+    zoneModeButton4.setXY(10, 117);
+    zoneModeButton4.setBitmaps(Bitmap(BITMAP_ZONEGRAD4NOTPRESSED_ID), Bitmap(BITMAP_ZONEGRAD4PRESSED_ID));
     zoneModeButton4.setAction(buttonCallback);
 
-    zoneModeButton5.setXY(65, 108);
-    zoneModeButton5.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID));
+    zoneModeButton5.setXY(70, 117);
+    zoneModeButton5.setBitmaps(Bitmap(BITMAP_ZONEGRAD3NOTPRESSED_ID), Bitmap(BITMAP_ZONEGRAD3PRESSED_ID));
     zoneModeButton5.setAction(buttonCallback);
 
-    zoneModeButton6.setXY(125, 108);
-    zoneModeButton6.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID));
+    zoneModeButton6.setXY(130, 117);
+    zoneModeButton6.setBitmaps(Bitmap(BITMAP_ZONEGRAD2NOTPRESSED_ID), Bitmap(BITMAP_ZONEGRAD2PRESSED_ID));
     zoneModeButton6.setAction(buttonCallback);
 
-    zoneModeButton7.setXY(185, 108);
-    zoneModeButton7.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID));
+    zoneModeButton7.setXY(190, 117);
+    zoneModeButton7.setBitmaps(Bitmap(BITMAP_ZONEGRAD1NOTPRESSED_ID), Bitmap(BITMAP_ZONEGRAD1PRESSED_ID));
     zoneModeButton7.setAction(buttonCallback);
 
     add(zoneNameText);

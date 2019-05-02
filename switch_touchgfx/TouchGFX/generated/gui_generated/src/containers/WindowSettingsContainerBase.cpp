@@ -9,48 +9,52 @@
 WindowSettingsContainerBase::WindowSettingsContainerBase() :
     buttonCallback(this, &WindowSettingsContainerBase::buttonCallbackHandler)
 {
-    setWidth(250);
-    setHeight(400);
+    setWidth(255);
+    setHeight(411);
 
-    closeButton.setXY(190, 0);
-    closeButton.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID));
+    imageBase.setXY(0, 0);
+    imageBase.setBitmap(Bitmap(BITMAP_PANELBASE_ID));
+
+    closeButton.setXY(225, 15);
+    closeButton.setBitmaps(Bitmap(BITMAP_CLOSEBUTTON_ID), Bitmap(BITMAP_CLOSEBUTTON_ID));
     closeButton.setAction(buttonCallback);
 
     containerNameText.setXY(41, 68);
-    containerNameText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    containerNameText.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     containerNameText.setLinespacing(0);
     containerNameText.setTypedText(TypedText(T_SINGLEUSEID10));
 
-    autoTintButton.setXY(40, 157);
-    autoTintButton.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
+    autoTintButton.setXY(8, 167);
+    autoTintButton.setBitmaps(Bitmap(BITMAP_AUTOTINTBUTTONNOTPRESSEDNEW_ID), Bitmap(BITMAP_AUTOTINTBUTTONPRESSEDNEW_ID));
     autoTintButton.forceState(true);
     autoTintButton.setAction(buttonCallback);
 
-    manualTintButton.setXY(40, 217);
-    manualTintButton.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
+    manualTintButton.setXY(8, 222);
+    manualTintButton.setBitmaps(Bitmap(BITMAP_MANUALTINTBUTTONNOTPRESSEDNEW_ID), Bitmap(BITMAP_MANUALTINTBUTTONPRESSEDNEW_ID));
     manualTintButton.setAction(buttonCallback);
 
-    presetScenesButton.setXY(40, 277);
-    presetScenesButton.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
+    presetScenesButton.setXY(8, 282);
+    presetScenesButton.setBitmaps(Bitmap(BITMAP_PRESENTSCENESBUTTONNOTPRESSEDNEW_ID), Bitmap(BITMAP_PRESENTSCENESBUTTONPRESSEDNEW_ID));
     presetScenesButton.setAction(buttonCallback);
 
-    autoTintText.setXY(79, 175);
-    autoTintText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    autoTintText.setXY(81, 180);
+    autoTintText.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     autoTintText.setLinespacing(0);
     autoTintText.setTypedText(TypedText(T_SINGLEUSEID27));
 
-    manualTintText.setXY(67, 235);
-    manualTintText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    manualTintText.setXY(81, 235);
+    manualTintText.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     manualTintText.setLinespacing(0);
     manualTintText.setAlpha(140);
     manualTintText.setTypedText(TypedText(T_SINGLEUSEID28));
 
-    presetScenesText.setXY(55, 295);
-    presetScenesText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    presetScenesText.setXY(81, 295);
+    presetScenesText.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     presetScenesText.setLinespacing(0);
     presetScenesText.setAlpha(140);
     presetScenesText.setTypedText(TypedText(T_SINGLEUSEID29));
 
+    add(imageBase);
     add(closeButton);
     add(containerNameText);
     add(autoTintButton);

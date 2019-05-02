@@ -37,6 +37,7 @@ protected:
     touchgfx::Callback<MainView, void> closePanelSettingsContainer;
 
     uint8_t m_lastBackgroundBlurAlfa;
+    bool m_lastWindowSettingsButtonTouchable;
 };
 
 #endif // MAIN_VIEW_HPP

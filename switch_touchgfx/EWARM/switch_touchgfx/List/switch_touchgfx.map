@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V8.32.3.193/W32 for ARM                  02/May/2019  11:45:40
+# IAR ELF Linker V8.32.3.193/W32 for ARM                  02/May/2019  11:58:01
 # Copyright 2007-2019 IAR Systems AB.
 #
 #    Output file  =  
@@ -8,7 +8,7 @@
 #    Map file     =  
 #        C:\projects\switchTouchGFX\switch_touchgfx\EWARM\switch_touchgfx\List\switch_touchgfx.map
 #    Command line =  
-#        -f C:\Users\user\AppData\Local\Temp\EW1200.tmp
+#        -f C:\Users\user\AppData\Local\Temp\EW60DA.tmp
 #        (C:\projects\switchTouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\AllScenesContainer.o
 #        C:\projects\switchTouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\AllScenesContainerBase.o
 #        C:\projects\switchTouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\AllZonesContainer.o
@@ -180,7 +180,7 @@ initialize by copy { rw };
   .intvec                ro code   0x800'0000     0x1ac  startup_stm32f429xx.o [1]
                                  - 0x800'01ac     0x1ac
 
-"P1":                                          0x167f7f
+"P1":                                          0x167f83
   ExtFlashSection        const     0x800'01ac   0x66594  panelBase.o [1]
   ExtFlashSection        const     0x806'6740   0x5fa00  background_image.o [1]
   ExtFlashSection        const     0x80c'6140   0x152c0  combinedGraphicNew.o [1]
@@ -409,252 +409,251 @@ initialize by copy { rw };
   .text                  ro code   0x816'283c      0x7a  stm32f4xx_hal_i2c_ex.o [1]
   .text                  ro code   0x816'28b6       0x2  FrontendApplicationBase.o [1]
   .text                  ro code   0x816'28b8      0x28  printf.o [2]
-  .text                  ro code   0x816'28e0      0xa4  BoardConfiguration.o [1]
-  .text                  ro code   0x816'2984     0x2f8  stm32f4xx_hal_rcc.o [1]
-  .text                  ro code   0x816'2c7c      0x78  stm32f4xx_hal_pwr_ex.o [1]
-  .text                  ro code   0x816'2cf4     0x21c  stm32f4xx_hal_rcc_ex.o [1]
-  .text                  ro code   0x816'2f10     0x14e  stm32f4xx_ll_fmc.o [1]
-  .text                  ro code   0x816'305e       0x2  stm32f4xx_hal_sdram.o [1]
-  .text                  ro code   0x816'3060     0x306  STM32F4DMA.o [1]
-  .text                  ro code   0x816'3366       0x2  FrontendApplicationBase.o [1]
-  .text                  ro code   0x816'3368      0x9c  sdram.o [1]
-  .text                  ro code   0x816'3404      0x78  BoardConfiguration.o [1]
-  .text                  ro code   0x816'347c      0xf0  STM32F4Instrumentation.o [1]
-  .text                  ro code   0x816'356c     0x30e  stm32f4xx_hal_dma2d.o [1]
-  .text                  ro code   0x816'387a       0x2  MainPresenter.o [1]
-  .text                  ro code   0x816'387c      0x28  stm32f4xx_hal.o [1]
-  .text                  ro code   0x816'38a4      0x2c  BoardConfiguration.o [1]
-  .text                  ro code   0x816'38d0       0xc  BitmapDatabase.o [1]
-  .text                  ro code   0x816'38dc      0x54  Texts.o [1]
-  .text                  ro code   0x816'3930       0xc  FontManager.o [7]
-  .text                  ro code   0x816'393c      0x64  BoardConfiguration.o [1]
-  .text                  ro code   0x816'39a0     0x250  stm32f4xx_hal_tim.o [1]
-  .text                  ro code   0x816'3bf0      0x3e  stm32f4xx_hal_tim_ex.o [1]
-  .text                  ro code   0x816'3c2e       0x2  stm32f4xx_hal_dma2d.o [1]
-  .text                  ro code   0x816'3c30       0x2  stm32f4xx_hal_dma2d.o [1]
-  .text                  ro code   0x816'3c32       0x2  MainPresenter.o [1]
-  .text                  ro code   0x816'3c34      0x20  BoardConfiguration.o [1]
-  .text                  ro code   0x816'3c54      0x30  TypedTextDatabase.o [1]
-  .text                  ro code   0x816'3c84       0xc  BoardConfiguration.o [1]
-  .text                  ro code   0x816'3c90      0x14  BoardConfiguration.o [1]
-  .text                  ro code   0x816'3ca4      0x14  BoardConfiguration.o [1]
-  .text                  ro code   0x816'3cb8      0x14  BoardConfiguration.o [1]
-  .text                  ro code   0x816'3ccc      0x18  FrontendApplication.o [1]
-  .text                  ro code   0x816'3ce4      0x68  Model.o [1]
-  .text                  ro code   0x816'3d4c      0xa8  FrontendApplicationBase.o [1]
-  .text                  ro code   0x816'3df4      0x10  BoardConfiguration.o [1]
-  .text                  ro code   0x816'3e04      0xdc  FontGetters.o [1]
-  .text                  ro code   0x816'3ee0      0x1c  BoardConfiguration.o [1]
-  .text                  ro code   0x816'3efc       0x8  AbstractPartition.o [7]
-  .text                  ro code   0x816'3f04      0x20  FrontendApplicationBase.o [1]
-  .text                  ro code   0x816'3f24      0x14  FrontendApplicationBase.o [1]
-  .text                  ro code   0x816'3f38     0x14c  FrontendApplicationBase.o [1]
-  .text                  ro code   0x816'4084      0x8c  BoardConfiguration.o [1]
-  .text                  ro code   0x816'4110      0x96  InternalFlashFont.o [7]
-  .text                  ro code   0x816'41a6       0xc  BoardConfiguration.o [1]
-  .text                  ro code   0x816'41b2       0x2  MainPresenter.o [1]
-  .text                  ro code   0x816'41b4      0x18  FrontendApplicationBase.o [1]
-  .text                  ro code   0x816'41cc      0x44  MainPresenter.o [1]
-  .text                  ro code   0x816'4210      0x12  BoardConfiguration.o [1]
-  .text                  ro code   0x816'4222      0xbe  ConstFont.o [7]
-  .text                  ro code   0x816'42e0      0x18  BoardConfiguration.o [1]
-  .text                  ro code   0x816'42f8      0x14  BoardConfiguration.o [1]
-  FontFlashSection       const     0x816'430c     0x390  Table_verdana_20_4bpp.o [1]
-  FontFlashSection       const     0x816'469c     0x380  Table_verdana_40_4bpp.o [1]
-  FontFlashSection       const     0x816'4a1c     0x374  Table_verdana_10_4bpp.o [1]
-  .rodata                const     0x816'4d90     0x280  BitmapDatabase.o [1]
-  FontFlashSection       const     0x816'5010     0x1ac  Kerning_verdana_40_4bpp.o [1]
-  .text                  ro code   0x816'51bc     0x140  heap0.o [2]
-  .text                  ro code   0x816'52fc      0x2c  xgetmemchunk.o [2]
-  FontFlashSection       const     0x816'5328      0xe0  Kerning_verdana_20_4bpp.o [1]
-  .text                  ro code   0x816'5408      0xd8  xfspos.o [2]
-  .text                  ro code   0x816'54e0      0xac  fflush.o [2]
-  .text                  ro code   0x816'558c       0xc  xfgpos.o [2]
-  .text                  ro code   0x816'5598      0x4a  lseek.o [6]
-  .text                  ro code   0x816'55e2       0x2  MainPresenter.o [1]
-  .text                  ro code   0x816'55e4      0xcc  XShHandles.o [2]
-  .rodata                const     0x816'56b0      0xc0  MainViewBase.o [1]
-  .rodata                const     0x816'5770      0xb4  MainViewBase.o [1]
-  .rodata                const     0x816'5824      0xb4  SingleZoneContainer.o [1]
-  .rodata                const     0x816'58d8      0xb4  SingleZoneContainerBase.o [1]
-  .text                  ro code   0x816'598c      0xb4  xfwprep.o [2]
-  .text                  ro code   0x816'5a40      0x24  fseek.o [2]
-  .rodata                const     0x816'5a64      0xb0  AllScenesContainer.o [1]
-  .rodata                const     0x816'5b14      0xb0  AllScenesContainerBase.o [1]
-  .rodata                const     0x816'5bc4      0xb0  MainViewBase.o [1]
-  .rodata                const     0x816'5c74      0xa8  MainViewBase.o [1]
-  .rodata                const     0x816'5d1c      0xa8  STM32F4HAL.o [1]
-  .text                  ro code   0x816'5dc4      0xa8  Font.o [7]
-  .rodata                const     0x816'5e6c      0xa4  FrontendApplicationBase.o [1]
-  .rodata                const     0x816'5f10      0xa4  FrontendApplicationBase.o [1]
-  .rodata                const     0x816'5fb4      0xa4  WindowSettingsContainer.o [1]
-  .rodata                const     0x816'6058      0xa4  WindowSettingsContainerBase.o [1]
-  .rodata                const     0x816'60fc      0xa0  AllZonesContainer.o [1]
-  .rodata                const     0x816'619c      0x9c  AllZonesContainerBase.o [1]
-  .text                  ro code   0x816'6238      0x9c  STM32F4HAL.o [1]
-  .rodata                const     0x816'62d4      0x98  PanelSettingsContainer.o [1]
-  .rodata                const     0x816'636c      0x98  PanelSettingsContainerBase.o [1]
-  .rodata                const     0x816'6404      0x98  ScrollableContainer.o [7]
-  .text                  ro code   0x816'649c      0x94  ft5436.o [1]
-  .text                  ro code   0x816'6530      0x94  MainViewBase.o [1]
-  .text                  ro code   0x816'65c4      0x24  SingleZoneContainerBase.o [1]
-  .text                  ro code   0x816'65e8      0x20  SingleZoneContainerBase.o [1]
-  .text                  ro code   0x816'6608      0x20  MainViewBase.o [1]
-  .rodata                const     0x816'6628      0x90  FrontendApplicationBase.o [1]
-  .rodata                const     0x816'66b8      0x90  Container.o [7]
-  .text                  ro code   0x816'6748      0x90  TextAreaWithWildcard.o [7]
-  .text                  ro code   0x816'67d8      0x8c  MainViewBase.o [1]
-  .text                  ro code   0x816'6864      0x8c  xfofind.o [2]
-  .text                  ro code   0x816'68f0       0x4  heaptramp0.o [2]
-  .rodata                const     0x816'68f4      0x80  FrontendApplicationBase.o [1]
-  .rodata                const     0x816'6974      0x80  MainViewBase.o [1]
-  .rodata                const     0x816'69f4      0x80  MainViewBase.o [1]
-  .rodata                const     0x816'6a74      0x80  SingleZoneContainerBase.o [1]
-  .text                  ro code   0x816'6af4      0x7e  fclose.o [2]
-  .text                  ro code   0x816'6b72      0x18  close.o [6]
-  .text                  ro code   0x816'6b8a      0x14  remove.o [6]
-  .text                  ro code   0x816'6b9e       0x2  MainPresenter.o [1]
-  .rodata                const     0x816'6ba0      0x7c  MainViewBase.o [1]
-  .rodata                const     0x816'6c1c      0x7c  SingleZoneContainerBase.o [1]
-  .rodata                const     0x816'6c98      0x7c  SingleZoneContainerBase.o [1]
-  .rodata                const     0x816'6d14      0x7c  STM32F4HAL.o [1]
-  .rodata                const     0x816'6d90      0x7c  TextArea.o [7]
-  .rodata                const     0x816'6e0c      0x74  ToggleButton.o [7]
-  .rodata                const     0x816'6e80      0x74  Button.o [7]
-  .rodata                const     0x816'6ef4      0x70  Image.o [7]
-  .rodata                const     0x816'6f64      0x6c  Box.o [7]
-  .text                  ro code   0x816'6fd0      0x64  Box.o [7]
-  .rodata                const     0x816'7034      0x60  main.o [1]
-  .text                  ro code   0x816'7094      0x60  system_stm32f4xx.o [1]
-  .text                  ro code   0x816'70f4      0x58  STM32F4HAL.o [1]
-  .rodata                const     0x816'714c      0x54  SingleZoneContainerBase.o [1]
-  .text                  ro code   0x816'71a0      0x54  fputc.o [2]
-  TextFlashSection       const     0x816'71f4      0x54  LanguageGb.o [1]
-  .rodata                const     0x816'7248      0x4c  STM32F4DMA.o [1]
-  .rodata                const     0x816'7294      0x4c  InternalFlashFont.o [7]
-  .rodata                const     0x816'72e0      0x44  SingleZoneContainerBase.o [1]
-  .text                  ro code   0x816'7324      0x42  MainViewBase.o [1]
-  .text                  ro code   0x816'7366       0x2  MainView.o [1]
-  .text                  ro code   0x816'7368      0x40  stm32f4xx_it.o [1]
-  .text                  ro code   0x816'73a8      0x10  stm32f4xx_hal.o [1]
-  .text                  ro code   0x816'73b8      0x3e  SingleZoneContainerBase.o [1]
-  .text                  ro code   0x816'73f6       0x2  MainViewBase.o [1]
-  .rodata                const     0x816'73f8      0x3c  FrontendApplication.o [1]
-  .rodata                const     0x816'7434      0x3c  FrontendApplicationBase.o [1]
-  .rodata                const     0x816'7470      0x3c  FrontendApplicationBase.o [1]
-  .rodata                const     0x816'74ac      0x3c  MainView.o [1]
-  .rodata                const     0x816'74e8      0x3c  MainViewBase.o [1]
-  .rodata                const     0x816'7524      0x3c  Application.o [7]
-  .text                  ro code   0x816'7560      0x3c  STM32F4TouchController.o [1]
-  .text                  ro code   0x816'759c      0x3c  xcloseall.o [2]
-  .rodata                const     0x816'75d8      0x34  BoardConfiguration.o [1]
-  .rodata                const     0x816'760c      0x34  BoardConfiguration.o [1]
-  .rodata                const     0x816'7640      0x34  BoardConfiguration.o [1]
-  .rodata                const     0x816'7674      0x34  MainViewBase.o [1]
-  .rodata                const     0x816'76a8      0x34  LCD24bpp.o [7]
-  .rodata                const     0x816'76dc      0x34  Screen.o [7]
-  .rodata                const     0x816'7710      0x30  MainPresenter.o [1]
-  TextFlashSection       const     0x816'7740      0x2c  TypedTextDatabase.o [1]
-  .text                  ro code   0x816'776c      0x2a  MainViewBase.o [1]
-  .text                  ro code   0x816'7796       0x2  MainViewBase.o [1]
-  .rodata                const     0x816'7798      0x28  STM32F4Instrumentation.o [1]
-  .rodata                const     0x816'77c0      0x28  Application.o [7]
-  .text                  ro code   0x816'77e8      0x28  SingleZoneContainerBase.o [1]
-  .text                  ro code   0x816'7810      0x28  data_init.o [5]
-  .rodata                const     0x816'7838      0x24  DMA.o [7]
-  .text                  ro code   0x816'785c      0x24  FrontendApplicationBase.o [1]
-  TextFlashSection       const     0x816'7880      0x24  LanguageGb.o [1]
-  .text                  ro code   0x816'78a4      0x22  fpinit_M.o [4]
-  .iar.init_table        const     0x816'78c8      0x24  - Linker created -
-  .text                  ro code   0x816'78ec       0x2  MainViewBase.o [1]
-  .rodata                const     0x816'78f0      0x20  FrontendApplicationBase.o [1]
-  .rodata                const     0x816'7910      0x20  FrontendApplicationBase.o [1]
-  .rodata                const     0x816'7930      0x20  STM32F4HAL.o [1]
-  .text                  ro code   0x816'7950      0x20  SingleZoneContainerBase.o [1]
-  .text                  ro code   0x816'7970      0x20  cmain_call_ctors.o [5]
-  .text                  ro code   0x816'7990      0x18  cppinit.o [2]
-  TextFlashSection       const     0x816'79a8      0x20  LanguageGb.o [1]
-  TextFlashSection       const     0x816'79c8      0x20  LanguageGb.o [1]
-  TextFlashSection       const     0x816'79e8      0x20  LanguageGb.o [1]
-  TextFlashSection       const     0x816'7a08      0x20  LanguageGb.o [1]
-  .text                  ro code   0x816'7a28      0x1e  ScrollableContainer.o [7]
-  .text                  ro code   0x816'7a46       0x2  MainViewBase.o [1]
-  .text                  ro code   0x816'7a48      0x1e  cmain.o [5]
-  .text                  ro code   0x816'7a66       0x4  low_level_init.o [2]
-  .text                  ro code   0x816'7a6a       0x4  exit.o [2]
-  .text                  ro code   0x816'7a6e       0x2  MainViewBase.o [1]
-  .text                  ro code   0x816'7a70       0xe  cexit.o [5]
-  .text                  ro code   0x816'7a7e       0x2  MainViewBase.o [1]
-  TextFlashSection       const     0x816'7a80      0x1c  LanguageGb.o [1]
-  TextFlashSection       const     0x816'7a9c      0x1c  LanguageGb.o [1]
-  .rodata                const     0x816'7ab8      0x18  AllScenesContainerBase.o [1]
-  .rodata                const     0x816'7ad0      0x18  AllZonesContainerBase.o [1]
-  .rodata                const     0x816'7ae8      0x18  FrontendApplicationBase.o [1]
-  .rodata                const     0x816'7b00      0x18  MainPresenter.o [1]
-  .rodata                const     0x816'7b18      0x18  MainView.o [1]
-  .rodata                const     0x816'7b30      0x18  MainViewBase.o [1]
-  .rodata                const     0x816'7b48      0x18  PanelSettingsContainerBase.o [1]
-  .rodata                const     0x816'7b60      0x18  SingleZoneContainerBase.o [1]
-  .rodata                const     0x816'7b78      0x18  STM32F4TouchController.o [1]
-  .rodata                const     0x816'7b90      0x18  WindowSettingsContainerBase.o [1]
-  .text                  ro code   0x816'7ba8      0x18  AllScenesContainerBase.o [1]
-  .text                  ro code   0x816'7bc0      0x18  AllZonesContainerBase.o [1]
-  .text                  ro code   0x816'7bd8      0x18  FrontendApplicationBase.o [1]
-  .text                  ro code   0x816'7bf0      0x18  MainView.o [1]
-  .text                  ro code   0x816'7c08      0x18  MainViewBase.o [1]
-  .text                  ro code   0x816'7c20      0x18  PanelSettingsContainerBase.o [1]
-  .text                  ro code   0x816'7c38      0x18  SingleZoneContainerBase.o [1]
-  .text                  ro code   0x816'7c50      0x18  WindowSettingsContainerBase.o [1]
-  TextFlashSection       const     0x816'7c68      0x18  LanguageGb.o [1]
-  .text                  ro code   0x816'7c80      0x16  FrontendApplication.o [1]
-  .text                  ro code   0x816'7c96      0x16  STM32F4HAL.o [1]
-  .text                  ro code   0x816'7cac      0x16  xprout.o [2]
-  .text                  ro code   0x816'7cc2       0x2  MainViewBase.o [1]
-  .text                  ro code   0x816'7cc4       0xc  putchar.o [2]
-  .rodata                const     0x816'7cd0      0x14  ApplicationFontProvider.o [1]
-  .rodata                const     0x816'7ce4      0x14  BoardConfiguration.o [1]
-  .rodata                const     0x816'7cf8      0x14  BoardConfiguration.o [1]
-  .rodata                const     0x816'7d0c      0x14  main.o [1]
-  .rodata                const     0x816'7d20      0x14  MainPresenter.o [1]
-  .rodata                const     0x816'7d34      0x14  Gestures.o [7]
-  .rodata                const     0x816'7d48      0x14  Gestures.o [7]
-  .rodata                const     0x816'7d5c      0x14  Gestures.o [7]
-  TextFlashSection       const     0x816'7d70      0x14  LanguageGb.o [1]
-  TextFlashSection       const     0x816'7d84      0x14  LanguageGb.o [1]
-  TextFlashSection       const     0x816'7d98      0x14  LanguageGb.o [1]
-  TextFlashSection       const     0x816'7dac      0x14  LanguageGb.o [1]
-  .rodata                const     0x816'7dc0      0x10  BoardConfiguration.o [1]
-  .text                  ro code   0x816'7dd0      0x10  BoardConfiguration.o [1]
-  .text                  ro code   0x816'7de0      0x10  startup_stm32f429xx.o [1]
-  .text                  ro code   0x816'7df0       0xc  AllZonesContainer.o [1]
-  .text                  ro code   0x816'7dfc       0xc  STM32F4HAL.o [1]
-  .text                  ro code   0x816'7e08       0xc  cstartup_M.o [5]
-  TextFlashSection       const     0x816'7e14       0xc  LanguageGb.o [1]
-  SHT$$PREINIT_ARRAY               0x816'7e20       0x0  <Block>
-  SHT$$INIT_ARRAY                  0x816'7e20       0xc  <Block>
-    .init_array          const     0x816'7e20       0x4  BoardConfiguration.o [1]
-    .init_array          const     0x816'7e24       0x4  Texts.o [1]
-    .init_array          const     0x816'7e28       0x4  TypedTextDatabase.o [1]
-  __iar_tls$$INIT_ARRAY            0x816'7e2c       0x0  <Block>
-  .rodata                const     0x816'7e2c       0x8  FrontendApplicationBase.o [1]
-  .rodata                const     0x816'7e34       0x8  system_stm32f4xx.o [1]
-  .text                  ro code   0x816'7e3c       0x8  BoardConfiguration.o [1]
-  .text                  ro code   0x816'7e44       0x8  BoardConfiguration.o [1]
-  .text                  ro code   0x816'7e4c       0x8  STM32F4HAL.o [1]
-  TextFlashSection       const     0x816'7e54       0x8  LanguageGb.o [1]
-  TextFlashSection       const     0x816'7e5c       0x8  LanguageGb.o [1]
-  TextFlashSection       const     0x816'7e64       0x8  LanguageGb.o [1]
-  .rodata                const     0x816'7e6c       0x6  xlocale_c.o [2]
-  .text                  ro code   0x816'7e72       0x4  BoardConfiguration.o [1]
+  .text                  ro code   0x816'28e0      0xa8  BoardConfiguration.o [1]
+  .text                  ro code   0x816'2988     0x2f8  stm32f4xx_hal_rcc.o [1]
+  .text                  ro code   0x816'2c80      0x78  stm32f4xx_hal_pwr_ex.o [1]
+  .text                  ro code   0x816'2cf8     0x21c  stm32f4xx_hal_rcc_ex.o [1]
+  .text                  ro code   0x816'2f14     0x14e  stm32f4xx_ll_fmc.o [1]
+  .text                  ro code   0x816'3062       0x2  stm32f4xx_hal_sdram.o [1]
+  .text                  ro code   0x816'3064     0x306  STM32F4DMA.o [1]
+  .text                  ro code   0x816'336a       0x2  FrontendApplicationBase.o [1]
+  .text                  ro code   0x816'336c      0x9c  sdram.o [1]
+  .text                  ro code   0x816'3408      0x78  BoardConfiguration.o [1]
+  .text                  ro code   0x816'3480      0xf0  STM32F4Instrumentation.o [1]
+  .text                  ro code   0x816'3570     0x30e  stm32f4xx_hal_dma2d.o [1]
+  .text                  ro code   0x816'387e       0x2  MainPresenter.o [1]
+  .text                  ro code   0x816'3880      0x28  stm32f4xx_hal.o [1]
+  .text                  ro code   0x816'38a8      0x2c  BoardConfiguration.o [1]
+  .text                  ro code   0x816'38d4       0xc  BitmapDatabase.o [1]
+  .text                  ro code   0x816'38e0      0x54  Texts.o [1]
+  .text                  ro code   0x816'3934       0xc  FontManager.o [7]
+  .text                  ro code   0x816'3940      0x64  BoardConfiguration.o [1]
+  .text                  ro code   0x816'39a4     0x250  stm32f4xx_hal_tim.o [1]
+  .text                  ro code   0x816'3bf4      0x3e  stm32f4xx_hal_tim_ex.o [1]
+  .text                  ro code   0x816'3c32       0x2  stm32f4xx_hal_dma2d.o [1]
+  .text                  ro code   0x816'3c34       0x2  stm32f4xx_hal_dma2d.o [1]
+  .text                  ro code   0x816'3c36       0x2  MainPresenter.o [1]
+  .text                  ro code   0x816'3c38      0x20  BoardConfiguration.o [1]
+  .text                  ro code   0x816'3c58      0x30  TypedTextDatabase.o [1]
+  .text                  ro code   0x816'3c88       0xc  BoardConfiguration.o [1]
+  .text                  ro code   0x816'3c94      0x14  BoardConfiguration.o [1]
+  .text                  ro code   0x816'3ca8      0x14  BoardConfiguration.o [1]
+  .text                  ro code   0x816'3cbc      0x14  BoardConfiguration.o [1]
+  .text                  ro code   0x816'3cd0      0x18  FrontendApplication.o [1]
+  .text                  ro code   0x816'3ce8      0x68  Model.o [1]
+  .text                  ro code   0x816'3d50      0xa8  FrontendApplicationBase.o [1]
+  .text                  ro code   0x816'3df8      0x10  BoardConfiguration.o [1]
+  .text                  ro code   0x816'3e08      0xdc  FontGetters.o [1]
+  .text                  ro code   0x816'3ee4      0x1c  BoardConfiguration.o [1]
+  .text                  ro code   0x816'3f00       0x8  AbstractPartition.o [7]
+  .text                  ro code   0x816'3f08      0x20  FrontendApplicationBase.o [1]
+  .text                  ro code   0x816'3f28      0x14  FrontendApplicationBase.o [1]
+  .text                  ro code   0x816'3f3c     0x14c  FrontendApplicationBase.o [1]
+  .text                  ro code   0x816'4088      0x8c  BoardConfiguration.o [1]
+  .text                  ro code   0x816'4114      0x96  InternalFlashFont.o [7]
+  .text                  ro code   0x816'41aa       0xc  BoardConfiguration.o [1]
+  .text                  ro code   0x816'41b6       0x2  MainPresenter.o [1]
+  .text                  ro code   0x816'41b8      0x18  FrontendApplicationBase.o [1]
+  .text                  ro code   0x816'41d0      0x44  MainPresenter.o [1]
+  .text                  ro code   0x816'4214      0x12  BoardConfiguration.o [1]
+  .text                  ro code   0x816'4226      0xbe  ConstFont.o [7]
+  .text                  ro code   0x816'42e4      0x18  BoardConfiguration.o [1]
+  .text                  ro code   0x816'42fc      0x14  BoardConfiguration.o [1]
+  FontFlashSection       const     0x816'4310     0x390  Table_verdana_20_4bpp.o [1]
+  FontFlashSection       const     0x816'46a0     0x380  Table_verdana_40_4bpp.o [1]
+  FontFlashSection       const     0x816'4a20     0x374  Table_verdana_10_4bpp.o [1]
+  .rodata                const     0x816'4d94     0x280  BitmapDatabase.o [1]
+  FontFlashSection       const     0x816'5014     0x1ac  Kerning_verdana_40_4bpp.o [1]
+  .text                  ro code   0x816'51c0     0x140  heap0.o [2]
+  .text                  ro code   0x816'5300      0x2c  xgetmemchunk.o [2]
+  FontFlashSection       const     0x816'532c      0xe0  Kerning_verdana_20_4bpp.o [1]
+  .text                  ro code   0x816'540c      0xd8  xfspos.o [2]
+  .text                  ro code   0x816'54e4      0xac  fflush.o [2]
+  .text                  ro code   0x816'5590       0xc  xfgpos.o [2]
+  .text                  ro code   0x816'559c      0x4a  lseek.o [6]
+  .text                  ro code   0x816'55e6       0x2  MainPresenter.o [1]
+  .text                  ro code   0x816'55e8      0xcc  XShHandles.o [2]
+  .rodata                const     0x816'56b4      0xc0  MainViewBase.o [1]
+  .rodata                const     0x816'5774      0xb4  MainViewBase.o [1]
+  .rodata                const     0x816'5828      0xb4  SingleZoneContainer.o [1]
+  .rodata                const     0x816'58dc      0xb4  SingleZoneContainerBase.o [1]
+  .text                  ro code   0x816'5990      0xb4  xfwprep.o [2]
+  .text                  ro code   0x816'5a44      0x24  fseek.o [2]
+  .rodata                const     0x816'5a68      0xb0  AllScenesContainer.o [1]
+  .rodata                const     0x816'5b18      0xb0  AllScenesContainerBase.o [1]
+  .rodata                const     0x816'5bc8      0xb0  MainViewBase.o [1]
+  .rodata                const     0x816'5c78      0xa8  MainViewBase.o [1]
+  .rodata                const     0x816'5d20      0xa8  STM32F4HAL.o [1]
+  .text                  ro code   0x816'5dc8      0xa8  Font.o [7]
+  .rodata                const     0x816'5e70      0xa4  FrontendApplicationBase.o [1]
+  .rodata                const     0x816'5f14      0xa4  FrontendApplicationBase.o [1]
+  .rodata                const     0x816'5fb8      0xa4  WindowSettingsContainer.o [1]
+  .rodata                const     0x816'605c      0xa4  WindowSettingsContainerBase.o [1]
+  .rodata                const     0x816'6100      0xa0  AllZonesContainer.o [1]
+  .rodata                const     0x816'61a0      0x9c  AllZonesContainerBase.o [1]
+  .text                  ro code   0x816'623c      0x9c  STM32F4HAL.o [1]
+  .rodata                const     0x816'62d8      0x98  PanelSettingsContainer.o [1]
+  .rodata                const     0x816'6370      0x98  PanelSettingsContainerBase.o [1]
+  .rodata                const     0x816'6408      0x98  ScrollableContainer.o [7]
+  .text                  ro code   0x816'64a0      0x94  ft5436.o [1]
+  .text                  ro code   0x816'6534      0x94  MainViewBase.o [1]
+  .text                  ro code   0x816'65c8      0x24  SingleZoneContainerBase.o [1]
+  .text                  ro code   0x816'65ec      0x20  SingleZoneContainerBase.o [1]
+  .text                  ro code   0x816'660c      0x20  MainViewBase.o [1]
+  .rodata                const     0x816'662c      0x90  FrontendApplicationBase.o [1]
+  .rodata                const     0x816'66bc      0x90  Container.o [7]
+  .text                  ro code   0x816'674c      0x90  TextAreaWithWildcard.o [7]
+  .text                  ro code   0x816'67dc      0x8c  MainViewBase.o [1]
+  .text                  ro code   0x816'6868      0x8c  xfofind.o [2]
+  .text                  ro code   0x816'68f4       0x4  heaptramp0.o [2]
+  .rodata                const     0x816'68f8      0x80  FrontendApplicationBase.o [1]
+  .rodata                const     0x816'6978      0x80  MainViewBase.o [1]
+  .rodata                const     0x816'69f8      0x80  MainViewBase.o [1]
+  .rodata                const     0x816'6a78      0x80  SingleZoneContainerBase.o [1]
+  .text                  ro code   0x816'6af8      0x7e  fclose.o [2]
+  .text                  ro code   0x816'6b76      0x18  close.o [6]
+  .text                  ro code   0x816'6b8e      0x14  remove.o [6]
+  .text                  ro code   0x816'6ba2       0x2  MainPresenter.o [1]
+  .rodata                const     0x816'6ba4      0x7c  MainViewBase.o [1]
+  .rodata                const     0x816'6c20      0x7c  SingleZoneContainerBase.o [1]
+  .rodata                const     0x816'6c9c      0x7c  SingleZoneContainerBase.o [1]
+  .rodata                const     0x816'6d18      0x7c  STM32F4HAL.o [1]
+  .rodata                const     0x816'6d94      0x7c  TextArea.o [7]
+  .rodata                const     0x816'6e10      0x74  ToggleButton.o [7]
+  .rodata                const     0x816'6e84      0x74  Button.o [7]
+  .rodata                const     0x816'6ef8      0x70  Image.o [7]
+  .rodata                const     0x816'6f68      0x6c  Box.o [7]
+  .text                  ro code   0x816'6fd4      0x64  Box.o [7]
+  .rodata                const     0x816'7038      0x60  main.o [1]
+  .text                  ro code   0x816'7098      0x60  system_stm32f4xx.o [1]
+  .text                  ro code   0x816'70f8      0x58  STM32F4HAL.o [1]
+  .rodata                const     0x816'7150      0x54  SingleZoneContainerBase.o [1]
+  .text                  ro code   0x816'71a4      0x54  fputc.o [2]
+  TextFlashSection       const     0x816'71f8      0x54  LanguageGb.o [1]
+  .rodata                const     0x816'724c      0x4c  STM32F4DMA.o [1]
+  .rodata                const     0x816'7298      0x4c  InternalFlashFont.o [7]
+  .rodata                const     0x816'72e4      0x44  SingleZoneContainerBase.o [1]
+  .text                  ro code   0x816'7328      0x42  MainViewBase.o [1]
+  .text                  ro code   0x816'736a       0x2  MainView.o [1]
+  .text                  ro code   0x816'736c      0x40  stm32f4xx_it.o [1]
+  .text                  ro code   0x816'73ac      0x10  stm32f4xx_hal.o [1]
+  .text                  ro code   0x816'73bc      0x3e  SingleZoneContainerBase.o [1]
+  .text                  ro code   0x816'73fa       0x2  MainViewBase.o [1]
+  .rodata                const     0x816'73fc      0x3c  FrontendApplication.o [1]
+  .rodata                const     0x816'7438      0x3c  FrontendApplicationBase.o [1]
+  .rodata                const     0x816'7474      0x3c  FrontendApplicationBase.o [1]
+  .rodata                const     0x816'74b0      0x3c  MainView.o [1]
+  .rodata                const     0x816'74ec      0x3c  MainViewBase.o [1]
+  .rodata                const     0x816'7528      0x3c  Application.o [7]
+  .text                  ro code   0x816'7564      0x3c  STM32F4TouchController.o [1]
+  .text                  ro code   0x816'75a0      0x3c  xcloseall.o [2]
+  .rodata                const     0x816'75dc      0x34  BoardConfiguration.o [1]
+  .rodata                const     0x816'7610      0x34  BoardConfiguration.o [1]
+  .rodata                const     0x816'7644      0x34  BoardConfiguration.o [1]
+  .rodata                const     0x816'7678      0x34  MainViewBase.o [1]
+  .rodata                const     0x816'76ac      0x34  LCD24bpp.o [7]
+  .rodata                const     0x816'76e0      0x34  Screen.o [7]
+  .rodata                const     0x816'7714      0x30  MainPresenter.o [1]
+  TextFlashSection       const     0x816'7744      0x2c  TypedTextDatabase.o [1]
+  .text                  ro code   0x816'7770      0x2a  MainViewBase.o [1]
+  .text                  ro code   0x816'779a       0x2  MainViewBase.o [1]
+  .rodata                const     0x816'779c      0x28  STM32F4Instrumentation.o [1]
+  .rodata                const     0x816'77c4      0x28  Application.o [7]
+  .text                  ro code   0x816'77ec      0x28  SingleZoneContainerBase.o [1]
+  .text                  ro code   0x816'7814      0x28  data_init.o [5]
+  .rodata                const     0x816'783c      0x24  DMA.o [7]
+  .text                  ro code   0x816'7860      0x24  FrontendApplicationBase.o [1]
+  TextFlashSection       const     0x816'7884      0x24  LanguageGb.o [1]
+  .text                  ro code   0x816'78a8      0x22  fpinit_M.o [4]
+  .iar.init_table        const     0x816'78cc      0x24  - Linker created -
+  .text                  ro code   0x816'78f0       0x2  MainViewBase.o [1]
+  .rodata                const     0x816'78f4      0x20  FrontendApplicationBase.o [1]
+  .rodata                const     0x816'7914      0x20  FrontendApplicationBase.o [1]
+  .rodata                const     0x816'7934      0x20  STM32F4HAL.o [1]
+  .text                  ro code   0x816'7954      0x20  SingleZoneContainerBase.o [1]
+  .text                  ro code   0x816'7974      0x20  cmain_call_ctors.o [5]
+  .text                  ro code   0x816'7994      0x18  cppinit.o [2]
+  TextFlashSection       const     0x816'79ac      0x20  LanguageGb.o [1]
+  TextFlashSection       const     0x816'79cc      0x20  LanguageGb.o [1]
+  TextFlashSection       const     0x816'79ec      0x20  LanguageGb.o [1]
+  TextFlashSection       const     0x816'7a0c      0x20  LanguageGb.o [1]
+  .text                  ro code   0x816'7a2c      0x1e  ScrollableContainer.o [7]
+  .text                  ro code   0x816'7a4a       0x2  MainViewBase.o [1]
+  .text                  ro code   0x816'7a4c      0x1e  cmain.o [5]
+  .text                  ro code   0x816'7a6a       0x4  low_level_init.o [2]
+  .text                  ro code   0x816'7a6e       0x4  exit.o [2]
+  .text                  ro code   0x816'7a72       0x2  MainViewBase.o [1]
+  .text                  ro code   0x816'7a74       0xe  cexit.o [5]
+  .text                  ro code   0x816'7a82       0x2  MainViewBase.o [1]
+  TextFlashSection       const     0x816'7a84      0x1c  LanguageGb.o [1]
+  TextFlashSection       const     0x816'7aa0      0x1c  LanguageGb.o [1]
+  .rodata                const     0x816'7abc      0x18  AllScenesContainerBase.o [1]
+  .rodata                const     0x816'7ad4      0x18  AllZonesContainerBase.o [1]
+  .rodata                const     0x816'7aec      0x18  FrontendApplicationBase.o [1]
+  .rodata                const     0x816'7b04      0x18  MainPresenter.o [1]
+  .rodata                const     0x816'7b1c      0x18  MainView.o [1]
+  .rodata                const     0x816'7b34      0x18  MainViewBase.o [1]
+  .rodata                const     0x816'7b4c      0x18  PanelSettingsContainerBase.o [1]
+  .rodata                const     0x816'7b64      0x18  SingleZoneContainerBase.o [1]
+  .rodata                const     0x816'7b7c      0x18  STM32F4TouchController.o [1]
+  .rodata                const     0x816'7b94      0x18  WindowSettingsContainerBase.o [1]
+  .text                  ro code   0x816'7bac      0x18  AllScenesContainerBase.o [1]
+  .text                  ro code   0x816'7bc4      0x18  AllZonesContainerBase.o [1]
+  .text                  ro code   0x816'7bdc      0x18  FrontendApplicationBase.o [1]
+  .text                  ro code   0x816'7bf4      0x18  MainView.o [1]
+  .text                  ro code   0x816'7c0c      0x18  MainViewBase.o [1]
+  .text                  ro code   0x816'7c24      0x18  PanelSettingsContainerBase.o [1]
+  .text                  ro code   0x816'7c3c      0x18  SingleZoneContainerBase.o [1]
+  .text                  ro code   0x816'7c54      0x18  WindowSettingsContainerBase.o [1]
+  TextFlashSection       const     0x816'7c6c      0x18  LanguageGb.o [1]
+  .text                  ro code   0x816'7c84      0x16  FrontendApplication.o [1]
+  .text                  ro code   0x816'7c9a      0x16  STM32F4HAL.o [1]
+  .text                  ro code   0x816'7cb0      0x16  xprout.o [2]
+  .text                  ro code   0x816'7cc6       0x2  MainViewBase.o [1]
+  .text                  ro code   0x816'7cc8       0xc  putchar.o [2]
+  .rodata                const     0x816'7cd4      0x14  ApplicationFontProvider.o [1]
+  .rodata                const     0x816'7ce8      0x14  BoardConfiguration.o [1]
+  .rodata                const     0x816'7cfc      0x14  BoardConfiguration.o [1]
+  .rodata                const     0x816'7d10      0x14  main.o [1]
+  .rodata                const     0x816'7d24      0x14  MainPresenter.o [1]
+  .rodata                const     0x816'7d38      0x14  Gestures.o [7]
+  .rodata                const     0x816'7d4c      0x14  Gestures.o [7]
+  .rodata                const     0x816'7d60      0x14  Gestures.o [7]
+  TextFlashSection       const     0x816'7d74      0x14  LanguageGb.o [1]
+  TextFlashSection       const     0x816'7d88      0x14  LanguageGb.o [1]
+  TextFlashSection       const     0x816'7d9c      0x14  LanguageGb.o [1]
+  TextFlashSection       const     0x816'7db0      0x14  LanguageGb.o [1]
+  .rodata                const     0x816'7dc4      0x10  BoardConfiguration.o [1]
+  .text                  ro code   0x816'7dd4      0x10  BoardConfiguration.o [1]
+  .text                  ro code   0x816'7de4      0x10  startup_stm32f429xx.o [1]
+  .text                  ro code   0x816'7df4       0xc  AllZonesContainer.o [1]
+  .text                  ro code   0x816'7e00       0xc  STM32F4HAL.o [1]
+  .text                  ro code   0x816'7e0c       0xc  cstartup_M.o [5]
+  TextFlashSection       const     0x816'7e18       0xc  LanguageGb.o [1]
+  SHT$$PREINIT_ARRAY               0x816'7e24       0x0  <Block>
+  SHT$$INIT_ARRAY                  0x816'7e24       0xc  <Block>
+    .init_array          const     0x816'7e24       0x4  BoardConfiguration.o [1]
+    .init_array          const     0x816'7e28       0x4  Texts.o [1]
+    .init_array          const     0x816'7e2c       0x4  TypedTextDatabase.o [1]
+  __iar_tls$$INIT_ARRAY            0x816'7e30       0x0  <Block>
+  .rodata                const     0x816'7e30       0x8  FrontendApplicationBase.o [1]
+  .rodata                const     0x816'7e38       0x8  system_stm32f4xx.o [1]
+  .text                  ro code   0x816'7e40       0x8  BoardConfiguration.o [1]
+  .text                  ro code   0x816'7e48       0x8  BoardConfiguration.o [1]
+  .text                  ro code   0x816'7e50       0x8  STM32F4HAL.o [1]
+  TextFlashSection       const     0x816'7e58       0x8  LanguageGb.o [1]
+  TextFlashSection       const     0x816'7e60       0x8  LanguageGb.o [1]
+  TextFlashSection       const     0x816'7e68       0x8  LanguageGb.o [1]
+  .rodata                const     0x816'7e70       0x6  xlocale_c.o [2]
   .text                  ro code   0x816'7e76       0x4  BoardConfiguration.o [1]
-  .text                  ro code   0x816'7e7a       0x4  FrontendApplicationBase.o [1]
-  .text                  ro code   0x816'7e7e       0x4  MainViewBase.o [1]
+  .text                  ro code   0x816'7e7a       0x4  BoardConfiguration.o [1]
+  .text                  ro code   0x816'7e7e       0x4  FrontendApplicationBase.o [1]
   .text                  ro code   0x816'7e82       0x4  MainViewBase.o [1]
   .text                  ro code   0x816'7e86       0x4  MainViewBase.o [1]
   .text                  ro code   0x816'7e8a       0x4  MainViewBase.o [1]
   .text                  ro code   0x816'7e8e       0x4  MainViewBase.o [1]
   .text                  ro code   0x816'7e92       0x4  MainViewBase.o [1]
-  .text                  ro code   0x816'7e96       0x4  startup_stm32f429xx.o [1]
+  .text                  ro code   0x816'7e96       0x4  MainViewBase.o [1]
   .text                  ro code   0x816'7e9a       0x4  startup_stm32f429xx.o [1]
   .text                  ro code   0x816'7e9e       0x4  startup_stm32f429xx.o [1]
   .text                  ro code   0x816'7ea2       0x4  startup_stm32f429xx.o [1]
@@ -740,51 +739,52 @@ initialize by copy { rw };
   .text                  ro code   0x816'7fe2       0x4  startup_stm32f429xx.o [1]
   .text                  ro code   0x816'7fe6       0x4  startup_stm32f429xx.o [1]
   .text                  ro code   0x816'7fea       0x4  startup_stm32f429xx.o [1]
-  .text                  ro code   0x816'7fee       0x4  STM32F4Instrumentation.o [1]
+  .text                  ro code   0x816'7fee       0x4  startup_stm32f429xx.o [1]
   .text                  ro code   0x816'7ff2       0x4  STM32F4Instrumentation.o [1]
-  .text                  ro code   0x816'7ff6       0x4  WindowSettingsContainerBase.o [1]
+  .text                  ro code   0x816'7ff6       0x4  STM32F4Instrumentation.o [1]
   .text                  ro code   0x816'7ffa       0x4  WindowSettingsContainerBase.o [1]
   .text                  ro code   0x816'7ffe       0x4  WindowSettingsContainerBase.o [1]
   .text                  ro code   0x816'8002       0x4  WindowSettingsContainerBase.o [1]
-  .text                  ro code   0x816'8006       0x4  LCD24bpp.o [7]
-  .text                  ro code   0x816'800a       0x4  ConstFont.o [7]
+  .text                  ro code   0x816'8006       0x4  WindowSettingsContainerBase.o [1]
+  .text                  ro code   0x816'800a       0x4  LCD24bpp.o [7]
   .text                  ro code   0x816'800e       0x4  ConstFont.o [7]
   .text                  ro code   0x816'8012       0x4  ConstFont.o [7]
   .text                  ro code   0x816'8016       0x4  ConstFont.o [7]
-  .text                  ro code   0x816'801a       0x2  MainViewBase.o [1]
-  FontFlashSection       const     0x816'801c       0x4  Kerning_verdana_10_4bpp.o [1]
-  TextFlashSection       const     0x816'8020       0x4  Texts.o [1]
-  TextFlashSection       const     0x816'8024       0x4  TypedTextDatabase.o [1]
-  .text                  ro code   0x816'8028       0x2  MainViewBase.o [1]
-  .text                  ro code   0x816'802a       0x2  PanelSettingsContainerBase.o [1]
-  .text                  ro code   0x816'802c       0x2  SingleZoneContainerBase.o [1]
-  .text                  ro code   0x816'802e       0x2  SingleZoneContainerBase.o [1]
+  .text                  ro code   0x816'801a       0x4  ConstFont.o [7]
+  .text                  ro code   0x816'801e       0x2  MainViewBase.o [1]
+  FontFlashSection       const     0x816'8020       0x4  Kerning_verdana_10_4bpp.o [1]
+  TextFlashSection       const     0x816'8024       0x4  Texts.o [1]
+  TextFlashSection       const     0x816'8028       0x4  TypedTextDatabase.o [1]
+  .text                  ro code   0x816'802c       0x2  MainViewBase.o [1]
+  .text                  ro code   0x816'802e       0x2  PanelSettingsContainerBase.o [1]
   .text                  ro code   0x816'8030       0x2  SingleZoneContainerBase.o [1]
   .text                  ro code   0x816'8032       0x2  SingleZoneContainerBase.o [1]
   .text                  ro code   0x816'8034       0x2  SingleZoneContainerBase.o [1]
   .text                  ro code   0x816'8036       0x2  SingleZoneContainerBase.o [1]
   .text                  ro code   0x816'8038       0x2  SingleZoneContainerBase.o [1]
   .text                  ro code   0x816'803a       0x2  SingleZoneContainerBase.o [1]
-  .text                  ro code   0x816'803c       0x2  WindowSettingsContainerBase.o [1]
-  .text                  ro code   0x816'803e       0x2  WindowSettingsContainerBase.o [1]
+  .text                  ro code   0x816'803c       0x2  SingleZoneContainerBase.o [1]
+  .text                  ro code   0x816'803e       0x2  SingleZoneContainerBase.o [1]
   .text                  ro code   0x816'8040       0x2  WindowSettingsContainerBase.o [1]
   .text                  ro code   0x816'8042       0x2  WindowSettingsContainerBase.o [1]
   .text                  ro code   0x816'8044       0x2  WindowSettingsContainerBase.o [1]
   .text                  ro code   0x816'8046       0x2  WindowSettingsContainerBase.o [1]
   .text                  ro code   0x816'8048       0x2  WindowSettingsContainerBase.o [1]
   .text                  ro code   0x816'804a       0x2  WindowSettingsContainerBase.o [1]
-  .text                  ro code   0x816'804c       0x2  Application.o [7]
-  .text                  ro code   0x816'804e       0x2  Application.o [7]
+  .text                  ro code   0x816'804c       0x2  WindowSettingsContainerBase.o [1]
+  .text                  ro code   0x816'804e       0x2  WindowSettingsContainerBase.o [1]
   .text                  ro code   0x816'8050       0x2  Application.o [7]
   .text                  ro code   0x816'8052       0x2  Application.o [7]
   .text                  ro code   0x816'8054       0x2  Application.o [7]
-  .text                  ro code   0x816'8056       0x2  Screen.o [7]
-  .rodata                const     0x816'8058       0x1  unwind_debug.o [6]
-  .text                  ro code   0x816'805c       0x0  cstart_closeall.o [5]
-  .rodata                const     0x816'805c       0x0  zero_init3.o [5]
-  .rodata                const     0x816'805c       0x0  lz77_init_single.o [5]
-  Initializer bytes      const     0x816'805c      0xcf  <for P2-1>
-                                 - 0x816'812b  0x167f7f
+  .text                  ro code   0x816'8056       0x2  Application.o [7]
+  .text                  ro code   0x816'8058       0x2  Application.o [7]
+  .text                  ro code   0x816'805a       0x2  Screen.o [7]
+  .rodata                const     0x816'805c       0x1  unwind_debug.o [6]
+  .text                  ro code   0x816'8060       0x0  cstart_closeall.o [5]
+  .rodata                const     0x816'8060       0x0  zero_init3.o [5]
+  .rodata                const     0x816'8060       0x0  lz77_init_single.o [5]
+  Initializer bytes      const     0x816'8060      0xcf  <for P2-1>
+                                 - 0x816'812f  0x167f83
 
 "P2", part 1 of 3:                                0xc80
   P2-1                            0x2000'0000     0xc80  <Init block>
@@ -861,7 +861,7 @@ Unused ranges:
 
          From           To      Size
          ----           --      ----
-   0x816'812b   0x81f'ffff  0x9'7ed5
+   0x816'812f   0x81f'ffff  0x9'7ed1
   0x2001'af60  0x2002'ffff  0x1'50a0
 
 
@@ -877,7 +877,7 @@ Zero (__iar_zero_init3)
 
 Copy/lz77 (__iar_lz77_init_single3)
     1 source range, total size 0xcf (6% of destination):
-           0x816'805c     0xcf
+           0x816'8060     0xcf
     1 destination range, total size 0xc80:
           0x2000'0000    0xc80
 
@@ -902,7 +902,7 @@ C:\projects\switchTouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj: [1]
     AllZonesContainerBase.o                 470        180
     ApplicationFontProvider.o                           20
     BitmapDatabase.o                         12        640
-    BoardConfiguration.o                    840        394   74 165
+    BoardConfiguration.o                    844        394   74 165
     FontGetters.o                           220                 108
     Font_verdana_10_4bpp.o                           1 552
     Font_verdana_20_4bpp.o                           5 048
@@ -999,7 +999,7 @@ C:\projects\switchTouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj: [1]
     zoneWhiteNotPressed.o                            8 600
     zoneWhitePressed.o                               8 600
     ---------------------------------------------------------------
-    Total:                               33 566  1 409 825  108 047
+    Total:                               33 570  1 409 825  108 047
 
 dl7M_tlf.a: [2]
     XShHandles.o                            204                 128
@@ -1124,7 +1124,7 @@ touchgfx_core_release.a: [7]
     Gaps                                      3          4        3
     Linker created                                      37    1 536
 -------------------------------------------------------------------
-    Grand Total:                         63 711  1 411 148  110 430
+    Grand Total:                         63 715  1 411 148  110 430
 
 
 *******************************************************************************
@@ -1133,11 +1133,11 @@ touchgfx_core_release.a: [7]
 
 Entry                       Address     Size  Type      Object
 -----                       -------     ----  ----      ------
-.iar.init_table$$Base    0x816'78c8            --   Gb  - Linker created -
-.iar.init_table$$Limit   0x816'78ec            --   Gb  - Linker created -
-?main                    0x816'7a49           Code  Gb  cmain.o [5]
-AHBPrescTable            0x816'70e4     0x10  Data  Gb  system_stm32f4xx.o [1]
-APBPrescTable            0x816'7e34      0x8  Data  Gb  system_stm32f4xx.o [1]
+.iar.init_table$$Base    0x816'78cc            --   Gb  - Linker created -
+.iar.init_table$$Limit   0x816'78f0            --   Gb  - Linker created -
+?main                    0x816'7a4d           Code  Gb  cmain.o [5]
+AHBPrescTable            0x816'70e8     0x10  Data  Gb  system_stm32f4xx.o [1]
+APBPrescTable            0x816'7e38      0x8  Data  Gb  system_stm32f4xx.o [1]
 Aldata                  0x2001'a928      0x8  Data  Lc  heap0.o [2]
 AllScenesContainer::AllScenesContainer()
                          0x815'fb5f     0x5e  Code  Gb  AllScenesContainer.o [1]
@@ -1196,7 +1196,7 @@ AllZonesContainer::CloseButtonClicked()
 AllZonesContainer::GetFirstFreeContainerInfoIndex()
                          0x815'f979     0x22  Code  Gb  AllZonesContainer.o [1]
 AllZonesContainer::ZoneInfos::ZoneInfos()
-                         0x816'7df1      0xc  Code  Gb  AllZonesContainer.o [1]
+                         0x816'7df5      0xc  Code  Gb  AllZonesContainer.o [1]
 AllZonesContainer::initialize()
                          0x815'f8ad      0x4  Code  Gb  AllZonesContainer.o [1]
 AllZonesContainerBase::AllZonesContainerBase()
@@ -1212,61 +1212,61 @@ AllZonesContainerBase::buttonCallbackHandler(touchgfx::AbstractButton const &)
 AllZonesContainerBase::initialize()
                          0x816'0263      0x2  Code  Gb  AllZonesContainerBase.o [1]
 BitmapDatabase::getInstance()
-                         0x816'38d1      0x4  Code  Gb  BitmapDatabase.o [1]
+                         0x816'38d5      0x4  Code  Gb  BitmapDatabase.o [1]
 BitmapDatabase::getInstanceSize()
-                         0x816'38d9      0x4  Code  Gb  BitmapDatabase.o [1]
-BusFault_Handler         0x816'736f      0x2  Code  Gb  stm32f4xx_it.o [1]
+                         0x816'38dd      0x4  Code  Gb  BitmapDatabase.o [1]
+BusFault_Handler         0x816'7373      0x2  Code  Gb  stm32f4xx_it.o [1]
 CRC_Lock                 0x815'634d     0x58  Code  Gb  stm32_crc_lock.o [7]
 CSTACK$$Base            0x2001'a960            --   Gb  - Linker created -
 CSTACK$$Limit           0x2001'ad60            --   Gb  - Linker created -
 CacheMore                0x815'3afd     0x24  Code  Lc  xlocale_c.o [2]
 Command                 0x2001'a764     0x10  Data  Lc  HW_Init.o [1]
-DMA2D_IRQHandler         0x816'7395      0x6  Code  Gb  stm32f4xx_it.o [1]
-DMA2D_SetConfig          0x816'37f3     0x88  Code  Lc  stm32f4xx_hal_dma2d.o [1]
-DebugMon_Handler         0x816'7373      0x2  Code  Gb  stm32f4xx_it.o [1]
+DMA2D_IRQHandler         0x816'7399      0x6  Code  Gb  stm32f4xx_it.o [1]
+DMA2D_SetConfig          0x816'37f7     0x88  Code  Lc  stm32f4xx_hal_dma2d.o [1]
+DebugMon_Handler         0x816'7377      0x2  Code  Gb  stm32f4xx_it.o [1]
 Error_Handler            0x816'1f8f      0x2  Code  Gb  main.o [1]
-FMC_IRQHandler           0x816'7383      0x6  Code  Gb  stm32f4xx_it.o [1]
+FMC_IRQHandler           0x816'7387      0x6  Code  Gb  stm32f4xx_it.o [1]
 FMC_Initialized         0x2001'a930      0x4  Data  Lc  HW_Init.o [1]
-FMC_SDRAM_Init           0x816'2f11     0x76  Code  Gb  stm32f4xx_ll_fmc.o [1]
+FMC_SDRAM_Init           0x816'2f15     0x76  Code  Gb  stm32f4xx_ll_fmc.o [1]
 FMC_SDRAM_ProgramRefreshRate
-                         0x816'3053      0xc  Code  Gb  stm32f4xx_ll_fmc.o [1]
-FMC_SDRAM_SendCommand    0x816'3009     0x4a  Code  Gb  stm32f4xx_ll_fmc.o [1]
-FMC_SDRAM_Timing_Init    0x816'2f87     0x7a  Code  Gb  stm32f4xx_ll_fmc.o [1]
-FT_GetState              0x816'64bb     0x72  Code  Gb  ft5436.o [1]
-FT_Init                  0x816'649d     0x1e  Code  Gb  ft5436.o [1]
+                         0x816'3057      0xc  Code  Gb  stm32f4xx_ll_fmc.o [1]
+FMC_SDRAM_SendCommand    0x816'300d     0x4a  Code  Gb  stm32f4xx_ll_fmc.o [1]
+FMC_SDRAM_Timing_Init    0x816'2f8b     0x7a  Code  Gb  stm32f4xx_ll_fmc.o [1]
+FT_GetState              0x816'64bf     0x72  Code  Gb  ft5436.o [1]
+FT_Init                  0x816'64a1     0x1e  Code  Gb  ft5436.o [1]
 FrontendApplication::FrontendApplication(Model &, FrontendHeap &)
-                         0x816'3ccd     0x10  Code  Gb  FrontendApplication.o [1]
+                         0x816'3cd1     0x10  Code  Gb  FrontendApplication.o [1]
 FrontendApplication::handleTickEvent()
-                         0x816'7c81     0x16  Code  Gb  FrontendApplication.o [1]
+                         0x816'7c85     0x16  Code  Gb  FrontendApplication.o [1]
 FrontendApplicationBase::FrontendApplicationBase(Model &, FrontendHeap &)
-                         0x816'3d4f     0x38  Code  Gb  FrontendApplicationBase.o [1]
+                         0x816'3d53     0x38  Code  Gb  FrontendApplicationBase.o [1]
 FrontendApplicationBase::FrontendApplicationBase(Model &, FrontendHeap &) [subobject]
-                         0x816'3d4d      0x2  Code  Gb  FrontendApplicationBase.o [1]
+                         0x816'3d51      0x2  Code  Gb  FrontendApplicationBase.o [1]
 FrontendApplicationBase::gotoMainScreenNoTransition()
-                         0x816'3d89     0x34  Code  Gb  FrontendApplicationBase.o [1]
+                         0x816'3d8d     0x34  Code  Gb  FrontendApplicationBase.o [1]
 FrontendApplicationBase::gotoMainScreenNoTransitionImpl()
-                         0x816'3dbd     0x1a  Code  Gb  FrontendApplicationBase.o [1]
+                         0x816'3dc1     0x1a  Code  Gb  FrontendApplicationBase.o [1]
 FrontendHeap::FrontendHeap()
-                         0x816'393d     0x64  Code  Gb  BoardConfiguration.o [1]
+                         0x816'3941     0x64  Code  Gb  BoardConfiguration.o [1]
 FrontendHeap::getInstance()::instance
                         0x2000'0c80  0x11688  Data  Gb  BoardConfiguration.o [1]
 FrontendHeapBase::FrontendHeapBase(touchgfx::AbstractPartition &, touchgfx::AbstractPartition &, touchgfx::AbstractPartition &, FrontendApplication &)
-                         0x816'3ee1     0x1c  Code  Gb  BoardConfiguration.o [1]
+                         0x816'3ee5     0x1c  Code  Gb  BoardConfiguration.o [1]
 FrontendHeapBase::FrontendHeapBase(touchgfx::AbstractPartition &, touchgfx::AbstractPartition &, touchgfx::AbstractPartition &, FrontendApplication &) [subobject]
-                         0x816'3c85      0xc  Code  Gb  BoardConfiguration.o [1]
+                         0x816'3c89      0xc  Code  Gb  BoardConfiguration.o [1]
 GRAPHICS_HW_Init()       0x816'28e7     0x18  Code  Gb  BoardConfiguration.o [1]
-GRAPHICS_Init()          0x816'295d      0x2  Code  Gb  BoardConfiguration.o [1]
-GRAPHICS_MainTask()      0x816'295f     0x1a  Code  Gb  BoardConfiguration.o [1]
+GRAPHICS_Init()          0x816'295f      0x2  Code  Gb  BoardConfiguration.o [1]
+GRAPHICS_MainTask()      0x816'2961     0x1a  Code  Gb  BoardConfiguration.o [1]
 HAL_CRC_Init             0x816'2819     0x24  Code  Gb  stm32f4xx_hal_crc.o [1]
 HAL_CRC_MspInit          0x815'c761     0x26  Code  Gb  stm32f4xx_hal_msp.o [1]
 HAL_DMA2D_BlendingStart_IT
-                         0x816'35ef     0x10  Code  Gb  stm32f4xx_hal_dma2d.o [1]
-HAL_DMA2D_ConfigLayer    0x816'3751     0x92  Code  Gb  stm32f4xx_hal_dma2d.o [1]
-HAL_DMA2D_IRQHandler     0x816'3641     0xf2  Code  Gb  stm32f4xx_hal_dma2d.o [1]
-HAL_DMA2D_Init           0x816'356d     0x56  Code  Gb  stm32f4xx_hal_dma2d.o [1]
+                         0x816'35f3     0x10  Code  Gb  stm32f4xx_hal_dma2d.o [1]
+HAL_DMA2D_ConfigLayer    0x816'3755     0x92  Code  Gb  stm32f4xx_hal_dma2d.o [1]
+HAL_DMA2D_IRQHandler     0x816'3645     0xf2  Code  Gb  stm32f4xx_hal_dma2d.o [1]
+HAL_DMA2D_Init           0x816'3571     0x56  Code  Gb  stm32f4xx_hal_dma2d.o [1]
 HAL_DMA2D_MspInit        0x816'17e7     0x26  Code  Gb  HW_Init.o [1]
-HAL_DMA2D_Start_IT       0x816'35c3     0x12  Code  Gb  stm32f4xx_hal_dma2d.o [1]
-HAL_Delay                0x816'387d     0x28  Code  Wk  stm32f4xx_hal.o [1]
+HAL_DMA2D_Start_IT       0x816'35c7     0x12  Code  Gb  stm32f4xx_hal_dma2d.o [1]
+HAL_Delay                0x816'3881     0x28  Code  Wk  stm32f4xx_hal.o [1]
 HAL_GPIO_DeInit          0x815'cd25    0x114  Code  Gb  stm32f4xx_hal_gpio.o [1]
 HAL_GPIO_Init            0x815'cb6d    0x1b8  Code  Gb  stm32f4xx_hal_gpio.o [1]
 HAL_GPIO_WritePin        0x815'ce39      0x8  Code  Gb  stm32f4xx_hal_gpio.o [1]
@@ -1280,7 +1280,7 @@ HAL_I2C_Master_Receive   0x815'c155     0xf4  Code  Gb  stm32f4xx_hal_i2c.o [1]
 HAL_I2C_Master_Transmit
                          0x815'c021    0x12c  Code  Gb  stm32f4xx_hal_i2c.o [1]
 HAL_I2C_MspInit          0x815'c787     0x52  Code  Gb  stm32f4xx_hal_msp.o [1]
-HAL_IncTick              0x816'73a9     0x10  Code  Wk  stm32f4xx_hal.o [1]
+HAL_IncTick              0x816'73ad     0x10  Code  Wk  stm32f4xx_hal.o [1]
 HAL_Init                 0x816'27e5     0x30  Code  Gb  stm32f4xx_hal.o [1]
 HAL_InitTick             0x815'ce75     0x40  Code  Wk  stm32f4xx_hal.o [1]
 HAL_LTDC_ConfigLayer     0x816'1a01     0x44  Code  Gb  stm32f4xx_hal_ltdc.o [1]
@@ -1301,15 +1301,15 @@ HAL_NVIC_SetPriority     0x815'cab9     0x3a  Code  Gb  stm32f4xx_hal_cortex.o [
 HAL_NVIC_SetPriorityGrouping
                          0x815'ca9f     0x1a  Code  Gb  stm32f4xx_hal_cortex.o [1]
 HAL_PWREx_EnableOverDrive
-                         0x816'2c7d     0x48  Code  Gb  stm32f4xx_hal_pwr_ex.o [1]
+                         0x816'2c81     0x48  Code  Gb  stm32f4xx_hal_pwr_ex.o [1]
 HAL_RCCEx_PeriphCLKConfig
-                         0x816'2cf5    0x1f2  Code  Gb  stm32f4xx_hal_rcc_ex.o [1]
+                         0x816'2cf9    0x1f2  Code  Gb  stm32f4xx_hal_rcc_ex.o [1]
 HAL_RCC_ClockConfig      0x815'c895     0xfe  Code  Gb  stm32f4xx_hal_rcc.o [1]
 HAL_RCC_GetClockConfig   0x815'c9c9     0x36  Code  Gb  stm32f4xx_hal_rcc.o [1]
 HAL_RCC_GetHCLKFreq      0x815'c99f      0x6  Code  Gb  stm32f4xx_hal_rcc.o [1]
 HAL_RCC_GetPCLK1Freq     0x815'c9a5     0x10  Code  Gb  stm32f4xx_hal_rcc.o [1]
 HAL_RCC_GetPCLK2Freq     0x815'c9b5      0xe  Code  Gb  stm32f4xx_hal_rcc.o [1]
-HAL_RCC_OscConfig        0x816'2985    0x2f8  Code  Wk  stm32f4xx_hal_rcc.o [1]
+HAL_RCC_OscConfig        0x816'2989    0x2f8  Code  Wk  stm32f4xx_hal_rcc.o [1]
 HAL_SDRAM_IRQHandler     0x816'2019     0x1e  Code  Gb  stm32f4xx_hal_sdram.o [1]
 HAL_SDRAM_Init           0x816'1fdd     0x3c  Code  Gb  stm32f4xx_hal_sdram.o [1]
 HAL_SDRAM_MspInit        0x816'17e5      0x2  Code  Gb  HW_Init.o [1]
@@ -1318,18 +1318,18 @@ HAL_SDRAM_ProgramRefreshRate
 HAL_SDRAM_SendCommand    0x816'2037     0x2c  Code  Gb  stm32f4xx_hal_sdram.o [1]
 HAL_SYSTICK_Config       0x815'cb27     0x28  Code  Gb  stm32f4xx_hal_cortex.o [1]
 HAL_TIMEx_MasterConfigSynchronization
-                         0x816'3bf1     0x3e  Code  Gb  stm32f4xx_hal_tim_ex.o [1]
-HAL_TIM_Base_Init        0x816'39a1     0x1a  Code  Gb  stm32f4xx_hal_tim.o [1]
+                         0x816'3bf5     0x3e  Code  Gb  stm32f4xx_hal_tim_ex.o [1]
+HAL_TIM_Base_Init        0x816'39a5     0x1a  Code  Gb  stm32f4xx_hal_tim.o [1]
 HAL_TIM_Base_MspInit     0x815'c7d9     0x26  Code  Gb  stm32f4xx_hal_msp.o [1]
-HAL_TIM_Base_Start       0x816'39bb     0x1c  Code  Gb  stm32f4xx_hal_tim.o [1]
+HAL_TIM_Base_Start       0x816'39bf     0x1c  Code  Gb  stm32f4xx_hal_tim.o [1]
 HAL_TIM_ConfigClockSource
-                         0x816'3a05     0x90  Code  Gb  stm32f4xx_hal_tim.o [1]
+                         0x816'3a09     0x90  Code  Gb  stm32f4xx_hal_tim.o [1]
 HAL_UART_Init            0x816'24cd     0x1e  Code  Gb  stm32f4xx_hal_uart.o [1]
 HAL_UART_MspInit         0x815'c7ff     0x52  Code  Gb  stm32f4xx_hal_msp.o [1]
 HAL_UART_Transmit        0x816'2543     0xac  Code  Gb  stm32f4xx_hal_uart.o [1]
 HEAP$$Base              0x2001'ad60            --   Gb  - Linker created -
 HEAP$$Limit             0x2001'af60            --   Gb  - Linker created -
-HardFault_Handler        0x816'736b      0x2  Code  Gb  stm32f4xx_it.o [1]
+HardFault_Handler        0x816'736f      0x2  Code  Gb  stm32f4xx_it.o [1]
 I2C_IsAcknowledgeFailed
                          0x815'c6f9     0x2c  Code  Lc  stm32f4xx_hal_i2c.o [1]
 I2C_MasterRequestRead    0x815'c445     0xa4  Code  Lc  stm32f4xx_hal_i2c.o [1]
@@ -1345,32 +1345,32 @@ I2C_WaitOnTXEFlagUntilTimeout
                          0x815'c615     0x38  Code  Lc  stm32f4xx_hal_i2c.o [1]
 Initialization guard variable for FrontendHeap::getInstance()::instance
                         0x2001'a95c      0x1  Data  Gb  BoardConfiguration.o [1]
-LTDC_ER_IRQHandler       0x816'738d      0x2  Code  Gb  stm32f4xx_it.o [1]
-LTDC_IRQHandler          0x816'7389      0x2  Code  Gb  stm32f4xx_it.o [1]
+LTDC_ER_IRQHandler       0x816'7391      0x2  Code  Gb  stm32f4xx_it.o [1]
+LTDC_IRQHandler          0x816'738d      0x2  Code  Gb  stm32f4xx_it.o [1]
 LTDC_SetConfig           0x816'1b3f     0xfa  Code  Lc  stm32f4xx_hal_ltdc.o [1]
 LoadInt                  0x815'2cfb     0x7a  Code  Lc  xprintffull.o [2]
 MX_FMC_Init()            0x816'14cf     0x5e  Code  Gb  HW_Init.o [1]
 MX_LCD_Init()            0x816'1419     0xb6  Code  Gb  HW_Init.o [1]
 MainPresenter * touchgfx::makeTransition<MainView, MainPresenter, touchgfx::NoTransition, Model>(touchgfx::Screen **, touchgfx::Presenter **, touchgfx::MVPHeap &, touchgfx::Transition **, Model *)
-                         0x816'3f39    0x14c  Code  Gb  FrontendApplicationBase.o [1]
+                         0x816'3f3d    0x14c  Code  Gb  FrontendApplicationBase.o [1]
 MainPresenter * touchgfx::makeTransition<MainView, MainPresenter, touchgfx::NoTransition, Model>(touchgfx::Screen **, touchgfx::Presenter **, touchgfx::MVPHeap &, touchgfx::Transition **, Model *)::string (instance 2)
-                         0x816'6628     0x90  Data  Gb  FrontendApplicationBase.o [1]
+                         0x816'662c     0x90  Data  Gb  FrontendApplicationBase.o [1]
 MainPresenter * touchgfx::makeTransition<MainView, MainPresenter, touchgfx::NoTransition, Model>(touchgfx::Screen **, touchgfx::Presenter **, touchgfx::MVPHeap &, touchgfx::Transition **, Model *)::string (instance 3)
-                         0x816'68f4     0x80  Data  Gb  FrontendApplicationBase.o [1]
+                         0x816'68f8     0x80  Data  Gb  FrontendApplicationBase.o [1]
 MainPresenter * touchgfx::makeTransition<MainView, MainPresenter, touchgfx::NoTransition, Model>(touchgfx::Screen **, touchgfx::Presenter **, touchgfx::MVPHeap &, touchgfx::Transition **, Model *)::string (instance 5)
-                         0x816'5e6c     0xa4  Data  Gb  FrontendApplicationBase.o [1]
+                         0x816'5e70     0xa4  Data  Gb  FrontendApplicationBase.o [1]
 MainPresenter * touchgfx::makeTransition<MainView, MainPresenter, touchgfx::NoTransition, Model>(touchgfx::Screen **, touchgfx::Presenter **, touchgfx::MVPHeap &, touchgfx::Transition **, Model *)::string (instance 7)
-                         0x816'5f10     0xa4  Data  Gb  FrontendApplicationBase.o [1]
+                         0x816'5f14     0xa4  Data  Gb  FrontendApplicationBase.o [1]
 MainPresenter::MainPresenter(MainView &)
-                         0x816'41cd     0x1c  Code  Gb  MainPresenter.o [1]
+                         0x816'41d1     0x1c  Code  Gb  MainPresenter.o [1]
 MainPresenter::activate()
-                         0x816'41f9      0x2  Code  Gb  MainPresenter.o [1]
+                         0x816'41fd      0x2  Code  Gb  MainPresenter.o [1]
 MainPresenter::deactivate()
-                         0x816'41fb      0x2  Code  Gb  MainPresenter.o [1]
+                         0x816'41ff      0x2  Code  Gb  MainPresenter.o [1]
 MainPresenter::notifySunStateChanged(int, int, int, int, int)
-                         0x816'41ff     0x12  Code  Gb  MainPresenter.o [1]
+                         0x816'4203     0x12  Code  Gb  MainPresenter.o [1]
 MainPresenter::~MainPresenter()
-                         0x816'6b9f      0x2  Code  Gb  MainPresenter.o [1]
+                         0x816'6ba3      0x2  Code  Gb  MainPresenter.o [1]
 MainView::BackAllScenesContainerHandler()
                          0x815'e249     0x18  Code  Gb  MainView.o [1]
 MainView::BackAllZonesContainerHandler()
@@ -1398,28 +1398,28 @@ MainView::setupScreen()
                          0x815'e243      0x4  Code  Gb  MainView.o [1]
 MainView::tearDownScreen()
                          0x815'e247      0x2  Code  Gb  MainView.o [1]
-MainView::~MainView()    0x816'7367      0x2  Code  Gb  MainView.o [1]
+MainView::~MainView()    0x816'736b      0x2  Code  Gb  MainView.o [1]
 MainViewBase::MainViewBase()
                          0x815'e751    0x2aa  Code  Gb  MainViewBase.o [1]
 MainViewBase::MainViewBase() [subobject]
                          0x815'e74d      0x2  Code  Gb  MainViewBase.o [1]
 MainViewBase::PanelSettingsButtonClicked()
-                         0x816'8029      0x2  Code  Gb  MainViewBase.o [1]
+                         0x816'802d      0x2  Code  Gb  MainViewBase.o [1]
 MainViewBase::WindowSettingsButtonClicked()
-                         0x816'801b      0x2  Code  Gb  MainViewBase.o [1]
+                         0x816'801f      0x2  Code  Gb  MainViewBase.o [1]
 MainViewBase::buttonCallbackHandler(touchgfx::AbstractButton const &)
                          0x815'ea65     0x48  Code  Gb  MainViewBase.o [1]
 MainViewBase::setupScreen()
                          0x815'ea3d     0x28  Code  Gb  MainViewBase.o [1]
 MainViewBase::~MainViewBase()
-                         0x816'7cc3      0x2  Code  Gb  MainViewBase.o [1]
-MemManage_Handler        0x816'736d      0x2  Code  Gb  stm32f4xx_it.o [1]
-Model::Model()           0x816'3ce5      0x2  Code  Gb  Model.o [1]
-Model::tick()            0x816'3ced     0x58  Code  Gb  Model.o [1]
+                         0x816'7cc7      0x2  Code  Gb  MainViewBase.o [1]
+MemManage_Handler        0x816'7371      0x2  Code  Gb  stm32f4xx_it.o [1]
+Model::Model()           0x816'3ce9      0x2  Code  Gb  Model.o [1]
+Model::tick()            0x816'3cf1     0x58  Code  Gb  Model.o [1]
 Model::tick()::counter  0x2001'a8d4      0x4  Data  Lc  Model.o [1]
 ModelListener::notifySunStateChanged(int, int, int, int, int)
-                         0x816'55e3      0x2  Code  Gb  MainPresenter.o [1]
-NMI_Handler              0x816'7369      0x2  Code  Gb  stm32f4xx_it.o [1]
+                         0x816'55e7      0x2  Code  Gb  MainPresenter.o [1]
+NMI_Handler              0x816'736d      0x2  Code  Gb  stm32f4xx_it.o [1]
 PanelSettingsContainer::CloseButtonClicked()
                          0x815'fc85      0xa  Code  Gb  PanelSettingsContainer.o [1]
 PanelSettingsContainer::PanelSettingsContainer()
@@ -1429,7 +1429,7 @@ PanelSettingsContainer::PanelSettingsContainer() [subobject]
 PanelSettingsContainer::initialize()
                          0x815'fc81      0x4  Code  Gb  PanelSettingsContainer.o [1]
 PanelSettingsContainerBase::CloseButtonClicked()
-                         0x816'802b      0x2  Code  Gb  PanelSettingsContainerBase.o [1]
+                         0x816'802f      0x2  Code  Gb  PanelSettingsContainerBase.o [1]
 PanelSettingsContainerBase::PanelSettingsContainerBase()
                          0x816'0a85     0xa8  Code  Gb  PanelSettingsContainerBase.o [1]
 PanelSettingsContainerBase::PanelSettingsContainerBase() [subobject]
@@ -1441,29 +1441,29 @@ PanelSettingsContainerBase::initialize()
 PendSV_Handler           0x815'872d           Code  Gb  portasm.o [1]
 PostSleepProcessing      0x815'87df      0x2  Code  Wk  freertos.o [1]
 PreSleepProcessing       0x815'87dd      0x2  Code  Wk  freertos.o [1]
-Region$$Table$$Base      0x816'78c8            --   Gb  - Linker created -
-Region$$Table$$Limit     0x816'78ec            --   Gb  - Linker created -
-SDRAM_Init               0x816'3369     0x7e  Code  Gb  sdram.o [1]
-SHT$$INIT_ARRAY$$Base    0x816'7e20            --   Gb  - Linker created -
-SHT$$INIT_ARRAY$$Limit   0x816'7e2c            --   Gb  - Linker created -
+Region$$Table$$Base      0x816'78cc            --   Gb  - Linker created -
+Region$$Table$$Limit     0x816'78f0            --   Gb  - Linker created -
+SDRAM_Init               0x816'336d     0x7e  Code  Gb  sdram.o [1]
+SHT$$INIT_ARRAY$$Base    0x816'7e24            --   Gb  - Linker created -
+SHT$$INIT_ARRAY$$Limit   0x816'7e30            --   Gb  - Linker created -
 SHT$$PREINIT_ARRAY$$Base
-                         0x816'7e20            --   Gb  - Linker created -
+                         0x816'7e24            --   Gb  - Linker created -
 SHT$$PREINIT_ARRAY$$Limit
-                         0x816'7e20            --   Gb  - Linker created -
+                         0x816'7e24            --   Gb  - Linker created -
 STM32F4DMA::STM32F4DMA()
-                         0x816'3095     0x30  Code  Gb  STM32F4DMA.o [1]
+                         0x816'3099     0x30  Code  Gb  STM32F4DMA.o [1]
 STM32F4DMA::getBlitCaps()
-                         0x816'30e5     0x10  Code  Gb  STM32F4DMA.o [1]
+                         0x816'30e9     0x10  Code  Gb  STM32F4DMA.o [1]
 STM32F4DMA::initialize()
-                         0x816'30c5     0x20  Code  Gb  STM32F4DMA.o [1]
+                         0x816'30c9     0x20  Code  Gb  STM32F4DMA.o [1]
 STM32F4DMA::setupDataCopy(touchgfx::BlitOp const &)
-                         0x816'30f5    0x156  Code  Gb  STM32F4DMA.o [1]
+                         0x816'30f9    0x156  Code  Gb  STM32F4DMA.o [1]
 STM32F4DMA::setupDataFill(touchgfx::BlitOp const &)
-                         0x816'324b     0xe2  Code  Gb  STM32F4DMA.o [1]
+                         0x816'324f     0xe2  Code  Gb  STM32F4DMA.o [1]
 STM32F4DMA::signalDMAInterrupt()
                          0x815'acb3      0x6  Code  Gb  STM32F4DMA.o [1]
 STM32F4HAL::STM32F4HAL(touchgfx::DMA_Interface &, touchgfx::LCD &, touchgfx::TouchController &, unsigned short, unsigned short)
-                         0x816'3c35     0x20  Code  Gb  BoardConfiguration.o [1]
+                         0x816'3c39     0x20  Code  Gb  BoardConfiguration.o [1]
 STM32F4HAL::configureInterrupts()
                          0x816'2117     0x14  Code  Gb  STM32F4HAL.o [1]
 STM32F4HAL::disableInterrupts()
@@ -1506,196 +1506,196 @@ SingleZoneContainerBase::SingleZoneContainerBase()
 SingleZoneContainerBase::SingleZoneContainerBase() [subobject]
                          0x816'0c21      0x2  Code  Gb  SingleZoneContainerBase.o [1]
 SingleZoneContainerBase::ZoneModeButton0Clicked()
-                         0x816'8035      0x2  Code  Gb  SingleZoneContainerBase.o [1]
-SingleZoneContainerBase::ZoneModeButton1Clicked()
-                         0x816'802d      0x2  Code  Gb  SingleZoneContainerBase.o [1]
-SingleZoneContainerBase::ZoneModeButton2Clicked()
-                         0x816'802f      0x2  Code  Gb  SingleZoneContainerBase.o [1]
-SingleZoneContainerBase::ZoneModeButton3Clicked()
-                         0x816'8031      0x2  Code  Gb  SingleZoneContainerBase.o [1]
-SingleZoneContainerBase::ZoneModeButton4Clicked()
-                         0x816'8033      0x2  Code  Gb  SingleZoneContainerBase.o [1]
-SingleZoneContainerBase::ZoneModeButton5Clicked()
-                         0x816'8037      0x2  Code  Gb  SingleZoneContainerBase.o [1]
-SingleZoneContainerBase::ZoneModeButton6Clicked()
                          0x816'8039      0x2  Code  Gb  SingleZoneContainerBase.o [1]
-SingleZoneContainerBase::ZoneModeButton7Clicked()
+SingleZoneContainerBase::ZoneModeButton1Clicked()
+                         0x816'8031      0x2  Code  Gb  SingleZoneContainerBase.o [1]
+SingleZoneContainerBase::ZoneModeButton2Clicked()
+                         0x816'8033      0x2  Code  Gb  SingleZoneContainerBase.o [1]
+SingleZoneContainerBase::ZoneModeButton3Clicked()
+                         0x816'8035      0x2  Code  Gb  SingleZoneContainerBase.o [1]
+SingleZoneContainerBase::ZoneModeButton4Clicked()
+                         0x816'8037      0x2  Code  Gb  SingleZoneContainerBase.o [1]
+SingleZoneContainerBase::ZoneModeButton5Clicked()
                          0x816'803b      0x2  Code  Gb  SingleZoneContainerBase.o [1]
+SingleZoneContainerBase::ZoneModeButton6Clicked()
+                         0x816'803d      0x2  Code  Gb  SingleZoneContainerBase.o [1]
+SingleZoneContainerBase::ZoneModeButton7Clicked()
+                         0x816'803f      0x2  Code  Gb  SingleZoneContainerBase.o [1]
 SingleZoneContainerBase::buttonCallbackHandler(touchgfx::AbstractButton const &)
                          0x816'0e53     0x90  Code  Gb  SingleZoneContainerBase.o [1]
 StartDefaultTask(void const *)
                          0x816'1d3b      0xe  Code  Gb  main.o [1]
 StartUITask(void const *)
                          0x816'1d49     0x98  Code  Gb  main.o [1]
-SysTick_Handler          0x816'7375      0xe  Code  Gb  stm32f4xx_it.o [1]
+SysTick_Handler          0x816'7379      0xe  Code  Gb  stm32f4xx_it.o [1]
 SystemClock_Config       0x816'1de1     0xbe  Code  Gb  main.o [1]
 SystemCoreClock         0x2000'0ae4      0x4  Data  Gb  system_stm32f4xx.o [1]
-SystemInit               0x816'7095     0x3a  Code  Gb  system_stm32f4xx.o [1]
-TIM_Base_SetConfig       0x816'3abf     0x96  Code  Gb  stm32f4xx_hal_tim.o [1]
-TIM_ETR_SetConfig        0x816'3bd7     0x14  Code  Gb  stm32f4xx_hal_tim.o [1]
-TIM_ITRx_SetConfig       0x816'3bc7     0x10  Code  Lc  stm32f4xx_hal_tim.o [1]
+SystemInit               0x816'7099     0x3a  Code  Gb  system_stm32f4xx.o [1]
+TIM_Base_SetConfig       0x816'3ac3     0x96  Code  Gb  stm32f4xx_hal_tim.o [1]
+TIM_ETR_SetConfig        0x816'3bdb     0x14  Code  Gb  stm32f4xx_hal_tim.o [1]
+TIM_ITRx_SetConfig       0x816'3bcb     0x10  Code  Lc  stm32f4xx_hal_tim.o [1]
 TIM_TI1_ConfigInputStage
-                         0x816'3b85     0x1e  Code  Lc  stm32f4xx_hal_tim.o [1]
+                         0x816'3b89     0x1e  Code  Lc  stm32f4xx_hal_tim.o [1]
 TIM_TI2_ConfigInputStage
-                         0x816'3ba3     0x24  Code  Lc  stm32f4xx_hal_tim.o [1]
-T_SingleUseId10_Gb       0x816'79a8     0x20  Data  Lc  LanguageGb.o [1]
-T_SingleUseId11_Gb       0x816'7e14      0xc  Data  Lc  LanguageGb.o [1]
-T_SingleUseId19_Gb       0x816'79e8     0x20  Data  Lc  LanguageGb.o [1]
-T_SingleUseId21_Gb       0x816'7880     0x24  Data  Lc  LanguageGb.o [1]
-T_SingleUseId23_Gb       0x816'79c8     0x20  Data  Lc  LanguageGb.o [1]
-T_SingleUseId25_Gb       0x816'7d98     0x14  Data  Lc  LanguageGb.o [1]
-T_SingleUseId26_Gb       0x816'7a80     0x1c  Data  Lc  LanguageGb.o [1]
-T_SingleUseId27_Gb       0x816'7dac     0x14  Data  Lc  LanguageGb.o [1]
-T_SingleUseId28_Gb       0x816'7c68     0x18  Data  Lc  LanguageGb.o [1]
-T_SingleUseId29_Gb       0x816'7a9c     0x1c  Data  Lc  LanguageGb.o [1]
-T_SingleUseId2_Gb        0x816'7d70     0x14  Data  Lc  LanguageGb.o [1]
-T_SingleUseId30_Gb       0x816'7a08     0x20  Data  Lc  LanguageGb.o [1]
-T_SingleUseId3_Gb        0x816'7e54      0x8  Data  Lc  LanguageGb.o [1]
-T_SingleUseId5_Gb        0x816'7e5c      0x8  Data  Lc  LanguageGb.o [1]
-T_SingleUseId7_Gb        0x816'7e64      0x8  Data  Lc  LanguageGb.o [1]
-T_SingleUseId9_Gb        0x816'7d84     0x14  Data  Lc  LanguageGb.o [1]
+                         0x816'3ba7     0x24  Code  Lc  stm32f4xx_hal_tim.o [1]
+T_SingleUseId10_Gb       0x816'79ac     0x20  Data  Lc  LanguageGb.o [1]
+T_SingleUseId11_Gb       0x816'7e18      0xc  Data  Lc  LanguageGb.o [1]
+T_SingleUseId19_Gb       0x816'79ec     0x20  Data  Lc  LanguageGb.o [1]
+T_SingleUseId21_Gb       0x816'7884     0x24  Data  Lc  LanguageGb.o [1]
+T_SingleUseId23_Gb       0x816'79cc     0x20  Data  Lc  LanguageGb.o [1]
+T_SingleUseId25_Gb       0x816'7d9c     0x14  Data  Lc  LanguageGb.o [1]
+T_SingleUseId26_Gb       0x816'7a84     0x1c  Data  Lc  LanguageGb.o [1]
+T_SingleUseId27_Gb       0x816'7db0     0x14  Data  Lc  LanguageGb.o [1]
+T_SingleUseId28_Gb       0x816'7c6c     0x18  Data  Lc  LanguageGb.o [1]
+T_SingleUseId29_Gb       0x816'7aa0     0x1c  Data  Lc  LanguageGb.o [1]
+T_SingleUseId2_Gb        0x816'7d74     0x14  Data  Lc  LanguageGb.o [1]
+T_SingleUseId30_Gb       0x816'7a0c     0x20  Data  Lc  LanguageGb.o [1]
+T_SingleUseId3_Gb        0x816'7e58      0x8  Data  Lc  LanguageGb.o [1]
+T_SingleUseId5_Gb        0x816'7e60      0x8  Data  Lc  LanguageGb.o [1]
+T_SingleUseId7_Gb        0x816'7e68      0x8  Data  Lc  LanguageGb.o [1]
+T_SingleUseId9_Gb        0x816'7d88     0x14  Data  Lc  LanguageGb.o [1]
 Thunk for (offset -4) MainPresenter::notifySunStateChanged(int, int, int, int, int)
-                         0x816'41fd      0x2  Code  Gb  MainPresenter.o [1]
+                         0x816'4201      0x2  Code  Gb  MainPresenter.o [1]
 TypedTextDatabase::getFonts()
-                         0x816'3c79      0x4  Code  Gb  TypedTextDatabase.o [1]
+                         0x816'3c7d      0x4  Code  Gb  TypedTextDatabase.o [1]
 TypedTextDatabase::getInstance(unsigned short)
-                         0x816'3c6d      0x8  Code  Gb  TypedTextDatabase.o [1]
+                         0x816'3c71      0x8  Code  Gb  TypedTextDatabase.o [1]
 TypedTextDatabase::getInstanceSize()
-                         0x816'3c75      0x4  Code  Gb  TypedTextDatabase.o [1]
+                         0x816'3c79      0x4  Code  Gb  TypedTextDatabase.o [1]
 UART_SetConfig           0x816'265b    0x13e  Code  Lc  stm32f4xx_hal_uart.o [1]
 UART_WaitOnFlagUntilTimeout
                          0x816'25f7     0x56  Code  Lc  stm32f4xx_hal_uart.o [1]
-UsageFault_Handler       0x816'7371      0x2  Code  Gb  stm32f4xx_it.o [1]
+UsageFault_Handler       0x816'7375      0x2  Code  Gb  stm32f4xx_it.o [1]
 Virtual function table for AllScenesContainer
-                         0x816'5a64     0xb0  Data  Gb  AllScenesContainer.o [1]
+                         0x816'5a68     0xb0  Data  Gb  AllScenesContainer.o [1]
 Virtual function table for AllScenesContainerBase
-                         0x816'5b14     0xb0  Data  Gb  AllScenesContainerBase.o [1]
+                         0x816'5b18     0xb0  Data  Gb  AllScenesContainerBase.o [1]
 Virtual function table for AllZonesContainer
-                         0x816'60fc     0xa0  Data  Gb  AllZonesContainer.o [1]
+                         0x816'6100     0xa0  Data  Gb  AllZonesContainer.o [1]
 Virtual function table for AllZonesContainerBase
-                         0x816'619c     0x9c  Data  Gb  AllZonesContainerBase.o [1]
+                         0x816'61a0     0x9c  Data  Gb  AllZonesContainerBase.o [1]
 Virtual function table for ApplicationFontProvider
-                         0x816'7cd0     0x14  Data  Gb  ApplicationFontProvider.o [1]
+                         0x816'7cd4     0x14  Data  Gb  ApplicationFontProvider.o [1]
 Virtual function table for FrontendApplication
-                         0x816'73f8     0x3c  Data  Gb  FrontendApplication.o [1]
+                         0x816'73fc     0x3c  Data  Gb  FrontendApplication.o [1]
 Virtual function table for FrontendApplicationBase
-                         0x816'7470     0x3c  Data  Gb  FrontendApplicationBase.o [1]
+                         0x816'7474     0x3c  Data  Gb  FrontendApplicationBase.o [1]
 Virtual function table for FrontendHeap
-                         0x816'7cf8     0x14  Data  Gb  BoardConfiguration.o [1]
+                         0x816'7cfc     0x14  Data  Gb  BoardConfiguration.o [1]
 Virtual function table for FrontendHeapBase
-                         0x816'7ce4     0x14  Data  Gb  BoardConfiguration.o [1]
+                         0x816'7ce8     0x14  Data  Gb  BoardConfiguration.o [1]
 Virtual function table for MainPresenter
-                         0x816'7710     0x30  Data  Gb  MainPresenter.o [1]
+                         0x816'7714     0x30  Data  Gb  MainPresenter.o [1]
 Virtual function table for MainView
-                         0x816'74ac     0x3c  Data  Gb  MainView.o [1]
+                         0x816'74b0     0x3c  Data  Gb  MainView.o [1]
 Virtual function table for MainViewBase
-                         0x816'74e8     0x3c  Data  Gb  MainViewBase.o [1]
+                         0x816'74ec     0x3c  Data  Gb  MainViewBase.o [1]
 Virtual function table for ModelListener
-                         0x816'7d20     0x14  Data  Gb  MainPresenter.o [1]
+                         0x816'7d24     0x14  Data  Gb  MainPresenter.o [1]
 Virtual function table for PanelSettingsContainer
-                         0x816'62d4     0x98  Data  Gb  PanelSettingsContainer.o [1]
+                         0x816'62d8     0x98  Data  Gb  PanelSettingsContainer.o [1]
 Virtual function table for PanelSettingsContainerBase
-                         0x816'636c     0x98  Data  Gb  PanelSettingsContainerBase.o [1]
+                         0x816'6370     0x98  Data  Gb  PanelSettingsContainerBase.o [1]
 Virtual function table for STM32F4DMA
-                         0x816'7248     0x4c  Data  Gb  STM32F4DMA.o [1]
+                         0x816'724c     0x4c  Data  Gb  STM32F4DMA.o [1]
 Virtual function table for STM32F4HAL
-                         0x816'5d1c     0xa8  Data  Gb  STM32F4HAL.o [1]
+                         0x816'5d20     0xa8  Data  Gb  STM32F4HAL.o [1]
 Virtual function table for SingleZoneContainer
-                         0x816'5824     0xb4  Data  Gb  SingleZoneContainer.o [1]
+                         0x816'5828     0xb4  Data  Gb  SingleZoneContainer.o [1]
 Virtual function table for SingleZoneContainerBase
-                         0x816'58d8     0xb4  Data  Gb  SingleZoneContainerBase.o [1]
+                         0x816'58dc     0xb4  Data  Gb  SingleZoneContainerBase.o [1]
 Virtual function table for WindowSettingsContainer
-                         0x816'5fb4     0xa4  Data  Gb  WindowSettingsContainer.o [1]
+                         0x816'5fb8     0xa4  Data  Gb  WindowSettingsContainer.o [1]
 Virtual function table for WindowSettingsContainerBase
-                         0x816'6058     0xa4  Data  Gb  WindowSettingsContainerBase.o [1]
+                         0x816'605c     0xa4  Data  Gb  WindowSettingsContainerBase.o [1]
 Virtual function table for touchgfx::Application
-                         0x816'7524     0x3c  Data  Gb  Application.o [7]
+                         0x816'7528     0x3c  Data  Gb  Application.o [7]
 Virtual function table for touchgfx::Box
-                         0x816'6f64     0x6c  Data  Gb  Box.o [7]
+                         0x816'6f68     0x6c  Data  Gb  Box.o [7]
 Virtual function table for touchgfx::Button
-                         0x816'6e80     0x74  Data  Gb  Button.o [7]
+                         0x816'6e84     0x74  Data  Gb  Button.o [7]
 Virtual function table for touchgfx::Callback<AllScenesContainerBase, touchgfx::AbstractButton const &, void, void>
-                         0x816'7ab8     0x18  Data  Gb  AllScenesContainerBase.o [1]
+                         0x816'7abc     0x18  Data  Gb  AllScenesContainerBase.o [1]
 Virtual function table for touchgfx::Callback<AllZonesContainerBase, touchgfx::AbstractButton const &, void, void>
-                         0x816'7ad0     0x18  Data  Gb  AllZonesContainerBase.o [1]
+                         0x816'7ad4     0x18  Data  Gb  AllZonesContainerBase.o [1]
 Virtual function table for touchgfx::Callback<FrontendApplicationBase, void, void, void>
-                         0x816'7ae8     0x18  Data  Gb  FrontendApplicationBase.o [1]
+                         0x816'7aec     0x18  Data  Gb  FrontendApplicationBase.o [1]
 Virtual function table for touchgfx::Callback<MainView, void, void, void>
-                         0x816'7b18     0x18  Data  Gb  MainView.o [1]
+                         0x816'7b1c     0x18  Data  Gb  MainView.o [1]
 Virtual function table for touchgfx::Callback<MainViewBase, touchgfx::AbstractButton const &, void, void>
-                         0x816'7b30     0x18  Data  Gb  MainViewBase.o [1]
+                         0x816'7b34     0x18  Data  Gb  MainViewBase.o [1]
 Virtual function table for touchgfx::Callback<PanelSettingsContainerBase, touchgfx::AbstractButton const &, void, void>
-                         0x816'7b48     0x18  Data  Gb  PanelSettingsContainerBase.o [1]
+                         0x816'7b4c     0x18  Data  Gb  PanelSettingsContainerBase.o [1]
 Virtual function table for touchgfx::Callback<SingleZoneContainerBase, touchgfx::AbstractButton const &, void, void>
-                         0x816'7b60     0x18  Data  Gb  SingleZoneContainerBase.o [1]
+                         0x816'7b64     0x18  Data  Gb  SingleZoneContainerBase.o [1]
 Virtual function table for touchgfx::Callback<WindowSettingsContainerBase, touchgfx::AbstractButton const &, void, void>
-                         0x816'7b90     0x18  Data  Gb  WindowSettingsContainerBase.o [1]
+                         0x816'7b94     0x18  Data  Gb  WindowSettingsContainerBase.o [1]
 Virtual function table for touchgfx::ClickEvent
-                         0x816'7d34     0x14  Data  Gb  Gestures.o [7]
+                         0x816'7d38     0x14  Data  Gb  Gestures.o [7]
 Virtual function table for touchgfx::Container
-                         0x816'66b8     0x90  Data  Gb  Container.o [7]
+                         0x816'66bc     0x90  Data  Gb  Container.o [7]
 Virtual function table for touchgfx::DragEvent
-                         0x816'7d48     0x14  Data  Gb  Gestures.o [7]
+                         0x816'7d4c     0x14  Data  Gb  Gestures.o [7]
 Virtual function table for touchgfx::FadeAnimator<touchgfx::Image>
-                         0x816'69f4     0x80  Data  Gb  MainViewBase.o [1]
+                         0x816'69f8     0x80  Data  Gb  MainViewBase.o [1]
 Virtual function table for touchgfx::GestureEvent
-                         0x816'7d5c     0x14  Data  Gb  Gestures.o [7]
+                         0x816'7d60     0x14  Data  Gb  Gestures.o [7]
 Virtual function table for touchgfx::Image
-                         0x816'6ef4     0x70  Data  Gb  Image.o [7]
+                         0x816'6ef8     0x70  Data  Gb  Image.o [7]
 Virtual function table for touchgfx::InternalFlashFont
-                         0x816'7294     0x4c  Data  Gb  InternalFlashFont.o [7]
+                         0x816'7298     0x4c  Data  Gb  InternalFlashFont.o [7]
 Virtual function table for touchgfx::LCD24bpp
-                         0x816'76a8     0x34  Data  Gb  LCD24bpp.o [7]
+                         0x816'76ac     0x34  Data  Gb  LCD24bpp.o [7]
 Virtual function table for touchgfx::LockFreeDMA_Queue
-                         0x816'7838     0x24  Data  Gb  DMA.o [7]
+                         0x816'783c     0x24  Data  Gb  DMA.o [7]
 Virtual function table for touchgfx::MVPApplication
-                         0x816'7434     0x3c  Data  Gb  FrontendApplicationBase.o [1]
+                         0x816'7438     0x3c  Data  Gb  FrontendApplicationBase.o [1]
 Virtual function table for touchgfx::MVPHeap
-                         0x816'7dc0     0x10  Data  Gb  BoardConfiguration.o [1]
+                         0x816'7dc4     0x10  Data  Gb  BoardConfiguration.o [1]
 Virtual function table for touchgfx::MoveAnimator<AllScenesContainer>
-                         0x816'56b0     0xc0  Data  Gb  MainViewBase.o [1]
+                         0x816'56b4     0xc0  Data  Gb  MainViewBase.o [1]
 Virtual function table for touchgfx::MoveAnimator<AllZonesContainer>
-                         0x816'5bc4     0xb0  Data  Gb  MainViewBase.o [1]
+                         0x816'5bc8     0xb0  Data  Gb  MainViewBase.o [1]
 Virtual function table for touchgfx::MoveAnimator<PanelSettingsContainer>
-                         0x816'5c74     0xa8  Data  Gb  MainViewBase.o [1]
+                         0x816'5c78     0xa8  Data  Gb  MainViewBase.o [1]
 Virtual function table for touchgfx::MoveAnimator<WindowSettingsContainer>
-                         0x816'5770     0xb4  Data  Gb  MainViewBase.o [1]
+                         0x816'5774     0xb4  Data  Gb  MainViewBase.o [1]
 Virtual function table for touchgfx::MoveAnimator<touchgfx::Image>
-                         0x816'6974     0x80  Data  Gb  MainViewBase.o [1]
+                         0x816'6978     0x80  Data  Gb  MainViewBase.o [1]
 Virtual function table for touchgfx::NoTransition
-                         0x816'7910     0x20  Data  Gb  FrontendApplicationBase.o [1]
+                         0x816'7914     0x20  Data  Gb  FrontendApplicationBase.o [1]
 Virtual function table for touchgfx::Partition<touchgfx::meta::TypeList<MainPresenter, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil>>, (unsigned short)1>
-                         0x816'75d8     0x34  Data  Gb  BoardConfiguration.o [1]
+                         0x816'75dc     0x34  Data  Gb  BoardConfiguration.o [1]
 Virtual function table for touchgfx::Partition<touchgfx::meta::TypeList<MainView, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil>>, (unsigned short)1>
-                         0x816'760c     0x34  Data  Gb  BoardConfiguration.o [1]
+                         0x816'7610     0x34  Data  Gb  BoardConfiguration.o [1]
 Virtual function table for touchgfx::Partition<touchgfx::meta::TypeList<touchgfx::NoTransition, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil>>, (unsigned short)1>
-                         0x816'7640     0x34  Data  Gb  BoardConfiguration.o [1]
+                         0x816'7644     0x34  Data  Gb  BoardConfiguration.o [1]
 Virtual function table for touchgfx::Presenter
-                         0x816'7b00     0x18  Data  Gb  MainPresenter.o [1]
+                         0x816'7b04     0x18  Data  Gb  MainPresenter.o [1]
 Virtual function table for touchgfx::STM32F4Instrumentation
-                         0x816'7798     0x28  Data  Gb  STM32F4Instrumentation.o [1]
+                         0x816'779c     0x28  Data  Gb  STM32F4Instrumentation.o [1]
 Virtual function table for touchgfx::STM32F4TouchController
-                         0x816'7b78     0x18  Data  Gb  STM32F4TouchController.o [1]
+                         0x816'7b7c     0x18  Data  Gb  STM32F4TouchController.o [1]
 Virtual function table for touchgfx::Screen
-                         0x816'76dc     0x34  Data  Gb  Screen.o [7]
+                         0x816'76e0     0x34  Data  Gb  Screen.o [7]
 Virtual function table for touchgfx::ScrollableContainer
-                         0x816'6404     0x98  Data  Gb  ScrollableContainer.o [7]
+                         0x816'6408     0x98  Data  Gb  ScrollableContainer.o [7]
 Virtual function table for touchgfx::TextArea
-                         0x816'6d90     0x7c  Data  Gb  TextArea.o [7]
+                         0x816'6d94     0x7c  Data  Gb  TextArea.o [7]
 Virtual function table for touchgfx::TextAreaWithOneWildcard
-                         0x816'6c98     0x7c  Data  Gb  SingleZoneContainerBase.o [1]
+                         0x816'6c9c     0x7c  Data  Gb  SingleZoneContainerBase.o [1]
 Virtual function table for touchgfx::TextAreaWithTwoWildcards
-                         0x816'6ba0     0x7c  Data  Gb  MainViewBase.o [1]
+                         0x816'6ba4     0x7c  Data  Gb  MainViewBase.o [1]
 Virtual function table for touchgfx::TextAreaWithWildcardBase
-                         0x816'6c1c     0x7c  Data  Gb  SingleZoneContainerBase.o [1]
+                         0x816'6c20     0x7c  Data  Gb  SingleZoneContainerBase.o [1]
 Virtual function table for touchgfx::ToggleButton
-                         0x816'6e0c     0x74  Data  Gb  ToggleButton.o [7]
+                         0x816'6e10     0x74  Data  Gb  ToggleButton.o [7]
 Virtual function table for touchgfx::Transition
-                         0x816'78f0     0x20  Data  Gb  FrontendApplicationBase.o [1]
+                         0x816'78f4     0x20  Data  Gb  FrontendApplicationBase.o [1]
 Virtual function table for touchgfx::UIEventListener
-                         0x816'77c0     0x28  Data  Gb  Application.o [7]
+                         0x816'77c4     0x28  Data  Gb  Application.o [7]
 Virtual function table for touchgfx::View<MainPresenter>
-                         0x816'7674     0x34  Data  Gb  MainViewBase.o [1]
+                         0x816'7678     0x34  Data  Gb  MainViewBase.o [1]
 WindowSettingsContainer::AutoTintButtonClicked()
                          0x815'f9f7     0x62  Code  Gb  WindowSettingsContainer.o [1]
 WindowSettingsContainer::CloseButtonClicked()
@@ -1711,13 +1711,13 @@ WindowSettingsContainer::WindowSettingsContainer() [subobject]
 WindowSettingsContainer::initialize()
                          0x815'f9e9      0x4  Code  Gb  WindowSettingsContainer.o [1]
 WindowSettingsContainerBase::AutoTintButtonClicked()
-                         0x816'8047      0x2  Code  Gb  WindowSettingsContainerBase.o [1]
-WindowSettingsContainerBase::CloseButtonClicked()
-                         0x816'8045      0x2  Code  Gb  WindowSettingsContainerBase.o [1]
-WindowSettingsContainerBase::ManualTintButtonClicked()
-                         0x816'8049      0x2  Code  Gb  WindowSettingsContainerBase.o [1]
-WindowSettingsContainerBase::PresetScenesButtonClicked()
                          0x816'804b      0x2  Code  Gb  WindowSettingsContainerBase.o [1]
+WindowSettingsContainerBase::CloseButtonClicked()
+                         0x816'8049      0x2  Code  Gb  WindowSettingsContainerBase.o [1]
+WindowSettingsContainerBase::ManualTintButtonClicked()
+                         0x816'804d      0x2  Code  Gb  WindowSettingsContainerBase.o [1]
+WindowSettingsContainerBase::PresetScenesButtonClicked()
+                         0x816'804f      0x2  Code  Gb  WindowSettingsContainerBase.o [1]
 WindowSettingsContainerBase::WindowSettingsContainerBase()
                          0x816'039d    0x200  Code  Gb  WindowSettingsContainerBase.o [1]
 WindowSettingsContainerBase::WindowSettingsContainerBase() [subobject]
@@ -1735,11 +1735,11 @@ WindowSettingsContainerBase::initialize()
 [local to OSWrappers_cpp]::IdleTaskHook(void *)
                          0x815'86b1     0x18  Code  Lc  OSWrappers.o [1]
 [local to STM32F4DMA_cpp]::DMA2D_XferCpltCallback(__DMA2D_HandleTypeDef *)
-                         0x816'3087      0xc  Code  Lc  STM32F4DMA.o [1]
+                         0x816'308b      0xc  Code  Lc  STM32F4DMA.o [1]
 [local to STM32F4DMA_cpp]::DMA2D_XferErrorCallback(__DMA2D_HandleTypeDef *)
-                         0x816'3093      0x2  Code  Lc  STM32F4DMA.o [1]
+                         0x816'3097      0x2  Code  Lc  STM32F4DMA.o [1]
 [local to STM32F4DMA_cpp]::HAL_DMA2D_SetMode(__DMA2D_HandleTypeDef *, unsigned int, unsigned int, unsigned int)
-                         0x816'3061     0x26  Code  Lc  STM32F4DMA.o [1]
+                         0x816'3065     0x26  Code  Lc  STM32F4DMA.o [1]
 [local to STM32F4HAL_cpp]::__NVIC_DisableIRQ(IRQn_Type)
                          0x816'20af     0x1e  Code  Lc  STM32F4HAL.o [1]
 [local to STM32F4HAL_cpp]::__NVIC_EnableIRQ(IRQn_Type)
@@ -1750,22 +1750,22 @@ WindowSettingsContainerBase::initialize()
                         0x2001'a7f4     0x40  Data  Lc  STM32F4Instrumentation.o [1]
 [local to main_cpp]::MX_GPIO_Init()
                          0x816'1e9f     0xb6  Code  Lc  main.o [1]
-_Close_all               0x816'759d     0x3c  Code  Gb  xcloseall.o [2]
+_Close_all               0x816'75a1     0x3c  Code  Gb  xcloseall.o [2]
 _Encoding_8859_1_Mbrlen
                          0x815'3cf5      0x2  Code  Gb  xencoding_8859_1.o [2]
 _Encoding_8859_1_Wctomb
                          0x815'3ce3     0x12  Code  Gb  xencoding_8859_1.o [2]
 _Files                  0x2000'0c60     0x20  Data  Gb  xfiles.o [2]
-_Fofree                  0x816'6865     0x86  Code  Gb  xfofind.o [2]
-_Fspos                   0x816'5409     0xd8  Code  Gb  xfspos.o [2]
-_Fwprep                  0x816'598d     0xb4  Code  Gb  xfwprep.o [2]
+_Fofree                  0x816'6869     0x86  Code  Gb  xfofind.o [2]
+_Fspos                   0x816'540d     0xd8  Code  Gb  xfspos.o [2]
+_Fwprep                  0x816'5991     0xb4  Code  Gb  xfwprep.o [2]
 _GenldFull               0x815'3759    0x274  Code  Lc  xprintffull.o [2]
 _LdtobFull               0x815'3355    0x3d6  Code  Lc  xprintffull.o [2]
 _LitobFull               0x815'3205    0x10a  Code  Lc  xprintffull.o [2]
 _Locale_lconv           0x2000'0b08     0x38  Data  Lc  xlocale_c.o [2]
-_Nnl                     0x816'558d      0xc  Code  Gb  xfgpos.o [2]
+_Nnl                     0x816'5591      0xc  Code  Gb  xfgpos.o [2]
 _PrintfFull              0x815'2b39    0x1aa  Code  Gb  xprintffull.o [2]
-_Prout                   0x816'7cad     0x16  Code  Gb  xprout.o [2]
+_Prout                   0x816'7cb1     0x16  Code  Gb  xprout.o [2]
 _PutcharsFull            0x815'39cd     0x2e  Code  Lc  xprintffull.o [2]
 _PutfldFull              0x815'2d75    0x2d4  Code  Lc  xprintffull.o [2]
 _PutstrFull              0x815'313f     0xc6  Code  Lc  xprintffull.o [2]
@@ -1791,16 +1791,16 @@ __aeabi_memset8          0x815'6d3d           Code  Gb  ABImemset48.o [5]
 __aeabi_ui2d             0x815'46fd           Code  Gb  U32ToDbl.o [4]
 __aeabi_vec_ctor_nocookie_nodtor
                          0x815'6325     0x28  Code  Gb  cxxabi.o [3]
-__basic_free             0x816'5269     0x16  Code  Gb  heap0.o [2]
-__basic_free_intern      0x816'527f     0x7a  Code  Lc  heap0.o [2]
-__basic_malloc           0x816'51bd     0x18  Code  Gb  heap0.o [2]
-__basic_malloc_intern    0x816'51d5     0x94  Code  Lc  heap0.o [2]
-__call_ctors             0x816'7991     0x18  Code  Gb  cppinit.o [2]
-__cexit_closeall         0x816'7a73           Code  Gb  cexit.o [5]
-__close                  0x816'6b73     0x18  Code  Gb  close.o [6]
-__cmain                  0x816'7a49           Code  Gb  cmain.o [5]
-__cstart_closeall        0x816'805c           Data  Gb  cstart_closeall.o [5]
-__data_GetMemChunk       0x816'52fd     0x2c  Code  Gb  xgetmemchunk.o [2]
+__basic_free             0x816'526d     0x16  Code  Gb  heap0.o [2]
+__basic_free_intern      0x816'5283     0x7a  Code  Lc  heap0.o [2]
+__basic_malloc           0x816'51c1     0x18  Code  Gb  heap0.o [2]
+__basic_malloc_intern    0x816'51d9     0x94  Code  Lc  heap0.o [2]
+__call_ctors             0x816'7995     0x18  Code  Gb  cppinit.o [2]
+__cexit_closeall         0x816'7a77           Code  Gb  cexit.o [5]
+__close                  0x816'6b77     0x18  Code  Gb  close.o [6]
+__cmain                  0x816'7a4d           Code  Gb  cmain.o [5]
+__cstart_closeall        0x816'8060           Data  Gb  cstart_closeall.o [5]
+__data_GetMemChunk       0x816'5301     0x2c  Code  Gb  xgetmemchunk.o [2]
 __data_GetMemChunk::start
                         0x2001'a954      0x4  Data  Lc  xgetmemchunk.o [2]
 __exit                   0x815'48a5     0x14  Code  Gb  exit.o [6]
@@ -1816,41 +1816,41 @@ __iar_Stdin             0x2000'0b88     0x48  Data  Gb  xfiles.o [2]
 __iar_Stdout            0x2000'0bd0     0x48  Data  Gb  xfiles.o [2]
 __iar_Strchr             0x815'3b71           Code  Gb  strchr.o [5]
 __iar_cstart_call_ctors
-                         0x816'7971     0x20  Code  Gb  cmain_call_ctors.o [5]
+                         0x816'7975     0x20  Code  Gb  cmain_call_ctors.o [5]
 __iar_dadd               0x815'4391           Code  Gb  DblSub.o [4]
-__iar_data_init3         0x816'7811     0x28  Code  Gb  data_init.o [5]
-__iar_debug_exceptions   0x816'8058      0x1  Data  Gb  unwind_debug.o [6]
+__iar_data_init3         0x816'7815     0x28  Code  Gb  data_init.o [5]
+__iar_debug_exceptions   0x816'805c      0x1  Data  Gb  unwind_debug.o [6]
 __iar_dsub               0x815'4731           Code  Gb  DblAdd.o [4]
 __iar_dsubStart          0x815'4743           Code  Gb  DblAdd.o [4]
 __iar_frexp              0x815'40a9           Code  Gb  frexp.o [4]
 __iar_frexpl             0x815'40a9           Code  Gb  frexp.o [4]
 __iar_globLocale        0x2000'0b40     0x48  Data  Lc  xlocale_c.o [2]
 __iar_global_Locale      0x815'3af9      0x4  Code  Gb  xlocale_c.o [2]
-__iar_init_vfp           0x816'78a5           Code  Gb  fpinit_M.o [4]
+__iar_init_vfp           0x816'78a9           Code  Gb  fpinit_M.o [4]
 __iar_ldexp64            0x815'419d           Code  Gb  ldexp.o [4]
 __iar_lz77_init_single3
                          0x815'3a7f     0x7a  Code  Gb  lz77_init_single.o [5]
-__iar_program_start      0x816'7e09           Code  Gb  cstartup_M.o [5]
+__iar_program_start      0x816'7e0d           Code  Gb  cstartup_M.o [5]
 __iar_scalbln64          0x815'419d           Code  Gb  ldexp.o [4]
 __iar_scalbn64           0x815'419d           Code  Gb  ldexp.o [4]
-__iar_sh_Discard         0x816'55e5     0x42  Code  Gb  XShHandles.o [2]
-__iar_sh_Move            0x816'5627     0x46  Code  Gb  XShHandles.o [2]
-__iar_sh_Pos             0x816'566d     0x3e  Code  Gb  XShHandles.o [2]
+__iar_sh_Discard         0x816'55e9     0x42  Code  Gb  XShHandles.o [2]
+__iar_sh_Move            0x816'562b     0x46  Code  Gb  XShHandles.o [2]
+__iar_sh_Pos             0x816'5671     0x3e  Code  Gb  XShHandles.o [2]
 __iar_small_uldivmod     0x815'3dc1           Code  Gb  I64DivMod_small.o [5]
 __iar_softfp___iar_frexp64
                          0x815'409d           Code  Gb  frexp.o [4]
 __iar_softfp_frexp       0x815'409d           Code  Gb  frexp.o [4]
 __iar_softfp_frexpl      0x815'409d           Code  Gb  frexp.o [4]
 __iar_tls$$INIT_ARRAY$$Base
-                         0x816'7e2c            --   Gb  - Linker created -
+                         0x816'7e30            --   Gb  - Linker created -
 __iar_tls$$INIT_ARRAY$$Limit
-                         0x816'7e2c            --   Gb  - Linker created -
+                         0x816'7e30            --   Gb  - Linker created -
 __iar_zero_init3         0x815'3c47     0x3a  Code  Gb  zero_init3.o [5]
-__low_level_init         0x816'7a67      0x4  Code  Gb  low_level_init.o [2]
-__lseek                  0x816'5599     0x4a  Code  Gb  lseek.o [6]
+__low_level_init         0x816'7a6b      0x4  Code  Gb  low_level_init.o [2]
+__lseek                  0x816'559d     0x4a  Code  Gb  lseek.o [6]
 __sti__routine           0x816'28e1      0x6  Code  Lc  BoardConfiguration.o [1]
-__sti__routine           0x816'38dd      0xe  Code  Lc  Texts.o [1]
-__sti__routine           0x816'3c55     0x18  Code  Lc  TypedTextDatabase.o [1]
+__sti__routine           0x816'38e1      0xe  Code  Lc  Texts.o [1]
+__sti__routine           0x816'3c59     0x18  Code  Lc  TypedTextDatabase.o [1]
 __vector_table           0x800'0000           Data  Gb  startup_stm32f429xx.o [1]
 __write                  0x816'1c73     0x18  Code  Gb  main.o [1]
 _autoTintButtonNotPressedNew
@@ -1861,16 +1861,16 @@ _backButton              0x815'ceb4    0x640  Data  Gb  backButton.o [1]
 _background_image        0x806'6740  0x5fa00  Data  Gb  background_image.o [1]
 _blue_buttons_round_edge_small
                          0x812'0fa0   0x9f60  Data  Gb  blue_buttons_round_edge_small.o [1]
-_call_main               0x816'7a55           Code  Gb  cmain.o [5]
+_call_main               0x816'7a59           Code  Gb  cmain.o [5]
 _closeButton             0x815'd4f4    0x640  Data  Gb  closeButton.o [1]
 _combinedGraphicNew      0x80c'6140  0x152c0  Data  Gb  combinedGraphicNew.o [1]
-_exit                    0x816'7a71           Code  Gb  cexit.o [5]
+_exit                    0x816'7a75           Code  Gb  cexit.o [5]
 _fonts                  0x2001'a904      0xc  Data  Lc  TypedTextDatabase.o [1]
 _gLocale_mblen           0x815'3b5d      0x4  Code  Gb  xlocale_c.o [2]
 _gLocale_mblenInt        0x815'3b21     0x2c  Code  Gb  xlocale_c.o [2]
 _gLocale_wctomb          0x815'3b61      0x4  Code  Gb  xlocale_c.o [2]
 _gLocale_wctombInt       0x815'3b59      0x4  Code  Gb  xlocale_c.o [2]
-_main                    0x816'7a63           Code  Gb  cmain.o [5]
+_main                    0x816'7a67           Code  Gb  cmain.o [5]
 _manualTintButtonNotPressedNew
                          0x80f'27e0   0xb9f0  Data  Gb  manualTintButtonNotPressedNew.o [1]
 _manualTintButtonPressedNew
@@ -1902,7 +1902,7 @@ _zoneGrey3Pressed        0x814'b2b8   0x2198  Data  Gb  zoneGrey3Pressed.o [1]
 _zoneWhiteNotPressed     0x814'd450   0x2198  Data  Gb  zoneWhiteNotPressed.o [1]
 _zoneWhitePressed        0x814'f5e8   0x2198  Data  Gb  zoneWhitePressed.o [1]
 abort                    0x815'4717      0x6  Code  Gb  abort.o [2]
-bitmap_database          0x816'4d90    0x280  Data  Lc  BitmapDatabase.o [1]
+bitmap_database          0x816'4d94    0x280  Data  Lc  BitmapDatabase.o [1]
 command                 0x2001'a8d8     0x10  Data  Gb  sdram.o [1]
 defaultTaskHandle       0x2001'a63c      0x4  Data  Gb  main.o [1]
 disableChromArt         0x2001'a95d      0x1  Data  Gb  STM32F4DMA.o [1]
@@ -1913,36 +1913,36 @@ eTaskConfirmSleepModeStatus
                          0x815'7e0f     0x24  Code  Gb  tasks.o [1]
 ebuf                    0x2001'a644     0x50  Data  Lc  xfiles.o [2]
 evt                     0x2001'a8c4      0xc  Data  Lc  Model.o [1]
-exit                     0x816'7a6b      0x4  Code  Gb  exit.o [2]
-fclose                   0x816'6af5     0x7e  Code  Gb  fclose.o [2]
-fflush                   0x816'5555     0x34  Code  Gb  fflush.o [2]
-fflushOne                0x816'54e1     0x74  Code  Lc  fflush.o [2]
+exit                     0x816'7a6f      0x4  Code  Gb  exit.o [2]
+fclose                   0x816'6af9     0x7e  Code  Gb  fclose.o [2]
+fflush                   0x816'5559     0x34  Code  Gb  fflush.o [2]
+fflushOne                0x816'54e5     0x74  Code  Lc  fflush.o [2]
 fontProvider            0x2000'0004      0x4  Data  Lc  BoardConfiguration.o [1]
-fputc                    0x816'71a1     0x54  Code  Gb  fputc.o [2]
+fputc                    0x816'71a5     0x54  Code  Gb  fputc.o [2]
 frame_buffer_sem        0x2000'0ac0      0x4  Data  Lc  OSWrappers.o [1]
-free                     0x816'68f1      0x4  Code  Gb  heaptramp0.o [2]
-fseek                    0x816'5a41     0x24  Code  Gb  fseek.o [2]
+free                     0x816'68f5      0x4  Code  Gb  heaptramp0.o [2]
+fseek                    0x816'5a45     0x24  Code  Gb  fseek.o [2]
 getFont_verdana_10_4bpp()
-                         0x816'3e05     0x36  Code  Gb  FontGetters.o [1]
+                         0x816'3e09     0x36  Code  Gb  FontGetters.o [1]
 getFont_verdana_10_4bpp()::static guard for verdana_10_4bpp
                         0x2001'a834      0x1  Data  Lc  FontGetters.o [1]
 getFont_verdana_10_4bpp()::verdana_10_4bpp
                         0x2001'a838     0x20  Data  Lc  FontGetters.o [1]
 getFont_verdana_20_4bpp()
-                         0x816'3e3b     0x34  Code  Gb  FontGetters.o [1]
+                         0x816'3e3f     0x34  Code  Gb  FontGetters.o [1]
 getFont_verdana_20_4bpp()::static guard for verdana_20_4bpp
                         0x2001'a858      0x1  Data  Lc  FontGetters.o [1]
 getFont_verdana_20_4bpp()::verdana_20_4bpp
                         0x2001'a85c     0x20  Data  Lc  FontGetters.o [1]
 getFont_verdana_40_4bpp()
-                         0x816'3e6f     0x30  Code  Gb  FontGetters.o [1]
+                         0x816'3e73     0x30  Code  Gb  FontGetters.o [1]
 getFont_verdana_40_4bpp()::static guard for verdana_40_4bpp
                         0x2001'a87c      0x1  Data  Lc  FontGetters.o [1]
 getFont_verdana_40_4bpp()::verdana_40_4bpp
                         0x2001'a880     0x20  Data  Lc  FontGetters.o [1]
-glyphs_verdana_10_4bpp   0x816'4a1c    0x374  Data  Gb  Table_verdana_10_4bpp.o [1]
-glyphs_verdana_20_4bpp   0x816'430c    0x390  Data  Gb  Table_verdana_20_4bpp.o [1]
-glyphs_verdana_40_4bpp   0x816'469c    0x380  Data  Gb  Table_verdana_40_4bpp.o [1]
+glyphs_verdana_10_4bpp   0x816'4a20    0x374  Data  Gb  Table_verdana_10_4bpp.o [1]
+glyphs_verdana_20_4bpp   0x816'4310    0x390  Data  Gb  Table_verdana_20_4bpp.o [1]
+glyphs_verdana_40_4bpp   0x816'46a0    0x380  Data  Gb  Table_verdana_40_4bpp.o [1]
 hcrc                    0x2001'a634      0x8  Data  Gb  main.o [1]
 hdma2d                  0x2001'a774     0x40  Data  Gb  HW_Init.o [1]
 hi2c1                   0x2001'a5e0     0x54  Data  Gb  main.o [1]
@@ -1950,12 +1950,12 @@ hltdc                   0x2001'a320     0xa8  Data  Gb  HW_Init.o [1]
 hsdram1                 0x2001'a730     0x34  Data  Gb  HW_Init.o [1]
 huart2                  0x2001'a7b4     0x40  Data  Gb  main.o [1]
 kerning_verdana_10_4bpp
-                         0x816'801c      0x4  Data  Gb  Kerning_verdana_10_4bpp.o [1]
+                         0x816'8020      0x4  Data  Gb  Kerning_verdana_10_4bpp.o [1]
 kerning_verdana_20_4bpp
-                         0x816'5328     0xe0  Data  Gb  Kerning_verdana_20_4bpp.o [1]
+                         0x816'532c     0xe0  Data  Gb  Kerning_verdana_20_4bpp.o [1]
 kerning_verdana_40_4bpp
-                         0x816'5010    0x1ac  Data  Gb  Kerning_verdana_40_4bpp.o [1]
-languagesArray           0x816'8020      0x4  Data  Lc  Texts.o [1]
+                         0x816'5014    0x1ac  Data  Gb  Kerning_verdana_40_4bpp.o [1]
+languagesArray           0x816'8024      0x4  Data  Lc  Texts.o [1]
 lcd_int_active_line     0x2001'a93c      0x2  Data  Lc  STM32F4HAL.o [1]
 lcd_int_porch_line      0x2001'a93e      0x2  Data  Lc  STM32F4HAL.o [1]
 ldexp                    0x815'419d           Code  Gb  ldexp.o [4]
@@ -2005,7 +2005,7 @@ prvTaskExitError         0x815'8369     0x1c  Code  Lc  port.o [1]
 prvUnlockQueue           0x815'8e6b     0x64  Code  Lc  queue.o [1]
 putSunMsg(main_screen_state_t)
                          0x816'1c4d     0x26  Code  Gb  main.o [1]
-putchar                  0x816'7cc5      0xc  Code  Gb  putchar.o [2]
+putchar                  0x816'7cc9      0xc  Code  Gb  putchar.o [2]
 pvPortMalloc             0x815'80f1    0x108  Code  Gb  heap_4.o [1]
 pvTaskIncrementMutexHeldCount
                          0x815'802b     0x14  Code  Gb  tasks.o [1]
@@ -2016,7 +2016,7 @@ pxOverflowDelayedTaskList
                         0x2001'a3f8      0x4  Data  Lc  tasks.o [1]
 pxPortInitialiseStack    0x815'8341     0x26  Code  Gb  port.o [1]
 pxReadyTasksLists       0x2001'a468     0x8c  Data  Lc  tasks.o [1]
-remove                   0x816'6b8b     0x14  Code  Gb  remove.o [6]
+remove                   0x816'6b8f     0x14  Code  Gb  remove.o [6]
 sFileInfo               0x2001'a4f4     0x80  Data  Lc  XShHandles.o [2]
 scalbln                  0x815'419d           Code  Gb  ldexp.o [4]
 scalblnl                 0x815'419d           Code  Gb  ldexp.o [4]
@@ -2028,11 +2028,11 @@ strchr                   0x815'3b71           Code  Gb  strchr.o [5]
 strlen                   0x815'3c11           Code  Gb  strlen.o [5]
 sunMsgBox_g             0x2001'a938      0x4  Data  Gb  main.o [1]
 tc                      0x2000'0aa8      0x4  Data  Gb  BoardConfiguration.o [1]
-textsGb                  0x816'71f4     0x54  Data  Gb  LanguageGb.o [1]
+textsGb                  0x816'71f8     0x54  Data  Gb  LanguageGb.o [1]
 touchgfx::AbstractButton::handleClickEvent(touchgfx::ClickEvent const &)
                          0x816'0f09     0x4e  Code  Gb  AbstractButton.o [7]
 touchgfx::AbstractPartition::AbstractPartition() [subobject]
-                         0x816'3efd      0x2  Code  Gb  AbstractPartition.o [7]
+                         0x816'3f01      0x2  Code  Gb  AbstractPartition.o [7]
 touchgfx::Application::Application()
                          0x815'581b     0x82  Code  Gb  Application.o [7]
 touchgfx::Application::Application() [subobject]
@@ -2114,9 +2114,9 @@ touchgfx::Bitmap::uncachedCount
 touchgfx::BlitOp::BlitOp()
                          0x815'6d77      0x6  Code  Gb  STM32F4DMA.o [1]
 touchgfx::Box::draw(touchgfx::Rect const &) const
-                         0x816'7001     0x30  Code  Gb  Box.o [7]
+                         0x816'7005     0x30  Code  Gb  Box.o [7]
 touchgfx::Box::getSolidRect() const
-                         0x816'6fd1     0x30  Code  Gb  Box.o [7]
+                         0x816'6fd5     0x30  Code  Gb  Box.o [7]
 touchgfx::Button::Button()
                          0x815'f33d     0x30  Code  Gb  WindowSettingsContainerBase.o [1]
 touchgfx::Button::draw(touchgfx::Rect const &) const
@@ -2128,61 +2128,61 @@ touchgfx::Button::setBitmaps(touchgfx::Bitmap const &, touchgfx::Bitmap const &)
 touchgfx::Callback<AllScenesContainerBase, touchgfx::AbstractButton const &, void, void>::Callback(AllScenesContainerBase *, void (AllScenesContainerBase::*)(touchgfx::AbstractButton const &))
                          0x816'0f59     0x14  Code  Gb  AllScenesContainerBase.o [1]
 touchgfx::Callback<AllScenesContainerBase, touchgfx::AbstractButton const &, void, void>::execute(touchgfx::AbstractButton const &)
-                         0x816'7ba9     0x18  Code  Gb  AllScenesContainerBase.o [1]
+                         0x816'7bad     0x18  Code  Gb  AllScenesContainerBase.o [1]
 touchgfx::Callback<AllScenesContainerBase, touchgfx::AbstractButton const &, void, void>::isValid() const
                          0x815'3da7     0x1a  Code  Gb  AllScenesContainerBase.o [1]
 touchgfx::Callback<AllZonesContainerBase, touchgfx::AbstractButton const &, void, void>::Callback(AllZonesContainerBase *, void (AllZonesContainerBase::*)(touchgfx::AbstractButton const &))
                          0x816'0c0d     0x14  Code  Gb  AllZonesContainerBase.o [1]
 touchgfx::Callback<AllZonesContainerBase, touchgfx::AbstractButton const &, void, void>::execute(touchgfx::AbstractButton const &)
-                         0x816'7bc1     0x18  Code  Gb  AllZonesContainerBase.o [1]
+                         0x816'7bc5     0x18  Code  Gb  AllZonesContainerBase.o [1]
 touchgfx::Callback<AllZonesContainerBase, touchgfx::AbstractButton const &, void, void>::isValid() const
                          0x815'3ec7     0x1a  Code  Gb  AllZonesContainerBase.o [1]
 touchgfx::Callback<FrontendApplicationBase, void, void, void>::Callback()
-                         0x816'3f05     0x20  Code  Gb  FrontendApplicationBase.o [1]
+                         0x816'3f09     0x20  Code  Gb  FrontendApplicationBase.o [1]
 touchgfx::Callback<FrontendApplicationBase, void, void, void>::Callback(FrontendApplicationBase *, void (FrontendApplicationBase::*)())
-                         0x816'3f25     0x14  Code  Gb  FrontendApplicationBase.o [1]
+                         0x816'3f29     0x14  Code  Gb  FrontendApplicationBase.o [1]
 touchgfx::Callback<FrontendApplicationBase, void, void, void>::execute()
-                         0x816'7bd9     0x18  Code  Gb  FrontendApplicationBase.o [1]
+                         0x816'7bdd     0x18  Code  Gb  FrontendApplicationBase.o [1]
 touchgfx::Callback<FrontendApplicationBase, void, void, void>::isValid() const
                          0x815'4083     0x1a  Code  Gb  FrontendApplicationBase.o [1]
 touchgfx::Callback<MainView, void, void, void>::Callback(MainView *, void (MainView::*)())
                          0x815'eaf1     0x14  Code  Gb  MainView.o [1]
 touchgfx::Callback<MainView, void, void, void>::execute()
-                         0x816'7bf1     0x18  Code  Gb  MainView.o [1]
+                         0x816'7bf5     0x18  Code  Gb  MainView.o [1]
 touchgfx::Callback<MainView, void, void, void>::isValid() const
                          0x815'413b     0x1a  Code  Gb  MainView.o [1]
 touchgfx::Callback<MainViewBase, touchgfx::AbstractButton const &, void, void>::Callback(MainViewBase *, void (MainViewBase::*)(touchgfx::AbstractButton const &))
                          0x815'f439     0x14  Code  Gb  MainViewBase.o [1]
 touchgfx::Callback<MainViewBase, touchgfx::AbstractButton const &, void, void>::execute(touchgfx::AbstractButton const &)
-                         0x816'7c09     0x18  Code  Gb  MainViewBase.o [1]
+                         0x816'7c0d     0x18  Code  Gb  MainViewBase.o [1]
 touchgfx::Callback<MainViewBase, touchgfx::AbstractButton const &, void, void>::isValid() const
                          0x815'4183     0x1a  Code  Gb  MainViewBase.o [1]
 touchgfx::Callback<PanelSettingsContainerBase, touchgfx::AbstractButton const &, void, void>::Callback(PanelSettingsContainerBase *, void (PanelSettingsContainerBase::*)(touchgfx::AbstractButton const &))
                          0x816'0f6d     0x14  Code  Gb  PanelSettingsContainerBase.o [1]
 touchgfx::Callback<PanelSettingsContainerBase, touchgfx::AbstractButton const &, void, void>::execute(touchgfx::AbstractButton const &)
-                         0x816'7c21     0x18  Code  Gb  PanelSettingsContainerBase.o [1]
+                         0x816'7c25     0x18  Code  Gb  PanelSettingsContainerBase.o [1]
 touchgfx::Callback<PanelSettingsContainerBase, touchgfx::AbstractButton const &, void, void>::isValid() const
                          0x815'42d7     0x1a  Code  Gb  PanelSettingsContainerBase.o [1]
 touchgfx::Callback<SingleZoneContainerBase, touchgfx::AbstractButton const &, void, void>::Callback(SingleZoneContainerBase *, void (SingleZoneContainerBase::*)(touchgfx::AbstractButton const &))
                          0x816'0f81     0x14  Code  Gb  SingleZoneContainerBase.o [1]
 touchgfx::Callback<SingleZoneContainerBase, touchgfx::AbstractButton const &, void, void>::execute(touchgfx::AbstractButton const &)
-                         0x816'7c39     0x18  Code  Gb  SingleZoneContainerBase.o [1]
+                         0x816'7c3d     0x18  Code  Gb  SingleZoneContainerBase.o [1]
 touchgfx::Callback<SingleZoneContainerBase, touchgfx::AbstractButton const &, void, void>::isValid() const
                          0x815'432b     0x1a  Code  Gb  SingleZoneContainerBase.o [1]
 touchgfx::Callback<WindowSettingsContainerBase, touchgfx::AbstractButton const &, void, void>::Callback(WindowSettingsContainerBase *, void (WindowSettingsContainerBase::*)(touchgfx::AbstractButton const &))
                          0x816'0eed     0x14  Code  Gb  WindowSettingsContainerBase.o [1]
 touchgfx::Callback<WindowSettingsContainerBase, touchgfx::AbstractButton const &, void, void>::execute(touchgfx::AbstractButton const &)
-                         0x816'7c51     0x18  Code  Gb  WindowSettingsContainerBase.o [1]
+                         0x816'7c55     0x18  Code  Gb  WindowSettingsContainerBase.o [1]
 touchgfx::Callback<WindowSettingsContainerBase, touchgfx::AbstractButton const &, void, void>::isValid() const
                          0x815'4367     0x1a  Code  Gb  WindowSettingsContainerBase.o [1]
 touchgfx::Color::getColorFrom24BitRGB(unsigned char, unsigned char, unsigned char)
                          0x815'5769     0xb0  Code  Gb  Color.o [7]
 touchgfx::ConstFont::ConstFont(touchgfx::GlyphNode const *, unsigned short, unsigned short, unsigned char, unsigned char, unsigned char, unsigned char, unsigned short, unsigned short) [subobject]
-                         0x816'4223      0x4  Code  Gb  ConstFont.o [7]
+                         0x816'4227      0x4  Code  Gb  ConstFont.o [7]
 touchgfx::ConstFont::find(unsigned short) const
-                         0x816'42a3     0x3e  Code  Gb  ConstFont.o [7]
+                         0x816'42a7     0x3e  Code  Gb  ConstFont.o [7]
 touchgfx::ConstFont::getGlyph(unsigned short, unsigned char const *&, unsigned char &) const
-                         0x816'424f     0x54  Code  Gb  ConstFont.o [7]
+                         0x816'4253     0x54  Code  Gb  ConstFont.o [7]
 touchgfx::Container::Container()
                          0x815'6c39     0x34  Code  Gb  Screen.o [7]
 touchgfx::Container::add(touchgfx::Drawable &)
@@ -2242,13 +2242,13 @@ touchgfx::Drawable::getCachedVisibleRect()
 touchgfx::Drawable::getVisibleRect(touchgfx::Rect &) const
                          0x815'60f9     0x40  Code  Gb  Drawable.o [7]
 touchgfx::Drawable::handleClickEvent(touchgfx::ClickEvent const &)
-                         0x816'803d      0x2  Code  Gb  WindowSettingsContainerBase.o [1]
-touchgfx::Drawable::handleDragEvent(touchgfx::DragEvent const &)
                          0x816'8041      0x2  Code  Gb  WindowSettingsContainerBase.o [1]
+touchgfx::Drawable::handleDragEvent(touchgfx::DragEvent const &)
+                         0x816'8045      0x2  Code  Gb  WindowSettingsContainerBase.o [1]
 touchgfx::Drawable::handleGestureEvent(touchgfx::GestureEvent const &)
-                         0x816'803f      0x2  Code  Gb  WindowSettingsContainerBase.o [1]
-touchgfx::Drawable::handleTickEvent()
                          0x816'8043      0x2  Code  Gb  WindowSettingsContainerBase.o [1]
+touchgfx::Drawable::handleTickEvent()
+                         0x816'8047      0x2  Code  Gb  WindowSettingsContainerBase.o [1]
 touchgfx::Drawable::invalidate() const
                          0x815'60db     0x1e  Code  Gb  Drawable.o [7]
 touchgfx::Drawable::invalidateRect(touchgfx::Rect &) const
@@ -2258,17 +2258,17 @@ touchgfx::Drawable::moveRelative(short, short)
 touchgfx::Drawable::moveTo(short, short)
                          0x815'ec27     0x16  Code  Gb  WindowSettingsContainerBase.o [1]
 touchgfx::Drawable::setHeight(short)
-                         0x816'8003      0x4  Code  Gb  WindowSettingsContainerBase.o [1]
+                         0x816'8007      0x4  Code  Gb  WindowSettingsContainerBase.o [1]
 touchgfx::Drawable::setPosition(short, short, short, short)
                          0x815'6211     0x28  Code  Gb  WindowSettingsContainerBase.o [1]
 touchgfx::Drawable::setWidth(short)
-                         0x816'7fff      0x4  Code  Gb  WindowSettingsContainerBase.o [1]
+                         0x816'8003      0x4  Code  Gb  WindowSettingsContainerBase.o [1]
 touchgfx::Drawable::setX(short)
-                         0x816'7ff7      0x4  Code  Gb  WindowSettingsContainerBase.o [1]
+                         0x816'7ffb      0x4  Code  Gb  WindowSettingsContainerBase.o [1]
 touchgfx::Drawable::setXY(short, short)
                          0x815'f44d     0x1a  Code  Gb  WindowSettingsContainerBase.o [1]
 touchgfx::Drawable::setY(short)
-                         0x816'7ffb      0x4  Code  Gb  WindowSettingsContainerBase.o [1]
+                         0x816'7fff      0x4  Code  Gb  WindowSettingsContainerBase.o [1]
 touchgfx::Drawable::setupDrawChain(touchgfx::Rect const &, touchgfx::Drawable**)
                          0x815'46c3     0x12  Code  Gb  SingleZoneContainerBase.o [1]
 touchgfx::Drawable::translateRectToAbsolute(touchgfx::Rect &) const
@@ -2282,33 +2282,33 @@ touchgfx::EasingEquations::linearEaseNone(unsigned short, short, short, unsigned
 touchgfx::FadeAnimator<touchgfx::Image>::FadeAnimator()
                          0x815'f36d     0x2c  Code  Gb  MainViewBase.o [1]
 touchgfx::FadeAnimator<touchgfx::Image>::handleTickEvent()
-                         0x816'7e7f      0x4  Code  Gb  MainViewBase.o [1]
+                         0x816'7e83      0x4  Code  Gb  MainViewBase.o [1]
 touchgfx::FadeAnimator<touchgfx::Image>::nextFadeAnimationStep()
                          0x815'fe8d     0x7e  Code  Gb  MainViewBase.o [1]
 touchgfx::FadeAnimator<touchgfx::Image>::startFadeAnimation(unsigned char, unsigned short, short (*)(unsigned short, short, short, unsigned short))
                          0x815'ec3d     0x4a  Code  Gb  MainView.o [1]
 touchgfx::Font::getBitsPerPixel() const
-                         0x816'8017      0x4  Code  Gb  ConstFont.o [7]
+                         0x816'801b      0x4  Code  Gb  ConstFont.o [7]
 touchgfx::Font::getEllipsisChar() const
-                         0x816'800f      0x4  Code  Gb  ConstFont.o [7]
-touchgfx::Font::getFallbackChar() const
-                         0x816'800b      0x4  Code  Gb  ConstFont.o [7]
-touchgfx::Font::getFontHeight() const
                          0x816'8013      0x4  Code  Gb  ConstFont.o [7]
+touchgfx::Font::getFallbackChar() const
+                         0x816'800f      0x4  Code  Gb  ConstFont.o [7]
+touchgfx::Font::getFontHeight() const
+                         0x816'8017      0x4  Code  Gb  ConstFont.o [7]
 touchgfx::Font::getGlyph(unsigned short) const
                          0x815'4463     0x1a  Code  Gb  ConstFont.o [7]
 touchgfx::Font::getMinimumTextHeight() const
                          0x815'6c2f      0xa  Code  Gb  ConstFont.o [7]
 touchgfx::Font::getStringWidth(unsigned char, unsigned short const *, ...) const
-                         0x816'5dc5     0x22  Code  Gb  Font.o [7]
+                         0x816'5dc9     0x22  Code  Gb  Font.o [7]
 touchgfx::Font::getStringWidthFunction
                         0x2000'0ae8      0x8  Data  Gb  Texts.o [1]
 touchgfx::Font::getStringWidthLTR(unsigned char, unsigned short const *, __va_list) const
-                         0x816'5de7     0x80  Code  Gb  Font.o [7]
+                         0x816'5deb     0x80  Code  Gb  Font.o [7]
 touchgfx::FontManager::provider
                         0x2001'a940      0x4  Data  Gb  FontManager.o [7]
 touchgfx::FontManager::setFontProvider(touchgfx::FontProvider *)
-                         0x816'3931      0x6  Code  Gb  FontManager.o [7]
+                         0x816'3935      0x6  Code  Gb  FontManager.o [7]
 touchgfx::GPIO::clear(touchgfx::GPIO::GPIO_ID)
                          0x815'93d1      0x2  Code  Gb  GPIO.o [1]
 touchgfx::GPIO::init()   0x815'93cd      0x2  Code  Gb  GPIO.o [1]
@@ -2319,9 +2319,9 @@ touchgfx::GPIO::toggle(touchgfx::GPIO::GPIO_ID)
 touchgfx::GestureEvent::GestureEvent(touchgfx::GestureEvent::GestureType, short, short, short)
                          0x815'6d21     0x1c  Code  Gb  Screen.o [7]
 touchgfx::Gestures::DragState::DragState()
-                         0x816'42f9     0x14  Code  Gb  BoardConfiguration.o [1]
+                         0x816'42fd     0x14  Code  Gb  BoardConfiguration.o [1]
 touchgfx::Gestures::Gestures()
-                         0x816'4211     0x12  Code  Gb  BoardConfiguration.o [1]
+                         0x816'4215     0x12  Code  Gb  BoardConfiguration.o [1]
 touchgfx::Gestures::registerClickEvent(touchgfx::ClickEvent::ClickEventType, unsigned short, unsigned short)
                          0x815'947f     0xa6  Code  Gb  Gestures.o [7]
 touchgfx::Gestures::registerDragEvent(unsigned short, unsigned short, unsigned short, unsigned short)
@@ -2331,9 +2331,9 @@ touchgfx::Gestures::registerEventListener(touchgfx::UIEventListener &)
 touchgfx::Gestures::tick()
                          0x815'93d9     0x1a  Code  Gb  Gestures.o [7]
 touchgfx::HAL & touchgfx::getHAL<STM32F4HAL>(touchgfx::DMA_Interface &, touchgfx::LCD &, touchgfx::TouchController &, short, short)
-                         0x816'38a5     0x2c  Code  Gb  BoardConfiguration.o [1]
+                         0x816'38a9     0x2c  Code  Gb  BoardConfiguration.o [1]
 touchgfx::HAL & touchgfx::touchgfx_generic_init<STM32F4HAL>(touchgfx::DMA_Interface &, touchgfx::LCD &, touchgfx::TouchController &, short, short, unsigned short *, unsigned int, unsigned int)
-                         0x816'3405     0x78  Code  Gb  BoardConfiguration.o [1]
+                         0x816'3409     0x78  Code  Gb  BoardConfiguration.o [1]
 touchgfx::HAL::DISPLAY_HEIGHT
                         0x2001'a8ee      0x2  Data  Gb  HAL.o [7]
 touchgfx::HAL::DISPLAY_ROTATION
@@ -2345,9 +2345,9 @@ touchgfx::HAL::FRAME_BUFFER_HEIGHT
 touchgfx::HAL::FRAME_BUFFER_WIDTH
                         0x2001'a8f0      0x2  Data  Gb  HAL.o [7]
 touchgfx::HAL::HAL(touchgfx::DMA_Interface &, touchgfx::LCD &, touchgfx::TouchController &, unsigned short, unsigned short)
-                         0x816'4085     0x8c  Code  Gb  BoardConfiguration.o [1]
+                         0x816'4089     0x8c  Code  Gb  BoardConfiguration.o [1]
 touchgfx::HAL::HAL(touchgfx::DMA_Interface &, touchgfx::LCD &, touchgfx::TouchController &, unsigned short, unsigned short) [subobject]
-                         0x816'3df5     0x10  Code  Gb  BoardConfiguration.o [1]
+                         0x816'3df9     0x10  Code  Gb  BoardConfiguration.o [1]
 touchgfx::HAL::USE_ANIMATION_STORAGE
                         0x2001'a8e9      0x1  Data  Gb  HAL.o [7]
 touchgfx::HAL::USE_DOUBLE_BUFFERING
@@ -2355,7 +2355,7 @@ touchgfx::HAL::USE_DOUBLE_BUFFERING
 touchgfx::HAL::allowDMATransfers()
                          0x815'90ab      0xe  Code  Gb  HAL.o [7]
 touchgfx::HAL::backPorchExited()
-                         0x816'7c97     0x16  Code  Gb  STM32F4HAL.o [1]
+                         0x816'7c9b     0x16  Code  Gb  STM32F4HAL.o [1]
 touchgfx::HAL::beginFrame()
                          0x815'92ab     0x16  Code  Gb  HAL.o [7]
 touchgfx::HAL::blitCopy(unsigned short const *, unsigned short, unsigned short, unsigned short, unsigned short, unsigned short, unsigned char, bool)
@@ -2375,7 +2375,7 @@ touchgfx::HAL::flushDMA()
 touchgfx::HAL::flushFrameBuffer(touchgfx::Rect const &)
                          0x815'909f      0x2  Code  Gb  HAL.o [7]
 touchgfx::HAL::getBlitCaps()
-                         0x816'7e4d      0x8  Code  Gb  STM32F4HAL.o [1]
+                         0x816'7e51      0x8  Code  Gb  STM32F4HAL.o [1]
 touchgfx::HAL::getClientFrameBuffer()
                          0x815'972d     0x24  Code  Gb  HAL.o [7]
 touchgfx::HAL::getDstAddress(unsigned short, unsigned short, unsigned short *) const
@@ -2391,23 +2391,23 @@ touchgfx::HAL::lockFrameBuffer()
 touchgfx::HAL::noTouch()
                          0x815'9379     0x24  Code  Gb  HAL.o [7]
 touchgfx::HAL::performDisplayOrientationChange()
-                         0x816'70f5     0x58  Code  Gb  STM32F4HAL.o [1]
+                         0x816'70f9     0x58  Code  Gb  STM32F4HAL.o [1]
 touchgfx::HAL::registerEventListener(touchgfx::UIEventListener &)
                          0x815'9277      0x8  Code  Gb  HAL.o [7]
 touchgfx::HAL::setDisplayOrientation(touchgfx::DisplayOrientation)
                          0x815'6c1f      0xa  Code  Gb  STM32F4HAL.o [1]
 touchgfx::HAL::setFrameBufferStartAddress(void *, unsigned short, bool, bool)
-                         0x816'6239     0x9c  Code  Gb  STM32F4HAL.o [1]
+                         0x816'623d     0x9c  Code  Gb  STM32F4HAL.o [1]
 touchgfx::HAL::setFrameBufferStartAddress(void *, unsigned short, bool, bool)::string (instance 2)
-                         0x816'7930     0x20  Data  Gb  STM32F4HAL.o [1]
+                         0x816'7934     0x20  Data  Gb  STM32F4HAL.o [1]
 touchgfx::HAL::setFrameBufferStartAddress(void *, unsigned short, bool, bool)::string (instance 3)
-                         0x816'6d14     0x7c  Data  Gb  STM32F4HAL.o [1]
+                         0x816'6d18     0x7c  Data  Gb  STM32F4HAL.o [1]
 touchgfx::HAL::setMCUActive(bool)
                          0x815'939d     0x30  Code  Gb  HAL.o [7]
 touchgfx::HAL::swapFrameBuffers()
                          0x815'92eb     0x30  Code  Gb  HAL.o [7]
 touchgfx::HAL::taskDelay(unsigned short)
-                         0x816'7dfd      0xc  Code  Gb  STM32F4HAL.o [1]
+                         0x816'7e01      0xc  Code  Gb  STM32F4HAL.o [1]
 touchgfx::HAL::taskEntry()
                          0x815'8f0d     0x20  Code  Gb  HAL.o [7]
 touchgfx::HAL::tick()    0x815'8f2d    0x172  Code  Gb  HAL.o [7]
@@ -2428,13 +2428,13 @@ touchgfx::Image::getSolidRect() const
 touchgfx::Image::setBitmap(touchgfx::Bitmap const &)
                          0x815'f469     0x3a  Code  Gb  Image.o [7]
 touchgfx::InternalFlashFont::InternalFlashFont(touchgfx::GlyphNode const *, unsigned short, unsigned short, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char const *, touchgfx::KerningNode const *, unsigned short, unsigned short)
-                         0x816'4111      0x2  Code  Gb  InternalFlashFont.o [7]
+                         0x816'4115      0x2  Code  Gb  InternalFlashFont.o [7]
 touchgfx::InternalFlashFont::getKerning(unsigned short, touchgfx::GlyphNode const *) const
-                         0x816'416d     0x3a  Code  Gb  InternalFlashFont.o [7]
+                         0x816'4171     0x3a  Code  Gb  InternalFlashFont.o [7]
 touchgfx::InternalFlashFont::getPixelData(touchgfx::GlyphNode const *) const
-                         0x816'4165      0x8  Code  Gb  InternalFlashFont.o [7]
+                         0x816'4169      0x8  Code  Gb  InternalFlashFont.o [7]
 touchgfx::LCD24bpp::bitDepth() const
-                         0x816'8007      0x4  Code  Gb  LCD24bpp.o [7]
+                         0x816'800b      0x4  Code  Gb  LCD24bpp.o [7]
 touchgfx::LCD24bpp::blitCopy(unsigned short const *, touchgfx::Rect const &, touchgfx::Rect const &, unsigned char, bool)
                          0x815'9ad7    0x178  Code  Gb  LCD24bpp.o [7]
 touchgfx::LCD24bpp::blitCopyARGB8888(unsigned int const *, touchgfx::Rect const &, touchgfx::Rect const &, unsigned char)
@@ -2480,19 +2480,19 @@ touchgfx::LockFreeDMA_Queue::pop()
 touchgfx::LockFreeDMA_Queue::pushCopyOf(touchgfx::BlitOp const &)
                          0x815'956d     0x36  Code  Gb  DMA.o [7]
 touchgfx::MCUInstrumentation::getCCConsumed()
-                         0x816'7fef      0x4  Code  Gb  STM32F4Instrumentation.o [1]
-touchgfx::MCUInstrumentation::setCCConsumed(unsigned int)
                          0x816'7ff3      0x4  Code  Gb  STM32F4Instrumentation.o [1]
+touchgfx::MCUInstrumentation::setCCConsumed(unsigned int)
+                         0x816'7ff7      0x4  Code  Gb  STM32F4Instrumentation.o [1]
 touchgfx::MVPApplication::handlePendingScreenTransition()
-                         0x816'785d     0x24  Code  Gb  FrontendApplicationBase.o [1]
+                         0x816'7861     0x24  Code  Gb  FrontendApplicationBase.o [1]
 touchgfx::MVPHeap::MVPHeap(touchgfx::AbstractPartition &, touchgfx::AbstractPartition &, touchgfx::AbstractPartition &, touchgfx::MVPApplication &)
-                         0x816'42e1     0x18  Code  Gb  BoardConfiguration.o [1]
+                         0x816'42e5     0x18  Code  Gb  BoardConfiguration.o [1]
 touchgfx::MVPHeap::MVPHeap(touchgfx::AbstractPartition &, touchgfx::AbstractPartition &, touchgfx::AbstractPartition &, touchgfx::MVPApplication &) [subobject]
-                         0x816'41a7      0xc  Code  Gb  BoardConfiguration.o [1]
+                         0x816'41ab      0xc  Code  Gb  BoardConfiguration.o [1]
 touchgfx::MoveAnimator<AllScenesContainer>::MoveAnimator()
                          0x815'f3f1     0x24  Code  Gb  MainViewBase.o [1]
 touchgfx::MoveAnimator<AllScenesContainer>::handleTickEvent()
-                         0x816'7e8f      0x4  Code  Gb  MainViewBase.o [1]
+                         0x816'7e93      0x4  Code  Gb  MainViewBase.o [1]
 touchgfx::MoveAnimator<AllScenesContainer>::nextMoveAnimationStep()
                          0x815'fc8f     0x9e  Code  Gb  MainViewBase.o [1]
 touchgfx::MoveAnimator<AllScenesContainer>::startMoveAnimation(short, short, unsigned short, short (*)(unsigned short, short, short, unsigned short), short (*)(unsigned short, short, short, unsigned short))
@@ -2500,7 +2500,7 @@ touchgfx::MoveAnimator<AllScenesContainer>::startMoveAnimation(short, short, uns
 touchgfx::MoveAnimator<AllZonesContainer>::MoveAnimator()
                          0x815'f399     0x30  Code  Gb  MainViewBase.o [1]
 touchgfx::MoveAnimator<AllZonesContainer>::handleTickEvent()
-                         0x816'7e87      0x4  Code  Gb  MainViewBase.o [1]
+                         0x816'7e8b      0x4  Code  Gb  MainViewBase.o [1]
 touchgfx::MoveAnimator<AllZonesContainer>::nextMoveAnimationStep()
                          0x815'fd2d     0xb4  Code  Gb  MainViewBase.o [1]
 touchgfx::MoveAnimator<AllZonesContainer>::startMoveAnimation(short, short, unsigned short, short (*)(unsigned short, short, short, unsigned short), short (*)(unsigned short, short, short, unsigned short))
@@ -2508,7 +2508,7 @@ touchgfx::MoveAnimator<AllZonesContainer>::startMoveAnimation(short, short, unsi
 touchgfx::MoveAnimator<PanelSettingsContainer>::MoveAnimator()
                          0x815'f415     0x24  Code  Gb  MainViewBase.o [1]
 touchgfx::MoveAnimator<PanelSettingsContainer>::handleTickEvent()
-                         0x816'7e93      0x4  Code  Gb  MainViewBase.o [1]
+                         0x816'7e97      0x4  Code  Gb  MainViewBase.o [1]
 touchgfx::MoveAnimator<PanelSettingsContainer>::nextMoveAnimationStep()
                          0x815'ff0b     0x9e  Code  Gb  MainViewBase.o [1]
 touchgfx::MoveAnimator<PanelSettingsContainer>::startMoveAnimation(short, short, unsigned short, short (*)(unsigned short, short, short, unsigned short), short (*)(unsigned short, short, short, unsigned short))
@@ -2516,7 +2516,7 @@ touchgfx::MoveAnimator<PanelSettingsContainer>::startMoveAnimation(short, short,
 touchgfx::MoveAnimator<WindowSettingsContainer>::MoveAnimator()
                          0x815'f3c9     0x28  Code  Gb  MainViewBase.o [1]
 touchgfx::MoveAnimator<WindowSettingsContainer>::handleTickEvent()
-                         0x816'7e8b      0x4  Code  Gb  MainViewBase.o [1]
+                         0x816'7e8f      0x4  Code  Gb  MainViewBase.o [1]
 touchgfx::MoveAnimator<WindowSettingsContainer>::nextMoveAnimationStep()
                          0x815'fde1     0xac  Code  Gb  MainViewBase.o [1]
 touchgfx::MoveAnimator<WindowSettingsContainer>::startMoveAnimation(short, short, unsigned short, short (*)(unsigned short, short, short, unsigned short), short (*)(unsigned short, short, short, unsigned short))
@@ -2524,17 +2524,17 @@ touchgfx::MoveAnimator<WindowSettingsContainer>::startMoveAnimation(short, short
 touchgfx::MoveAnimator<touchgfx::Image>::MoveAnimator()
                          0x815'f2dd     0x2c  Code  Gb  MainViewBase.o [1]
 touchgfx::MoveAnimator<touchgfx::Image>::handleTickEvent()
-                         0x816'7e83      0x4  Code  Gb  MainViewBase.o [1]
+                         0x816'7e87      0x4  Code  Gb  MainViewBase.o [1]
 touchgfx::MoveAnimator<touchgfx::Image>::nextMoveAnimationStep()
                          0x815'ffb7     0xa8  Code  Gb  MainViewBase.o [1]
 touchgfx::MoveAnimator<touchgfx::Image>::startMoveAnimation(short, short, unsigned short, short (*)(unsigned short, short, short, unsigned short), short (*)(unsigned short, short, short, unsigned short))
                          0x815'f253     0x5e  Code  Gb  MainView.o [1]
 touchgfx::NoTransition::NoTransition()
-                         0x816'41b5     0x18  Code  Gb  FrontendApplicationBase.o [1]
+                         0x816'41b9     0x18  Code  Gb  FrontendApplicationBase.o [1]
 touchgfx::NoTransition::handleTickEvent()
                          0x815'6cfb      0x6  Code  Gb  FrontendApplicationBase.o [1]
 touchgfx::NoTransition::~NoTransition()
-                         0x816'3367      0x2  Code  Gb  FrontendApplicationBase.o [1]
+                         0x816'336b      0x2  Code  Gb  FrontendApplicationBase.o [1]
 touchgfx::OSWrappers::giveFrameBufferSemaphore()
                          0x815'862b      0xe  Code  Gb  OSWrappers.o [1]
 touchgfx::OSWrappers::giveFrameBufferSemaphoreFromISR()
@@ -2550,29 +2550,29 @@ touchgfx::OSWrappers::tryTakeFrameBufferSemaphore()
 touchgfx::OSWrappers::waitForVSync()
                          0x815'868f     0x22  Code  Gb  OSWrappers.o [1]
 touchgfx::Partition<touchgfx::meta::TypeList<MainPresenter, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil>>, (unsigned short)1>::Partition()
-                         0x816'3c91     0x14  Code  Gb  BoardConfiguration.o [1]
+                         0x816'3c95     0x14  Code  Gb  BoardConfiguration.o [1]
 touchgfx::Partition<touchgfx::meta::TypeList<MainPresenter, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil>>, (unsigned short)1>::element(unsigned short)
-                         0x816'7e45      0x8  Code  Gb  BoardConfiguration.o [1]
+                         0x816'7e49      0x8  Code  Gb  BoardConfiguration.o [1]
 touchgfx::Partition<touchgfx::meta::TypeList<MainPresenter, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil>>, (unsigned short)1>::element_size()
-                         0x816'7e73      0x4  Code  Gb  BoardConfiguration.o [1]
+                         0x816'7e77      0x4  Code  Gb  BoardConfiguration.o [1]
 touchgfx::Partition<touchgfx::meta::TypeList<MainView, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil>>, (unsigned short)1>::Partition()
-                         0x816'3ca5     0x14  Code  Gb  BoardConfiguration.o [1]
+                         0x816'3ca9     0x14  Code  Gb  BoardConfiguration.o [1]
 touchgfx::Partition<touchgfx::meta::TypeList<MainView, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil>>, (unsigned short)1>::element(unsigned short)
-                         0x816'7dd1     0x10  Code  Gb  BoardConfiguration.o [1]
+                         0x816'7dd5     0x10  Code  Gb  BoardConfiguration.o [1]
 touchgfx::Partition<touchgfx::meta::TypeList<MainView, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil>>, (unsigned short)1>::element_size()
-                         0x816'7e3d      0x8  Code  Gb  BoardConfiguration.o [1]
+                         0x816'7e41      0x8  Code  Gb  BoardConfiguration.o [1]
 touchgfx::Partition<touchgfx::meta::TypeList<touchgfx::NoTransition, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil>>, (unsigned short)1>::Partition()
-                         0x816'3cb9     0x14  Code  Gb  BoardConfiguration.o [1]
+                         0x816'3cbd     0x14  Code  Gb  BoardConfiguration.o [1]
 touchgfx::Partition<touchgfx::meta::TypeList<touchgfx::NoTransition, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil>>, (unsigned short)1>::element(unsigned short)
                          0x815'489b      0xa  Code  Gb  BoardConfiguration.o [1]
 touchgfx::Partition<touchgfx::meta::TypeList<touchgfx::NoTransition, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil>>, (unsigned short)1>::element_size()
-                         0x816'7e77      0x4  Code  Gb  BoardConfiguration.o [1]
+                         0x816'7e7b      0x4  Code  Gb  BoardConfiguration.o [1]
 touchgfx::Presenter::activate()
-                         0x816'387b      0x2  Code  Gb  MainPresenter.o [1]
+                         0x816'387f      0x2  Code  Gb  MainPresenter.o [1]
 touchgfx::Presenter::deactivate()
-                         0x816'3c33      0x2  Code  Gb  MainPresenter.o [1]
+                         0x816'3c37      0x2  Code  Gb  MainPresenter.o [1]
 touchgfx::Presenter::~Presenter()
-                         0x816'41b3      0x2  Code  Gb  MainPresenter.o [1]
+                         0x816'41b7      0x2  Code  Gb  MainPresenter.o [1]
 touchgfx::Rect::Rect()   0x815'6319      0xc  Code  Gb  WindowSettingsContainerBase.o [1]
 touchgfx::Rect::Rect(short, short, short, short)
                          0x815'6309     0x10  Code  Gb  WindowSettingsContainerBase.o [1]
@@ -2585,15 +2585,15 @@ touchgfx::Rect::intersect(const touchgfx::Rect&) const
 touchgfx::Rect::operator &=(const touchgfx::Rect&)
                          0x815'6a09     0x86  Code  Gb  Screen.o [7]
 touchgfx::STM32F4Instrumentation::getCPUCycles()
-                         0x816'3527      0xe  Code  Gb  STM32F4Instrumentation.o [1]
+                         0x816'352b      0xe  Code  Gb  STM32F4Instrumentation.o [1]
 touchgfx::STM32F4Instrumentation::init()
-                         0x816'347d     0xaa  Code  Gb  STM32F4Instrumentation.o [1]
+                         0x816'3481     0xaa  Code  Gb  STM32F4Instrumentation.o [1]
 touchgfx::STM32F4Instrumentation::setMCUActive(bool)
-                         0x816'3541     0x22  Code  Gb  STM32F4Instrumentation.o [1]
+                         0x816'3545     0x22  Code  Gb  STM32F4Instrumentation.o [1]
 touchgfx::STM32F4TouchController::init()
-                         0x816'7561      0x4  Code  Gb  STM32F4TouchController.o [1]
+                         0x816'7565      0x4  Code  Gb  STM32F4TouchController.o [1]
 touchgfx::STM32F4TouchController::sampleTouch(int &, int &)
-                         0x816'7565     0x38  Code  Gb  STM32F4TouchController.o [1]
+                         0x816'7569     0x38  Code  Gb  STM32F4TouchController.o [1]
 touchgfx::Screen::JSMOC(touchgfx::Rect const &, touchgfx::Drawable *)
                          0x815'6477    0x214  Code  Gb  Screen.o [7]
 touchgfx::Screen::Screen()
@@ -2603,7 +2603,7 @@ touchgfx::Screen::Screen() [subobject]
 touchgfx::Screen::add(touchgfx::Drawable &)
                          0x815'f829      0x6  Code  Gb  MainViewBase.o [1]
 touchgfx::Screen::afterTransition()
-                         0x816'7797      0x2  Code  Gb  MainViewBase.o [1]
+                         0x816'779b      0x2  Code  Gb  MainViewBase.o [1]
 touchgfx::Screen::bindTransition(touchgfx::Transition &)
                          0x815'69b5      0xc  Code  Gb  Screen.o [7]
 touchgfx::Screen::draw()
@@ -2619,17 +2619,17 @@ touchgfx::Screen::handleDragEvent(touchgfx::DragEvent const &)
 touchgfx::Screen::handleGestureEvent(touchgfx::GestureEvent const &)
                          0x815'6969     0x4c  Code  Gb  Screen.o [7]
 touchgfx::Screen::handleKeyEvent(unsigned char)
-                         0x816'7a6f      0x2  Code  Gb  MainViewBase.o [1]
+                         0x816'7a73      0x2  Code  Gb  MainViewBase.o [1]
 touchgfx::Screen::handleTickEvent()
-                         0x816'7a47      0x2  Code  Gb  MainViewBase.o [1]
+                         0x816'7a4b      0x2  Code  Gb  MainViewBase.o [1]
 touchgfx::Screen::setupScreen()
-                         0x816'73f7      0x2  Code  Gb  MainViewBase.o [1]
+                         0x816'73fb      0x2  Code  Gb  MainViewBase.o [1]
 touchgfx::Screen::startSMOC(touchgfx::Rect &)
                          0x815'6453     0x24  Code  Gb  Screen.o [7]
 touchgfx::Screen::tearDownScreen()
-                         0x816'78ed      0x2  Code  Gb  MainViewBase.o [1]
+                         0x816'78f1      0x2  Code  Gb  MainViewBase.o [1]
 touchgfx::Screen::~Screen()
-                         0x816'8057      0x2  Code  Gb  Screen.o [7]
+                         0x816'805b      0x2  Code  Gb  Screen.o [7]
 touchgfx::ScrollableContainer::ScrollableContainer()
                          0x815'48b9     0xda  Code  Gb  ScrollableContainer.o [7]
 touchgfx::ScrollableContainer::add(touchgfx::Drawable &)
@@ -2641,7 +2641,7 @@ touchgfx::ScrollableContainer::doScroll(short, short)
 touchgfx::ScrollableContainer::getContainedArea() const
                          0x815'54e3     0xe6  Code  Gb  ScrollableContainer.o [7]
 touchgfx::ScrollableContainer::getLastChild(short, short, touchgfx::Drawable **)
-                         0x816'7a29     0x1e  Code  Gb  ScrollableContainer.o [7]
+                         0x816'7a2d     0x1e  Code  Gb  ScrollableContainer.o [7]
 touchgfx::ScrollableContainer::getXBorder(touchgfx::Rect const &, touchgfx::Rect const &) const
                          0x815'5159     0x5e  Code  Gb  ScrollableContainer.o [7]
 touchgfx::ScrollableContainer::getXScrollbar() const
@@ -2677,7 +2677,7 @@ touchgfx::TextArea::TextArea()
 touchgfx::TextArea::draw(touchgfx::Rect const &) const
                          0x815'f5bf     0x84  Code  Gb  TextArea.o [7]
 touchgfx::TextArea::getSolidRect() const
-                         0x816'7951     0x20  Code  Gb  SingleZoneContainerBase.o [1]
+                         0x816'7955     0x20  Code  Gb  SingleZoneContainerBase.o [1]
 touchgfx::TextArea::getTextHeight()
                          0x815'f56d     0x18  Code  Gb  TextArea.o [7]
 touchgfx::TextArea::getTextHeightInternal(unsigned short const *, ...) const
@@ -2691,23 +2691,23 @@ touchgfx::TextArea::setTypedText(touchgfx::TypedText)
 touchgfx::TextAreaWithOneWildcard::TextAreaWithOneWildcard()
                          0x815'f325     0x18  Code  Gb  MainViewBase.o [1]
 touchgfx::TextAreaWithOneWildcard::draw(touchgfx::Rect const &) const
-                         0x816'67d9     0x8c  Code  Gb  MainViewBase.o [1]
+                         0x816'67dd     0x8c  Code  Gb  MainViewBase.o [1]
 touchgfx::TextAreaWithOneWildcard::getTextHeight()
-                         0x816'77e9     0x28  Code  Gb  SingleZoneContainerBase.o [1]
+                         0x816'77ed     0x28  Code  Gb  SingleZoneContainerBase.o [1]
 touchgfx::TextAreaWithOneWildcard::getTextWidth() const
-                         0x816'73b9     0x3e  Code  Gb  SingleZoneContainerBase.o [1]
+                         0x816'73bd     0x3e  Code  Gb  SingleZoneContainerBase.o [1]
 touchgfx::TextAreaWithTwoWildcards::TextAreaWithTwoWildcards()
                          0x815'f309     0x1c  Code  Gb  MainViewBase.o [1]
 touchgfx::TextAreaWithTwoWildcards::draw(touchgfx::Rect const &) const
-                         0x816'6531     0x94  Code  Gb  MainViewBase.o [1]
+                         0x816'6535     0x94  Code  Gb  MainViewBase.o [1]
 touchgfx::TextAreaWithTwoWildcards::getTextHeight()
-                         0x816'776d     0x2a  Code  Gb  MainViewBase.o [1]
+                         0x816'7771     0x2a  Code  Gb  MainViewBase.o [1]
 touchgfx::TextAreaWithTwoWildcards::getTextWidth() const
-                         0x816'7325     0x42  Code  Gb  MainViewBase.o [1]
+                         0x816'7329     0x42  Code  Gb  MainViewBase.o [1]
 touchgfx::TextAreaWithWildcardBase::TextAreaWithWildcardBase() [subobject]
                          0x816'0071     0x14  Code  Gb  MainViewBase.o [1]
 touchgfx::TextAreaWithWildcardBase::calculateTextHeight(unsigned short const *, ...) const
-                         0x816'6749     0x90  Code  Gb  TextAreaWithWildcard.o [7]
+                         0x816'674d     0x90  Code  Gb  TextAreaWithWildcard.o [7]
 touchgfx::TextProvider::TextProvider()
                          0x815'acb9      0x2  Code  Gb  TextProvider.o [7]
 touchgfx::TextProvider::getNextChar()
@@ -2729,7 +2729,7 @@ touchgfx::Texts::currentLanguage
 touchgfx::Texts::currentLanguagePtr
                         0x2001'a924      0x4  Data  Gb  Texts.o [1]
 touchgfx::Texts::setLanguage(unsigned short)
-                         0x816'38eb     0x30  Code  Gb  Texts.o [1]
+                         0x816'38ef     0x30  Code  Gb  Texts.o [1]
 touchgfx::ToggleButton::ToggleButton()
                          0x816'0619     0x46  Code  Gb  ToggleButton.o [7]
 touchgfx::ToggleButton::forceState(bool)
@@ -2751,7 +2751,7 @@ touchgfx::Transition::handleTickEvent()
 touchgfx::Transition::init()
                          0x816'28b7      0x2  Code  Gb  FrontendApplicationBase.o [1]
 touchgfx::Transition::setScreenContainer(touchgfx::Container &)
-                         0x816'7e7b      0x4  Code  Gb  FrontendApplicationBase.o [1]
+                         0x816'7e7f      0x4  Code  Gb  FrontendApplicationBase.o [1]
 touchgfx::Transition::tearDown()
                          0x816'2097      0x2  Code  Gb  FrontendApplicationBase.o [1]
 touchgfx::Transition::~Transition()
@@ -2759,21 +2759,21 @@ touchgfx::Transition::~Transition()
 touchgfx::TypedText::assertValid() const
                          0x816'0085     0x48  Code  Gb  SingleZoneContainerBase.o [1]
 touchgfx::TypedText::assertValid() const::string (instance 2)
-                         0x816'72e0     0x44  Data  Gb  SingleZoneContainerBase.o [1]
+                         0x816'72e4     0x44  Data  Gb  SingleZoneContainerBase.o [1]
 touchgfx::TypedText::assertValid() const::string (instance 3)
-                         0x816'6a74     0x80  Data  Gb  SingleZoneContainerBase.o [1]
+                         0x816'6a78     0x80  Data  Gb  SingleZoneContainerBase.o [1]
 touchgfx::TypedText::assertValid() const::string (instance 5)
-                         0x816'714c     0x54  Data  Gb  SingleZoneContainerBase.o [1]
+                         0x816'7150     0x54  Data  Gb  SingleZoneContainerBase.o [1]
 touchgfx::TypedText::fonts
                         0x2001'a94c      0x4  Data  Gb  TypedText.o [7]
 touchgfx::TypedText::getAlignment() const
-                         0x816'6609     0x20  Code  Gb  MainViewBase.o [1]
+                         0x816'660d     0x20  Code  Gb  MainViewBase.o [1]
 touchgfx::TypedText::getFont() const
-                         0x816'65c5     0x24  Code  Gb  SingleZoneContainerBase.o [1]
+                         0x816'65c9     0x24  Code  Gb  SingleZoneContainerBase.o [1]
 touchgfx::TypedText::getText() const
                          0x815'f555     0x18  Code  Gb  SingleZoneContainerBase.o [1]
 touchgfx::TypedText::getTextDirection() const
-                         0x816'65e9     0x20  Code  Gb  SingleZoneContainerBase.o [1]
+                         0x816'65ed     0x20  Code  Gb  SingleZoneContainerBase.o [1]
 touchgfx::TypedText::numberOfTypedTexts
                         0x2001'a95a      0x2  Data  Gb  TypedText.o [7]
 touchgfx::TypedText::texts
@@ -2781,15 +2781,15 @@ touchgfx::TypedText::texts
 touchgfx::TypedText::typedTexts
                         0x2001'a944      0x4  Data  Gb  TypedText.o [7]
 touchgfx::UIEventListener::handleClickEvent(touchgfx::ClickEvent const &)
-                         0x816'804d      0x2  Code  Gb  Application.o [7]
-touchgfx::UIEventListener::handleDragEvent(touchgfx::DragEvent const &)
-                         0x816'804f      0x2  Code  Gb  Application.o [7]
-touchgfx::UIEventListener::handleGestureEvent(touchgfx::GestureEvent const &)
                          0x816'8051      0x2  Code  Gb  Application.o [7]
-touchgfx::UIEventListener::handleKeyEvent(unsigned char)
+touchgfx::UIEventListener::handleDragEvent(touchgfx::DragEvent const &)
                          0x816'8053      0x2  Code  Gb  Application.o [7]
-touchgfx::UIEventListener::handleTickEvent()
+touchgfx::UIEventListener::handleGestureEvent(touchgfx::GestureEvent const &)
                          0x816'8055      0x2  Code  Gb  Application.o [7]
+touchgfx::UIEventListener::handleKeyEvent(unsigned char)
+                         0x816'8057      0x2  Code  Gb  Application.o [7]
+touchgfx::UIEventListener::handleTickEvent()
+                         0x816'8059      0x2  Code  Gb  Application.o [7]
 touchgfx::Unicode::EMPTY
                          0x815'ae72      0x2  Data  Gb  Unicode.o [7]
 touchgfx::Unicode::atoi(unsigned short const *)
@@ -2813,7 +2813,7 @@ touchgfx::Vector<touchgfx::Rect, (unsigned short)8>::add(touchgfx::Rect)
 touchgfx::Vector<touchgfx::Rect, (unsigned short)8>::quickRemoveAt(unsigned short)
                          0x815'6ad3     0x50  Code  Gb  Application.o [7]
 touchgfx::View<MainPresenter>::~View()
-                         0x816'7a7f      0x2  Code  Gb  MainViewBase.o [1]
+                         0x816'7a83      0x2  Code  Gb  MainViewBase.o [1]
 touchgfx::Widget::Widget() [subobject]
                          0x816'005f      0xc  Code  Gb  WindowSettingsContainerBase.o [1]
 touchgfx::Widget::getLastChild(short, short, touchgfx::Drawable **)
@@ -2825,10 +2825,10 @@ touchgfx::getHAL<STM32F4HAL>(touchgfx::DMA_Interface &, touchgfx::LCD &, touchgf
 touchgfx::memset(void *, unsigned char, unsigned int)
                          0x815'ffa9      0xe  Code  Gb  Utils.o [7]
 touchgfx::touchgfx_init()
-                         0x816'28ff     0x5e  Code  Gb  BoardConfiguration.o [1]
-typedTextDatabaseArray   0x816'8024      0x4  Data  Lc  TypedTextDatabase.o [1]
+                         0x816'28ff     0x60  Code  Gb  BoardConfiguration.o [1]
+typedTextDatabaseArray   0x816'8028      0x4  Data  Lc  TypedTextDatabase.o [1]
 typedText_database_DEFAULT
-                         0x816'7740     0x2c  Data  Lc  TypedTextDatabase.o [1]
+                         0x816'7744     0x2c  Data  Lc  TypedTextDatabase.o [1]
 ucHeap                  0x2001'2320   0x8000  Data  Lc  heap_4.o [1]
 ucMaxSysCallPriority    0x2000'0acc      0x1  Data  Lc  port.o [1]
 uiTaskHandle            0x2001'a640      0x4  Data  Gb  main.o [1]
@@ -2937,7 +2937,7 @@ xYieldPending           0x2001'a428      0x4  Data  Lc  tasks.o [1]
 [6] = shb_l.a
 [7] = touchgfx_core_release.a
 
-     63 711 bytes of readonly  code memory
+     63 715 bytes of readonly  code memory
   1 411 148 bytes of readonly  data memory
     110 430 bytes of readwrite data memory
 

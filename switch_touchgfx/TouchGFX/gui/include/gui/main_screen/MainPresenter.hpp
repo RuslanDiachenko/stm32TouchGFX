@@ -27,7 +27,7 @@ public:
 
     virtual ~MainPresenter() {};
 
-    void notifySunStateChanged(int newSunState, int hour, int minute, int hF, int dow);
+    void notifySunStateChanged(int hour, int minute, int hF, int dow);
 
 private:
     MainPresenter();

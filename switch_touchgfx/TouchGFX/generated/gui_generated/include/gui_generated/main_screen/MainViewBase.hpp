@@ -8,8 +8,8 @@
 #include <mvp/View.hpp>
 #include <gui/main_screen/MainPresenter.hpp>
 #include <touchgfx/widgets/Image.hpp>
-#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/Button.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <gui/containers/AllZonesContainer.hpp>
 #include <gui/containers/WindowSettingsContainer.hpp>
 #include <gui/containers/AllScenesContainer.hpp>
@@ -48,18 +48,19 @@ protected:
      * Member Declarations
      */
     touchgfx::Image background;
+    touchgfx::Button windowSettingsButton;
     touchgfx::Image sunHorizontImg;
     touchgfx::MoveAnimator< touchgfx::Image > sunIcon;
     touchgfx::TextAreaWithTwoWildcards clockNum;
     touchgfx::TextAreaWithOneWildcard clockText;
     touchgfx::TextAreaWithOneWildcard dayOfWeek;
-    touchgfx::Button windowSettingsButton;
     touchgfx::FadeAnimator< touchgfx::Image > backgroundBlur;
     touchgfx::Button panelSettingsButton;
     touchgfx::MoveAnimator< AllZonesContainer > allZonesContainer;
     touchgfx::MoveAnimator< WindowSettingsContainer > windowSettingsContainer;
     touchgfx::MoveAnimator< AllScenesContainer > allScenesContainer;
     touchgfx::MoveAnimator< PanelSettingsContainer > panelSettingsContainer;
+    touchgfx::Image image;
 
     /*
      * Wildcard Buffers
@@ -70,7 +71,7 @@ protected:
     touchgfx::Unicode::UnicodeChar clockNumBuffer2[CLOCKNUMBUFFER2_SIZE];
     static const uint16_t CLOCKTEXT_SIZE = 3;
     touchgfx::Unicode::UnicodeChar clockTextBuffer[CLOCKTEXT_SIZE];
-    static const uint16_t DAYOFWEEK_SIZE = 10;
+    static const uint16_t DAYOFWEEK_SIZE = 20;
     touchgfx::Unicode::UnicodeChar dayOfWeekBuffer[DAYOFWEEK_SIZE];
 
 private:

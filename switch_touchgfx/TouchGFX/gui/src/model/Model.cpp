@@ -25,7 +25,7 @@ void Model::tick()
       mail = (main_screen_state_t *) evt.value.p;
       if (mail)
       {
-        modelListener->notifySunStateChanged(mail->sunState, mail->hour, mail->minute, mail->hF, mail->dayOfWeek);
+        modelListener->notifySunStateChanged(mail->hour, mail->minute, mail->hF, mail->dayOfWeek);
         osMailFree(sunMsgBox_g, mail);
       }
     }

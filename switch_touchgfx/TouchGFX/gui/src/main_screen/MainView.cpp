@@ -179,9 +179,27 @@ void MainView::ClosePanelSettingsContainerHandler(void)
 }
 
 
-void MainView::setSunState(int newSunState, int hour, int minute, int hF, int dow)
+void MainView::setSunState(int hour, int minute, int hF, int dow)
 {
-    int16_t endX, endY;
+    int16_t endX, endY, newSunState = 0;
+    uint8_t totalMin = minute + hour*60;
+    uint8_t hideSun = 0;
+    if (hF)
+    {
+      totalMin += 360;
+    }
+    else
+    {
+      totalMin -= 360;
+    }
+    
+    newSunState = totalMin / 96;
+    
+    if ((hour >= 8 && minute >= 40 && hF == 1) || (hour < 6 && hF == 0))
+    {
+      hideSun = 1;
+    }
+    
     switch (newSunState)
     {
         case 0:
@@ -231,7 +249,7 @@ void MainView::setSunState(int newSunState, int hour, int minute, int hF, int do
     else
         Unicode::strncpy(clockTextBuffer, "am", CLOCKTEXT_SIZE);
     clockText.invalidate();
-
+/*
     Unicode::UnicodeChar dayOfWeekStr[10] = {0};
 
     switch (dow)
@@ -261,7 +279,13 @@ void MainView::setSunState(int newSunState, int hour, int minute, int hF, int do
 
     Unicode::snprintf(dayOfWeekBuffer, DAYOFWEEK_SIZE, "%s", dayOfWeekStr);
     dayOfWeek.invalidate();
-
+*/
+    
+    sunIcon.setVisible(!hideSun);
+    sunHorizontImg.setVisible(!hideSun);
+    sunIcon.invalidate();
+    sunHorizontImg.invalidate();
+    
     sunIcon.clearMoveAnimationEndedAction();
     sunIcon.startMoveAnimation(endX, endY, 48, EasingEquations::linearEaseIn, EasingEquations::linearEaseIn);
 }

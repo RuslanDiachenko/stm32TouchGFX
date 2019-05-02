@@ -12,10 +12,15 @@ MainViewBase::MainViewBase() :
     background.setXY(0, 0);
     background.setBitmap(Bitmap(BITMAP_BACKGROUND_IMAGE_ID));
 
+    windowSettingsButton.setXY(0, 0);
+    windowSettingsButton.setBitmaps(Bitmap(BITMAP_BACKGROUND_IMAGE_ID), Bitmap(BITMAP_BACKGROUND_IMAGE_ID));
+    windowSettingsButton.setAction(buttonCallback);
+    windowSettingsButton.setAlpha(0);
+
     sunHorizontImg.setXY(1, 333);
     sunHorizontImg.setBitmap(Bitmap(BITMAP_COMBINEDGRAPHICNEW_ID));
 
-    sunIcon.setXY(23, 374);
+    sunIcon.setXY(66, 336);
     sunIcon.setBitmap(Bitmap(BITMAP_SUN_ICON_ID));
 
     clockNum.setPosition(42, 50, 121, 49);
@@ -35,7 +40,7 @@ MainViewBase::MainViewBase() :
     clockText.resizeToCurrentText();
     clockText.setTypedText(TypedText(T_SINGLEUSEID6));
 
-    dayOfWeek.setXY(86, 100);
+    dayOfWeek.setXY(30, 106);
     dayOfWeek.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     dayOfWeek.setLinespacing(0);
     Unicode::snprintf(dayOfWeekBuffer, DAYOFWEEK_SIZE, "%s", TypedText(T_SINGLEUSEID9).getText());
@@ -43,15 +48,11 @@ MainViewBase::MainViewBase() :
     dayOfWeek.resizeToCurrentText();
     dayOfWeek.setTypedText(TypedText(T_SINGLEUSEID8));
 
-    windowSettingsButton.setXY(58, 217);
-    windowSettingsButton.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID));
-    windowSettingsButton.setAction(buttonCallback);
-
     backgroundBlur.setXY(0, 0);
     backgroundBlur.setBitmap(Bitmap(BITMAP_BACKGROUND_IMAGE_ID));
     backgroundBlur.setAlpha(0);
 
-    panelSettingsButton.setXY(237, 446);
+    panelSettingsButton.setXY(220, 428);
     panelSettingsButton.setBitmaps(Bitmap(BITMAP_PANELSETTINGSBUTTONICON_ID), Bitmap(BITMAP_PANELSETTINGSBUTTONICON_ID));
     panelSettingsButton.setAction(buttonCallback);
 
@@ -63,19 +64,23 @@ MainViewBase::MainViewBase() :
 
     panelSettingsContainer.setXY(10, -410);
 
+    image.setXY(87, 433);
+    image.setBitmap(Bitmap(BITMAP_SAINTGOBAINLOGO_ID));
+
     add(background);
+    add(windowSettingsButton);
     add(sunHorizontImg);
     add(sunIcon);
     add(clockNum);
     add(clockText);
     add(dayOfWeek);
-    add(windowSettingsButton);
     add(backgroundBlur);
     add(panelSettingsButton);
     add(allZonesContainer);
     add(windowSettingsContainer);
     add(allScenesContainer);
     add(panelSettingsContainer);
+    add(image);
 }
 
 void MainViewBase::setupScreen()

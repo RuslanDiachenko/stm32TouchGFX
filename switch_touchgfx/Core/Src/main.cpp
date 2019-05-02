@@ -25,7 +25,6 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <yfuns.h>
-#include <stdio.h>
 
 extern "C"
 {
@@ -506,25 +505,30 @@ void StartUITask(void const *argument)
 {
   sunMsgBox_g = osMailCreate(osMailQ(sunMsgBox_g), NULL);
   main_screen_state_t state = {0};
+  state.hour = 10;
   for (;;)
   {
-    state.sunState++;
-    state.hF++;
-    state.dayOfWeek++;
-    state.hour++;
-    state.minute++;
-
-    if (state.sunState >= 9)
-      state.sunState = 0;
-    if (state.hF)
-      state.hF = 0;
-    if (state.dayOfWeek >= 7)
-      state.dayOfWeek = 0;
-    if (state.hour >= 12)
-      state.hour = 0;
+    if (state.seconds >= 60)
+    {
+      state.seconds = 0;
+      state.minute++;
+    }
     if (state.minute >= 60)
+    {
       state.minute = 0;
+      state.hour++;
+    }
+    if (state.hour >= 12)
+    {
+      state.hour = 0;
+      state.hF++;
+    }
+    if (state.hF >= 2)
+    {
+      state.hF = 0;
+    }
     osDelay(1000);
+    state.seconds++;
     putSunMsg(state);    
   }
 }

@@ -15,11 +15,11 @@ AllScenesContainerBase::AllScenesContainerBase() :
     panelBase.setXY(0, 0);
     panelBase.setBitmap(Bitmap(BITMAP_PANELBASE_ID));
 
-    backButton.setXY(15, 15);
+    backButton.setXY(6, 3);
     backButton.setBitmaps(Bitmap(BITMAP_BACKBUTTON_ID), Bitmap(BITMAP_BACKBUTTON_ID));
     backButton.setAction(buttonCallback);
 
-    closeButton.setXY(225, 15);
+    closeButton.setXY(210, 3);
     closeButton.setBitmaps(Bitmap(BITMAP_CLOSEBUTTON_ID), Bitmap(BITMAP_CLOSEBUTTON_ID));
     closeButton.setAction(buttonCallback);
 
@@ -28,24 +28,24 @@ AllScenesContainerBase::AllScenesContainerBase() :
     containerNameText.setLinespacing(0);
     containerNameText.setTypedText(TypedText(T_SINGLEUSEID12));
 
-    sceneButton0.setXY(15, 97);
+    sceneButton0.setXY(5, 93);
     sceneButton0.setBitmaps(Bitmap(BITMAP_TOGGLENOTPRESSED_ID), Bitmap(BITMAP_TOGGLEPRESSED_ID));
     sceneButton0.forceState(true);
     sceneButton0.setAction(buttonCallback);
 
-    sceneButton1.setXY(15, 145);
+    sceneButton1.setXY(5, 141);
     sceneButton1.setBitmaps(Bitmap(BITMAP_TOGGLENOTPRESSED_ID), Bitmap(BITMAP_TOGGLEPRESSED_ID));
     sceneButton1.setAction(buttonCallback);
 
-    sceneButton2.setXY(15, 194);
+    sceneButton2.setXY(5, 190);
     sceneButton2.setBitmaps(Bitmap(BITMAP_TOGGLENOTPRESSED_ID), Bitmap(BITMAP_TOGGLEPRESSED_ID));
     sceneButton2.setAction(buttonCallback);
 
-    sceneButton3.setXY(15, 245);
+    sceneButton3.setXY(5, 241);
     sceneButton3.setBitmaps(Bitmap(BITMAP_TOGGLENOTPRESSED_ID), Bitmap(BITMAP_TOGGLEPRESSED_ID));
     sceneButton3.setAction(buttonCallback);
 
-    sceneButton4.setXY(15, 297);
+    sceneButton4.setXY(5, 293);
     sceneButton4.setBitmaps(Bitmap(BITMAP_TOGGLENOTPRESSED_ID), Bitmap(BITMAP_TOGGLEPRESSED_ID));
     sceneButton4.setAction(buttonCallback);
 

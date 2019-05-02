@@ -13,7 +13,7 @@ public:
     virtual void setupScreen();
     virtual void tearDownScreen();
 
-    void setSunState(int newSunState, int hour, int minute, int hF, int dow);
+    void setSunState(int hour, int minute, int hF, int dow);
 protected:
     virtual void WindowSettingsButtonClicked();
     virtual void PanelSettingsButtonClicked();

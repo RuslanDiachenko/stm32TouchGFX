@@ -12,7 +12,7 @@ PanelSettingsContainerBase::PanelSettingsContainerBase() :
     setWidth(250);
     setHeight(400);
 
-    closeButton.setXY(214, 14);
+    closeButton.setXY(210, 3);
     closeButton.setBitmaps(Bitmap(BITMAP_CLOSEBUTTON_ID), Bitmap(BITMAP_CLOSEBUTTON_ID));
     closeButton.setAction(buttonCallback);
 

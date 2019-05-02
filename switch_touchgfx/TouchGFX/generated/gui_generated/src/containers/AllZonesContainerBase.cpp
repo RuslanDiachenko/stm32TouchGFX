@@ -15,18 +15,18 @@ AllZonesContainerBase::AllZonesContainerBase() :
     background.setXY(0, 0);
     background.setBitmap(Bitmap(BITMAP_PANELBASE_ID));
 
-    closeButton.setXY(225, 15);
+    closeButton.setXY(210, 3);
     closeButton.setBitmaps(Bitmap(BITMAP_CLOSEBUTTON_ID), Bitmap(BITMAP_CLOSEBUTTON_ID));
     closeButton.setAction(buttonCallback);
 
-    scrollableAllZonesContainer.setPosition(6, 71, 244, 271);
+    scrollableAllZonesContainer.setPosition(6, 71, 244, 334);
     scrollableAllZonesContainer.enableHorizontalScroll(false);
     scrollableAllZonesContainer.setScrollbarsColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
 
 
     scrollableAllZonesContainer.setScrollbarsVisible(false);
 
-    backButton.setXY(15, 15);
+    backButton.setXY(6, 3);
     backButton.setBitmaps(Bitmap(BITMAP_BACKBUTTON_ID), Bitmap(BITMAP_BACKBUTTON_ID));
     backButton.setAction(buttonCallback);
 

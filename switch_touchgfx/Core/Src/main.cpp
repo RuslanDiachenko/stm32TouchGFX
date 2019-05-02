@@ -27,6 +27,8 @@
 #include <yfuns.h>
 #include <stdio.h>
 
+#include <common/TouchGFXInit.hpp>
+
 extern "C"
 {
 #include "persist_storage.h"
@@ -94,13 +96,13 @@ int putSunMsg(main_screen_state_t state)
 {
   osStatus status = osOK;
   main_screen_state_t *mail = 0;
-  
+
   mail = (main_screen_state_t *) osMailAlloc(sunMsgBox_g, 100);
-  
+
   *mail = state;
-  
+
   status = osMailPut(sunMsgBox_g, mail);
-  
+
   return (int) status;
 }
 
@@ -156,17 +158,17 @@ int main(void)
   /* USER CODE BEGIN 2 */
   osMutexDef(debugMutex);
   debugMutexHandle = osMutexCreate(osMutex(debugMutex));
-  
+
   DBG_LOG("MAIN", "SageGlass switch v%d.%d.%d", FW_VERSION_MAJOR, FW_VERSION_MINOR, FW_VERSION_BUILD);
   /* USER CODE END 2 */
 
-/* Initialise the graphical hardware */
-  GRAPHICS_HW_Init();
+// /* Initialise the graphical hardware */
+//   GRAPHICS_HW_Init();
 
-  /* Initialise the graphical stack engine */
-  GRAPHICS_Init();
-      
-  
+//   /* Initialise the graphical stack engine */
+//   GRAPHICS_Init();
+
+
 
   /* USER CODE BEGIN RTOS_MUTEX */
   /* add mutexes, ... */
@@ -193,14 +195,14 @@ int main(void)
   /* add threads, ... */
   osThreadDef(uiTask, StartUITask, osPriorityNormal, 0, 256);
   uiTaskHandle = osThreadCreate(osThread(uiTask), NULL);
-  
+
   osThreadDef(psTask, PersistStorageTask, osPriorityNormal, 0, 256);
   psTaskHandle = osThreadCreate(osThread(psTask), NULL);
   /* USER CODE END RTOS_THREADS */
 
   /* Start scheduler */
   osKernelStart();
-  
+
   /* We should never get here as control is now taken by the scheduler */
 
   /* Infinite loop */
@@ -224,11 +226,11 @@ void SystemClock_Config(void)
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
   RCC_PeriphCLKInitTypeDef PeriphClkInitStruct = {0};
 
-  /** Configure the main internal regulator output voltage 
+  /** Configure the main internal regulator output voltage
   */
   __HAL_RCC_PWR_CLK_ENABLE();
   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
-  /** Initializes the CPU, AHB and APB busses clocks 
+  /** Initializes the CPU, AHB and APB busses clocks
   */
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
@@ -243,13 +245,13 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
-  /** Activate the Over-Drive mode 
+  /** Activate the Over-Drive mode
   */
   if (HAL_PWREx_EnableOverDrive() != HAL_OK)
   {
     Error_Handler();
   }
-  /** Initializes the CPU, AHB and APB busses clocks 
+  /** Initializes the CPU, AHB and APB busses clocks
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
@@ -307,7 +309,7 @@ static void MX_GFXSIMULATOR_Init(void)
 {
 
   /* USER CODE BEGIN GFXSIMULATOR_Init 0 */
- 
+
   /* USER CODE END GFXSIMULATOR_Init 0 */
 
   /* USER CODE BEGIN GFXSIMULATOR_Init 1 */
@@ -347,13 +349,13 @@ static void MX_I2C1_Init(void)
   {
     Error_Handler();
   }
-  /** Configure Analogue filter 
+  /** Configure Analogue filter
   */
   if (HAL_I2CEx_ConfigAnalogFilter(&hi2c1, I2C_ANALOGFILTER_ENABLE) != HAL_OK)
   {
     Error_Handler();
   }
-  /** Configure Digital filter 
+  /** Configure Digital filter
   */
   if (HAL_I2CEx_ConfigDigitalFilter(&hi2c1, 0) != HAL_OK)
   {
@@ -490,6 +492,13 @@ static void MX_GPIO_Init(void)
 void StartDefaultTask(void const * argument)
 {
   PS_Init();
+  // Bitmap::cacheAll();
+  /* Initialise the graphical hardware */
+  GRAPHICS_HW_Init();
+
+  /* Initialise the graphical stack engine */
+  GRAPHICS_Init();
+
 /* Graphic application */
   GRAPHICS_MainTask();
 
@@ -525,7 +534,7 @@ void StartUITask(void const *argument)
     if (state.minute >= 60)
       state.minute = 0;
     osDelay(1000);
-    putSunMsg(state);    
+    putSunMsg(state);
   }
 }
 
@@ -551,7 +560,7 @@ void Error_Handler(void)
   * @retval None
   */
 void assert_failed(uint8_t *file, uint32_t line)
-{ 
+{
   /* USER CODE BEGIN 6 */
   /* User can add his own implementation to report the file name and line number,
      tex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */

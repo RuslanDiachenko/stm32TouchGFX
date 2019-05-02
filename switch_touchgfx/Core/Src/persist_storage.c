@@ -182,22 +182,40 @@ static RV_t readFromFlash(uint32_t addr, uint8_t *data, uint32_t len)
 
 		uint8_t sendCom[FLASH_PAGE_SIZE] = {0};
 
-		sendCom[0] = FLASH_CMD_READ_DATA;
-		sendCom[1] = (addr >> 16) & 0xFF;
-		sendCom[2] = (addr >> 8) & 0xFF;
-		sendCom[3] = addr & 0xFF;
-
 		FLASH_SELECT;
+
+		sendCom[0] = FLASH_CMD_READ_DATA;
+		sendCom[1] = ((addr) >> 16) & 0xFF;
+		sendCom[2] = ((addr) >> 8) & 0xFF;
+		sendCom[3] = (addr) & 0xFF;
+
 		if( HAL_SPI_Transmit(FLASH_SPI_INTERFACE, sendCom, 4, 100))
 		{
 			DBG_ERR(PS_MGR, "Problem with data sending");
 			state = RV_FAILURE;
 			break;
 		}
-		if (HAL_SPI_Receive(FLASH_SPI_INTERFACE, data, len, 1000))
+
+		for (uint32_t i = 0; i < len;)
 		{
-			DBG_ERR(PS_MGR, "Problem with data receiving");
-			state = RV_FAILURE;
+			uint16_t receiveLength = 60000;
+			if ((len - i) < receiveLength)
+			{
+					receiveLength = (len - i);
+			}
+
+			if (HAL_SPI_Receive(FLASH_SPI_INTERFACE, data + i, receiveLength, 1000))
+			{
+				DBG_ERR(PS_MGR, "Problem with data receiving");
+				state = RV_FAILURE;
+				break;
+			}
+
+			i += receiveLength;
+		}
+
+		if (state == RV_FAILURE)
+		{
 			break;
 		}
 

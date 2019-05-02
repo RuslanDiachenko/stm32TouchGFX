@@ -1227,6 +1227,12 @@
                         <name>$PROJ_DIR$\..\TouchGFX\target\BoardConfiguration.cpp</name>
                     </file>
                     <file>
+                        <name>$PROJ_DIR$\..\TouchGFX\target\CustomHAL.cpp</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\TouchGFX\target\CustomHAL.hpp</name>
+                    </file>
+                    <file>
                         <name>$PROJ_DIR$\..\TouchGFX\target\GPIO.cpp</name>
                     </file>
                     <file>

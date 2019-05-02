@@ -1,7 +1,7 @@
 /********************************************************************************
   * @file    flash_common.h
-  * @brief   System wide defines for SPI flash 
-  *          
+  * @brief   System wide defines for SPI flash
+  *
 ********************************************************************************/
 
 #ifndef FLASH_CMN_H
@@ -20,6 +20,9 @@
 #define FIRST_APP_SECTOR_END			0x081FFF
 #define SECOND_APP_SECTOR_START			0x082000
 #define SECOND_APP_SECTOR_END			0x101FFF
+
+#define GUI_CACHE_SECTOR_START 0x200000
+#define GUI_CACHE_SECTOR_END 0x9FFFFF
 
 #define SYS_CONFIGS_VALID_FLAG        0x90FA45F1
 

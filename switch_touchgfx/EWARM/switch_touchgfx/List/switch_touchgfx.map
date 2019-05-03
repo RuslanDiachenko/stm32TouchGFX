@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V8.32.3.193/W32 for ARM                  03/May/2019  12:13:08
+# IAR ELF Linker V8.32.3.193/W32 for ARM                  03/May/2019  13:48:39
 # Copyright 2007-2019 IAR Systems AB.
 #
 #    Output file  =  
@@ -8,7 +8,7 @@
 #    Map file     =  
 #        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\List\switch_touchgfx.map
 #    Command line =  
-#        -f C:\Users\User\AppData\Local\Temp\EWDFF5.tmp
+#        -f C:\Users\User\AppData\Local\Temp\EW52C0.tmp
 #        (C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\AllScenesContainer.o
 #        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\AllScenesContainerBase.o
 #        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\AllZonesContainer.o
@@ -1293,7 +1293,7 @@ HAL_DMA2D_BlendingStart_IT
 HAL_DMA2D_ConfigLayer    0x801'4df1     0x92  Code  Gb  stm32f4xx_hal_dma2d.o [1]
 HAL_DMA2D_IRQHandler     0x801'4ce1     0xf2  Code  Gb  stm32f4xx_hal_dma2d.o [1]
 HAL_DMA2D_Init           0x801'4c0d     0x56  Code  Gb  stm32f4xx_hal_dma2d.o [1]
-HAL_DMA2D_MspInit        0x801'49b5     0x26  Code  Gb  HW_Init.o [1]
+HAL_DMA2D_MspInit        0x801'49b7     0x26  Code  Gb  HW_Init.o [1]
 HAL_DMA2D_Start_IT       0x801'4c63     0x12  Code  Gb  stm32f4xx_hal_dma2d.o [1]
 HAL_GPIO_DeInit          0x800'ca6d    0x114  Code  Gb  stm32f4xx_hal_gpio.o [1]
 HAL_GPIO_Init            0x800'c8b5    0x1b8  Code  Gb  stm32f4xx_hal_gpio.o [1]
@@ -1318,8 +1318,8 @@ HAL_LTDC_IRQHandler      0x801'501b     0xa8  Code  Gb  stm32f4xx_hal_ltdc.o [1]
 HAL_LTDC_Init            0x801'4f1d     0xe6  Code  Gb  stm32f4xx_hal_ltdc.o [1]
 HAL_LTDC_LineEventCallback
                          0x801'5857     0x4c  Code  Gb  STM32F4HAL.o [1]
-HAL_LTDC_MspDeInit       0x801'487d     0x6c  Code  Gb  HW_Init.o [1]
-HAL_LTDC_MspInit         0x801'46fb    0x15a  Code  Gb  HW_Init.o [1]
+HAL_LTDC_MspDeInit       0x801'487f     0x6c  Code  Gb  HW_Init.o [1]
+HAL_LTDC_MspInit         0x801'46fd    0x15a  Code  Gb  HW_Init.o [1]
 HAL_LTDC_ProgramLineEvent
                          0x801'5185     0x2c  Code  Gb  stm32f4xx_hal_ltdc.o [1]
 HAL_LTDC_SetPitch        0x801'5123     0x62  Code  Gb  stm32f4xx_hal_ltdc.o [1]
@@ -1341,7 +1341,7 @@ HAL_RCC_GetPCLK2Freq     0x800'ef49      0xe  Code  Gb  stm32f4xx_hal_rcc.o [1]
 HAL_RCC_OscConfig        0x801'3c79    0x2f8  Code  Wk  stm32f4xx_hal_rcc.o [1]
 HAL_SDRAM_IRQHandler     0x801'5359     0x1e  Code  Gb  stm32f4xx_hal_sdram.o [1]
 HAL_SDRAM_Init           0x801'531d     0x3c  Code  Gb  stm32f4xx_hal_sdram.o [1]
-HAL_SDRAM_MspInit        0x801'49b3      0x2  Code  Gb  HW_Init.o [1]
+HAL_SDRAM_MspInit        0x801'49b5      0x2  Code  Gb  HW_Init.o [1]
 HAL_SDRAM_ProgramRefreshRate
                          0x801'53a3     0x16  Code  Gb  stm32f4xx_hal_sdram.o [1]
 HAL_SDRAM_SendCommand    0x801'5377     0x2c  Code  Gb  stm32f4xx_hal_sdram.o [1]
@@ -1384,7 +1384,7 @@ LTDC_ER_IRQHandler       0x801'9681      0x2  Code  Gb  stm32f4xx_it.o [1]
 LTDC_IRQHandler          0x801'967d      0x2  Code  Gb  stm32f4xx_it.o [1]
 LTDC_SetConfig           0x801'520f     0xfa  Code  Lc  stm32f4xx_hal_ltdc.o [1]
 LoadInt                  0x800'664b     0x7a  Code  Lc  xprintffull.o [2]
-MX_FMC_Init()            0x801'469b     0x60  Code  Gb  HW_Init.o [1]
+MX_FMC_Init()            0x801'469b     0x62  Code  Gb  HW_Init.o [1]
 MX_LCD_Init()            0x801'45e5     0xb6  Code  Gb  HW_Init.o [1]
 MainPresenter * touchgfx::makeTransition<MainView, MainPresenter, touchgfx::NoTransition, Model>(touchgfx::Screen **, touchgfx::Presenter **, touchgfx::MVPHeap &, touchgfx::Transition **, Model *)
                          0x801'5d25    0x14c  Code  Gb  FrontendApplicationBase.o [1]
@@ -1782,7 +1782,7 @@ WindowSettingsContainerBase::initialize()
 [local to BoardConfiguration_cpp]::touchgfx::texts
                         0x2000'0000      0x1  Data  Lc  BoardConfiguration.o [1]
 [local to HW_Init_cpp]::HAL_FMC_MspInit()
-                         0x801'48e9     0xa6  Code  Lc  HW_Init.o [1]
+                         0x801'48eb     0xa6  Code  Lc  HW_Init.o [1]
 [local to OSWrappers_cpp]::IdleTaskHook(void *)
                          0x800'b571     0x18  Code  Lc  OSWrappers.o [1]
 [local to STM32F4DMA_cpp]::DMA2D_XferCpltCallback(__DMA2D_HandleTypeDef *)

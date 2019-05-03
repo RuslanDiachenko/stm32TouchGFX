@@ -1379,7 +1379,7 @@
             "Alpha": 255,
             "AutoSize": true,
             "LineSpacing": 0,
-            "Name": "textArea1",
+            "Name": "panelBrightnessText",
             "X": 16,
             "Y": 51,
             "Width": 176,
@@ -1403,7 +1403,7 @@
             "IndicatorMin": 0,
             "ValueMax": 100,
             "ValueMin": 0,
-            "InitValue": 0,
+            "InitValue": 100,
             "Name": "sleepAfterSlider",
             "X": 15,
             "Y": 136,
@@ -1520,7 +1520,7 @@
             "IndicatorMin": 0,
             "ValueMax": 100,
             "ValueMin": 0,
-            "InitValue": 0,
+            "InitValue": 100,
             "Name": "panelBrightnessSlider",
             "X": 15,
             "Y": 63,
@@ -1590,12 +1590,132 @@
             "Alpha": 255,
             "AutoSize": true,
             "LineSpacing": 0,
-            "Name": "textArea1_1",
+            "Name": "sleepAfterText",
             "X": 16,
             "Y": 124,
             "Width": 115,
             "Height": 25,
             "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId39",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 234,
+              "Green": 234,
+              "Blue": 234
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "staticTextArea5",
+            "X": 7,
+            "Y": 380,
+            "Width": 97,
+            "Height": 15,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId40",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 234,
+              "Green": 234,
+              "Blue": 234
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "staticTextArea6",
+            "X": 140,
+            "Y": 380,
+            "Width": 104,
+            "Height": 15,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId41",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "visualStyleText",
+            "X": 16,
+            "Y": 206,
+            "Width": 127,
+            "Height": 25,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "InitialStatePressed": false,
+            "Pressed": "whitestylebuttonpressed.png",
+            "Released": "whitestylebuttonnotpressed.png",
+            "Alpha": 255,
+            "Name": "lightStyleButton",
+            "X": 0,
+            "Y": 254,
+            "Width": 55,
+            "Height": 47,
+            "Type": "ToggleButton",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "InitialStatePressed": false,
+            "Pressed": "darkstylebuttonpressed.png",
+            "Released": "darkstylebuttonnotpressed.png",
+            "Alpha": 255,
+            "Name": "darkStyleButton",
+            "X": 63,
+            "Y": 254,
+            "Width": 55,
+            "Height": 47,
+            "Type": "ToggleButton",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "InitialStatePressed": false,
+            "Pressed": "urbanstylebuttonpressed.png",
+            "Released": "urbanstylebuttonnotpressed.png",
+            "Alpha": 255,
+            "Name": "urbanStyleButton",
+            "X": 127,
+            "Y": 254,
+            "Width": 55,
+            "Height": 47,
+            "Type": "ToggleButton",
             "Visible": true,
             "Draggable": false,
             "Clickable": false,
@@ -1637,6 +1757,42 @@
             },
             "Action": {
               "FunctionName": "panelBrightnessSliderCallback",
+              "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "urbanStyleButtonInteraction",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "urbanStyleButton",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "urbanStyleButtonClicked",
+              "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "darkStyleButtonInteraction",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "darkStyleButton",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "darkStyleButtonClicked",
+              "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "lightStyleButtonInteraction",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "lightStyleButton",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "lightStyleButtonClicked",
               "Type": "ActionCustom"
             }
           }
@@ -1769,6 +1925,18 @@
       },
       {
         "TextEntryId": "SingleUseId38",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId39",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId40",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId41",
         "IsResource": false
       }
     ],

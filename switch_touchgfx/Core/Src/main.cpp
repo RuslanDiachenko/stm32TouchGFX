@@ -501,6 +501,7 @@ void StartDefaultTask(void const * argument)
 
 void StartUITask(void const *argument)
 {
+  static uint8_t prevHour = 0, prevMinute = 0;
   sunMsgBox_g = osMailCreate(osMailQ(sunMsgBox_g), NULL);
   main_screen_state_t state = {0};
   state.hour = 10;
@@ -527,7 +528,9 @@ void StartUITask(void const *argument)
     }
     osDelay(1000);
     state.seconds++;
-    putSunMsg(state);
+    
+    if (prevHour != state.hour || prevMinute != state.minute)
+      putSunMsg(state);
   }
 }
 

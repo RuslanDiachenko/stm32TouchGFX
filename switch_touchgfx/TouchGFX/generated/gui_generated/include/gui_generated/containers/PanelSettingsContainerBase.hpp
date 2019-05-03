@@ -9,6 +9,7 @@
 #include <touchgfx/widgets/Button.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/containers/Slider.hpp>
+#include <touchgfx/widgets/ToggleButton.hpp>
 
 class PanelSettingsContainerBase : public touchgfx::Container
 {
@@ -36,6 +37,21 @@ public:
         // Override and implement this function in PanelSettingsContainer
     }
 
+    virtual void urbanStyleButtonClicked()
+    {
+        // Override and implement this function in PanelSettingsContainer
+    }
+
+    virtual void darkStyleButtonClicked()
+    {
+        // Override and implement this function in PanelSettingsContainer
+    }
+
+    virtual void lightStyleButtonClicked()
+    {
+        // Override and implement this function in PanelSettingsContainer
+    }
+
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(Application::getInstance());
@@ -46,7 +62,7 @@ protected:
      */
     touchgfx::Button closeButton;
     touchgfx::TextArea containerNameText;
-    touchgfx::TextArea textArea1;
+    touchgfx::TextArea panelBrightnessText;
     touchgfx::Slider sleepAfterSlider;
     touchgfx::TextArea staticTextArea1;
     touchgfx::TextArea staticTextArea2;
@@ -55,7 +71,13 @@ protected:
     touchgfx::Slider panelBrightnessSlider;
     touchgfx::TextArea staticTextArea1_1;
     touchgfx::TextArea staticTextArea4_1;
-    touchgfx::TextArea textArea1_1;
+    touchgfx::TextArea sleepAfterText;
+    touchgfx::TextArea staticTextArea5;
+    touchgfx::TextArea staticTextArea6;
+    touchgfx::TextArea visualStyleText;
+    touchgfx::ToggleButton lightStyleButton;
+    touchgfx::ToggleButton darkStyleButton;
+    touchgfx::ToggleButton urbanStyleButton;
 
 private:
 

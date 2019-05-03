@@ -96,7 +96,7 @@ STM32F4TouchController tc;
 STM32F4Instrumentation mcuInstr;
 
 static LCD24bpp display;
-static uint16_t bitdepth = 24;
+//static uint16_t bitdepth = 24;
 
 namespace touchgfx
 {

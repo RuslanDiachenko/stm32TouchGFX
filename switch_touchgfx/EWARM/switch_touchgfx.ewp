@@ -1140,6 +1140,9 @@
         <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Font_verdana_12_4bpp.cpp</name>
       </file>
       <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Font_verdana_15_4bpp.cpp</name>
+      </file>
+      <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Font_verdana_20_4bpp.cpp</name>
       </file>
       <file>
@@ -1155,6 +1158,9 @@
         <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Kerning_verdana_12_4bpp.cpp</name>
       </file>
       <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Kerning_verdana_15_4bpp.cpp</name>
+      </file>
+      <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Kerning_verdana_20_4bpp.cpp</name>
       </file>
       <file>
@@ -1165,6 +1171,9 @@
       </file>
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Table_verdana_12_4bpp.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Table_verdana_15_4bpp.cpp</name>
       </file>
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Table_verdana_20_4bpp.cpp</name>
@@ -1233,6 +1242,12 @@
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\combinedGraphicNew.cpp</name>
       </file>
       <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\darkStyleButtonNotPressed.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\darkStyleButtonPressed.cpp</name>
+      </file>
+      <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\manualTintButtonNotPressedNew.cpp</name>
       </file>
       <file>
@@ -1270,6 +1285,18 @@
       </file>
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\togglePressed.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\urbanStyleButtonNotPressed.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\urbanStyleButtonPressed.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\whiteStyleButtonNotPressed.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\whiteStyleButtonPressed.cpp</name>
       </file>
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\zoneGrad1NotPressed.cpp</name>

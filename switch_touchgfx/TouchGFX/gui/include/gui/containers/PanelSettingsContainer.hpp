@@ -11,6 +11,10 @@ public:
 
     virtual void initialize();
 
+    virtual void urbanStyleButtonClicked(void);
+    virtual void darkStyleButtonClicked(void);
+    virtual void lightStyleButtonClicked(void);
+    
     void SetCloseContainerCallback(GenericCallback<void>& callback)
     {
         m_pCloseContainerCallback = &callback;
@@ -21,6 +25,15 @@ protected:
 
 private:
     GenericCallback<void>* m_pCloseContainerCallback;
+    
+    enum class PressedButton : uint8_t
+    {
+        LightStyle,
+        DarkStyle,
+        UrbanStyle
+    };
+    
+    PressedButton m_currentPressedButton;
 };
 
 #endif // PANELSETTINGSCONTAINER_HPP

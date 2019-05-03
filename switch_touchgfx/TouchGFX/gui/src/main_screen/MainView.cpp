@@ -181,8 +181,9 @@ void MainView::ClosePanelSettingsContainerHandler(void)
 
 void MainView::setSunState(int hour, int minute, int hF, int dow)
 {
+    static int16_t prevSunState = -1; 
     int16_t endX, endY, newSunState = 0;
-    uint8_t totalMin = minute + hour*60;
+    uint16_t totalMin = minute + hour*60;
     uint8_t hideSun = 0;
     if (hF)
     {
@@ -286,6 +287,14 @@ void MainView::setSunState(int hour, int minute, int hF, int dow)
     sunIcon.invalidate();
     sunHorizontImg.invalidate();
     
-    sunIcon.clearMoveAnimationEndedAction();
-    sunIcon.startMoveAnimation(endX, endY, 48, EasingEquations::linearEaseIn, EasingEquations::linearEaseIn);
+    if (prevSunState != newSunState)
+    {
+//      int hourDup = hour;
+//      int minuteDup = minute;
+//      int hFDup = hF;
+      
+      sunIcon.clearMoveAnimationEndedAction();
+      sunIcon.startMoveAnimation(endX, endY, 48, EasingEquations::linearEaseIn, EasingEquations::linearEaseIn);
+      prevSunState = newSunState;
+    }
 }

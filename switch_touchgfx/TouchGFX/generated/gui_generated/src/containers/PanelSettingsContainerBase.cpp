@@ -22,16 +22,16 @@ PanelSettingsContainerBase::PanelSettingsContainerBase() :
     containerNameText.setLinespacing(0);
     containerNameText.setTypedText(TypedText(T_SINGLEUSEID30));
 
-    textArea1.setXY(16, 51);
-    textArea1.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
-    textArea1.setLinespacing(0);
-    textArea1.setTypedText(TypedText(T_SINGLEUSEID31));
+    panelBrightnessText.setXY(16, 51);
+    panelBrightnessText.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    panelBrightnessText.setLinespacing(0);
+    panelBrightnessText.setTypedText(TypedText(T_SINGLEUSEID31));
 
     sleepAfterSlider.setXY(15, 136);
     sleepAfterSlider.setBitmaps(Bitmap(BITMAP_SLIDERBASE4POINTS_ID), Bitmap(BITMAP_SLIDERBASE4POINTS_ID), Bitmap(BITMAP_SLIDERINDICATOR_ID));
     sleepAfterSlider.setupHorizontalSlider(2, 22, 19, 0, 201);
     sleepAfterSlider.setValueRange(0, 100);
-    sleepAfterSlider.setValue(0);
+    sleepAfterSlider.setValue(100);
     sleepAfterSlider.setStopValueCallback(sliderValueConfirmedCallback);
 
     staticTextArea1.setXY(10, 179);
@@ -58,7 +58,7 @@ PanelSettingsContainerBase::PanelSettingsContainerBase() :
     panelBrightnessSlider.setBitmaps(Bitmap(BITMAP_SLIDERBASE2POINTS_ID), Bitmap(BITMAP_SLIDERBASE2POINTS_ID), Bitmap(BITMAP_SLIDERINDICATOR_ID));
     panelBrightnessSlider.setupHorizontalSlider(2, 22, 19, 0, 201);
     panelBrightnessSlider.setValueRange(0, 100);
-    panelBrightnessSlider.setValue(0);
+    panelBrightnessSlider.setValue(100);
     panelBrightnessSlider.setStopValueCallback(sliderValueConfirmedCallback);
 
     staticTextArea1_1.setXY(10, 102);
@@ -71,14 +71,41 @@ PanelSettingsContainerBase::PanelSettingsContainerBase() :
     staticTextArea4_1.setLinespacing(0);
     staticTextArea4_1.setTypedText(TypedText(T_SINGLEUSEID37));
 
-    textArea1_1.setXY(16, 124);
-    textArea1_1.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
-    textArea1_1.setLinespacing(0);
-    textArea1_1.setTypedText(TypedText(T_SINGLEUSEID38));
+    sleepAfterText.setXY(16, 124);
+    sleepAfterText.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    sleepAfterText.setLinespacing(0);
+    sleepAfterText.setTypedText(TypedText(T_SINGLEUSEID38));
+
+    staticTextArea5.setXY(7, 380);
+    staticTextArea5.setColor(touchgfx::Color::getColorFrom24BitRGB(234, 234, 234));
+    staticTextArea5.setLinespacing(0);
+    staticTextArea5.setTypedText(TypedText(T_SINGLEUSEID39));
+
+    staticTextArea6.setXY(140, 380);
+    staticTextArea6.setColor(touchgfx::Color::getColorFrom24BitRGB(234, 234, 234));
+    staticTextArea6.setLinespacing(0);
+    staticTextArea6.setTypedText(TypedText(T_SINGLEUSEID40));
+
+    visualStyleText.setXY(16, 206);
+    visualStyleText.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    visualStyleText.setLinespacing(0);
+    visualStyleText.setTypedText(TypedText(T_SINGLEUSEID41));
+
+    lightStyleButton.setXY(0, 254);
+    lightStyleButton.setBitmaps(Bitmap(BITMAP_WHITESTYLEBUTTONNOTPRESSED_ID), Bitmap(BITMAP_WHITESTYLEBUTTONPRESSED_ID));
+    lightStyleButton.setAction(buttonCallback);
+
+    darkStyleButton.setXY(63, 254);
+    darkStyleButton.setBitmaps(Bitmap(BITMAP_DARKSTYLEBUTTONNOTPRESSED_ID), Bitmap(BITMAP_DARKSTYLEBUTTONPRESSED_ID));
+    darkStyleButton.setAction(buttonCallback);
+
+    urbanStyleButton.setXY(127, 254);
+    urbanStyleButton.setBitmaps(Bitmap(BITMAP_URBANSTYLEBUTTONNOTPRESSED_ID), Bitmap(BITMAP_URBANSTYLEBUTTONPRESSED_ID));
+    urbanStyleButton.setAction(buttonCallback);
 
     add(closeButton);
     add(containerNameText);
-    add(textArea1);
+    add(panelBrightnessText);
     add(sleepAfterSlider);
     add(staticTextArea1);
     add(staticTextArea2);
@@ -87,7 +114,13 @@ PanelSettingsContainerBase::PanelSettingsContainerBase() :
     add(panelBrightnessSlider);
     add(staticTextArea1_1);
     add(staticTextArea4_1);
-    add(textArea1_1);
+    add(sleepAfterText);
+    add(staticTextArea5);
+    add(staticTextArea6);
+    add(visualStyleText);
+    add(lightStyleButton);
+    add(darkStyleButton);
+    add(urbanStyleButton);
 }
 
 void PanelSettingsContainerBase::initialize()
@@ -103,6 +136,27 @@ void PanelSettingsContainerBase::buttonCallbackHandler(const touchgfx::AbstractB
         //When closeButton clicked call virtual function
         //Call CloseButtonClicked
         CloseButtonClicked();
+    }
+    else if (&src == &lightStyleButton)
+    {
+        //lightStyleButtonInteraction
+        //When lightStyleButton clicked call virtual function
+        //Call lightStyleButtonClicked
+        lightStyleButtonClicked();
+    }
+    else if (&src == &darkStyleButton)
+    {
+        //darkStyleButtonInteraction
+        //When darkStyleButton clicked call virtual function
+        //Call darkStyleButtonClicked
+        darkStyleButtonClicked();
+    }
+    else if (&src == &urbanStyleButton)
+    {
+        //urbanStyleButtonInteraction
+        //When urbanStyleButton clicked call virtual function
+        //Call urbanStyleButtonClicked
+        urbanStyleButtonClicked();
     }
 }
 

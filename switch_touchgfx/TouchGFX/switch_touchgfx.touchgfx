@@ -154,7 +154,7 @@
             "Moveable": false
           },
           {
-            "RelativeFilename": "background_image.png",
+            "RelativeFilename": "background_image_blur.png",
             "Alpha": 0,
             "Name": "backgroundBlur",
             "X": 0,
@@ -1625,6 +1625,18 @@
             },
             "Action": {
               "FunctionName": "sleepAfterSliderCallback",
+              "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "panelBrightnessSliderInteraction",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "panelBrightnessSlider",
+              "Type": "TriggerSliderValueConfirmed"
+            },
+            "Action": {
+              "FunctionName": "panelBrightnessSliderCallback",
               "Type": "ActionCustom"
             }
           }

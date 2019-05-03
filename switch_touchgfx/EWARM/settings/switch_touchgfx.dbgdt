@@ -931,7 +931,7 @@
             <IarPane-34104>
                 <expressions>
                     <item>rxBuf</item>
-                    <item></item>
+                    <item />
                 </expressions>
                 <col-names>
                     <item>Expression</item>

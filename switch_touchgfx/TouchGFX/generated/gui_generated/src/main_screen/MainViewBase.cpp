@@ -49,7 +49,7 @@ MainViewBase::MainViewBase() :
     dayOfWeek.setTypedText(TypedText(T_SINGLEUSEID8));
 
     backgroundBlur.setXY(0, 0);
-    backgroundBlur.setBitmap(Bitmap(BITMAP_BACKGROUND_IMAGE_ID));
+    backgroundBlur.setBitmap(Bitmap(BITMAP_BACKGROUND_IMAGE_BLUR_ID));
     backgroundBlur.setAlpha(0);
 
     panelSettingsButton.setXY(220, 428);

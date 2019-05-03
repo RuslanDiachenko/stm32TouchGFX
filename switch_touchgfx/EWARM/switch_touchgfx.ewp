@@ -1221,6 +1221,9 @@
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\background_image.cpp</name>
       </file>
       <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\background_image_blur.cpp</name>
+      </file>
+      <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\BitmapDatabase.cpp</name>
       </file>
       <file>

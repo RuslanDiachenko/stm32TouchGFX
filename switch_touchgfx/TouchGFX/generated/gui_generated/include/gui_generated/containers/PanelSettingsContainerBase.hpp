@@ -31,6 +31,11 @@ public:
         // Override and implement this function in PanelSettingsContainer
     }
 
+    virtual void panelBrightnessSliderCallback(int value)
+    {
+        // Override and implement this function in PanelSettingsContainer
+    }
+
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(Application::getInstance());

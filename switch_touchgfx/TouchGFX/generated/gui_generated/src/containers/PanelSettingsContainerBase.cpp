@@ -59,6 +59,7 @@ PanelSettingsContainerBase::PanelSettingsContainerBase() :
     panelBrightnessSlider.setupHorizontalSlider(2, 22, 19, 0, 201);
     panelBrightnessSlider.setValueRange(0, 100);
     panelBrightnessSlider.setValue(0);
+    panelBrightnessSlider.setStopValueCallback(sliderValueConfirmedCallback);
 
     staticTextArea1_1.setXY(10, 102);
     staticTextArea1_1.setColor(touchgfx::Color::getColorFrom24BitRGB(234, 234, 234));
@@ -116,6 +117,9 @@ void PanelSettingsContainerBase::sliderValueConfirmedCallbackHandler(const touch
     }
     else if (&src == &panelBrightnessSlider)
     {
-
+        //panelBrightnessSliderInteraction
+        //When panelBrightnessSlider value confirmed call virtual function
+        //Call panelBrightnessSliderCallback
+        panelBrightnessSliderCallback(value);
     }
 }

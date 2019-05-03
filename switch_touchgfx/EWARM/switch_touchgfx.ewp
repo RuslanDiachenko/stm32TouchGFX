@@ -1236,6 +1236,12 @@
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\saintGobainLogo.cpp</name>
       </file>
       <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\sliderBase4Points.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\sliderIndicator.cpp</name>
+      </file>
+      <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\sun-icon.cpp</name>
       </file>
       <file>

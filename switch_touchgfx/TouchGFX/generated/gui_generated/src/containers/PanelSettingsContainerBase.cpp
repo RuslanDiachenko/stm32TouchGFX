@@ -21,8 +21,39 @@ PanelSettingsContainerBase::PanelSettingsContainerBase() :
     containerNameText.setLinespacing(0);
     containerNameText.setTypedText(TypedText(T_SINGLEUSEID30));
 
+    textArea1.setXY(16, 58);
+    textArea1.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    textArea1.setLinespacing(0);
+    textArea1.setTypedText(TypedText(T_SINGLEUSEID31));
+
+    slider1.setXY(15, 155);
+    slider1.setBitmaps(Bitmap(BITMAP_SLIDERBASE4POINTS_ID), Bitmap(BITMAP_SLIDERBASE4POINTS_ID), Bitmap(BITMAP_SLIDERINDICATOR_ID));
+    slider1.setupHorizontalSlider(2, 22, 19, 0, 201);
+    slider1.setValueRange(0, 100);
+    slider1.setValue(0);
+
+    staticTextArea1.setXY(15, 194);
+    staticTextArea1.setColor(touchgfx::Color::getColorFrom24BitRGB(234, 234, 234));
+    staticTextArea1.setLinespacing(0);
+    staticTextArea1.setTypedText(TypedText(T_SINGLEUSEID32));
+
+    staticTextArea2.setXY(75, 194);
+    staticTextArea2.setColor(touchgfx::Color::getColorFrom24BitRGB(234, 234, 234));
+    staticTextArea2.setLinespacing(0);
+    staticTextArea2.setTypedText(TypedText(T_SINGLEUSEID33));
+
+    textArea2.setXY(150, 194);
+    textArea2.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    textArea2.setLinespacing(0);
+    textArea2.setTypedText(TypedText(T_SINGLEUSEID34));
+
     add(closeButton);
     add(containerNameText);
+    add(textArea1);
+    add(slider1);
+    add(staticTextArea1);
+    add(staticTextArea2);
+    add(textArea2);
 }
 
 void PanelSettingsContainerBase::initialize()

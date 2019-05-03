@@ -8,6 +8,7 @@
 #include <touchgfx/containers/Container.hpp>
 #include <touchgfx/widgets/Button.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
+#include <touchgfx/containers/Slider.hpp>
 
 class PanelSettingsContainerBase : public touchgfx::Container
 {
@@ -35,6 +36,11 @@ protected:
      */
     touchgfx::Button closeButton;
     touchgfx::TextArea containerNameText;
+    touchgfx::TextArea textArea1;
+    touchgfx::Slider slider1;
+    touchgfx::TextArea staticTextArea1;
+    touchgfx::TextArea staticTextArea2;
+    touchgfx::TextArea textArea2;
 
 private:
 

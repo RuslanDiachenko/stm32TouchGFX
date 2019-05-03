@@ -107,7 +107,7 @@ void touchgfx_init()
 
   HAL& hal = touchgfx_generic_init<CustomHAL>(dma, display, tc, dispWidth, dispHeight, (uint16_t*)cacheStart, cacheSize, 0);
 
-    const uint32_t bufferSize = LCD_GetXSize() * LCD_GetYSize() * 3;
+    const uint32_t bufferSize = LCD_GetXSize() * LCD_GetYSize() * 4;
 
     for (uint32_t i = 0; i < bufferSize; i += 4)
     {
@@ -118,6 +118,11 @@ void touchgfx_init()
     {
         *((uint32_t *)(frameBuf1 + i)) = 0x00000000;
     }
+
+    // for (uint32_t i = 0; i < cacheSize; i += 4)
+    // {
+    //     *((uint32_t *)(cacheStart + i)) = 0x00000000;
+    // }
 
     hal.setFrameBufferStartAddresses((uint16_t*)frameBuf0, (uint16_t*)frameBuf1, NULL);
 

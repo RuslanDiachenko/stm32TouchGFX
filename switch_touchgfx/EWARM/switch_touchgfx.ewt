@@ -1327,12 +1327,6 @@
         </group>
         <group>
             <name>images</name>
-            <group>
-                <name>__designer</name>
-                <file>
-                    <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\__designer\blue_buttons_round_edge_small.cpp</name>
-                </file>
-            </group>
             <file>
                 <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\autoTintButtonNotPressedNew.cpp</name>
             </file>
@@ -1371,6 +1365,9 @@
             </file>
             <file>
                 <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\presentScenesButtonPressedNew.cpp</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\saintGobainLogo.cpp</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\sun-icon.cpp</name>

@@ -15,7 +15,7 @@ WindowSettingsContainerBase::WindowSettingsContainerBase() :
     imageBase.setXY(0, 0);
     imageBase.setBitmap(Bitmap(BITMAP_PANELBASE_ID));
 
-    closeButton.setXY(225, 15);
+    closeButton.setXY(210, 3);
     closeButton.setBitmaps(Bitmap(BITMAP_CLOSEBUTTON_ID), Bitmap(BITMAP_CLOSEBUTTON_ID));
     closeButton.setAction(buttonCallback);
 

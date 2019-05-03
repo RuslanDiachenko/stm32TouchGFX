@@ -20,15 +20,15 @@ SingleZoneContainerBase::SingleZoneContainerBase() :
     zoneNameText.resizeToCurrentText();
     zoneNameText.setTypedText(TypedText(T_SINGLEUSEID1));
 
-    zoneModeButton0.setXY(10, 56);
+    zoneModeButton0.setXY(0, 56);
     zoneModeButton0.setBitmaps(Bitmap(BITMAP_ZONEGREY3NOTPRESSED_ID), Bitmap(BITMAP_ZONEGREY3PRESSED_ID));
     zoneModeButton0.setAction(buttonCallback);
 
-    zoneModeButton1.setXY(70, 56);
+    zoneModeButton1.setXY(63, 56);
     zoneModeButton1.setBitmaps(Bitmap(BITMAP_ZONEGREY2NOTPRESSED_ID), Bitmap(BITMAP_ZONEGREY2PRESSED_ID));
     zoneModeButton1.setAction(buttonCallback);
 
-    zoneModeButton2.setXY(130, 56);
+    zoneModeButton2.setXY(127, 56);
     zoneModeButton2.setBitmaps(Bitmap(BITMAP_ZONEGREY1NOTPRESSED_ID), Bitmap(BITMAP_ZONEGREY1PRESSED_ID));
     zoneModeButton2.setAction(buttonCallback);
 
@@ -36,15 +36,15 @@ SingleZoneContainerBase::SingleZoneContainerBase() :
     zoneModeButton3.setBitmaps(Bitmap(BITMAP_ZONEWHITENOTPRESSED_ID), Bitmap(BITMAP_ZONEWHITEPRESSED_ID));
     zoneModeButton3.setAction(buttonCallback);
 
-    zoneModeButton4.setXY(10, 117);
+    zoneModeButton4.setXY(0, 117);
     zoneModeButton4.setBitmaps(Bitmap(BITMAP_ZONEGRAD4NOTPRESSED_ID), Bitmap(BITMAP_ZONEGRAD4PRESSED_ID));
     zoneModeButton4.setAction(buttonCallback);
 
-    zoneModeButton5.setXY(70, 117);
+    zoneModeButton5.setXY(63, 117);
     zoneModeButton5.setBitmaps(Bitmap(BITMAP_ZONEGRAD3NOTPRESSED_ID), Bitmap(BITMAP_ZONEGRAD3PRESSED_ID));
     zoneModeButton5.setAction(buttonCallback);
 
-    zoneModeButton6.setXY(130, 117);
+    zoneModeButton6.setXY(127, 117);
     zoneModeButton6.setBitmaps(Bitmap(BITMAP_ZONEGRAD2NOTPRESSED_ID), Bitmap(BITMAP_ZONEGRAD2PRESSED_ID));
     zoneModeButton6.setAction(buttonCallback);
 

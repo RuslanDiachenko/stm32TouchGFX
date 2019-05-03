@@ -32,11 +32,11 @@
         </option>
         <option>
           <name>Input description</name>
-          <state>Full formatting, with multibyte support.</state>
+          <state>No specifier n, no float nor long long, no scan set, no assignment suppressing, with multibyte support.</state>
         </option>
         <option>
           <name>Output description</name>
-          <state>Full formatting, with multibyte support.</state>
+          <state>No specifier a, A, no specifier n, no float nor long long, with multibyte support.</state>
         </option>
         <option>
           <name>GOutputBinary</name>
@@ -66,7 +66,7 @@
         </option>
         <option>
           <name>OGLastSavedByProductVersion</name>
-          <state>8.32.4.20866</state>
+          <state>8.32.3.20186</state>
         </option>
         <option>
           <name>GeneralEnableMisra</name>
@@ -1099,12 +1099,6 @@
             <name>$PROJ_DIR$\..\TouchGFX\target\BoardConfiguration.cpp</name>
           </file>
           <file>
-            <name>$PROJ_DIR$\..\TouchGFX\target\CustomHAL.cpp</name>
-          </file>
-          <file>
-            <name>$PROJ_DIR$\..\TouchGFX\target\CustomHAL.hpp</name>
-          </file>
-          <file>
             <name>$PROJ_DIR$\..\TouchGFX\target\GPIO.cpp</name>
           </file>
           <file>
@@ -1199,12 +1193,6 @@
     </group>
     <group>
       <name>images</name>
-      <group>
-        <name>__designer</name>
-        <file>
-          <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\__designer\blue_buttons_round_edge_small.cpp</name>
-        </file>
-      </group>
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\autoTintButtonNotPressedNew.cpp</name>
       </file>
@@ -1243,6 +1231,9 @@
       </file>
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\presentScenesButtonPressedNew.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\saintGobainLogo.cpp</name>
       </file>
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\sun-icon.cpp</name>

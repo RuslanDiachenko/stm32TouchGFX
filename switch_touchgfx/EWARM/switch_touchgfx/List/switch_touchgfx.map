@@ -3,11 +3,11 @@
 # IAR ELF Linker V8.32.3.193/W32 for ARM                  03/May/2019  09:53:25
 # Copyright 2007-2019 IAR Systems AB.
 #
-#    Output file  =  
+#    Output file  =
 #        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Exe\switch_touchgfx.out
-#    Map file     =  
+#    Map file     =
 #        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\List\switch_touchgfx.map
-#    Command line =  
+#    Command line =
 #        -f C:\Users\User\AppData\Local\Temp\EWF839.tmp
 #        (C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\AllScenesContainer.o
 #        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\AllScenesContainerBase.o
@@ -786,59 +786,59 @@ initialize by copy { rw };
     .data                inited   0x2000'0c60      0x20  xfiles.o [2]
                                 - 0x2000'0c80     0xc80
 
-"P2", part 2 of 3:                              0x19d50
-  .bss                   zero     0x2000'0c80   0x11688  BoardConfiguration.o [1]
-  .bss                   zero     0x2001'2308    0x8018  heap_4.o [1]
-  .bss                   zero     0x2001'a320      0xc4  main.o [1]
-  .bss                   zero     0x2001'a3e4      0xa8  HW_Init.o [1]
-  .bss                   zero     0x2001'a48c      0xa0  tasks.o [1]
-  .bss                   zero     0x2001'a52c      0x8c  tasks.o [1]
-  .bss                   zero     0x2001'a5b8      0x80  XShHandles.o [2]
-  .bss                   zero     0x2001'a638      0x6c  BoardConfiguration.o [1]
-  .bss                   zero     0x2001'a6a4      0x50  xfiles.o [2]
-  .bss                   zero     0x2001'a6f4      0x50  xfiles.o [2]
-  .bss                   zero     0x2001'a744      0x4c  TouchCalibration.o [7]
-  .bss                   zero     0x2001'a790      0x44  HW_Init.o [1]
-  .bss                   zero     0x2001'a7d4      0x40  HW_Init.o [1]
-  .bss                   zero     0x2001'a814      0x40  main.o [1]
-  .bss                   zero     0x2001'a854      0x40  STM32F4Instrumentation.o [1]
-  .bss                   zero     0x2001'a894      0x24  FontGetters.o [1]
-  .bss                   zero     0x2001'a8b8      0x24  FontGetters.o [1]
-  .bss                   zero     0x2001'a8dc      0x24  FontGetters.o [1]
-  .bss                   zero     0x2001'a900      0x24  Bitmap.o [7]
-  .bss                   zero     0x2001'a924      0x14  Model.o [1]
-  .bss                   zero     0x2001'a938      0x10  sdram.o [1]
-  .bss                   zero     0x2001'a948      0x10  HAL.o [7]
-  .bss                   zero     0x2001'a958       0xc  persist_storage.o [1]
-  .bss                   zero     0x2001'a964       0xc  port.o [1]
-  .bss                   zero     0x2001'a970       0xc  TypedTextDatabase.o [1]
-  .bss                   zero     0x2001'a97c       0x8  Texts.o [1]
-  .bss                   zero     0x2001'a984       0x8  Texts.o [1]
-  .bss                   zero     0x2001'a98c       0x8  Texts.o [1]
-  .bss                   zero     0x2001'a994       0x8  heap0.o [2]
-  .bss                   zero     0x2001'a99c       0x4  HW_Init.o [1]
-  .bss                   zero     0x2001'a9a0       0x4  main.o [1]
-  .bss                   zero     0x2001'a9a4       0x4  main.o [1]
-  .bss                   zero     0x2001'a9a8       0x4  persist_storage.o [1]
-  .bss                   zero     0x2001'a9ac       0x4  STM32F4HAL.o [1]
-  .bss                   zero     0x2001'a9b0       0x4  FontManager.o [7]
-  .bss                   zero     0x2001'a9b4       0x4  TypedText.o [7]
-  .bss                   zero     0x2001'a9b8       0x4  TypedText.o [7]
-  .bss                   zero     0x2001'a9bc       0x4  TypedText.o [7]
-  .bss                   zero     0x2001'a9c0       0x4  xfail_s.o [2]
-  .bss                   zero     0x2001'a9c4       0x4  xgetmemchunk.o [2]
-  .bss                   zero     0x2001'a9c8       0x2  HAL.o [7]
-  .bss                   zero     0x2001'a9ca       0x2  TypedText.o [7]
-  .bss                   zero     0x2001'a9cc       0x1  BoardConfiguration.o [1]
-  .bss                   zero     0x2001'a9cd       0x1  STM32F4DMA.o [1]
-                                - 0x2001'a9ce   0x19d4e
+"P2", part 2 of 3:                              0x19d90
+  .bss                   zero     0x2000'0c80   0x116c8  BoardConfiguration.o [1]
+  .bss                   zero     0x2001'2348    0x8018  heap_4.o [1]
+  .bss                   zero     0x2001'a360      0xc4  main.o [1]
+  .bss                   zero     0x2001'a424      0xa8  HW_Init.o [1]
+  .bss                   zero     0x2001'a4cc      0xa0  tasks.o [1]
+  .bss                   zero     0x2001'a56c      0x8c  tasks.o [1]
+  .bss                   zero     0x2001'a5f8      0x80  XShHandles.o [2]
+  .bss                   zero     0x2001'a678      0x6c  BoardConfiguration.o [1]
+  .bss                   zero     0x2001'a6e4      0x50  xfiles.o [2]
+  .bss                   zero     0x2001'a734      0x50  xfiles.o [2]
+  .bss                   zero     0x2001'a784      0x4c  TouchCalibration.o [7]
+  .bss                   zero     0x2001'a7d0      0x44  HW_Init.o [1]
+  .bss                   zero     0x2001'a814      0x40  HW_Init.o [1]
+  .bss                   zero     0x2001'a854      0x40  main.o [1]
+  .bss                   zero     0x2001'a894      0x40  STM32F4Instrumentation.o [1]
+  .bss                   zero     0x2001'a8d4      0x24  FontGetters.o [1]
+  .bss                   zero     0x2001'a8f8      0x24  FontGetters.o [1]
+  .bss                   zero     0x2001'a91c      0x24  FontGetters.o [1]
+  .bss                   zero     0x2001'a940      0x24  Bitmap.o [7]
+  .bss                   zero     0x2001'a964      0x14  Model.o [1]
+  .bss                   zero     0x2001'a978      0x10  sdram.o [1]
+  .bss                   zero     0x2001'a988      0x10  HAL.o [7]
+  .bss                   zero     0x2001'a998       0xc  persist_storage.o [1]
+  .bss                   zero     0x2001'a9a4       0xc  port.o [1]
+  .bss                   zero     0x2001'a9b0       0xc  TypedTextDatabase.o [1]
+  .bss                   zero     0x2001'a9bc       0x8  Texts.o [1]
+  .bss                   zero     0x2001'a9c4       0x8  Texts.o [1]
+  .bss                   zero     0x2001'a9cc       0x8  Texts.o [1]
+  .bss                   zero     0x2001'a9d4       0x8  heap0.o [2]
+  .bss                   zero     0x2001'a9dc       0x4  HW_Init.o [1]
+  .bss                   zero     0x2001'a9e0       0x4  main.o [1]
+  .bss                   zero     0x2001'a9e4       0x4  main.o [1]
+  .bss                   zero     0x2001'a9e8       0x4  persist_storage.o [1]
+  .bss                   zero     0x2001'a9ec       0x4  STM32F4HAL.o [1]
+  .bss                   zero     0x2001'a9f0       0x4  FontManager.o [7]
+  .bss                   zero     0x2001'a9f4       0x4  TypedText.o [7]
+  .bss                   zero     0x2001'a9f8       0x4  TypedText.o [7]
+  .bss                   zero     0x2001'a9fc       0x4  TypedText.o [7]
+  .bss                   zero     0x2001'aa00       0x4  xfail_s.o [2]
+  .bss                   zero     0x2001'aa04       0x4  xgetmemchunk.o [2]
+  .bss                   zero     0x2001'aa08       0x2  HAL.o [7]
+  .bss                   zero     0x2001'aa0a       0x2  TypedText.o [7]
+  .bss                   zero     0x2001'aa0c       0x1  BoardConfiguration.o [1]
+  .bss                   zero     0x2001'aa0d       0x1  STM32F4DMA.o [1]
+                                - 0x2001'aa0e   0x19d8e
 
 "P2", part 3 of 3:                                0x600
-  CSTACK                          0x2001'a9d0     0x400  <Block>
-    CSTACK               uninit   0x2001'a9d0     0x400  <Block tail>
-  HEAP                            0x2001'add0     0x200  <Block>
-    HEAP                 uninit   0x2001'add0     0x200  <Block tail>
-                                - 0x2001'afd0     0x600
+  CSTACK                          0x2001'aa10     0x400  <Block>
+    CSTACK               uninit   0x2001'aa10     0x400  <Block tail>
+  HEAP                            0x2001'ae10     0x200  <Block>
+    HEAP                 uninit   0x2001'ae10     0x200  <Block tail>
+                                - 0x2001'b010     0x600
 
 "P3":                                          0x14f2f0
   ExtFlashSection        const    0x2100'0000   0x66594  panelBase.o [1]
@@ -891,8 +891,8 @@ Unused ranges:
           Address      Size
           -------      ----
 Zero (__iar_zero_init3)
-    1 destination range, total size 0x19d4e:
-          0x2000'0c80  0x19d4e
+    1 destination range, total size 0x19d8e:
+          0x2000'0c80  0x19d8e
 
 Copy/lz77 (__iar_lz77_init_single3)
     1 source range, total size 0xd0 (6% of destination):
@@ -925,20 +925,20 @@ C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj: [
     CustomHAL.o                             184        308
     FontGetters.o                           220                 108
     Font_verdana_10_4bpp.o                           1 552
-    Font_verdana_20_4bpp.o                           5 048
+    Font_verdana_20_4bpp.o                           5 084
     Font_verdana_40_4bpp.o                          20 224
     FrontendApplication.o                    46         60
     FrontendApplicationBase.o               682        824
     GPIO.o                                   84
     HW_Init.o                             1 080                 304
     Kerning_verdana_10_4bpp.o                            4
-    Kerning_verdana_20_4bpp.o                          224
+    Kerning_verdana_20_4bpp.o                          276
     Kerning_verdana_40_4bpp.o                          428
-    LanguageGb.o                                       444
-    MainPresenter.o                          78         92
-    MainView.o                            2 068         84
-    MainViewBase.o                        2 858      1 232
-    Model.o                                 104                  20
+    LanguageGb.o                                       472
+    MainPresenter.o                          74         92
+    MainView.o                            1 960         84
+    MainViewBase.o                        2 922      1 232
+    Model.o                                 100                  20
     OSWrappers.o                            240          1        9
     PanelSettingsContainer.o                 38        152
     PanelSettingsContainerBase.o            280        176
@@ -949,7 +949,7 @@ C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj: [
     SingleZoneContainer.o                   264        180
     SingleZoneContainerBase.o             1 190        740
     Table_verdana_10_4bpp.o                            884
-    Table_verdana_20_4bpp.o                            912
+    Table_verdana_20_4bpp.o                            940
     Table_verdana_40_4bpp.o                            896
     Texts.o                                  84          9       40
     TypedTextDatabase.o                      48         52       12
@@ -957,10 +957,9 @@ C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj: [
     WindowSettingsContainerBase.o         1 070        188
     autoTintButtonNotPressedNew.o                   47 600
     autoTintButtonPressedNew.o                      47 600
-    backButton.o                                     1 600
+    backButton.o                                     6 400
     background_image.o                             391 680
-    blue_buttons_round_edge_small.o                 40 800
-    closeButton.o                                    1 600
+    closeButton.o                                    6 400
     cmsis_os.o                              848
     combinedGraphicNew.o                            86 720
     freertos.o                                4
@@ -978,6 +977,7 @@ C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj: [
     presentScenesButtonNotPressedNew.o              47 600
     presentScenesButtonPressedNew.o                 47 600
     queue.o                               1 840
+    saintGobainLogo.o                               11 880
     sdram.o                                 134                  16
     startup_stm32f429xx.o                   788
     stm32f4xx_hal.o                         144          1       12
@@ -1002,24 +1002,24 @@ C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj: [
     sun-icon.o                                       2 704
     system_stm32f4xx.o                       96          8        4
     tasks.o                               2 276                 300
-    toggleNotPressed.o                               2 116
-    togglePressed.o                                  2 116
-    zoneGrad1NotPressed.o                            8 600
-    zoneGrad1Pressed.o                               8 600
-    zoneGrad2NotPressed.o                            8 600
-    zoneGrad2Pressed.o                               8 600
-    zoneGrad3NotPressed.o                            8 600
-    zoneGrad3Pressed.o                               8 600
-    zoneGrad4NotPressed.o                            8 600
-    zoneGrad4Pressed.o                               8 600
-    zoneGrey1NotPressed.o                            8 600
-    zoneGrey1Pressed.o                               8 600
-    zoneGrey2NotPressed.o                            8 600
-    zoneGrey2Pressed.o                               8 600
-    zoneGrey3NotPressed.o                            8 600
-    zoneGrey3Pressed.o                               8 600
-    zoneWhiteNotPressed.o                            8 600
-    zoneWhitePressed.o                               8 600
+    toggleNotPressed.o                              26 400
+    togglePressed.o                                 26 400
+    zoneGrad1NotPressed.o                           10 340
+    zoneGrad1Pressed.o                              10 340
+    zoneGrad2NotPressed.o                           10 340
+    zoneGrad2Pressed.o                              10 340
+    zoneGrad3NotPressed.o                           10 340
+    zoneGrad3Pressed.o                              10 340
+    zoneGrad4NotPressed.o                           10 340
+    zoneGrad4Pressed.o                              10 340
+    zoneGrey1NotPressed.o                           10 340
+    zoneGrey1Pressed.o                              10 340
+    zoneGrey2NotPressed.o                           10 340
+    zoneGrey2Pressed.o                              10 340
+    zoneGrey3NotPressed.o                           10 340
+    zoneGrey3Pressed.o                              10 340
+    zoneWhiteNotPressed.o                           10 340
+    zoneWhitePressed.o                              10 340
     ---------------------------------------------------------------
     Total:                               37 224  1 410 970  108 159
 
@@ -1277,7 +1277,7 @@ FrontendApplicationBase::gotoMainScreenNoTransitionImpl()
 FrontendHeap::FrontendHeap()
                          0x801'5481     0x64  Code  Gb  BoardConfiguration.o [1]
 FrontendHeap::getInstance()::instance
-                        0x2000'0c80  0x11688  Data  Gb  BoardConfiguration.o [1]
+                        0x2000'0c80  0x116c8  Data  Gb  BoardConfiguration.o [1]
 FrontendHeapBase::FrontendHeapBase(touchgfx::AbstractPartition &, touchgfx::AbstractPartition &, touchgfx::AbstractPartition &, FrontendApplication &)
                          0x801'5ce1     0x1c  Code  Gb  BoardConfiguration.o [1]
 FrontendHeapBase::FrontendHeapBase(touchgfx::AbstractPartition &, touchgfx::AbstractPartition &, touchgfx::AbstractPartition &, FrontendApplication &) [subobject]
@@ -1796,7 +1796,7 @@ WindowSettingsContainerBase::initialize()
 [local to STM32F4HAL_cpp]::__NVIC_SetPriority(IRQn_Type, unsigned int)
                          0x801'57ad     0x1a  Code  Lc  STM32F4HAL.o [1]
 [local to STM32F4Instrumentation_cpp]::touchgfx::htim1
-                        0x2001'a854     0x40  Data  Lc  STM32F4Instrumentation.o [1]
+                        0x2001'a894     0x40  Data  Lc  STM32F4Instrumentation.o [1]
 [local to main_cpp]::MX_GPIO_Init()
                          0x801'3665     0xdc  Code  Lc  main.o [1]
 _Close_all               0x801'9859     0x3c  Code  Gb  xcloseall.o [2]
@@ -1980,19 +1980,19 @@ fseek                    0x801'7b89     0x24  Code  Gb  fseek.o [2]
 getFont_verdana_10_4bpp()
                          0x801'5c05     0x36  Code  Gb  FontGetters.o [1]
 getFont_verdana_10_4bpp()::static guard for verdana_10_4bpp
-                        0x2001'a894      0x1  Data  Lc  FontGetters.o [1]
+                        0x2001'a8d4      0x1  Data  Lc  FontGetters.o [1]
 getFont_verdana_10_4bpp()::verdana_10_4bpp
-                        0x2001'a898     0x20  Data  Lc  FontGetters.o [1]
+                        0x2001'a8d8     0x20  Data  Lc  FontGetters.o [1]
 getFont_verdana_20_4bpp()
                          0x801'5c3b     0x34  Code  Gb  FontGetters.o [1]
 getFont_verdana_20_4bpp()::static guard for verdana_20_4bpp
-                        0x2001'a8b8      0x1  Data  Lc  FontGetters.o [1]
+                        0x2001'a8f8      0x1  Data  Lc  FontGetters.o [1]
 getFont_verdana_20_4bpp()::verdana_20_4bpp
-                        0x2001'a8bc     0x20  Data  Lc  FontGetters.o [1]
+                        0x2001'a8fc     0x20  Data  Lc  FontGetters.o [1]
 getFont_verdana_40_4bpp()
                          0x801'5c6f     0x30  Code  Gb  FontGetters.o [1]
 getFont_verdana_40_4bpp()::static guard for verdana_40_4bpp
-                        0x2001'a8dc      0x1  Data  Lc  FontGetters.o [1]
+                        0x2001'a91c      0x1  Data  Lc  FontGetters.o [1]
 getFont_verdana_40_4bpp()::verdana_40_4bpp
                         0x2001'a8e0     0x20  Data  Lc  FontGetters.o [1]
 glyphs_verdana_10_4bpp   0x801'6850    0x374  Data  Gb  Table_verdana_10_4bpp.o [1]
@@ -2042,7 +2042,7 @@ osSystickHandler         0x801'3425     0x14  Code  Gb  cmsis_os.o [1]
 osThreadCreate           0x801'310f     0x2e  Code  Gb  cmsis_os.o [1]
 os_mailQ_cb_psMsgBox_g  0x2001'a9a8      0x4  Data  Lc  persist_storage.o [1]
 os_mailQ_cb_sunMsgBox_g
-                        0x2001'a9a0      0x4  Data  Gb  main.o [1]
+                        0x2001'a9e0      0x4  Data  Gb  main.o [1]
 os_mailQ_def_psMsgBox_g
                          0x801'30c4      0xc  Data  Gb  persist_storage.o [1]
 os_mailQ_def_sunMsgBox_g
@@ -2141,7 +2141,7 @@ touchgfx::Application::registerTimerWidget(touchgfx::Drawable *)
 touchgfx::Application::unregisterTimerWidget(touchgfx::Drawable const *)
                          0x800'9515     0x32  Code  Gb  Application.o [7]
 touchgfx::Bitmap::allocationTable
-                        0x2001'a914      0x4  Data  Gb  Bitmap.o [7]
+                        0x2001'a954      0x4  Data  Gb  Bitmap.o [7]
 touchgfx::Bitmap::bitmaps
                         0x2001'a908      0x4  Data  Gb  Bitmap.o [7]
 touchgfx::Bitmap::cache(unsigned short)
@@ -2149,7 +2149,7 @@ touchgfx::Bitmap::cache(unsigned short)
 touchgfx::Bitmap::cacheAll()
                          0x800'd611     0x28  Code  Gb  Bitmap.o [7]
 touchgfx::Bitmap::cacheTable
-                        0x2001'a910      0x4  Data  Gb  Bitmap.o [7]
+                        0x2001'a950      0x4  Data  Gb  Bitmap.o [7]
 touchgfx::Bitmap::clearCache()
                          0x800'd639     0x7c  Code  Gb  Bitmap.o [7]
 touchgfx::Bitmap::compactCache()
@@ -2157,7 +2157,7 @@ touchgfx::Bitmap::compactCache()
 touchgfx::Bitmap::copyBitmapToCache(unsigned short, unsigned char *)
                          0x800'd44d     0xb0  Code  Gb  Bitmap.o [7]
 touchgfx::Bitmap::dynBitmaps
-                        0x2001'a90c      0x4  Data  Gb  Bitmap.o [7]
+                        0x2001'a94c      0x4  Data  Gb  Bitmap.o [7]
 touchgfx::Bitmap::getData() const
                          0x800'd90b     0x40  Code  Gb  Bitmap.o [7]
 touchgfx::Bitmap::getFormat() const
@@ -2173,23 +2173,23 @@ touchgfx::Bitmap::getWidth() const
 touchgfx::Bitmap::hasTransparentPixels() const
                          0x800'd8a5     0x66  Code  Gb  Bitmap.o [7]
 touchgfx::Bitmap::memoryRemaining
-                        0x2001'a91c      0x4  Data  Gb  Bitmap.o [7]
+                        0x2001'a95c      0x4  Data  Gb  Bitmap.o [7]
 touchgfx::Bitmap::nextAllocationIndex
-                        0x2001'a900      0x2  Data  Gb  Bitmap.o [7]
+                        0x2001'a940      0x2  Data  Gb  Bitmap.o [7]
 touchgfx::Bitmap::nextFreeData
-                        0x2001'a918      0x4  Data  Gb  Bitmap.o [7]
+                        0x2001'a958      0x4  Data  Gb  Bitmap.o [7]
 touchgfx::Bitmap::numberOfBitmaps
-                        0x2001'a902      0x2  Data  Gb  Bitmap.o [7]
+                        0x2001'a942      0x2  Data  Gb  Bitmap.o [7]
 touchgfx::Bitmap::numberOfDynamicBitmaps
-                        0x2001'a904      0x2  Data  Gb  Bitmap.o [7]
+                        0x2001'a944      0x2  Data  Gb  Bitmap.o [7]
 touchgfx::Bitmap::registerBitmapDatabase(touchgfx::Bitmap::BitmapData const *, unsigned short, unsigned short *, unsigned int, unsigned int)
                          0x800'd411     0x20  Code  Gb  Bitmap.o [7]
 touchgfx::Bitmap::setCache(unsigned short *, unsigned int, unsigned int)
                          0x800'd431     0x1a  Code  Gb  Bitmap.o [7]
 touchgfx::Bitmap::totalMemory
-                        0x2001'a920      0x4  Data  Gb  Bitmap.o [7]
+                        0x2001'a960      0x4  Data  Gb  Bitmap.o [7]
 touchgfx::Bitmap::uncachedCount
-                        0x2001'a906      0x2  Data  Gb  Bitmap.o [7]
+                        0x2001'a946      0x2  Data  Gb  Bitmap.o [7]
 touchgfx::BlitOp::BlitOp()
                          0x800'a6a3      0x6  Code  Gb  STM32F4DMA.o [1]
 touchgfx::Box::draw(touchgfx::Rect const &) const
@@ -2385,7 +2385,7 @@ touchgfx::Font::getStringWidthFunction
 touchgfx::Font::getStringWidthLTR(unsigned char, unsigned short const *, __va_list) const
                          0x801'7fd7     0x80  Code  Gb  Font.o [7]
 touchgfx::FontManager::provider
-                        0x2001'a9b0      0x4  Data  Gb  FontManager.o [7]
+                        0x2001'a9f0      0x4  Data  Gb  FontManager.o [7]
 touchgfx::FontManager::setFontProvider(touchgfx::FontProvider *)
                          0x801'5475      0x6  Code  Gb  FontManager.o [7]
 touchgfx::GPIO::clear(touchgfx::GPIO::GPIO_ID)
@@ -2414,23 +2414,23 @@ touchgfx::HAL & touchgfx::getHAL<CustomHAL>(touchgfx::DMA_Interface &, touchgfx:
 touchgfx::HAL & touchgfx::touchgfx_generic_init<CustomHAL>(touchgfx::DMA_Interface &, touchgfx::LCD &, touchgfx::TouchController &, short, short, unsigned short *, unsigned int, unsigned int)
                          0x801'4ab5     0x78  Code  Gb  BoardConfiguration.o [1]
 touchgfx::HAL::DISPLAY_HEIGHT
-                        0x2001'a94e      0x2  Data  Gb  HAL.o [7]
+                        0x2001'a98e      0x2  Data  Gb  HAL.o [7]
 touchgfx::HAL::DISPLAY_ROTATION
-                        0x2001'a94a      0x1  Data  Gb  HAL.o [7]
+                        0x2001'a98a      0x1  Data  Gb  HAL.o [7]
 touchgfx::HAL::DISPLAY_WIDTH
-                        0x2001'a94c      0x2  Data  Gb  HAL.o [7]
+                        0x2001'a98c      0x2  Data  Gb  HAL.o [7]
 touchgfx::HAL::FRAME_BUFFER_HEIGHT
-                        0x2001'a952      0x2  Data  Gb  HAL.o [7]
+                        0x2001'a992      0x2  Data  Gb  HAL.o [7]
 touchgfx::HAL::FRAME_BUFFER_WIDTH
-                        0x2001'a950      0x2  Data  Gb  HAL.o [7]
+                        0x2001'a990      0x2  Data  Gb  HAL.o [7]
 touchgfx::HAL::HAL(touchgfx::DMA_Interface &, touchgfx::LCD &, touchgfx::TouchController &, unsigned short, unsigned short)
                          0x801'608d     0x8c  Code  Gb  BoardConfiguration.o [1]
 touchgfx::HAL::HAL(touchgfx::DMA_Interface &, touchgfx::LCD &, touchgfx::TouchController &, unsigned short, unsigned short) [subobject]
                          0x801'5fa5     0x10  Code  Gb  BoardConfiguration.o [1]
 touchgfx::HAL::USE_ANIMATION_STORAGE
-                        0x2001'a949      0x1  Data  Gb  HAL.o [7]
+                        0x2001'a989      0x1  Data  Gb  HAL.o [7]
 touchgfx::HAL::USE_DOUBLE_BUFFERING
-                        0x2001'a948      0x1  Data  Gb  HAL.o [7]
+                        0x2001'a988      0x1  Data  Gb  HAL.o [7]
 touchgfx::HAL::allowDMATransfers()
                          0x800'bf6f      0xe  Code  Gb  HAL.o [7]
 touchgfx::HAL::backPorchExited()
@@ -2464,9 +2464,9 @@ touchgfx::HAL::getDstAddress(unsigned short, unsigned short, unsigned short *) c
 touchgfx::HAL::initialize()
                          0x800'bdad     0x24  Code  Gb  HAL.o [7]
 touchgfx::HAL::instance
-                        0x2001'a954      0x4  Data  Gb  HAL.o [7]
+                        0x2001'a994      0x4  Data  Gb  HAL.o [7]
 touchgfx::HAL::isDrawing
-                        0x2001'a9c8      0x1  Data  Gb  HAL.o [7]
+                        0x2001'aa08      0x1  Data  Gb  HAL.o [7]
 touchgfx::HAL::lockFrameBuffer()
                          0x800'bf85     0x28  Code  Gb  HAL.o [7]
 touchgfx::HAL::noTouch()
@@ -2493,7 +2493,7 @@ touchgfx::HAL::taskEntry()
                          0x800'bdd1     0x20  Code  Gb  HAL.o [7]
 touchgfx::HAL::tick()    0x800'bdf1    0x172  Code  Gb  HAL.o [7]
 touchgfx::HAL::tick(){1}::touchTickCnt
-                        0x2001'a9c9      0x1  Data  Lc  HAL.o [7]
+                        0x2001'aa09      0x1  Data  Lc  HAL.o [7]
 touchgfx::HAL::touch(int, int)
                          0x800'c263     0x5e  Code  Gb  HAL.o [7]
 touchgfx::HAL::unlockFrameBuffer()
@@ -2802,13 +2802,13 @@ touchgfx::TextProvider::initialize(unsigned short const *, __va_list)
 touchgfx::TextProvider::initializeInternal()
                          0x800'e303     0x42  Code  Gb  TextProvider.o [7]
 touchgfx::TextProvider::unicodeConverterFunction
-                        0x2001'a984      0x8  Data  Gb  Texts.o [1]
+                        0x2001'a9c4      0x8  Data  Gb  Texts.o [1]
 touchgfx::TextProvider::unicodeConverterInitFunction
-                        0x2001'a97c      0x8  Data  Gb  Texts.o [1]
+                        0x2001'a9bc      0x8  Data  Gb  Texts.o [1]
 touchgfx::Texts::currentLanguage
-                        0x2001'a98c      0x2  Data  Gb  Texts.o [1]
+                        0x2001'a9cc      0x2  Data  Gb  Texts.o [1]
 touchgfx::Texts::currentLanguagePtr
-                        0x2001'a990      0x4  Data  Gb  Texts.o [1]
+                        0x2001'a9d0      0x4  Data  Gb  Texts.o [1]
 touchgfx::Texts::setLanguage(unsigned short)
                          0x801'542f     0x30  Code  Gb  Texts.o [1]
 touchgfx::ToggleButton::ToggleButton()
@@ -2822,7 +2822,7 @@ touchgfx::ToggleButton::handleClickEvent(touchgfx::ClickEvent const &)
 touchgfx::ToggleButton::setBitmaps(touchgfx::Bitmap const &, touchgfx::Bitmap const &)
                          0x801'2b1d      0x8  Code  Gb  WindowSettingsContainerBase.o [1]
 touchgfx::TouchCalibration::matrix
-                        0x2001'a744     0x4c  Data  Gb  TouchCalibration.o [7]
+                        0x2001'a784     0x4c  Data  Gb  TouchCalibration.o [7]
 touchgfx::TouchCalibration::muldiv(int, int, int, int, int, int, int &)
                          0x800'c6e5     0x60  Code  Gb  TouchCalibration.o [7]
 touchgfx::TouchCalibration::translatePoint(touchgfx::Point &)
@@ -2846,7 +2846,7 @@ touchgfx::TypedText::assertValid() const::string (instance 3)
 touchgfx::TypedText::assertValid() const::string (instance 5)
                          0x801'93bc     0x54  Data  Gb  SingleZoneContainerBase.o [1]
 touchgfx::TypedText::fonts
-                        0x2001'a9bc      0x4  Data  Gb  TypedText.o [7]
+                        0x2001'a9fc      0x4  Data  Gb  TypedText.o [7]
 touchgfx::TypedText::getAlignment() const
                          0x801'875d     0x20  Code  Gb  MainViewBase.o [1]
 touchgfx::TypedText::getFont() const
@@ -2856,11 +2856,11 @@ touchgfx::TypedText::getText() const
 touchgfx::TypedText::getTextDirection() const
                          0x801'873d     0x20  Code  Gb  SingleZoneContainerBase.o [1]
 touchgfx::TypedText::numberOfTypedTexts
-                        0x2001'a9ca      0x2  Data  Gb  TypedText.o [7]
+                        0x2001'aa0a      0x2  Data  Gb  TypedText.o [7]
 touchgfx::TypedText::texts
-                        0x2001'a9b8      0x4  Data  Gb  TypedText.o [7]
+                        0x2001'a9f8      0x4  Data  Gb  TypedText.o [7]
 touchgfx::TypedText::typedTexts
-                        0x2001'a9b4      0x4  Data  Gb  TypedText.o [7]
+                        0x2001'a9f4      0x4  Data  Gb  TypedText.o [7]
 touchgfx::UIEventListener::handleClickEvent(touchgfx::ClickEvent const &)
                          0x801'a35b      0x2  Code  Gb  Application.o [7]
 touchgfx::UIEventListener::handleDragEvent(touchgfx::DragEvent const &)
@@ -2912,12 +2912,12 @@ typedText_database_DEFAULT
                          0x801'9a6c     0x2c  Data  Lc  TypedTextDatabase.o [1]
 ucHeap                  0x2001'2320   0x8000  Data  Lc  heap_4.o [1]
 ucMaxSysCallPriority    0x2000'0acc      0x1  Data  Lc  port.o [1]
-uiTaskHandle            0x2001'a3d8      0x4  Data  Gb  main.o [1]
+uiTaskHandle            0x2001'a418      0x4  Data  Gb  main.o [1]
 ulMaxPRIGROUPValue      0x2000'0ad4      0x4  Data  Lc  port.o [1]
 ulStoppedTimerCompensation
-                        0x2001'a96c      0x4  Data  Lc  port.o [1]
+                        0x2001'a9ac      0x4  Data  Lc  port.o [1]
 ulTimerCountsForOneTick
-                        0x2001'a964      0x4  Data  Lc  port.o [1]
+                        0x2001'a9a4      0x4  Data  Lc  port.o [1]
 unicodes_verdana_10_4bpp
                          0x800'f750    0x610  Data  Gb  Font_verdana_10_4bpp.o [1]
 unicodes_verdana_20_4bpp
@@ -2928,7 +2928,7 @@ uwTick                  0x2000'0adc      0x4  Data  Gb  stm32f4xx_hal.o [1]
 uwTickFreq              0x2000'0ad8      0x1  Data  Gb  stm32f4xx_hal.o [1]
 uwTickPrio              0x2000'0ae0      0x4  Data  Gb  stm32f4xx_hal.o [1]
 uxCriticalNesting       0x2000'0ad0      0x4  Data  Lc  port.o [1]
-uxCurrentNumberOfTasks  0x2001'a4d8      0x4  Data  Lc  tasks.o [1]
+uxCurrentNumberOfTasks  0x2001'a518      0x4  Data  Lc  tasks.o [1]
 uxDeletedTasksWaitingCleanUp
                         0x2001'a4c0      0x4  Data  Lc  tasks.o [1]
 uxListRemove             0x800'b1b1     0x26  Code  Gb  list.o [1]
@@ -2980,7 +2980,7 @@ xDelayedTaskList2       0x2001'a514     0x14  Data  Lc  tasks.o [1]
 xFreeBytesRemaining     0x2001'2314      0x4  Data  Lc  heap_4.o [1]
 xIdleTaskHandle         0x2001'a528      0x4  Data  Lc  tasks.o [1]
 xMaximumPossibleSuppressedTicks
-                        0x2001'a968      0x4  Data  Lc  port.o [1]
+                        0x2001'a9a8      0x4  Data  Lc  port.o [1]
 xMinimumEverFreeBytesRemaining
                         0x2001'2318      0x4  Data  Lc  heap_4.o [1]
 xNextTaskUnblockTime    0x2001'a4f8      0x4  Data  Lc  tasks.o [1]
@@ -3012,9 +3012,9 @@ xTaskRemoveFromEventList
                          0x800'ab45     0x56  Code  Gb  tasks.o [1]
 xTaskResumeAll           0x800'a8f9     0x90  Code  Gb  tasks.o [1]
 xTasksWaitingTermination
-                        0x2001'a4a0     0x14  Data  Lc  tasks.o [1]
-xTickCount              0x2001'a4dc      0x4  Data  Lc  tasks.o [1]
-xYieldPending           0x2001'a4ec      0x4  Data  Lc  tasks.o [1]
+                        0x2001'a4e0     0x14  Data  Lc  tasks.o [1]
+xTickCount              0x2001'a51c      0x4  Data  Lc  tasks.o [1]
+xYieldPending           0x2001'a52c      0x4  Data  Lc  tasks.o [1]
 
 
 [1] = C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj

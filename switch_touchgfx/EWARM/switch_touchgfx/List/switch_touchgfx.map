@@ -1,6 +1,10 @@
 ###############################################################################
 #
+<<<<<<< HEAD
 # IAR ELF Linker V8.32.3.193/W32 for ARM                  03/May/2019  13:52:30
+=======
+# IAR ELF Linker V8.32.3.193/W32 for ARM                  03/May/2019  13:48:39
+>>>>>>> b3c74559ee9e3a2e882b430e5b55301647e68d06
 # Copyright 2007-2019 IAR Systems AB.
 #
 #    Output file  =  
@@ -8,6 +12,7 @@
 #    Map file     =  
 #        C:\projects\switchTouchGFX\switch_touchgfx\EWARM\switch_touchgfx\List\switch_touchgfx.map
 #    Command line =  
+<<<<<<< HEAD
 #        -f C:\Users\user\AppData\Local\Temp\EW925F.tmp
 #        (C:\projects\switchTouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\AllScenesContainer.o
 #        C:\projects\switchTouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\AllScenesContainerBase.o
@@ -138,6 +143,131 @@
 #        C:\projects\switchTouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\zoneGrey3Pressed.o
 #        C:\projects\switchTouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\zoneWhiteNotPressed.o
 #        C:\projects\switchTouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\zoneWhitePressed.o
+=======
+#        -f C:\Users\User\AppData\Local\Temp\EW52C0.tmp
+#        (C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\AllScenesContainer.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\AllScenesContainerBase.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\AllZonesContainer.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\AllZonesContainerBase.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\ApplicationFontProvider.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\autoTintButtonNotPressedNew.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\autoTintButtonPressedNew.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\backButton.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\background_image.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\BitmapDatabase.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\BoardConfiguration.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\closeButton.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\cmsis_os.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\combinedGraphicNew.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\croutine.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\CustomHAL.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\event_groups.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\exc7200.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\Font_verdana_10_4bpp.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\Font_verdana_20_4bpp.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\Font_verdana_40_4bpp.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\FontGetters.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\freertos.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\FrontendApplication.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\FrontendApplicationBase.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\ft5436.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\GPIO.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\heap_4.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\HW_Init.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\Kerning_verdana_10_4bpp.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\Kerning_verdana_20_4bpp.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\Kerning_verdana_40_4bpp.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\LanguageGb.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\list.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\main.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\MainPresenter.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\MainView.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\MainViewBase.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\manualTintButtonNotPressedNew.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\manualTintButtonPressedNew.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\Model.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\OSWrappers.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\panelBase.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\panelSettingsButtonIcon.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\PanelSettingsContainer.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\PanelSettingsContainerBase.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\persist_storage.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\port.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\portasm.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\presentScenesButtonNotPressedNew.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\presentScenesButtonPressedNew.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\queue.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\saintGobainLogo.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\sdram.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\SingleZoneContainer.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\SingleZoneContainerBase.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\startup_stm32f429xx.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\STM32F4DMA.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\STM32F4HAL.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\STM32F4Instrumentation.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\STM32F4TouchController.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\stm32f4xx_hal.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\stm32f4xx_hal_cortex.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\stm32f4xx_hal_crc.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\stm32f4xx_hal_dma.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\stm32f4xx_hal_dma2d.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\stm32f4xx_hal_dma_ex.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\stm32f4xx_hal_dsi.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\stm32f4xx_hal_exti.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\stm32f4xx_hal_flash.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\stm32f4xx_hal_flash_ex.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\stm32f4xx_hal_flash_ramfunc.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\stm32f4xx_hal_gpio.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\stm32f4xx_hal_i2c.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\stm32f4xx_hal_i2c_ex.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\stm32f4xx_hal_ltdc.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\stm32f4xx_hal_ltdc_ex.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\stm32f4xx_hal_msp.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\stm32f4xx_hal_pwr.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\stm32f4xx_hal_pwr_ex.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\stm32f4xx_hal_rcc.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\stm32f4xx_hal_rcc_ex.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\stm32f4xx_hal_sdram.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\stm32f4xx_hal_spi.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\stm32f4xx_hal_tim.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\stm32f4xx_hal_tim_ex.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\stm32f4xx_hal_uart.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\stm32f4xx_it.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\stm32f4xx_ll_fmc.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\stmpe811.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\stream_buffer.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\sun-icon.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\system_stm32f4xx.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\Table_verdana_10_4bpp.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\Table_verdana_20_4bpp.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\Table_verdana_40_4bpp.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\tasks.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\Texts.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\timers.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\toggleNotPressed.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\togglePressed.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\Middlewares\ST\TouchGFX\touchgfx\lib\core\cortex_m4f\IAR8.x\touchgfx_core_release.a
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\ts3510.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\TypedTextDatabase.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\WindowSettingsContainer.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\WindowSettingsContainerBase.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\zoneGrad1NotPressed.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\zoneGrad1Pressed.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\zoneGrad2NotPressed.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\zoneGrad2Pressed.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\zoneGrad3NotPressed.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\zoneGrad3Pressed.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\zoneGrad4NotPressed.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\zoneGrad4Pressed.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\zoneGrey1NotPressed.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\zoneGrey1Pressed.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\zoneGrey2NotPressed.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\zoneGrey2Pressed.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\zoneGrey3NotPressed.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\zoneGrey3Pressed.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\zoneWhiteNotPressed.o
+#        C:\Data\Work\Git\sage\stm32TouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Obj\zoneWhitePressed.o
+>>>>>>> b3c74559ee9e3a2e882b430e5b55301647e68d06
 #        --redirect _Printf=_PrintfFull --redirect _Scanf=_ScanfFull
 #        --no_out_extension -o
 #        C:\projects\switchTouchGFX\switch_touchgfx\EWARM\switch_touchgfx\Exe\switch_touchgfx.out
@@ -1331,6 +1461,7 @@ GRAPHICS_MainTask()      0x801'5263     0x1a  Code  Gb  BoardConfiguration.o [1]
 HAL_CRC_Init             0x801'4b89     0x24  Code  Gb  stm32f4xx_hal_crc.o [1]
 HAL_CRC_MspInit          0x800'f4f9     0x26  Code  Gb  stm32f4xx_hal_msp.o [1]
 HAL_DMA2D_BlendingStart_IT
+<<<<<<< HEAD
                          0x801'5c3f     0x10  Code  Gb  stm32f4xx_hal_dma2d.o [1]
 HAL_DMA2D_ConfigLayer    0x801'5da1     0x92  Code  Gb  stm32f4xx_hal_dma2d.o [1]
 HAL_DMA2D_IRQHandler     0x801'5c91     0xf2  Code  Gb  stm32f4xx_hal_dma2d.o [1]
@@ -1342,6 +1473,19 @@ HAL_GPIO_Init            0x800'c8dd    0x1b8  Code  Gb  stm32f4xx_hal_gpio.o [1]
 HAL_GPIO_TogglePin       0x800'cbb1      0xe  Code  Gb  stm32f4xx_hal_gpio.o [1]
 HAL_GPIO_WritePin        0x800'cba9      0x8  Code  Gb  stm32f4xx_hal_gpio.o [1]
 HAL_GetTick              0x800'f8a5      0xc  Code  Wk  stm32f4xx_hal.o [1]
+=======
+                         0x801'4c8f     0x10  Code  Gb  stm32f4xx_hal_dma2d.o [1]
+HAL_DMA2D_ConfigLayer    0x801'4df1     0x92  Code  Gb  stm32f4xx_hal_dma2d.o [1]
+HAL_DMA2D_IRQHandler     0x801'4ce1     0xf2  Code  Gb  stm32f4xx_hal_dma2d.o [1]
+HAL_DMA2D_Init           0x801'4c0d     0x56  Code  Gb  stm32f4xx_hal_dma2d.o [1]
+HAL_DMA2D_MspInit        0x801'49b7     0x26  Code  Gb  HW_Init.o [1]
+HAL_DMA2D_Start_IT       0x801'4c63     0x12  Code  Gb  stm32f4xx_hal_dma2d.o [1]
+HAL_GPIO_DeInit          0x800'ca6d    0x114  Code  Gb  stm32f4xx_hal_gpio.o [1]
+HAL_GPIO_Init            0x800'c8b5    0x1b8  Code  Gb  stm32f4xx_hal_gpio.o [1]
+HAL_GPIO_TogglePin       0x800'cb89      0xe  Code  Gb  stm32f4xx_hal_gpio.o [1]
+HAL_GPIO_WritePin        0x800'cb81      0x8  Code  Gb  stm32f4xx_hal_gpio.o [1]
+HAL_GetTick              0x800'f00d      0xc  Code  Wk  stm32f4xx_hal.o [1]
+>>>>>>> b3c74559ee9e3a2e882b430e5b55301647e68d06
 HAL_I2CEx_ConfigAnalogFilter
                          0x801'4bad     0x30  Code  Gb  stm32f4xx_hal_i2c_ex.o [1]
 HAL_I2CEx_ConfigDigitalFilter
@@ -1359,9 +1503,15 @@ HAL_LTDC_DeInit          0x801'5fb3     0x18  Code  Gb  stm32f4xx_hal_ltdc.o [1]
 HAL_LTDC_IRQHandler      0x801'5fcb     0xa8  Code  Gb  stm32f4xx_hal_ltdc.o [1]
 HAL_LTDC_Init            0x801'5ecd     0xe6  Code  Gb  stm32f4xx_hal_ltdc.o [1]
 HAL_LTDC_LineEventCallback
+<<<<<<< HEAD
                          0x801'6807     0x4c  Code  Gb  STM32F4HAL.o [1]
 HAL_LTDC_MspDeInit       0x801'582d     0x6c  Code  Gb  HW_Init.o [1]
 HAL_LTDC_MspInit         0x801'56ab    0x15a  Code  Gb  HW_Init.o [1]
+=======
+                         0x801'5857     0x4c  Code  Gb  STM32F4HAL.o [1]
+HAL_LTDC_MspDeInit       0x801'487f     0x6c  Code  Gb  HW_Init.o [1]
+HAL_LTDC_MspInit         0x801'46fd    0x15a  Code  Gb  HW_Init.o [1]
+>>>>>>> b3c74559ee9e3a2e882b430e5b55301647e68d06
 HAL_LTDC_ProgramLineEvent
                          0x801'6135     0x2c  Code  Gb  stm32f4xx_hal_ltdc.o [1]
 HAL_LTDC_SetPitch        0x801'60d3     0x62  Code  Gb  stm32f4xx_hal_ltdc.o [1]
@@ -1374,6 +1524,7 @@ HAL_NVIC_SetPriorityGrouping
 HAL_PWREx_EnableOverDrive
                          0x801'4f21     0x48  Code  Gb  stm32f4xx_hal_pwr_ex.o [1]
 HAL_RCCEx_PeriphCLKConfig
+<<<<<<< HEAD
                          0x801'4f99    0x1f2  Code  Gb  stm32f4xx_hal_rcc_ex.o [1]
 HAL_RCC_ClockConfig      0x800'f6c1     0xfe  Code  Gb  stm32f4xx_hal_rcc.o [1]
 HAL_RCC_GetClockConfig   0x800'f7f5     0x36  Code  Gb  stm32f4xx_hal_rcc.o [1]
@@ -1384,6 +1535,18 @@ HAL_RCC_OscConfig        0x801'4c29    0x2f8  Code  Wk  stm32f4xx_hal_rcc.o [1]
 HAL_SDRAM_IRQHandler     0x801'6309     0x1e  Code  Gb  stm32f4xx_hal_sdram.o [1]
 HAL_SDRAM_Init           0x801'62cd     0x3c  Code  Gb  stm32f4xx_hal_sdram.o [1]
 HAL_SDRAM_MspInit        0x801'5963      0x2  Code  Gb  HW_Init.o [1]
+=======
+                         0x801'3fe9    0x1f2  Code  Gb  stm32f4xx_hal_rcc_ex.o [1]
+HAL_RCC_ClockConfig      0x800'ee29     0xfe  Code  Gb  stm32f4xx_hal_rcc.o [1]
+HAL_RCC_GetClockConfig   0x800'ef5d     0x36  Code  Gb  stm32f4xx_hal_rcc.o [1]
+HAL_RCC_GetHCLKFreq      0x800'ef33      0x6  Code  Gb  stm32f4xx_hal_rcc.o [1]
+HAL_RCC_GetPCLK1Freq     0x800'ef39     0x10  Code  Gb  stm32f4xx_hal_rcc.o [1]
+HAL_RCC_GetPCLK2Freq     0x800'ef49      0xe  Code  Gb  stm32f4xx_hal_rcc.o [1]
+HAL_RCC_OscConfig        0x801'3c79    0x2f8  Code  Wk  stm32f4xx_hal_rcc.o [1]
+HAL_SDRAM_IRQHandler     0x801'5359     0x1e  Code  Gb  stm32f4xx_hal_sdram.o [1]
+HAL_SDRAM_Init           0x801'531d     0x3c  Code  Gb  stm32f4xx_hal_sdram.o [1]
+HAL_SDRAM_MspInit        0x801'49b5      0x2  Code  Gb  HW_Init.o [1]
+>>>>>>> b3c74559ee9e3a2e882b430e5b55301647e68d06
 HAL_SDRAM_ProgramRefreshRate
                          0x801'6353     0x16  Code  Gb  stm32f4xx_hal_sdram.o [1]
 HAL_SDRAM_SendCommand    0x801'6327     0x2c  Code  Gb  stm32f4xx_hal_sdram.o [1]
@@ -1421,6 +1584,7 @@ I2C_WaitOnRXNEFlagUntilTimeout
 I2C_WaitOnTXEFlagUntilTimeout
                          0x800'f3ad     0x38  Code  Lc  stm32f4xx_hal_i2c.o [1]
 Initialization guard variable for FrontendHeap::getInstance()::instance
+<<<<<<< HEAD
                         0x2001'addc      0x1  Data  Gb  BoardConfiguration.o [1]
 LTDC_ER_IRQHandler       0x801'ab65      0x2  Code  Gb  stm32f4xx_it.o [1]
 LTDC_IRQHandler          0x801'ab61      0x2  Code  Gb  stm32f4xx_it.o [1]
@@ -1428,6 +1592,15 @@ LTDC_SetConfig           0x801'61bf     0xfa  Code  Lc  stm32f4xx_hal_ltdc.o [1]
 LoadInt                  0x800'665f     0x7a  Code  Lc  xprintffull.o [2]
 MX_FMC_Init()            0x801'564b     0x60  Code  Gb  HW_Init.o [1]
 MX_LCD_Init()            0x801'5595     0xb6  Code  Gb  HW_Init.o [1]
+=======
+                        0x2001'aa0c      0x1  Data  Gb  BoardConfiguration.o [1]
+LTDC_ER_IRQHandler       0x801'9681      0x2  Code  Gb  stm32f4xx_it.o [1]
+LTDC_IRQHandler          0x801'967d      0x2  Code  Gb  stm32f4xx_it.o [1]
+LTDC_SetConfig           0x801'520f     0xfa  Code  Lc  stm32f4xx_hal_ltdc.o [1]
+LoadInt                  0x800'664b     0x7a  Code  Lc  xprintffull.o [2]
+MX_FMC_Init()            0x801'469b     0x62  Code  Gb  HW_Init.o [1]
+MX_LCD_Init()            0x801'45e5     0xb6  Code  Gb  HW_Init.o [1]
+>>>>>>> b3c74559ee9e3a2e882b430e5b55301647e68d06
 MainPresenter * touchgfx::makeTransition<MainView, MainPresenter, touchgfx::NoTransition, Model>(touchgfx::Screen **, touchgfx::Presenter **, touchgfx::MVPHeap &, touchgfx::Transition **, Model *)
                          0x801'6d19    0x14c  Code  Gb  FrontendApplicationBase.o [1]
 MainPresenter * touchgfx::makeTransition<MainView, MainPresenter, touchgfx::NoTransition, Model>(touchgfx::Screen **, touchgfx::Presenter **, touchgfx::MVPHeap &, touchgfx::Transition **, Model *)::string (instance 2)
@@ -1846,7 +2019,11 @@ WindowSettingsContainerBase::initialize()
 [local to BoardConfiguration_cpp]::touchgfx::texts
                         0x2000'0000      0x1  Data  Lc  BoardConfiguration.o [1]
 [local to HW_Init_cpp]::HAL_FMC_MspInit()
+<<<<<<< HEAD
                          0x801'5899     0xa6  Code  Lc  HW_Init.o [1]
+=======
+                         0x801'48eb     0xa6  Code  Lc  HW_Init.o [1]
+>>>>>>> b3c74559ee9e3a2e882b430e5b55301647e68d06
 [local to OSWrappers_cpp]::IdleTaskHook(void *)
                          0x800'b599     0x18  Code  Lc  OSWrappers.o [1]
 [local to STM32F4DMA_cpp]::DMA2D_XferCpltCallback(__DMA2D_HandleTypeDef *)

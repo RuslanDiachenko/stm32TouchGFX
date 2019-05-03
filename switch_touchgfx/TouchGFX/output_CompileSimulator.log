@@ -1,2 +1,5 @@
 Converting images
+Compiling gui/src/main_screen/MainView.cpp
+Compiling gui/src/containers/PanelSettingsContainer.cpp
+Compiling gui/src/model/Model.cpp
 Linking build/bin/simulator.exe

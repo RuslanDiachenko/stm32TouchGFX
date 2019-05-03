@@ -15,6 +15,8 @@ public:
     virtual void darkStyleButtonClicked(void);
     virtual void lightStyleButtonClicked(void);
     
+    virtual void panelBrightnessSliderCallback(int value);
+    
     void SetCloseContainerCallback(GenericCallback<void>& callback)
     {
         m_pCloseContainerCallback = &callback;

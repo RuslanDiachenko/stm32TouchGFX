@@ -1,13 +1,17 @@
 #ifndef PRESIST_STORAGE_H
 #define PRESIST_STORAGE_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "main.h"
 #include "flash_common.h"
 
 #define PS_STACK_SIZE   512
 
 #define FLASH_BEGIN_ADDR		0x0000
-#define FLASH_END_ADDR			0x1fffff
+#define FLASH_END_ADDR			0xffffff
 #define FLASH_BLOCK_SIZE_4K		0x0fff
 #define FLASH_BLOCK_SIZE_32K	0x7fff
 #define FLASH_BLOCK_SIZE_64K	0xffff
@@ -44,5 +48,9 @@ RV_t PS_Init(void);
 #ifdef PS_ADDITIONAL
 RV_t PS_GetManAndDevID(uint8_t *man, uint16_t *devID);
 #endif /* PS_ADDITIONAL */
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* PRESIST_STORAGE_H */

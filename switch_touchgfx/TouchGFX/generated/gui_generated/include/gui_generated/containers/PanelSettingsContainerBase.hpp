@@ -26,6 +26,11 @@ public:
         // Override and implement this function in PanelSettingsContainer
     }
 
+    virtual void sleepAfterSliderCallback(int value)
+    {
+        // Override and implement this function in PanelSettingsContainer
+    }
+
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(Application::getInstance());
@@ -37,10 +42,15 @@ protected:
     touchgfx::Button closeButton;
     touchgfx::TextArea containerNameText;
     touchgfx::TextArea textArea1;
-    touchgfx::Slider slider1;
+    touchgfx::Slider sleepAfterSlider;
     touchgfx::TextArea staticTextArea1;
     touchgfx::TextArea staticTextArea2;
-    touchgfx::TextArea textArea2;
+    touchgfx::TextArea staticTextArea3;
+    touchgfx::TextArea staticTextArea4;
+    touchgfx::Slider panelBrightnessSlider;
+    touchgfx::TextArea staticTextArea1_1;
+    touchgfx::TextArea staticTextArea4_1;
+    touchgfx::TextArea textArea1_1;
 
 private:
 
@@ -48,11 +58,13 @@ private:
      * Callback Handler Declarations
      */
     void buttonCallbackHandler(const touchgfx::AbstractButton& src);
+    void sliderValueConfirmedCallbackHandler(const touchgfx::Slider& src, int value);
 
     /*
      * Callback Declarations
      */
     touchgfx::Callback<PanelSettingsContainerBase, const touchgfx::AbstractButton&> buttonCallback;
+    touchgfx::Callback<PanelSettingsContainerBase, const touchgfx::Slider&, int> sliderValueConfirmedCallback;
 
 };
 

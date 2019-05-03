@@ -66,7 +66,7 @@
         </option>
         <option>
           <name>OGLastSavedByProductVersion</name>
-          <state>8.32.3.20186</state>
+          <state>8.32.4.20866</state>
         </option>
         <option>
           <name>GeneralEnableMisra</name>
@@ -1099,6 +1099,12 @@
             <name>$PROJ_DIR$\..\TouchGFX\target\BoardConfiguration.cpp</name>
           </file>
           <file>
+            <name>$PROJ_DIR$\..\TouchGFX\target\CustomHAL.cpp</name>
+          </file>
+          <file>
+            <name>$PROJ_DIR$\..\TouchGFX\target\CustomHAL.hpp</name>
+          </file>
+          <file>
             <name>$PROJ_DIR$\..\TouchGFX\target\GPIO.cpp</name>
           </file>
           <file>
@@ -1131,6 +1137,9 @@
         <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Font_verdana_10_4bpp.cpp</name>
       </file>
       <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Font_verdana_12_4bpp.cpp</name>
+      </file>
+      <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Font_verdana_20_4bpp.cpp</name>
       </file>
       <file>
@@ -1143,6 +1152,9 @@
         <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Kerning_verdana_10_4bpp.cpp</name>
       </file>
       <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Kerning_verdana_12_4bpp.cpp</name>
+      </file>
+      <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Kerning_verdana_20_4bpp.cpp</name>
       </file>
       <file>
@@ -1150,6 +1162,9 @@
       </file>
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Table_verdana_10_4bpp.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Table_verdana_12_4bpp.cpp</name>
       </file>
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Table_verdana_20_4bpp.cpp</name>
@@ -1234,6 +1249,9 @@
       </file>
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\saintGobainLogo.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\sliderBase2Points.cpp</name>
       </file>
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\sliderBase4Points.cpp</name>

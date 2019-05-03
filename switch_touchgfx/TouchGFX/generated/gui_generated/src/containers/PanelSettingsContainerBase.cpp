@@ -7,7 +7,8 @@
 #include <touchgfx/Color.hpp>
 
 PanelSettingsContainerBase::PanelSettingsContainerBase() :
-    buttonCallback(this, &PanelSettingsContainerBase::buttonCallbackHandler)
+    buttonCallback(this, &PanelSettingsContainerBase::buttonCallbackHandler),
+    sliderValueConfirmedCallback(this, &PanelSettingsContainerBase::sliderValueConfirmedCallbackHandler)
 {
     setWidth(250);
     setHeight(400);
@@ -21,39 +22,71 @@ PanelSettingsContainerBase::PanelSettingsContainerBase() :
     containerNameText.setLinespacing(0);
     containerNameText.setTypedText(TypedText(T_SINGLEUSEID30));
 
-    textArea1.setXY(16, 58);
+    textArea1.setXY(16, 51);
     textArea1.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     textArea1.setLinespacing(0);
     textArea1.setTypedText(TypedText(T_SINGLEUSEID31));
 
-    slider1.setXY(15, 155);
-    slider1.setBitmaps(Bitmap(BITMAP_SLIDERBASE4POINTS_ID), Bitmap(BITMAP_SLIDERBASE4POINTS_ID), Bitmap(BITMAP_SLIDERINDICATOR_ID));
-    slider1.setupHorizontalSlider(2, 22, 19, 0, 201);
-    slider1.setValueRange(0, 100);
-    slider1.setValue(0);
+    sleepAfterSlider.setXY(15, 136);
+    sleepAfterSlider.setBitmaps(Bitmap(BITMAP_SLIDERBASE4POINTS_ID), Bitmap(BITMAP_SLIDERBASE4POINTS_ID), Bitmap(BITMAP_SLIDERINDICATOR_ID));
+    sleepAfterSlider.setupHorizontalSlider(2, 22, 19, 0, 201);
+    sleepAfterSlider.setValueRange(0, 100);
+    sleepAfterSlider.setValue(0);
+    sleepAfterSlider.setStopValueCallback(sliderValueConfirmedCallback);
 
-    staticTextArea1.setXY(15, 194);
+    staticTextArea1.setXY(10, 179);
     staticTextArea1.setColor(touchgfx::Color::getColorFrom24BitRGB(234, 234, 234));
     staticTextArea1.setLinespacing(0);
     staticTextArea1.setTypedText(TypedText(T_SINGLEUSEID32));
 
-    staticTextArea2.setXY(75, 194);
+    staticTextArea2.setXY(79, 179);
     staticTextArea2.setColor(touchgfx::Color::getColorFrom24BitRGB(234, 234, 234));
     staticTextArea2.setLinespacing(0);
     staticTextArea2.setTypedText(TypedText(T_SINGLEUSEID33));
 
-    textArea2.setXY(150, 194);
-    textArea2.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
-    textArea2.setLinespacing(0);
-    textArea2.setTypedText(TypedText(T_SINGLEUSEID34));
+    staticTextArea3.setXY(147, 179);
+    staticTextArea3.setColor(touchgfx::Color::getColorFrom24BitRGB(234, 234, 234));
+    staticTextArea3.setLinespacing(0);
+    staticTextArea3.setTypedText(TypedText(T_SINGLEUSEID34));
+
+    staticTextArea4.setXY(219, 179);
+    staticTextArea4.setColor(touchgfx::Color::getColorFrom24BitRGB(234, 234, 234));
+    staticTextArea4.setLinespacing(0);
+    staticTextArea4.setTypedText(TypedText(T_SINGLEUSEID35));
+
+    panelBrightnessSlider.setXY(15, 63);
+    panelBrightnessSlider.setBitmaps(Bitmap(BITMAP_SLIDERBASE2POINTS_ID), Bitmap(BITMAP_SLIDERBASE2POINTS_ID), Bitmap(BITMAP_SLIDERINDICATOR_ID));
+    panelBrightnessSlider.setupHorizontalSlider(2, 22, 19, 0, 201);
+    panelBrightnessSlider.setValueRange(0, 100);
+    panelBrightnessSlider.setValue(0);
+
+    staticTextArea1_1.setXY(10, 102);
+    staticTextArea1_1.setColor(touchgfx::Color::getColorFrom24BitRGB(234, 234, 234));
+    staticTextArea1_1.setLinespacing(0);
+    staticTextArea1_1.setTypedText(TypedText(T_SINGLEUSEID36));
+
+    staticTextArea4_1.setXY(210, 102);
+    staticTextArea4_1.setColor(touchgfx::Color::getColorFrom24BitRGB(234, 234, 234));
+    staticTextArea4_1.setLinespacing(0);
+    staticTextArea4_1.setTypedText(TypedText(T_SINGLEUSEID37));
+
+    textArea1_1.setXY(16, 124);
+    textArea1_1.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    textArea1_1.setLinespacing(0);
+    textArea1_1.setTypedText(TypedText(T_SINGLEUSEID38));
 
     add(closeButton);
     add(containerNameText);
     add(textArea1);
-    add(slider1);
+    add(sleepAfterSlider);
     add(staticTextArea1);
     add(staticTextArea2);
-    add(textArea2);
+    add(staticTextArea3);
+    add(staticTextArea4);
+    add(panelBrightnessSlider);
+    add(staticTextArea1_1);
+    add(staticTextArea4_1);
+    add(textArea1_1);
 }
 
 void PanelSettingsContainerBase::initialize()
@@ -69,5 +102,20 @@ void PanelSettingsContainerBase::buttonCallbackHandler(const touchgfx::AbstractB
         //When closeButton clicked call virtual function
         //Call CloseButtonClicked
         CloseButtonClicked();
+    }
+}
+
+void PanelSettingsContainerBase::sliderValueConfirmedCallbackHandler(const touchgfx::Slider& src, int value)
+{
+    if (&src == &sleepAfterSlider)
+    {
+        //sleepAfterSliderInteraction
+        //When sleepAfterSlider value confirmed call virtual function
+        //Call sleepAfterSliderCallback
+        sleepAfterSliderCallback(value);
+    }
+    else if (&src == &panelBrightnessSlider)
+    {
+
     }
 }

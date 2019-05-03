@@ -1381,7 +1381,7 @@
             "LineSpacing": 0,
             "Name": "textArea1",
             "X": 16,
-            "Y": 58,
+            "Y": 51,
             "Width": 176,
             "Height": 25,
             "Type": "TextArea",
@@ -1404,9 +1404,9 @@
             "ValueMax": 100,
             "ValueMin": 0,
             "InitValue": 0,
-            "Name": "slider1",
+            "Name": "sleepAfterSlider",
             "X": 15,
-            "Y": 155,
+            "Y": 136,
             "Width": 221,
             "Height": 39,
             "Type": "Slider",
@@ -1428,10 +1428,10 @@
             "AutoSize": true,
             "LineSpacing": 0,
             "Name": "staticTextArea1",
-            "X": 15,
-            "Y": 194,
-            "Width": 26,
-            "Height": 13,
+            "X": 10,
+            "Y": 179,
+            "Width": 32,
+            "Height": 15,
             "Type": "TextArea",
             "Visible": true,
             "Draggable": false,
@@ -1451,10 +1451,10 @@
             "AutoSize": true,
             "LineSpacing": 0,
             "Name": "staticTextArea2",
-            "X": 75,
-            "Y": 194,
-            "Width": 29,
-            "Height": 13,
+            "X": 79,
+            "Y": 179,
+            "Width": 34,
+            "Height": 15,
             "Type": "TextArea",
             "Visible": true,
             "Draggable": false,
@@ -1466,18 +1466,135 @@
             "TextId": "SingleUseId34",
             "TextRotation": "0",
             "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
+              "Red": 234,
+              "Green": 234,
+              "Blue": 234
             },
             "Alpha": 255,
             "AutoSize": true,
             "LineSpacing": 0,
-            "Name": "textArea2",
-            "X": 150,
-            "Y": 194,
-            "Width": 29,
-            "Height": 13,
+            "Name": "staticTextArea3",
+            "X": 147,
+            "Y": 179,
+            "Width": 34,
+            "Height": 15,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId35",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 234,
+              "Green": 234,
+              "Blue": 234
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "staticTextArea4",
+            "X": 219,
+            "Y": 179,
+            "Width": 12,
+            "Height": 15,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "IsHorizontalSlider": true,
+            "BackgroundUnselected": "sliderbase2points.png",
+            "BackgroundSelected": "sliderbase2points.png",
+            "Indicator": "sliderindicator.png",
+            "BackgroundX": 2,
+            "BackgroundY": 22,
+            "IndicatorPos": 19,
+            "IndicatorMax": 201,
+            "IndicatorMin": 0,
+            "ValueMax": 100,
+            "ValueMin": 0,
+            "InitValue": 0,
+            "Name": "panelBrightnessSlider",
+            "X": 15,
+            "Y": 63,
+            "Width": 221,
+            "Height": 39,
+            "Type": "Slider",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId36",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 234,
+              "Green": 234,
+              "Blue": 234
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "staticTextArea1_1",
+            "X": 10,
+            "Y": 102,
+            "Width": 28,
+            "Height": 15,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId37",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 234,
+              "Green": 234,
+              "Blue": 234
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "staticTextArea4_1",
+            "X": 210,
+            "Y": 102,
+            "Width": 36,
+            "Height": 15,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId38",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textArea1_1",
+            "X": 16,
+            "Y": 124,
+            "Width": 115,
+            "Height": 25,
             "Type": "TextArea",
             "Visible": true,
             "Draggable": false,
@@ -1496,6 +1613,18 @@
             },
             "Action": {
               "FunctionName": "CloseButtonClicked",
+              "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "sleepAfterSliderInteraction",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "sleepAfterSlider",
+              "Type": "TriggerSliderValueConfirmed"
+            },
+            "Action": {
+              "FunctionName": "sleepAfterSliderCallback",
               "Type": "ActionCustom"
             }
           }
@@ -1612,6 +1741,22 @@
       },
       {
         "TextEntryId": "SingleUseId34",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId35",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId36",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId37",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId38",
         "IsResource": false
       }
     ],

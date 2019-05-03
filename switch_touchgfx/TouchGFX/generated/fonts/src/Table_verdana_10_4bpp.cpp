@@ -8,7 +8,6 @@ using namespace touchgfx;
 FONT_LOCATION_FLASH_PRAGMA
 KEEP extern const touchgfx::GlyphNode glyphs_verdana_10_4bpp[] FONT_LOCATION_FLASH_ATTRIBUTE =
 {
-    {     0,  32,   0,   0,   0,   0,   4, 255,   0, touchgfx::GLYPH_DATA_FORMAT_A4 | 0},
     {     0,  48,   6,   8,   8,   0,   6, 255,   0, touchgfx::GLYPH_DATA_FORMAT_A4 | 0},
     {    24,  49,   5,   8,   8,   1,   6, 255,   0, touchgfx::GLYPH_DATA_FORMAT_A4 | 0},
     {    48,  50,   6,   8,   8,   0,   6, 255,   0, touchgfx::GLYPH_DATA_FORMAT_A4 | 0},

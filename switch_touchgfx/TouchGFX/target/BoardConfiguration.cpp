@@ -56,10 +56,14 @@ extern "C"
 #include "stm32f4xx_hal_rcc_ex.h"
 #include "stm32f4xx_hal_tim.h"
 #include "sdram.h"
-  
+#include "CustomHAL.hpp"
+
 }
 extern SDRAM_HandleTypeDef hsdram1;
-static uint32_t frameBuf0 = (uint32_t)(0xc0000000);
+static uint32_t frameBuf0 = (uint32_t) (0xc0000000);
+static uint32_t frameBuf1 = (uint32_t) (0xc0800000);
+static uint32_t cacheStart = (uint32_t)(0xc1000000);
+static uint32_t cacheSize = (uint32_t) (0x00800000);
 extern "C" {
 
 uint32_t LCD_GetXSize(void)
@@ -75,7 +79,7 @@ uint32_t LCD_GetYSize(void)
 
 void GRAPHICS_HW_Init()
 {
-    
+
 
     /* Initialize the SDRAM */
     MX_FMC_Init();
@@ -99,15 +103,33 @@ namespace touchgfx
 void touchgfx_init()
 {
   uint16_t dispWidth = 480;
-  uint16_t dispHeight = 272;  
-  
-  HAL& hal = touchgfx_generic_init<STM32F4HAL>(dma, display, tc, dispWidth, dispHeight,(uint16_t*) 0, 
-                                               0, 0); 
+  uint16_t dispHeight = 272;
 
-    hal.setFrameBufferStartAddress((uint16_t*)frameBuf0, bitdepth ,true , true);
+  HAL& hal = touchgfx_generic_init<CustomHAL>(dma, display, tc, dispWidth, dispHeight, (uint16_t*)cacheStart, cacheSize, 0);
+
+    const uint32_t bufferSize = LCD_GetXSize() * LCD_GetYSize() * 4;
+
+    for (uint32_t i = 0; i < bufferSize; i += 4)
+    {
+        *((uint32_t *)(frameBuf0 + i)) = 0x00000000;
+    }
+
+    for (uint32_t i = 0; i < bufferSize; i += 4)
+    {
+        *((uint32_t *)(frameBuf1 + i)) = 0x00000000;
+    }
+
+    // for (uint32_t i = 0; i < cacheSize; i += 4)
+    // {
+    //     *((uint32_t *)(cacheStart + i)) = 0x00000000;
+    // }
+
+    hal.setFrameBufferStartAddresses((uint16_t*)frameBuf0, (uint16_t*)frameBuf1, NULL);
+
+    Bitmap::cacheAll();
 
     hal.setTouchSampleRate(2);
-    hal.setFingerSize(2);
+    hal.setFingerSize(10);
 
     // By default frame rate compensation is off.
     // Enable frame rate compensation to smooth out animations in case there is periodic slow frame rates.
@@ -120,7 +142,8 @@ void touchgfx_init()
 
     //Set MCU instrumentation and Load calculation
     hal.setMCUInstrumentation(&mcuInstr);
-    hal.enableMCULoadCalculation(true);
+    hal.enableMCULoadCalculation(false);
+
 }
 }
 

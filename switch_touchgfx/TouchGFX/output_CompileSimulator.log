@@ -1,9 +1,3 @@
 Converting images
-Compiling gui/src/containers/PanelSettingsContainer.cpp
-Compiling gui/src/main_screen/MainPresenter.cpp
 Compiling gui/src/main_screen/MainView.cpp
-Compiling gui/src/model/Model.cpp
-Compiling generated/gui_generated/src/main_screen/MainViewBase.cpp
-Compiling generated/gui_generated/src/common/FrontendApplicationBase.cpp
-Compiling simulator/main.cpp
 Linking build/bin/simulator.exe

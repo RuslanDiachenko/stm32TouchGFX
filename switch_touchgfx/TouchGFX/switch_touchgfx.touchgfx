@@ -210,7 +210,7 @@
             "Draggable": false,
             "Clickable": false,
             "Fadeable": false,
-            "Moveable": false
+            "Moveable": true
           },
           {
             "CustomContainerDefinitionName": "AllScenesContainer",
@@ -267,23 +267,6 @@
             "Action": {
               "FunctionName": "WindowSettingsButtonClicked",
               "Type": "ActionCustom"
-            }
-          },
-          {
-            "InteractionName": "WindowSettingsAnimation",
-            "HasCompletedTrigger": false,
-            "Trigger": {
-              "InteractionToTriggerOn": "WindowSettingsButtonClicked",
-              "Type": "TriggerInteractionCompleted"
-            },
-            "Action": {
-              "X": 10,
-              "Y": 10,
-              "Easing": "Linear",
-              "EasingOption": "In",
-              "Duration": 200,
-              "ActionComponent": "windowSettingsContainer",
-              "Type": "ActionMove"
             }
           },
           {

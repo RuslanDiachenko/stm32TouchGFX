@@ -117,6 +117,9 @@ void MainView::WindowSettingsButtonClicked()
     backgroundBlur.startFadeAnimation(255, 4, EasingEquations::linearEaseIn);
     
     windowSettingsButton.setTouchable(false);
+    
+    windowSettingsContainer.clearMoveAnimationEndedAction();
+    windowSettingsContainer.startMoveAnimation(10, 10, 12, EasingEquations::linearEaseIn, EasingEquations::linearEaseIn);
 }
 
 void MainView::CloseWindowSettingsContainerHandler(void)
@@ -312,4 +315,21 @@ void MainView::setSunState(int hour, int minute, int hF, int dow)
       sunIcon.startMoveAnimation(endX, endY, 48, EasingEquations::linearEaseIn, EasingEquations::linearEaseIn);
       prevSunState = newSunState;
     }
+}
+
+void MainView::hideAllContainers(void)
+{
+  panelSettingsContainer.moveTo(10, -410);
+  allScenesContainer.moveTo(-260, 10);
+  windowSettingsContainer.moveTo(-260, 10);
+  allZonesContainer.moveTo(-260, 10);
+  
+  backgroundBlur.clearFadeAnimationEndedAction();
+  backgroundBlur.setFadeAnimationDelay(8);
+  backgroundBlur.startFadeAnimation(0, 4, EasingEquations::linearEaseIn);
+    
+  windowSettingsButton.setTouchable(true);
+  
+  panelSettingsButton.setVisible(true);
+  panelSettingsButton.setTouchable(true);
 }

@@ -617,6 +617,9 @@ extern sleep_after_state_t sleepAfterState_g;
 void sleepAfterTimerHandler(void const *argument)
 {
   sleepAfterState_g.screenState = 0;
+  ui_state_t state;
+  state.msgType = SLEEP_AFTER_TIMER;
+  putSunMsg(state);
   DBG_LOG("TIM1", "Sleep after timer expired");
   HAL_GPIO_WritePin(LCD_DISP_GPIO_Port, LCD_DISP_Pin, GPIO_PIN_RESET);
 }

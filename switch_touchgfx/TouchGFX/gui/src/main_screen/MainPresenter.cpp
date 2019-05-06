@@ -23,5 +23,5 @@ void MainPresenter::notifySunStateChanged(int hour, int minute, int hF, int dow)
 
 void MainPresenter::hideAllWidgets(void)
 {
-  
+  view.hideAllContainers();
 }

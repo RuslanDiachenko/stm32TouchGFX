@@ -99,12 +99,6 @@ void MainViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
         //When windowSettingsButton clicked call virtual function
         //Call WindowSettingsButtonClicked
         WindowSettingsButtonClicked();
-
-        //WindowSettingsAnimation
-        //When WindowSettingsButtonClicked completed move windowSettingsContainer
-        //Move windowSettingsContainer to x:10, y:10 with LinearIn easing in 200 ms (12 Ticks)
-        windowSettingsContainer.clearMoveAnimationEndedAction();
-        windowSettingsContainer.startMoveAnimation(10, 10, 12, EasingEquations::linearEaseIn, EasingEquations::linearEaseIn);
     }
     else if (&src == &panelSettingsButton)
     {

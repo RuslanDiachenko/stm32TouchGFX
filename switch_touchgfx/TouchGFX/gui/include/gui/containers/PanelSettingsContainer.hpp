@@ -16,6 +16,7 @@ public:
     virtual void lightStyleButtonClicked(void);
     
     virtual void panelBrightnessSliderCallback(int value);
+    virtual void sleepAfterSliderCallback(int value);
     
     void SetCloseContainerCallback(GenericCallback<void>& callback)
     {

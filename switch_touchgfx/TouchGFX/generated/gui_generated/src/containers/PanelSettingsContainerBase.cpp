@@ -31,7 +31,7 @@ PanelSettingsContainerBase::PanelSettingsContainerBase() :
     sleepAfterSlider.setBitmaps(Bitmap(BITMAP_SLIDERBASE4POINTS_ID), Bitmap(BITMAP_SLIDERBASE4POINTS_ID), Bitmap(BITMAP_SLIDERINDICATOR_ID));
     sleepAfterSlider.setupHorizontalSlider(2, 22, 19, 0, 201);
     sleepAfterSlider.setValueRange(0, 100);
-    sleepAfterSlider.setValue(100);
+    sleepAfterSlider.setValue(33);
     sleepAfterSlider.setStopValueCallback(sliderValueConfirmedCallback);
 
     staticTextArea1.setXY(10, 179);

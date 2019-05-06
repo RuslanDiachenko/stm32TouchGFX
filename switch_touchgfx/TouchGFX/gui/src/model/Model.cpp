@@ -11,7 +11,7 @@ Model::Model() : modelListener(0)
 extern osMailQId sunMsgBox_g;
 
 static osEvent evt;
-main_screen_state_t *mail;
+ui_state_t *mail;
 
 void Model::tick()
 {
@@ -23,12 +23,19 @@ void Model::tick()
     evt = osMailGet(sunMsgBox_g, 0);
     if (evt.status == osEventMail)
     {
-      mail = (main_screen_state_t *) evt.value.p;
+      mail = (ui_state_t *) evt.value.p;
       if (mail)
       {
-        if (prevHour != mail->hour || prevMinute != mail->minute)
+        if (mail->msgType == DATE_TIME_CHANGED)
         {
-          modelListener->notifySunStateChanged(mail->hour, mail->minute, mail->hF, mail->dayOfWeek);
+          if (prevHour != mail->dateTime.hour || prevMinute != mail->dateTime.minute)
+          {
+            modelListener->notifySunStateChanged(mail->dateTime.hour, mail->dateTime.minute, mail->dateTime.hF, mail->dateTime.dayOfWeek);
+          }
+        }
+        else if(mail->msgType == SLEEP_AFTER_TIMER)
+        {
+          modelListener->hideAllWidgets();
         }
       }
       osMailFree(sunMsgBox_g, mail);

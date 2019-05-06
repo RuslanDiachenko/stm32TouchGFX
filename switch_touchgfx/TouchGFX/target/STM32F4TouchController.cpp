@@ -1,7 +1,9 @@
 #include <STM32F4TouchController.hpp>
 
 /* USER CODE BEGIN BSP user includes */
-
+#include "main.h"
+#include "stm32f4xx_hal.h"
+#include "cmsis_os.h"
 /* USER CODE END BSP user includes */
 
 extern "C"
@@ -10,6 +12,9 @@ extern "C"
 uint32_t LCD_GetXSize();
 uint32_t LCD_GetYSize();
 }
+
+extern sleep_after_state_t sleepAfterState_g;
+extern osTimerId sleepAfterTimerHandle;
 
 using namespace touchgfx;
 
@@ -34,6 +39,10 @@ bool STM32F4TouchController::sampleTouch(int32_t& x, int32_t& y)
     {
       x = state.x;
       y = state.y;
+      //sleepAfterState_g.screenState = 1;
+      HAL_GPIO_WritePin(LCD_DISP_GPIO_Port, LCD_DISP_Pin, GPIO_PIN_SET);
+      if (!sleepAfterState_g.infinity)
+        osTimerStart(sleepAfterTimerHandle, pdMS_TO_TICKS(sleepAfterState_g.duration * 1000));
       return true;
     }
     return false;

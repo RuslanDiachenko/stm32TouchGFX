@@ -1,5 +1,10 @@
 #include <gui/main_screen/MainView.hpp>
 
+#ifndef SIMULATOR
+#include "main.h"
+extern sleep_after_state_t sleepAfterState_g;
+#endif
+
 MainView::MainView() :
     openAllZonesContainer(this, &MainView::OpenAllZonesContainerHandler),
     closeAllZonesContainer(this, &MainView::CloseAllZonesContainerHandler),
@@ -97,6 +102,13 @@ void MainView::OpenAllZonesContainerHandler(void)
 
 void MainView::WindowSettingsButtonClicked()
 {
+#ifndef SIMULATOR
+    if (!sleepAfterState_g.screenState)
+    {
+      sleepAfterState_g.screenState = 1;
+      return;
+    }
+#endif
     windowSettingsContainer.clearMoveAnimationEndedAction();
     windowSettingsContainer.moveTo(-260, 10);
 
@@ -121,6 +133,13 @@ void MainView::CloseWindowSettingsContainerHandler(void)
 
 void MainView::PanelSettingsButtonClicked()
 {
+#ifndef SIMULATOR
+    if (!sleepAfterState_g.screenState)
+    {
+      sleepAfterState_g.screenState = 1;
+      return;
+    }
+#endif
     m_lastBackgroundBlurAlfa = backgroundBlur.getAlpha();
     m_lastWindowSettingsButtonTouchable = windowSettingsButton.isTouchable();
 
@@ -288,11 +307,7 @@ void MainView::setSunState(int hour, int minute, int hF, int dow)
     sunHorizontImg.invalidate();
     
     if (prevSunState != newSunState)
-    {
-//      int hourDup = hour;
-//      int minuteDup = minute;
-//      int hFDup = hF;
-      
+    {      
       sunIcon.clearMoveAnimationEndedAction();
       sunIcon.startMoveAnimation(endX, endY, 48, EasingEquations::linearEaseIn, EasingEquations::linearEaseIn);
       prevSunState = newSunState;

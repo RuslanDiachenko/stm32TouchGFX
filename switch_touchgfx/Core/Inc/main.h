@@ -37,7 +37,14 @@ extern "C" {
 
 /* Exported types ------------------------------------------------------------*/
 /* USER CODE BEGIN ET */
-typedef struct
+typedef enum
+{
+  NONE = 0,
+  DATE_TIME_CHANGED = 1,
+  SLEEP_AFTER_TIMER
+} ui_msg_type_t;
+  
+typedef struct 
 {
   uint8_t hour;
   uint8_t minute;
@@ -45,8 +52,21 @@ typedef struct
   uint8_t hF;
   uint8_t dayOfWeek;
   uint8_t day;
-  uint8_t month;
-} main_screen_state_t;
+  uint8_t month; 
+} date_time_state_t;
+
+typedef struct
+{
+  ui_msg_type_t         msgType;
+  date_time_state_t     dateTime;
+} ui_state_t;
+
+typedef struct
+{
+  uint8_t screenState;
+  uint8_t infinity;
+  uint8_t duration;
+} sleep_after_state_t;
 /* USER CODE END ET */
 
 /* Exported constants --------------------------------------------------------*/

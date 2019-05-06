@@ -25,7 +25,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <yfuns.h>
-
+#include <string.h>
 extern "C"
 {
 #include "persist_storage.h"
@@ -63,6 +63,7 @@ osThreadId defaultTaskHandle;
 osThreadId uiTaskHandle;
 osThreadId psTaskHandle;
 osMutexId debugMutexHandle;
+osTimerId sleepAfterTimerHandle;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -81,23 +82,23 @@ void StartDefaultTask(void const * argument);
 
 /* USER CODE BEGIN PFP */
 void StartUITask(void const *argument);
-
+void sleepAfterTimerHandler(void const *argument);
 extern "C" void PersistStorageTask(void const *argument);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
-osMailQDef(sunMsgBox_g, 5, main_screen_state_t);
+osMailQDef(sunMsgBox_g, 5, ui_state_t);
 osMailQId sunMsgBox_g;
 
 
-int putSunMsg(main_screen_state_t state)
+int putSunMsg(ui_state_t state)
 {
   osStatus status = osOK;
-  main_screen_state_t *mail = 0;
+  ui_state_t *mail = 0;
 
-  mail = (main_screen_state_t *) osMailAlloc(sunMsgBox_g, 100);
+  mail = (ui_state_t *) osMailAlloc(sunMsgBox_g, 100);
 
   *mail = state;
 
@@ -176,6 +177,8 @@ int main(void)
 
   /* USER CODE BEGIN RTOS_TIMERS */
   /* start timers, add new ones, ... */
+  osTimerDef(sleepAfterTimer, sleepAfterTimerHandler);
+  sleepAfterTimerHandle = osTimerCreate(osTimer(sleepAfterTimer), osTimerOnce, NULL);
   /* USER CODE END RTOS_TIMERS */
 
   /* USER CODE BEGIN RTOS_QUEUES */
@@ -548,7 +551,9 @@ void StartDefaultTask(void const * argument)
 {
   /* Initialise persist storage manager */
   PS_Init();
-  
+  osStatus status = osTimerStart(sleepAfterTimerHandle, pdMS_TO_TICKS(60000));
+  if (status)
+    DBG_ERR("TIM1", "Failed to start sleepAfterTimer, err #%d", status);
   /* Initialise the graphical hardware */
   GRAPHICS_HW_Init();
 
@@ -571,37 +576,50 @@ void StartUITask(void const *argument)
 {
   static uint8_t prevHour = 0, prevMinute = 0;
   sunMsgBox_g = osMailCreate(osMailQ(sunMsgBox_g), NULL);
-  main_screen_state_t state = {0};
-  state.hour = 10;
+  ui_state_t state;
+  memset(&state, 0, sizeof(state));
+  state.dateTime.hour = 10;
   for (;;)
   {
-    if (state.seconds >= 60)
+    state.msgType = NONE;
+    if (state.dateTime.seconds >= 60)
     {
-      state.seconds = 0;
-      state.minute++;
+      state.dateTime.seconds = 0;
+      state.dateTime.minute++;
     }
-    if (state.minute >= 60)
+    if (state.dateTime.minute >= 60)
     {
-      state.minute = 0;
-      state.hour++;
+      state.dateTime.minute = 0;
+      state.dateTime.hour++;
     }
-    if (state.hour >= 12)
+    if (state.dateTime.hour >= 12)
     {
-      state.hour = 0;
-      state.hF++;
+      state.dateTime.hour = 0;
+      state.dateTime.hF++;
     }
-    if (state.hF >= 2)
+    if (state.dateTime.hF >= 2)
     {
-      state.hF = 0;
+      state.dateTime.hF = 0;
     }
     osDelay(1000);
-    state.seconds++;
+    state.dateTime.seconds++;
 
-    if (prevHour != state.hour || prevMinute != state.minute)
+    if (prevHour != state.dateTime.hour || prevMinute != state.dateTime.minute)
+    {
+      state.msgType = DATE_TIME_CHANGED;
       putSunMsg(state);
+    }
   }
 }
 
+extern sleep_after_state_t sleepAfterState_g;
+
+void sleepAfterTimerHandler(void const *argument)
+{
+  sleepAfterState_g.screenState = 0;
+  DBG_LOG("TIM1", "Sleep after timer expired");
+  HAL_GPIO_WritePin(LCD_DISP_GPIO_Port, LCD_DISP_Pin, GPIO_PIN_RESET);
+}
 
 /**
   * @brief  This function is executed in case of error occurrence.

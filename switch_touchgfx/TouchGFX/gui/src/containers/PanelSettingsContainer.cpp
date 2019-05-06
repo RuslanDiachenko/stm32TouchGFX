@@ -1,8 +1,15 @@
 #include <gui/containers/PanelSettingsContainer.hpp>
+
+#ifndef SIMULATOR
 #include "main.h"
+#include "cmsis_os.h"
 #include "stm32f4xx_hal.h" 
 
 extern TIM_HandleTypeDef htim4;
+extern osTimerId sleepAfterTimerHandle;
+
+sleep_after_state_t sleepAfterState_g = {1, 0, 60}; 
+#endif
 
 PanelSettingsContainer::PanelSettingsContainer():
   m_currentPressedButton(PressedButton::UrbanStyle)
@@ -74,7 +81,7 @@ void PanelSettingsContainer::lightStyleButtonClicked(void)
     darkStyleButton.invalidate();
   }
 }
-
+#ifndef SIMULATOR
 static void changePWMOut(uint16_t pulseWidth)
 {
   TIM_OC_InitTypeDef conf;
@@ -90,11 +97,56 @@ static void changePWMOut(uint16_t pulseWidth)
 
 void PanelSettingsContainer::panelBrightnessSliderCallback(int value)
 {
-  //uint16_t newPWM = map(value, 0, 100, 700, 0);
-  /* input min  - 0
-     input max  - 100
-     output min - 725
-     output max - 0 */
+  /*
+  example of map function : 
+
+  long map(long x, long in_min, long in_max, long out_min, long out_max)
+  {
+    return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+  } 
+  */
   uint16_t newPWM = (value - 0) * (0 - 725) / (100 - 0) + 725;
   changePWMOut(newPWM);
 }
+
+void PanelSettingsContainer::sleepAfterSliderCallback(int value)
+{
+  uint16_t seconds = 0;
+  sleepAfterState_g.infinity = 0;
+  DBG_LOG("SLEP", "Value is - %d", value);
+  if (value <= 33)
+  {
+    seconds = (value - 0) * (60 - 5) / (33 - 0) + 5;
+  }
+  else if (value > 33 && value <= 66)
+  {
+    seconds = (value - 34) * (300 - 60) / (64 - 34) + 60;
+  }
+  else if (value > 66 && value <= 98)
+  {
+    seconds = (value - 67) * (600 - 300) / (98 - 67) + 300;
+  }
+  else
+  {
+    seconds = 65535;
+    sleepAfterState_g.infinity = 1;
+  }
+  sleepAfterState_g.duration = seconds;
+  if (sleepAfterState_g.infinity)
+    osTimerStop(sleepAfterTimerHandle);
+  else 
+    osTimerStart(sleepAfterTimerHandle, pdMS_TO_TICKS(seconds*1000));
+  DBG_LOG("SLEP", "Seconds is - %d", seconds);
+}
+#else
+
+void PanelSettingsContainer::panelBrightnessSliderCallback(int value)
+{
+  
+}
+
+void PanelSettingsContainer::sleepAfterSliderCallback(int value)
+{
+  
+}
+#endif

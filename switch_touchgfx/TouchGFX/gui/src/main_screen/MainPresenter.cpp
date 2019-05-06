@@ -20,3 +20,8 @@ void MainPresenter::notifySunStateChanged(int hour, int minute, int hF, int dow)
 {
   view.setSunState(hour, minute, hF, dow);
 }
+
+void MainPresenter::hideAllWidgets(void)
+{
+  
+}

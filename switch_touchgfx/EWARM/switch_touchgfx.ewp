@@ -1218,7 +1218,13 @@
     <group>
       <name>images</name>
       <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\autoTintButtonNotPressedBlack.cpp</name>
+      </file>
+      <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\autoTintButtonNotPressedNew.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\autoTintButtonPressedBlack.cpp</name>
       </file>
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\autoTintButtonPressedNew.cpp</name>
@@ -1233,10 +1239,19 @@
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\background_image_blur.cpp</name>
       </file>
       <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\backgroundImageDarkStyle.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\backgroundImageWhiteStyle.cpp</name>
+      </file>
+      <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\BitmapDatabase.cpp</name>
       </file>
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\closeButton.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\combined-graphic-black.cpp</name>
       </file>
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\combinedGraphicNew.cpp</name>
@@ -1248,7 +1263,16 @@
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\darkStyleButtonPressed.cpp</name>
       </file>
       <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\darkStyleButtonPressedBlack.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\manualTintButtonNotPressedBlack.cpp</name>
+      </file>
+      <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\manualTintButtonNotPressedNew.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\manualTintButtonPressedBlack.cpp</name>
       </file>
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\manualTintButtonPressedNew.cpp</name>
@@ -1260,7 +1284,16 @@
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\panelSettingsButtonIcon.cpp</name>
       </file>
       <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\panelSettingsButtonIconBlack.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\presentScenesButtonNotPressedBlack.cpp</name>
+      </file>
+      <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\presentScenesButtonNotPressedNew.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\presentScenesButtonPressedBlack.cpp</name>
       </file>
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\presentScenesButtonPressedNew.cpp</name>
@@ -1269,13 +1302,28 @@
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\saintGobainLogo.cpp</name>
       </file>
       <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\saintGobainLogoBlack.cpp</name>
+      </file>
+      <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\sliderBase2Points.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\sliderBase2PointsBlack.cpp</name>
       </file>
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\sliderBase4Points.cpp</name>
       </file>
       <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\sliderBase4PointsBlack.cpp</name>
+      </file>
+      <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\sliderIndicator.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\sliderIndicatorBlack.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\sun-icon-black.cpp</name>
       </file>
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\sun-icon.cpp</name>
@@ -1287,10 +1335,16 @@
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\togglePressed.cpp</name>
       </file>
       <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\togglePressedBlack.cpp</name>
+      </file>
+      <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\urbanStyleButtonNotPressed.cpp</name>
       </file>
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\urbanStyleButtonPressed.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\urbanStyleButtonPressedBlack.cpp</name>
       </file>
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\whiteStyleButtonNotPressed.cpp</name>
@@ -1299,10 +1353,16 @@
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\whiteStyleButtonPressed.cpp</name>
       </file>
       <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\whiteStyleButtonPressedBlack.cpp</name>
+      </file>
+      <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\zoneGrad1NotPressed.cpp</name>
       </file>
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\zoneGrad1Pressed.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\zoneGrad1PressedBlack.cpp</name>
       </file>
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\zoneGrad2NotPressed.cpp</name>
@@ -1311,10 +1371,16 @@
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\zoneGrad2Pressed.cpp</name>
       </file>
       <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\zoneGrad2PressedBlack.cpp</name>
+      </file>
+      <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\zoneGrad3NotPressed.cpp</name>
       </file>
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\zoneGrad3Pressed.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\zoneGrad3PressedBlack.cpp</name>
       </file>
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\zoneGrad4NotPressed.cpp</name>
@@ -1323,10 +1389,16 @@
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\zoneGrad4Pressed.cpp</name>
       </file>
       <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\zoneGrad4PressedBlack.cpp</name>
+      </file>
+      <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\zoneGrey1NotPressed.cpp</name>
       </file>
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\zoneGrey1Pressed.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\zoneGrey1PressedBlack.cpp</name>
       </file>
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\zoneGrey2NotPressed.cpp</name>
@@ -1335,16 +1407,25 @@
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\zoneGrey2Pressed.cpp</name>
       </file>
       <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\zoneGrey2PressedBlack.cpp</name>
+      </file>
+      <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\zoneGrey3NotPressed.cpp</name>
       </file>
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\zoneGrey3Pressed.cpp</name>
       </file>
       <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\zoneGrey3PressedBlack.cpp</name>
+      </file>
+      <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\zoneWhiteNotPressed.cpp</name>
       </file>
       <file>
         <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\zoneWhitePressed.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\zoneWhitePressedBlack.cpp</name>
       </file>
     </group>
     <group>

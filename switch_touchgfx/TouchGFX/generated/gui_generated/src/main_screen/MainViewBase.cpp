@@ -9,13 +9,13 @@
 MainViewBase::MainViewBase() :
     buttonCallback(this, &MainViewBase::buttonCallbackHandler)
 {
-    background.setXY(0, 0);
-    background.setBitmap(Bitmap(BITMAP_BACKGROUND_IMAGE_ID));
-
     windowSettingsButton.setXY(0, 0);
     windowSettingsButton.setBitmaps(Bitmap(BITMAP_BACKGROUND_IMAGE_ID), Bitmap(BITMAP_BACKGROUND_IMAGE_ID));
     windowSettingsButton.setAction(buttonCallback);
     windowSettingsButton.setAlpha(0);
+
+    background.setXY(0, 0);
+    background.setBitmap(Bitmap(BITMAP_BACKGROUND_IMAGE_ID));
 
     sunHorizontImg.setXY(1, 333);
     sunHorizontImg.setBitmap(Bitmap(BITMAP_COMBINEDGRAPHICNEW_ID));
@@ -64,11 +64,11 @@ MainViewBase::MainViewBase() :
 
     panelSettingsContainer.setXY(10, -410);
 
-    image.setXY(87, 433);
-    image.setBitmap(Bitmap(BITMAP_SAINTGOBAINLOGO_ID));
+    saintGobainLogo.setXY(87, 433);
+    saintGobainLogo.setBitmap(Bitmap(BITMAP_SAINTGOBAINLOGO_ID));
 
-    add(background);
     add(windowSettingsButton);
+    add(background);
     add(sunHorizontImg);
     add(sunIcon);
     add(clockNum);
@@ -80,7 +80,7 @@ MainViewBase::MainViewBase() :
     add(windowSettingsContainer);
     add(allScenesContainer);
     add(panelSettingsContainer);
-    add(image);
+    add(saintGobainLogo);
 }
 
 void MainViewBase::setupScreen()

@@ -13,7 +13,7 @@ public:
 
     void ResetInfo();
     void SetZoneNameText(Unicode::UnicodeChar *pZoneName);
-
+    void setStyle(int style);
 protected:
     virtual void ZoneModeButton0Clicked();
     virtual void ZoneModeButton1Clicked();
@@ -28,6 +28,7 @@ private:
     static constexpr uint32_t ZONE_MODE_BUTTONS_COUNT = 8;
     static constexpr uint32_t ZONE_MODE_BUTTON_DEFAULT = 3;
     static constexpr uint32_t ZONE_NAME_TEXT_LENGTH_MAX = 20;
+    uint8_t m_lastPressedButtonId;
 
     touchgfx::ToggleButton *m_pZoneModeButtons[ZONE_MODE_BUTTONS_COUNT];
     Unicode::UnicodeChar m_zoneNameBuffer[ZONE_NAME_TEXT_LENGTH_MAX];

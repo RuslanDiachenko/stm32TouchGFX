@@ -1,4 +1,6 @@
 #include <gui/containers/PanelSettingsContainer.hpp>
+#include <touchgfx/Color.hpp>
+#include "BitmapDatabase.hpp"
 
 #ifndef SIMULATOR
 #include "main.h"
@@ -15,7 +17,8 @@ PanelSettingsContainer::PanelSettingsContainer():
   m_currentPressedButton(PressedButton::UrbanStyle)
 {
   urbanStyleButton.forceState(true);
-  urbanStyleButtonClicked();
+  startUrbanStyle();
+  //urbanStyleButtonClicked();
 }
 
 void PanelSettingsContainer::initialize()
@@ -30,57 +33,183 @@ void PanelSettingsContainer::CloseButtonClicked()
 
 void PanelSettingsContainer::urbanStyleButtonClicked(void)
 {
-  if (urbanStyleButton.getState())
-  {
-    m_currentPressedButton = PressedButton::UrbanStyle;
+  m_currentPressedButton = PressedButton::UrbanStyle;
     
-    urbanStyleButton.setTouchable(false);
+  urbanStyleButton.setTouchable(false);
+   
+  darkStyleButton.setTouchable(true);
+  darkStyleButton.forceState(false);
+  darkStyleButton.invalidate();
     
-    darkStyleButton.setTouchable(true);
-    darkStyleButton.forceState(false);
-    darkStyleButton.invalidate();
-    
-    lightStyleButton.setTouchable(true);
-    lightStyleButton.forceState(false);
-    lightStyleButton.invalidate();
-  }
+  lightStyleButton.setTouchable(true);
+  lightStyleButton.forceState(false);
+  lightStyleButton.invalidate();
+  
+  m_pSetStyleCallback->execute(2);
 }
 
 void PanelSettingsContainer::darkStyleButtonClicked(void)
 {
-  if (darkStyleButton.getState())
-  {
-    m_currentPressedButton = PressedButton::DarkStyle;
+  m_currentPressedButton = PressedButton::DarkStyle;
     
-    darkStyleButton.setTouchable(false);
+  darkStyleButton.setTouchable(false);
     
-    urbanStyleButton.setTouchable(true);
-    urbanStyleButton.forceState(false);
-    urbanStyleButton.invalidate();
+  urbanStyleButton.setTouchable(true);
+  urbanStyleButton.forceState(false);
+  urbanStyleButton.invalidate();
     
-    lightStyleButton.setTouchable(true);
-    lightStyleButton.forceState(false);
-    lightStyleButton.invalidate();
-  }
+  lightStyleButton.setTouchable(true);
+  lightStyleButton.forceState(false);
+  lightStyleButton.invalidate();
+  
+  m_pSetStyleCallback->execute(1);
 }
 
 void PanelSettingsContainer::lightStyleButtonClicked(void)
 {
-  if (lightStyleButton.getState())
-  {
-    m_currentPressedButton = PressedButton::LightStyle;
+  m_currentPressedButton = PressedButton::LightStyle;
     
-    lightStyleButton.setTouchable(false);
+  lightStyleButton.setTouchable(false);
     
-    urbanStyleButton.setTouchable(true);
-    urbanStyleButton.forceState(false);
-    urbanStyleButton.invalidate();
+  urbanStyleButton.setTouchable(true);
+  urbanStyleButton.forceState(false);
+  urbanStyleButton.invalidate();
     
-    darkStyleButton.setTouchable(true);
-    darkStyleButton.forceState(false);
-    darkStyleButton.invalidate();
-  }
+  darkStyleButton.setTouchable(true);
+  darkStyleButton.forceState(false);
+  darkStyleButton.invalidate();
+  
+  m_pSetStyleCallback->execute(0);
 }
+
+void PanelSettingsContainer::startUrbanStyle(void)
+{
+  m_currentPressedButton = PressedButton::UrbanStyle;
+    
+  urbanStyleButton.setTouchable(false);
+   
+  darkStyleButton.setTouchable(true);
+  darkStyleButton.forceState(false);
+  darkStyleButton.invalidate();
+    
+  lightStyleButton.setTouchable(true);
+  lightStyleButton.forceState(false);
+  lightStyleButton.invalidate();
+}
+
+void PanelSettingsContainer::setStyle(int style)
+{
+  if (style == 2)
+  {
+    containerNameText.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    panelBrightnessText.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    sleepAfterText.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    visualStyleText.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    
+    staticTextArea1.setColor(touchgfx::Color::getColorFrom24BitRGB(234, 234, 234));
+    staticTextArea2.setColor(touchgfx::Color::getColorFrom24BitRGB(234, 234, 234));
+    staticTextArea3.setColor(touchgfx::Color::getColorFrom24BitRGB(234, 234, 234));
+    staticTextArea4.setColor(touchgfx::Color::getColorFrom24BitRGB(234, 234, 234));
+    staticTextArea5.setColor(touchgfx::Color::getColorFrom24BitRGB(234, 234, 234));
+    staticTextArea6.setColor(touchgfx::Color::getColorFrom24BitRGB(234, 234, 234));
+    staticTextArea7.setColor(touchgfx::Color::getColorFrom24BitRGB(234, 234, 234));
+    staticTextArea8.setColor(touchgfx::Color::getColorFrom24BitRGB(234, 234, 234));
+    
+    panelBrightnessSlider.setBitmaps(Bitmap(BITMAP_SLIDERBASE2POINTS_ID), Bitmap(BITMAP_SLIDERBASE2POINTS_ID), Bitmap(BITMAP_SLIDERINDICATOR_ID));
+    sleepAfterSlider.setBitmaps(Bitmap(BITMAP_SLIDERBASE4POINTS_ID), Bitmap(BITMAP_SLIDERBASE4POINTS_ID), Bitmap(BITMAP_SLIDERINDICATOR_ID));
+    
+    lightStyleButton.setBitmaps(Bitmap(BITMAP_WHITESTYLEBUTTONNOTPRESSED_ID), Bitmap(BITMAP_WHITESTYLEBUTTONPRESSED_ID));
+    darkStyleButton.setBitmaps(Bitmap(BITMAP_DARKSTYLEBUTTONNOTPRESSED_ID), Bitmap(BITMAP_DARKSTYLEBUTTONPRESSED_ID));
+    urbanStyleButton.setBitmaps(Bitmap(BITMAP_URBANSTYLEBUTTONNOTPRESSED_ID), Bitmap(BITMAP_URBANSTYLEBUTTONPRESSED_ID));
+  }
+  else if (style == 1)
+  {
+    containerNameText.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    panelBrightnessText.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    sleepAfterText.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    visualStyleText.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    
+    staticTextArea1.setColor(touchgfx::Color::getColorFrom24BitRGB(234, 234, 234));
+    staticTextArea2.setColor(touchgfx::Color::getColorFrom24BitRGB(234, 234, 234));
+    staticTextArea3.setColor(touchgfx::Color::getColorFrom24BitRGB(234, 234, 234));
+    staticTextArea4.setColor(touchgfx::Color::getColorFrom24BitRGB(234, 234, 234));
+    staticTextArea5.setColor(touchgfx::Color::getColorFrom24BitRGB(234, 234, 234));
+    staticTextArea6.setColor(touchgfx::Color::getColorFrom24BitRGB(234, 234, 234));
+    staticTextArea7.setColor(touchgfx::Color::getColorFrom24BitRGB(234, 234, 234));
+    staticTextArea8.setColor(touchgfx::Color::getColorFrom24BitRGB(234, 234, 234));
+    
+    panelBrightnessSlider.setBitmaps(Bitmap(BITMAP_SLIDERBASE2POINTS_ID), Bitmap(BITMAP_SLIDERBASE2POINTS_ID), Bitmap(BITMAP_SLIDERINDICATOR_ID));
+    sleepAfterSlider.setBitmaps(Bitmap(BITMAP_SLIDERBASE4POINTS_ID), Bitmap(BITMAP_SLIDERBASE4POINTS_ID), Bitmap(BITMAP_SLIDERINDICATOR_ID));
+    
+    lightStyleButton.setBitmaps(Bitmap(BITMAP_WHITESTYLEBUTTONNOTPRESSED_ID), Bitmap(BITMAP_WHITESTYLEBUTTONPRESSED_ID));
+    darkStyleButton.setBitmaps(Bitmap(BITMAP_DARKSTYLEBUTTONNOTPRESSED_ID), Bitmap(BITMAP_DARKSTYLEBUTTONPRESSED_ID));
+    urbanStyleButton.setBitmaps(Bitmap(BITMAP_URBANSTYLEBUTTONNOTPRESSED_ID), Bitmap(BITMAP_URBANSTYLEBUTTONPRESSED_ID));
+  }
+  else if (style == 0)
+  {
+    containerNameText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    panelBrightnessText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    sleepAfterText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    visualStyleText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    
+    staticTextArea1.setColor(touchgfx::Color::getColorFrom24BitRGB(21, 21, 21));
+    staticTextArea2.setColor(touchgfx::Color::getColorFrom24BitRGB(21, 21, 21));
+    staticTextArea3.setColor(touchgfx::Color::getColorFrom24BitRGB(21, 21, 21));
+    staticTextArea4.setColor(touchgfx::Color::getColorFrom24BitRGB(21, 21, 21));
+    staticTextArea5.setColor(touchgfx::Color::getColorFrom24BitRGB(21, 21, 21));
+    staticTextArea6.setColor(touchgfx::Color::getColorFrom24BitRGB(21, 21, 21));
+    staticTextArea7.setColor(touchgfx::Color::getColorFrom24BitRGB(21, 21, 21));
+    staticTextArea8.setColor(touchgfx::Color::getColorFrom24BitRGB(21, 21, 21));
+    
+    panelBrightnessSlider.setBitmaps(Bitmap(BITMAP_SLIDERBASE2POINTSBLACK_ID), Bitmap(BITMAP_SLIDERBASE2POINTSBLACK_ID), Bitmap(BITMAP_SLIDERINDICATORBLACK_ID));
+    sleepAfterSlider.setBitmaps(Bitmap(BITMAP_SLIDERBASE4POINTSBLACK_ID), Bitmap(BITMAP_SLIDERBASE4POINTSBLACK_ID), Bitmap(BITMAP_SLIDERINDICATORBLACK_ID));
+    
+    lightStyleButton.setBitmaps(Bitmap(BITMAP_WHITESTYLEBUTTONNOTPRESSED_ID), Bitmap(BITMAP_WHITESTYLEBUTTONPRESSEDBLACK_ID));
+    darkStyleButton.setBitmaps(Bitmap(BITMAP_DARKSTYLEBUTTONNOTPRESSED_ID), Bitmap(BITMAP_DARKSTYLEBUTTONPRESSEDBLACK_ID));
+    urbanStyleButton.setBitmaps(Bitmap(BITMAP_URBANSTYLEBUTTONNOTPRESSED_ID), Bitmap(BITMAP_URBANSTYLEBUTTONPRESSEDBLACK_ID));
+  }
+  
+  containerNameText.invalidate();
+  panelBrightnessText.invalidate();
+  sleepAfterText.invalidate();
+  visualStyleText.invalidate();
+  
+  staticTextArea1.invalidate();
+  staticTextArea2.invalidate();
+  staticTextArea3.invalidate();
+  staticTextArea4.invalidate();
+  staticTextArea5.invalidate();
+  staticTextArea6.invalidate();
+  staticTextArea7.invalidate();
+  staticTextArea8.invalidate();
+  
+  panelBrightnessSlider.invalidate();
+  sleepAfterSlider.invalidate();
+  
+  if(m_currentPressedButton == PressedButton::UrbanStyle)
+  {
+    urbanStyleButton.forceState(true);
+    darkStyleButton.forceState(false);
+    lightStyleButton.forceState(false);
+  }
+  else if(m_currentPressedButton == PressedButton::DarkStyle)
+  {
+    urbanStyleButton.forceState(false);
+    darkStyleButton.forceState(true);
+    lightStyleButton.forceState(false);
+  }
+  else if(m_currentPressedButton == PressedButton::LightStyle)
+  {
+    urbanStyleButton.forceState(false);
+    darkStyleButton.forceState(false);
+    lightStyleButton.forceState(true);
+  }
+  
+  urbanStyleButton.invalidate();
+  darkStyleButton.invalidate();
+  lightStyleButton.invalidate();
+}
+
 #ifndef SIMULATOR
 static void changePWMOut(uint16_t pulseWidth)
 {

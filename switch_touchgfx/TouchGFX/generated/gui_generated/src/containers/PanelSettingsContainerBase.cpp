@@ -61,15 +61,15 @@ PanelSettingsContainerBase::PanelSettingsContainerBase() :
     panelBrightnessSlider.setValue(100);
     panelBrightnessSlider.setStopValueCallback(sliderValueConfirmedCallback);
 
-    staticTextArea1_1.setXY(10, 102);
-    staticTextArea1_1.setColor(touchgfx::Color::getColorFrom24BitRGB(234, 234, 234));
-    staticTextArea1_1.setLinespacing(0);
-    staticTextArea1_1.setTypedText(TypedText(T_SINGLEUSEID36));
+    staticTextArea7.setXY(10, 102);
+    staticTextArea7.setColor(touchgfx::Color::getColorFrom24BitRGB(234, 234, 234));
+    staticTextArea7.setLinespacing(0);
+    staticTextArea7.setTypedText(TypedText(T_SINGLEUSEID36));
 
-    staticTextArea4_1.setXY(210, 102);
-    staticTextArea4_1.setColor(touchgfx::Color::getColorFrom24BitRGB(234, 234, 234));
-    staticTextArea4_1.setLinespacing(0);
-    staticTextArea4_1.setTypedText(TypedText(T_SINGLEUSEID37));
+    staticTextArea8.setXY(210, 102);
+    staticTextArea8.setColor(touchgfx::Color::getColorFrom24BitRGB(234, 234, 234));
+    staticTextArea8.setLinespacing(0);
+    staticTextArea8.setTypedText(TypedText(T_SINGLEUSEID37));
 
     sleepAfterText.setXY(16, 124);
     sleepAfterText.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
@@ -112,8 +112,8 @@ PanelSettingsContainerBase::PanelSettingsContainerBase() :
     add(staticTextArea3);
     add(staticTextArea4);
     add(panelBrightnessSlider);
-    add(staticTextArea1_1);
-    add(staticTextArea4_1);
+    add(staticTextArea7);
+    add(staticTextArea8);
     add(sleepAfterText);
     add(staticTextArea5);
     add(staticTextArea6);

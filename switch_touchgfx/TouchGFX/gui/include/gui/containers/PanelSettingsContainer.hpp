@@ -11,23 +11,31 @@ public:
 
     virtual void initialize();
 
+    void setStyle(int style);
+    
     virtual void urbanStyleButtonClicked(void);
     virtual void darkStyleButtonClicked(void);
     virtual void lightStyleButtonClicked(void);
     
     virtual void panelBrightnessSliderCallback(int value);
     virtual void sleepAfterSliderCallback(int value);
-    
-    void SetCloseContainerCallback(GenericCallback<void>& callback)
+    void startUrbanStyle(void);
+    void SetCloseContainerCallback(GenericCallback<void> &callback)
     {
         m_pCloseContainerCallback = &callback;
+    }
+    
+    void SetStyleCallback(GenericCallback<int> &callback)
+    {
+        m_pSetStyleCallback = &callback;
     }
 
 protected:
     virtual void CloseButtonClicked();
 
 private:
-    GenericCallback<void>* m_pCloseContainerCallback;
+    GenericCallback<int> *m_pSetStyleCallback; 
+    GenericCallback<void> *m_pCloseContainerCallback;
     
     enum class PressedButton : uint8_t
     {

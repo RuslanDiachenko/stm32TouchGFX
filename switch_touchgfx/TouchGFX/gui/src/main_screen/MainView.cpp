@@ -1,4 +1,6 @@
 #include <gui/main_screen/MainView.hpp>
+#include "BitmapDatabase.hpp"
+#include <touchgfx/Color.hpp>
 
 #ifndef SIMULATOR
 #include "main.h"
@@ -13,7 +15,8 @@ MainView::MainView() :
     closeAllScenesContainer(this, &MainView::CloseAllScenesContainerHandler),
     backAllScenesContainer(this, &MainView::BackAllScenesContainerHandler),
     closeWindowSettingsContainer(this, &MainView::CloseWindowSettingsContainerHandler),
-    closePanelSettingsContainer(this, &MainView::ClosePanelSettingsContainerHandler)
+    closePanelSettingsContainer(this, &MainView::ClosePanelSettingsContainerHandler),
+    setStyle(this, &MainView::SetStyleHandler)
 {
     allZonesContainer.SetCloseContainerCallback(closeAllZonesContainer);
     allZonesContainer.SetBackContainerCallback(backAllZonesContainer);
@@ -23,6 +26,7 @@ MainView::MainView() :
     windowSettingsContainer.SetOpenManualTintContainerCallback(openAllZonesContainer);
     windowSettingsContainer.SetOpenAllScenesContainerCallback(openAllScenesContainer);
     panelSettingsContainer.SetCloseContainerCallback(closePanelSettingsContainer);
+    panelSettingsContainer.SetStyleCallback(setStyle);
 }
 
 void MainView::setupScreen()
@@ -332,4 +336,58 @@ void MainView::hideAllContainers(void)
   
   panelSettingsButton.setVisible(true);
   panelSettingsButton.setTouchable(true);
+}
+
+void MainView::SetStyleHandler(int vall)
+{
+  if (vall == 2)
+  {
+    clockNum.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    clockText.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    dayOfWeek.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    background.setBitmap(Bitmap(BITMAP_BACKGROUND_IMAGE_ID));
+    backgroundBlur.setBitmap(Bitmap(BITMAP_BACKGROUND_IMAGE_BLUR_ID));
+    sunIcon.setBitmap(Bitmap(BITMAP_SUN_ICON_ID));
+    saintGobainLogo.setBitmap(Bitmap(BITMAP_SAINTGOBAINLOGO_ID));
+    sunHorizontImg.setBitmap(Bitmap(BITMAP_COMBINEDGRAPHICNEW_ID));
+    panelSettingsButton.setBitmaps(Bitmap(BITMAP_PANELSETTINGSBUTTONICON_ID), Bitmap(BITMAP_PANELSETTINGSBUTTONICON_ID));
+  }
+  else if (vall == 1)
+  {
+    clockNum.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    clockText.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    dayOfWeek.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    background.setBitmap(Bitmap(BITMAP_BACKGROUNDIMAGEDARKSTYLE_ID));
+    backgroundBlur.setBitmap(Bitmap(BITMAP_BACKGROUNDIMAGEDARKSTYLE_ID));
+    sunIcon.setBitmap(Bitmap(BITMAP_SUN_ICON_ID));
+    saintGobainLogo.setBitmap(Bitmap(BITMAP_SAINTGOBAINLOGO_ID));
+    sunHorizontImg.setBitmap(Bitmap(BITMAP_COMBINEDGRAPHICNEW_ID));
+    panelSettingsButton.setBitmaps(Bitmap(BITMAP_PANELSETTINGSBUTTONICON_ID), Bitmap(BITMAP_PANELSETTINGSBUTTONICON_ID));
+  }
+  else if (vall == 0)
+  {
+    clockNum.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    clockText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    dayOfWeek.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    background.setBitmap(Bitmap(BITMAP_BACKGROUNDIMAGEWHITESTYLE_ID));
+    backgroundBlur.setBitmap(Bitmap(BITMAP_BACKGROUNDIMAGEWHITESTYLE_ID));
+    sunIcon.setBitmap(Bitmap(BITMAP_SUN_ICON_BLACK_ID));
+    saintGobainLogo.setBitmap(Bitmap(BITMAP_SAINTGOBAINLOGOBLACK_ID));
+    sunHorizontImg.setBitmap(Bitmap(BITMAP_COMBINED_GRAPHIC_BLACK_ID));
+    panelSettingsButton.setBitmaps(Bitmap(BITMAP_PANELSETTINGSBUTTONICONBLACK_ID), Bitmap(BITMAP_PANELSETTINGSBUTTONICON_ID));
+  }
+  clockNum.invalidate();
+  clockText.invalidate();
+  dayOfWeek.invalidate();
+  background.invalidate();
+  backgroundBlur.invalidate();
+  sunIcon.invalidate();
+  saintGobainLogo.invalidate();
+  sunHorizontImg.invalidate();
+  panelSettingsButton.invalidate();
+  
+  panelSettingsContainer.setStyle(vall);
+  allScenesContainer.setStyle(vall);
+  windowSettingsContainer.setStyle(vall);
+  allZonesContainer.setStyle(vall);
 }

@@ -69,8 +69,8 @@ protected:
     touchgfx::TextArea staticTextArea3;
     touchgfx::TextArea staticTextArea4;
     touchgfx::Slider panelBrightnessSlider;
-    touchgfx::TextArea staticTextArea1_1;
-    touchgfx::TextArea staticTextArea4_1;
+    touchgfx::TextArea staticTextArea7;
+    touchgfx::TextArea staticTextArea8;
     touchgfx::TextArea sleepAfterText;
     touchgfx::TextArea staticTextArea5;
     touchgfx::TextArea staticTextArea6;

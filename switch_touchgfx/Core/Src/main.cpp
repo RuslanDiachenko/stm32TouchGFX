@@ -93,7 +93,7 @@ osMailQDef(sunMsgBox_g, 5, ui_state_t);
 osMailQId sunMsgBox_g;
 
 
-int putSunMsg(ui_state_t state)
+int sendUIStateMsg(ui_state_t state)
 {
   osStatus status = osOK;
   ui_state_t *mail = 0;
@@ -607,7 +607,7 @@ void StartUITask(void const *argument)
     if (prevHour != state.dateTime.hour || prevMinute != state.dateTime.minute)
     {
       state.msgType = DATE_TIME_CHANGED;
-      putSunMsg(state);
+      sendUIStateMsg(state);
     }
   }
 }
@@ -619,7 +619,7 @@ void sleepAfterTimerHandler(void const *argument)
   sleepAfterState_g.screenState = 0;
   ui_state_t state;
   state.msgType = SLEEP_AFTER_TIMER;
-  putSunMsg(state);
+  sendUIStateMsg(state);
   DBG_LOG("TIM1", "Sleep after timer expired");
   HAL_GPIO_WritePin(LCD_DISP_GPIO_Port, LCD_DISP_Pin, GPIO_PIN_RESET);
 }

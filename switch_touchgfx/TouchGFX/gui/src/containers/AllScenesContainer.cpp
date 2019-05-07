@@ -1,4 +1,6 @@
 #include <gui/containers/AllScenesContainer.hpp>
+#include <touchgfx/Color.hpp>
+#include "BitmapDatabase.hpp"
 
 AllScenesContainer::AllScenesContainer()
 {
@@ -16,6 +18,8 @@ AllScenesContainer::AllScenesContainer()
 
     m_pSceneButtons[DEFAULT_SELECTED_BUTTON]->forceState(true);
     SceneButtonClicked(DEFAULT_SELECTED_BUTTON);
+    
+    m_lastPressedButtonId = DEFAULT_SELECTED_BUTTON;
 }
 
 void AllScenesContainer::initialize()
@@ -37,6 +41,7 @@ void AllScenesContainer::SceneButtonClicked(uint8_t buttonId)
 {
     if (m_pSceneButtons[buttonId]->getState())
     {
+        m_lastPressedButtonId = buttonId;
         m_pSceneButtons[buttonId]->setTouchable(false);
 
         m_pSceneButtonsText[buttonId]->setAlpha(SCENE_TEXT_SELECTED_ALPHA);
@@ -80,4 +85,48 @@ void AllScenesContainer::SceneButton3Clicked()
 void AllScenesContainer::SceneButton4Clicked()
 {
     SceneButtonClicked(4);
+}
+
+void AllScenesContainer::setStyle(int style)
+{
+  if (style == 2)
+  {
+    containerNameText.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    
+    for (uint8_t i = 0; i < SCENE_BUTTONS_COUNT; i++)
+      m_pSceneButtonsText[i]->setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    
+    for (uint8_t i = 0; i < SCENE_BUTTONS_COUNT; i++)
+      m_pSceneButtons[i]->setBitmaps(Bitmap(BITMAP_TOGGLENOTPRESSED_ID), Bitmap(BITMAP_TOGGLEPRESSED_ID));
+  }
+  else if (style == 1)
+  {
+    containerNameText.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    
+    for (uint8_t i = 0; i < SCENE_BUTTONS_COUNT; i++)
+      m_pSceneButtonsText[i]->setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    
+    for (uint8_t i = 0; i < SCENE_BUTTONS_COUNT; i++)
+      m_pSceneButtons[i]->setBitmaps(Bitmap(BITMAP_TOGGLENOTPRESSED_ID), Bitmap(BITMAP_TOGGLEPRESSED_ID));
+  }
+  else if (style == 0)
+  {
+    containerNameText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+
+    for (uint8_t i = 0; i < SCENE_BUTTONS_COUNT; i++)
+      m_pSceneButtonsText[i]->setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    
+    for (uint8_t i = 0; i < SCENE_BUTTONS_COUNT; i++)
+      m_pSceneButtons[i]->setBitmaps(Bitmap(BITMAP_TOGGLENOTPRESSED_ID), Bitmap(BITMAP_TOGGLEPRESSEDBLACK_ID));
+  }
+  
+  containerNameText.invalidate();
+  
+  for (uint32_t i = 0; i < SCENE_BUTTONS_COUNT; ++i)
+  {
+    m_pSceneButtons[i]->forceState((i == m_lastPressedButtonId) ? true : false);
+    m_pSceneButtons[i]->invalidate();
+    m_pSceneButtonsText[i]->invalidate();
+  }  
+  
 }

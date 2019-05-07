@@ -11,6 +11,7 @@ public:
 
     virtual void initialize();
 
+    void setStyle(int style);
     void SetCloseContainerCallback(GenericCallback<void>& callback)
     {
         m_pCloseContainerCallback = &callback;

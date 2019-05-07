@@ -26,8 +26,9 @@ protected:
     void CloseAllScenesContainerHandler(void);
     void BackAllScenesContainerHandler(void);
     void CloseWindowSettingsContainerHandler(void);
-    void ClosePanelSettingsContainerHandler(void);
-
+    void ClosePanelSettingsContainerHandler(void);  
+    void SetStyleHandler(int vall);
+    
     touchgfx::Callback<MainView, void> openAllZonesContainer;
     touchgfx::Callback<MainView, void> closeAllZonesContainer;
     touchgfx::Callback<MainView, void> backAllZonesContainer;
@@ -36,6 +37,7 @@ protected:
     touchgfx::Callback<MainView, void> backAllScenesContainer;
     touchgfx::Callback<MainView, void> closeWindowSettingsContainer;
     touchgfx::Callback<MainView, void> closePanelSettingsContainer;
+    touchgfx::Callback<MainView, int> setStyle;
 
     uint8_t m_lastBackgroundBlurAlfa;
     bool m_lastWindowSettingsButtonTouchable;

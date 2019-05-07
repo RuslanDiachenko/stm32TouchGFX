@@ -1,5 +1,6 @@
 #include <gui/containers/AllZonesContainer.hpp>
-
+#include <touchgfx/Color.hpp>
+#include "BitmapDatabase.hpp"
 
 AllZonesContainer::AllZonesContainer()
 {
@@ -123,4 +124,26 @@ uint16_t AllZonesContainer::GetFirstFreeContainerInfoIndex()
     }
 
     return ZONE_CONTAINER_COUNT_MAX;
+}
+
+void AllZonesContainer::setStyle(int style)
+{
+  if (style == 2)
+  {
+    containerNameText.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+  }
+  else if (style == 1)
+  {
+    containerNameText.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+  }
+  else if (style == 0)
+  {
+    containerNameText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+  }
+  containerNameText.invalidate();
+  
+  for (uint8_t i = 0; i < GetFirstFreeContainerInfoIndex(); i++)
+  {
+    m_zonesInfos[i].zoneContainer.setStyle(style);
+  }
 }

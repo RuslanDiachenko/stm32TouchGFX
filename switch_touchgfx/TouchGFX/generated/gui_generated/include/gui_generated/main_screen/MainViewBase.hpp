@@ -7,8 +7,8 @@
 #include <gui/common/FrontendApplication.hpp>
 #include <mvp/View.hpp>
 #include <gui/main_screen/MainPresenter.hpp>
-#include <touchgfx/widgets/Image.hpp>
 #include <touchgfx/widgets/Button.hpp>
+#include <touchgfx/widgets/Image.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <gui/containers/AllZonesContainer.hpp>
 #include <gui/containers/WindowSettingsContainer.hpp>
@@ -47,8 +47,8 @@ protected:
     /*
      * Member Declarations
      */
-    touchgfx::Image background;
     touchgfx::Button windowSettingsButton;
+    touchgfx::Image background;
     touchgfx::Image sunHorizontImg;
     touchgfx::MoveAnimator< touchgfx::Image > sunIcon;
     touchgfx::TextAreaWithTwoWildcards clockNum;
@@ -60,7 +60,7 @@ protected:
     touchgfx::MoveAnimator< WindowSettingsContainer > windowSettingsContainer;
     touchgfx::MoveAnimator< AllScenesContainer > allScenesContainer;
     touchgfx::MoveAnimator< PanelSettingsContainer > panelSettingsContainer;
-    touchgfx::Image image;
+    touchgfx::Image saintGobainLogo;
 
     /*
      * Wildcard Buffers

@@ -11,6 +11,8 @@ public:
 
     virtual void initialize();
 
+    void setStyle(int style);
+    
     void SetCloseContainerCallback(GenericCallback<void>& callback)
     {
         m_pCloseContainerCallback = &callback;
@@ -45,6 +47,8 @@ private:
 
     touchgfx::ToggleButton *m_pSceneButtons[SCENE_BUTTONS_COUNT];
     touchgfx::TextArea *m_pSceneButtonsText[SCENE_BUTTONS_COUNT];
+    
+    uint8_t m_lastPressedButtonId;
 };
 
 #endif // ALLSCENESCONTAINER_HPP

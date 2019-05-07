@@ -30,7 +30,8 @@ public:
 
     bool AddNewZone(ZoneType type, Unicode::UnicodeChar *pZoneName);
     void DeleteAllZones();
-
+    
+    void setStyle(int style);
 protected:
     virtual void CloseButtonClicked();
     virtual void ResetButtonClicked();

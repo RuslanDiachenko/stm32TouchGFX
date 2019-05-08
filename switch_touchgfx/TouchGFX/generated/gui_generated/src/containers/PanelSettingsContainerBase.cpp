@@ -103,6 +103,21 @@ PanelSettingsContainerBase::PanelSettingsContainerBase() :
     urbanStyleButton.setBitmaps(Bitmap(BITMAP_URBANSTYLEBUTTONNOTPRESSED_ID), Bitmap(BITMAP_URBANSTYLEBUTTONPRESSED_ID));
     urbanStyleButton.setAction(buttonCallback);
 
+    staticTextArea9.setXY(10, 306);
+    staticTextArea9.setColor(touchgfx::Color::getColorFrom24BitRGB(234, 234, 234));
+    staticTextArea9.setLinespacing(0);
+    staticTextArea9.setTypedText(TypedText(T_SINGLEUSEID42));
+
+    staticTextArea10.setXY(76, 306);
+    staticTextArea10.setColor(touchgfx::Color::getColorFrom24BitRGB(234, 234, 234));
+    staticTextArea10.setLinespacing(0);
+    staticTextArea10.setTypedText(TypedText(T_SINGLEUSEID43));
+
+    staticTextArea11.setXY(136, 306);
+    staticTextArea11.setColor(touchgfx::Color::getColorFrom24BitRGB(234, 234, 234));
+    staticTextArea11.setLinespacing(0);
+    staticTextArea11.setTypedText(TypedText(T_SINGLEUSEID44));
+
     add(closeButton);
     add(containerNameText);
     add(panelBrightnessText);
@@ -121,6 +136,9 @@ PanelSettingsContainerBase::PanelSettingsContainerBase() :
     add(lightStyleButton);
     add(darkStyleButton);
     add(urbanStyleButton);
+    add(staticTextArea9);
+    add(staticTextArea10);
+    add(staticTextArea11);
 }
 
 void PanelSettingsContainerBase::initialize()

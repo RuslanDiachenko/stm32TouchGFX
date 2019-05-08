@@ -114,6 +114,9 @@ void PanelSettingsContainer::setStyle(int style)
     staticTextArea6.setColor(touchgfx::Color::getColorFrom24BitRGB(234, 234, 234));
     staticTextArea7.setColor(touchgfx::Color::getColorFrom24BitRGB(234, 234, 234));
     staticTextArea8.setColor(touchgfx::Color::getColorFrom24BitRGB(234, 234, 234));
+    staticTextArea9.setColor(touchgfx::Color::getColorFrom24BitRGB(234, 234, 234));
+    staticTextArea10.setColor(touchgfx::Color::getColorFrom24BitRGB(234, 234, 234));
+    staticTextArea11.setColor(touchgfx::Color::getColorFrom24BitRGB(234, 234, 234));
     
     panelBrightnessSlider.setBitmaps(Bitmap(BITMAP_SLIDERBASE2POINTS_ID), Bitmap(BITMAP_SLIDERBASE2POINTS_ID), Bitmap(BITMAP_SLIDERINDICATOR_ID));
     sleepAfterSlider.setBitmaps(Bitmap(BITMAP_SLIDERBASE4POINTS_ID), Bitmap(BITMAP_SLIDERBASE4POINTS_ID), Bitmap(BITMAP_SLIDERINDICATOR_ID));
@@ -137,6 +140,9 @@ void PanelSettingsContainer::setStyle(int style)
     staticTextArea6.setColor(touchgfx::Color::getColorFrom24BitRGB(234, 234, 234));
     staticTextArea7.setColor(touchgfx::Color::getColorFrom24BitRGB(234, 234, 234));
     staticTextArea8.setColor(touchgfx::Color::getColorFrom24BitRGB(234, 234, 234));
+    staticTextArea9.setColor(touchgfx::Color::getColorFrom24BitRGB(234, 234, 234));
+    staticTextArea10.setColor(touchgfx::Color::getColorFrom24BitRGB(234, 234, 234));
+    staticTextArea11.setColor(touchgfx::Color::getColorFrom24BitRGB(234, 234, 234));
     
     panelBrightnessSlider.setBitmaps(Bitmap(BITMAP_SLIDERBASE2POINTS_ID), Bitmap(BITMAP_SLIDERBASE2POINTS_ID), Bitmap(BITMAP_SLIDERINDICATOR_ID));
     sleepAfterSlider.setBitmaps(Bitmap(BITMAP_SLIDERBASE4POINTS_ID), Bitmap(BITMAP_SLIDERBASE4POINTS_ID), Bitmap(BITMAP_SLIDERINDICATOR_ID));
@@ -160,6 +166,9 @@ void PanelSettingsContainer::setStyle(int style)
     staticTextArea6.setColor(touchgfx::Color::getColorFrom24BitRGB(21, 21, 21));
     staticTextArea7.setColor(touchgfx::Color::getColorFrom24BitRGB(21, 21, 21));
     staticTextArea8.setColor(touchgfx::Color::getColorFrom24BitRGB(21, 21, 21));
+    staticTextArea9.setColor(touchgfx::Color::getColorFrom24BitRGB(21, 21, 21));
+    staticTextArea10.setColor(touchgfx::Color::getColorFrom24BitRGB(21, 21, 21));
+    staticTextArea11.setColor(touchgfx::Color::getColorFrom24BitRGB(21, 21, 21));
     
     panelBrightnessSlider.setBitmaps(Bitmap(BITMAP_SLIDERBASE2POINTSBLACK_ID), Bitmap(BITMAP_SLIDERBASE2POINTSBLACK_ID), Bitmap(BITMAP_SLIDERINDICATORBLACK_ID));
     sleepAfterSlider.setBitmaps(Bitmap(BITMAP_SLIDERBASE4POINTSBLACK_ID), Bitmap(BITMAP_SLIDERBASE4POINTSBLACK_ID), Bitmap(BITMAP_SLIDERINDICATORBLACK_ID));
@@ -182,6 +191,9 @@ void PanelSettingsContainer::setStyle(int style)
   staticTextArea6.invalidate();
   staticTextArea7.invalidate();
   staticTextArea8.invalidate();
+  staticTextArea9.invalidate();
+  staticTextArea10.invalidate();
+  staticTextArea11.invalidate();
   
   panelBrightnessSlider.invalidate();
   sleepAfterSlider.invalidate();

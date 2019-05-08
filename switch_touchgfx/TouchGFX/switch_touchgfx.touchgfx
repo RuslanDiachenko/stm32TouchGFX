@@ -1704,6 +1704,75 @@
             "Clickable": false,
             "Fadeable": false,
             "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId42",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 234,
+              "Green": 234,
+              "Blue": 234
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "staticTextArea9",
+            "X": 10,
+            "Y": 306,
+            "Width": 35,
+            "Height": 15,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId43",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 234,
+              "Green": 234,
+              "Blue": 234
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "staticTextArea10",
+            "X": 76,
+            "Y": 306,
+            "Width": 29,
+            "Height": 15,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId44",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 234,
+              "Green": 234,
+              "Blue": 234
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "staticTextArea11",
+            "X": 136,
+            "Y": 306,
+            "Width": 36,
+            "Height": 15,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
           }
         ],
         "Interactions": [
@@ -1920,6 +1989,18 @@
       },
       {
         "TextEntryId": "SingleUseId41",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId42",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId43",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId44",
         "IsResource": false
       }
     ],

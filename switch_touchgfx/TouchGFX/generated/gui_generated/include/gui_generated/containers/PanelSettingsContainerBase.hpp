@@ -78,6 +78,9 @@ protected:
     touchgfx::ToggleButton lightStyleButton;
     touchgfx::ToggleButton darkStyleButton;
     touchgfx::ToggleButton urbanStyleButton;
+    touchgfx::TextArea staticTextArea9;
+    touchgfx::TextArea staticTextArea10;
+    touchgfx::TextArea staticTextArea11;
 
 private:
 
